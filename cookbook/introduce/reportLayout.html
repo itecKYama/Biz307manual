@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>帳票レイアウトを使い分けるための設定を行う &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="着地見込管理" href="ef/index.html" />
+    <link rel="prev" title="Biz∫APF データ連携ジョブ実行" href="batch/gm/di_job.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U">導入</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">帳票レイアウトを使い分けるための設定を行う</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="batch/gm/di_job.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="ef/index.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">逆引き(Cookbook)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../setting/index.html">開発/動作環境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spec/index.html">性能改善</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">ワークフロー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sms/index.html">Biz∫販売連携</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../invoice/index.html">請求書レイアウトの変更</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">導入</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pattern/index.html">仕訳の自動作成に使用する仕訳パターンを登録する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="balanceshift/index.html">残高移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dtlshift/index.html">明細移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batch/index.html">ジョブ</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">帳票レイアウトを使い分けるための設定を行う</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fms-cookbook-introduce-reportlayout-prepare">前提条件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-cookbook-introduce-reportlayout-do">実行手順</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-cookbook-introduce-reportlayout-endconditions">完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ef/index.html">着地見込管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gt/index.html">グループ会社間取引</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gm/index.html">グループ連結オペレーション</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restApiIntegration/index.html">REST API を使用した外部連携</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-cookbook-introduce-reportlayout">
+<span id="id39"></span><h1>帳票レイアウトを使い分けるための設定を行う<a class="headerlink" href="#fms-cookbook-introduce-reportlayout" title="Link to this heading">¶</a></h1>
+<p>標準のレイアウトとは別に、独自に追加したレイアウトを指定して帳票を出力できるようにします。</p>
+<p>レイアウトを指定できる帳票は、以下となります。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>総勘定元帳</p></li>
+<li><p>債権申請書</p></li>
+<li><p>請求書</p></li>
+<li><p>支払調書</p></li>
+<li><p>資産登録申請書</p></li>
+</ul>
+</div></blockquote>
+<section id="fms-cookbook-introduce-reportlayout-prepare">
+<span id="id40"></span><h2>前提条件<a class="headerlink" href="#fms-cookbook-introduce-reportlayout-prepare" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>帳票レイアウトファイルを帳票サーバーに配置していること。</p>
+<p>フレキシブルレポートを利用してレイアウトを作成した場合には、帳票レイアウトファイルを帳票サーバーに配置する必要はありません。</p>
+</li>
+</ul>
+</section>
+<section id="fms-cookbook-introduce-reportlayout-do">
+<span id="id41"></span><h2>実行手順<a class="headerlink" href="#fms-cookbook-introduce-reportlayout-do" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>帳票設定の登録</p></li>
+</ol>
+<blockquote>
+<div><p>追加したレイアウトに対して帳票設定を登録します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF アドミニストレーション
+  システム管理
+    帳票設定
+      帳票設定
+</pre></div>
+</div>
+</li>
+<li><p>設定内容</p>
+<p>以下の表にしたがい、各項目に値を設定してください。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 28.6%" />
+<col style="width: 57.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>アプリケーションID</p></td>
+<td><p>fms</p></td>
+<td><p>アプリケーションIDを間違えると、印刷実行ダイアログで検索対象となりません。</p></td>
+</tr>
+<tr class="row-odd"><td><p>モジュールID</p></td>
+<td><p>総勘定元帳：gl</p>
+<p>債権申請書：pr</p>
+<p>請求書：pr</p>
+<p>支払調書：pr</p>
+<p>資産登録申請書：fa</p>
+</td>
+<td><p>モジュールIDを間違えると、印刷実行ダイアログで検索対象となりません。</p></td>
+</tr>
+<tr class="row-even"><td><p>帳票コード</p></td>
+<td><p>任意</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>製品区分</p></td>
+<td><p>SVF For PDF</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>帳票レイアウトファイルパス</p></td>
+<td><p>任意</p></td>
+<td><p>帳票サーバに配置したレイアウトファイルのファイルパス</p>
+<p>フレキシブルレポートを利用してレイアウトを作成した場合には、設定する必要はありません。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>帳票ファイル表示名</p></td>
+<td><p>任意</p></td>
+<td><p>帳票ファイル表示名は、以下の場面で表示されます。</p>
+<ul class="simple">
+<li><p>印刷実行ダイアログでレイアウトを選択するときの帳票ファイル表示名</p></li>
+<li><p>ファイルダウンロードダイアログのファイル名</p></li>
+</ul>
+<p>例）XXX社用請求書</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>削除フラグ</p></td>
+<td><p>活動中</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>フレキシブルレポートを利用してレイアウトを作成した場合は、  Biz∫APFのフレキシブルレポート<a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/flexiblereports/reference_mm_fr_dec.html">フレキシブルレポート決定表</a>を参照してフレキシブルレポート決定表を登録してください。</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>帳票グループ関連の登録</p></li>
+</ol>
+<blockquote>
+<div><p>追加したレイアウトと帳票グループの関連付けを登録します。以下のメニューから帳票グループを選択し、帳票グループ関連を追加します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF アドミニストレーション
+  システム管理
+    帳票設定
+      帳票グループ管理
+</pre></div>
+</div>
+</li>
+<li><p>帳票グループ</p>
+<p>以下の表にしたがい、帳票グループを選択してください。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>帳票</p></th>
+<th class="head"><p>帳票グループコード</p></th>
+<th class="head"><p>帳票グループ名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>総勘定元帳</p></td>
+<td><p>generalLedger</p></td>
+<td><p>総勘定元帳</p></td>
+</tr>
+<tr class="row-odd"><td><p>債権申請書</p></td>
+<td><p>arRequestApplication</p></td>
+<td><p>債権申請書</p></td>
+</tr>
+<tr class="row-even"><td><p>請求書</p></td>
+<td><p>invoice</p></td>
+<td><p>請求書</p></td>
+</tr>
+<tr class="row-odd"><td><p>支払調書</p></td>
+<td><p>paymentRecord</p></td>
+<td><p>支払調書</p></td>
+</tr>
+<tr class="row-even"><td><p>資産登録申請書</p></td>
+<td><p>assetAcquisitionApplication</p></td>
+<td><p>資産登録申請書</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>帳票グループ関連の設定内容</p>
+<p>以下の表にしたがい、各項目に値を設定してください。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 28.6%" />
+<col style="width: 57.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>帳票設定ID</p></td>
+<td><p>1で登録した帳票レイアウトの帳票設定ID</p></td>
+<td><p>帳票コード、帳票ファイル表示名から対象を判定します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>ソートキー</p></td>
+<td><p>任意</p></td>
+<td><p>印刷実行ダイアログでレイアウトを選択するときに、ソートキーの昇順で表示されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>デフォルトフラグ</p></td>
+<td><p>任意</p></td>
+<td><p>デフォルトにすることで、印刷実行ダイアログの項目「帳票レイアウト」に初期表示される値となります。（請求書を除く）</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>取引先別帳票レイアウト決定表の登録</p></li>
+</ol>
+<blockquote>
+<div><p>請求先毎に請求書のレイアウトをあらかじめ指定したい場合のみ、取引先別帳票レイアウト決定表を登録します。</p>
+<p>取引先別帳票レイアウト決定表の登録につきましては、  Biz∫APFの取引先マスタ拡張モジュール<a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/administration-ext/biz-cx/installation/customer_report_layout.html">取引先別に帳票レイアウトを設定する</a>を参照してください。</p>
+</div></blockquote>
+</section>
+<section id="fms-cookbook-introduce-reportlayout-endconditions">
+<span id="id42"></span><h2>完了条件<a class="headerlink" href="#fms-cookbook-introduce-reportlayout-endconditions" title="Link to this heading">¶</a></h2>
+<p>該当の帳票出力画面にて、追加したレイアウトを指定して帳票出力できることを確認します。</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" >導入</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">帳票レイアウトを使い分けるための設定を行う</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>仕訳パターン_外貨評価替仕訳明細の登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/biz_highlight.css" />
+    <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="資産管理" href="../fa/index.html" />
+    <link rel="prev" title="外貨管理" href="index.html" />
+    <script type="text/javascript" src="../../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../../index.html" >導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="../index.html" >仕訳の自動作成に使用する仕訳パターンを登録する</a></li>
+        <li class="nav-item nav-item-4 breadcrumbs-item"><a href="index.html" accesskey="U">外貨管理</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">仕訳パターン_外貨評価替仕訳明細の登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="index.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="../fa/index.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">逆引き(Cookbook)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../setting/index.html">開発/動作環境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../spec/index.html">性能改善</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflow/index.html">ワークフロー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../sms/index.html">Biz∫販売連携</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../invoice/index.html">請求書レイアウトの変更</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">導入</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">仕訳の自動作成に使用する仕訳パターンを登録する</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../fc/index.html">会計コア</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gl/index.html">一般会計</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pr/index.html">債権債務</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../bn/index.html">手形管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ec/index.html">電子記録債権管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cm/index.html">資金管理</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">外貨管理</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">仕訳パターン_外貨評価替仕訳明細の登録</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-startconditions">着手条件</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-do">実行手順</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-do-pattern">仕訳パターンの登録</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-do-parameter">パラメータの設定</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-endconditions">完了条件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../fa/index.html">資産管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../om/index.html">組織変更</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../balanceshift/index.html">残高移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dtlshift/index.html">明細移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../batch/index.html">ジョブ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reportLayout.html">帳票レイアウトを使い分けるための設定を行う</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ef/index.html">着地見込管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../gt/index.html">グループ会社間取引</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../gm/index.html">グループ連結オペレーション</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../restApiIntegration/index.html">REST API を使用した外部連携</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl">
+<span id="id39"></span><h1>仕訳パターン_外貨評価替仕訳明細の登録<a class="headerlink" href="#fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl" title="Link to this heading">¶</a></h1>
+<p>外貨管理の「外貨評価替実行」画面で実行処理を行った際、自動的に為替差損益の仕訳を作成します。</p>
+<p>この仕訳を作成するために、仕訳パターンを登録し、その仕訳パターンのコードをパラメータに設定します。</p>
+<section id="fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-startconditions">
+<span id="id40"></span><h2>着手条件<a class="headerlink" href="#fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../../../../introduce/core/index.html#fms-introduce-core"><span class="std std-ref">会計コアマスタの設定</span></a>までの作業を終えていること。</p>
+</section>
+<section id="fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-do">
+<span id="id41"></span><h2>実行手順<a class="headerlink" href="#fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-do" title="Link to this heading">¶</a></h2>
+<section id="fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-do-pattern">
+<span id="id42"></span><h3>仕訳パターンの登録<a class="headerlink" href="#fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-do-pattern" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p>Biz∫会計管理者アカウントでポータル画面にログインし、「仕訳登録」画面を表示してください。</p>
+</div></blockquote>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  一般会計
+    仕訳入力
+      仕訳登録
+</pre></div>
+</div>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>「仕訳登録」画面から、以下のように仕訳を入力してください。</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>仕訳のヘッダ項目について</p>
+<ul class="simple">
+<li><p>伝票摘要に、登録する仕訳パターンの名称を入力してください。</p></li>
+</ul>
+</li>
+<li><p>仕訳の明細項目について</p>
+<ul>
+<li><p>貸借とも、1行のみ入力してください。（2行目以降は、無視されます）</p></li>
+<li><p>仕訳パターンの値が適用される明細項目は下表のとおりです。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>予算コードは<a class="reference internal" href="../../../../introduce/module/ma/budget_import.html#fms-introduce-module-ma-budget-import"><span class="std std-ref">予算取込</span></a>で登録するものを設定してください。</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>借方</p></th>
+<th class="head"><p>貸方</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>消費税</p></td>
+<td><p>為替差損用の消費税コード</p></td>
+<td><p>為替差益用の消費税コード</p></td>
+</tr>
+<tr class="row-odd"><td><p>税処理区分</p></td>
+<td><p>為替差損用の税処理区分</p></td>
+<td><p>為替差益用の税処理区分</p></td>
+</tr>
+<tr class="row-even"><td><p>明細摘要</p></td>
+<td><p>為替差損用の明細摘要<a class="footnote-reference brackets" href="#f1" id="id43" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+<td><p>為替差益用の明細摘要<a class="footnote-reference brackets" href="#f1" id="id44" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>予算コード</p></td>
+<td><p>為替差損用の予算コード</p></td>
+<td><p>為替差益用の予算コード</p></td>
+</tr>
+<tr class="row-even"><td><p>キャッシュフローコード</p></td>
+<td><p>為替差損用のキャッシュフローコード</p></td>
+<td><p>為替差益用のキャッシュフローコード</p></td>
+</tr>
+<tr class="row-odd"><td><p>分析フィールド1～10,21～30</p></td>
+<td><p>為替差損用の分析フィールド1～10,21～30</p></td>
+<td><p>為替差益用の分析フィールド1～10,21～30</p></td>
+</tr>
+<tr class="row-even"><td><p>分析テキスト11～20,31～40</p></td>
+<td><p>為替差損用の分析テキスト11～20,31～40</p></td>
+<td><p>為替差益用の分析テキスト11～20,31～40</p></td>
+</tr>
+<tr class="row-odd"><td><p>明細メモ</p></td>
+<td><p>為替差損用の明細メモ</p></td>
+<td><p>為替差益用の明細メモ</p></td>
+</tr>
+<tr class="row-even"><td><p>その他の項目</p></td>
+<td><p>仕訳パターンの値は使用されません</p></td>
+<td><p>仕訳パターンの値は使用されません</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id43">1</a>,<a role="doc-backlink" href="#id44">2</a>)</span>
+<p>外貨管理の場合のみ利用されます。</p>
+</aside>
+</aside>
+</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>仕訳入力後、「SF12:パターン」ボタンを押下し、仕訳パターン登録ダイアログを表示します。</p></li>
+<li><p>任意のパターンコードを入力し、「F5:登録」ボタンを押下して仕訳パターンを登録してください。</p></li>
+</ol>
+</section>
+<section id="fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-do-parameter">
+<span id="id45"></span><h3>パラメータの設定<a class="headerlink" href="#fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-do-parameter" title="Link to this heading">¶</a></h3>
+<p>Biz∫会計管理者アカウントでポータル画面にログインし、対象モジュール「会計コア」のパラメータ「仕訳パターン_外貨評価替仕訳明細」に登録した仕訳パターンのコードを設定してください。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  会計コア
+    マスタメンテナンス
+      基本設定管理
+        パラメータ管理
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-endconditions">
+<span id="id46"></span><h2>完了条件<a class="headerlink" href="#fms-cookbook-introduce-pattern-pr-jrnlptn-fxrevaluation-dtl-endconditions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>登録した仕訳パターンコードが「パラメータ」検索画面のパラメータ「仕訳パターン_外貨評価替仕訳明細」に設定されていることを確認します。</p></li>
+<li><p>仕訳パターンマスタのプルーフリストを出力し、仕訳パターンコードが正しく登録されていることを確認します。</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../../index.html" >導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="../index.html" >仕訳の自動作成に使用する仕訳パターンを登録する</a></li>
+        <li class="nav-item nav-item-4 breadcrumbs-item"><a href="index.html" >外貨管理</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">仕訳パターン_外貨評価替仕訳明細の登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

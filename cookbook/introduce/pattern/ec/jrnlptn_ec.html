@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>電子記録債権管理仕訳パターンの登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/biz_highlight.css" />
+    <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="資金管理" href="../cm/index.html" />
+    <link rel="prev" title="電子記録債権管理" href="index.html" />
+    <script type="text/javascript" src="../../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../../index.html" >導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="../index.html" >仕訳の自動作成に使用する仕訳パターンを登録する</a></li>
+        <li class="nav-item nav-item-4 breadcrumbs-item"><a href="index.html" accesskey="U">電子記録債権管理</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">電子記録債権管理仕訳パターンの登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="index.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="../cm/index.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">逆引き(Cookbook)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../setting/index.html">開発/動作環境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../spec/index.html">性能改善</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflow/index.html">ワークフロー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../sms/index.html">Biz∫販売連携</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../invoice/index.html">請求書レイアウトの変更</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">導入</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">仕訳の自動作成に使用する仕訳パターンを登録する</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../fc/index.html">会計コア</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gl/index.html">一般会計</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pr/index.html">債権債務</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../bn/index.html">手形管理</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">電子記録債権管理</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">電子記録債権管理仕訳パターンの登録</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#fms-cookbook-introduce-pattern-ec-jrnlptn-ec-startconditions">着手条件</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-cookbook-introduce-pattern-ec-jrnlptn-ec-do">実行手順</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#fms-cookbook-introduce-pattern-ec-jrnlptn-ec-do-pattern">仕訳パターンの登録</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#fms-cookbook-introduce-pattern-ec-jrnlptn-ec-do-parameter">パラメータの設定</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-cookbook-introduce-pattern-ec-jrnlptn-ec-endconditions">完了条件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../cm/index.html">資金管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../fe/index.html">外貨管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../fa/index.html">資産管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../om/index.html">組織変更</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../balanceshift/index.html">残高移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dtlshift/index.html">明細移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../batch/index.html">ジョブ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reportLayout.html">帳票レイアウトを使い分けるための設定を行う</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ef/index.html">着地見込管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../gt/index.html">グループ会社間取引</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../gm/index.html">グループ連結オペレーション</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../restApiIntegration/index.html">REST API を使用した外部連携</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-cookbook-introduce-pattern-ec-jrnlptn-ec">
+<span id="id39"></span><h1>電子記録債権管理仕訳パターンの登録<a class="headerlink" href="#fms-cookbook-introduce-pattern-ec-jrnlptn-ec" title="Link to this heading">¶</a></h1>
+<p>電子記録債権管理の「電子債権登録」「電子債権状態変更」「電子債務登録」「電子債務状態変更」画面で電子記録債権の登録処理または状態変更を行った際、パラメータに電子記録債権管理の仕訳パターンが登録されている場合、自動的に入金仕訳または振替仕訳を作成します。</p>
+<p>この仕訳を作成するために、仕訳パターンを登録し、その仕訳パターンのコードをパラメータに設定します。</p>
+<section id="fms-cookbook-introduce-pattern-ec-jrnlptn-ec-startconditions">
+<span id="id40"></span><h2>着手条件<a class="headerlink" href="#fms-cookbook-introduce-pattern-ec-jrnlptn-ec-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../../../../introduce/core/index.html#fms-introduce-core"><span class="std std-ref">会計コアマスタの設定</span></a>までの作業を終えていること。</p>
+</section>
+<section id="fms-cookbook-introduce-pattern-ec-jrnlptn-ec-do">
+<span id="id41"></span><h2>実行手順<a class="headerlink" href="#fms-cookbook-introduce-pattern-ec-jrnlptn-ec-do" title="Link to this heading">¶</a></h2>
+<section id="fms-cookbook-introduce-pattern-ec-jrnlptn-ec-do-pattern">
+<span id="id42"></span><h3>仕訳パターンの登録<a class="headerlink" href="#fms-cookbook-introduce-pattern-ec-jrnlptn-ec-do-pattern" title="Link to this heading">¶</a></h3>
+<p>Biz∫会計管理者アカウントでポータル画面にログインし、「仕訳登録」または「入金仕訳登録」画面を表示してください。</p>
+<ul>
+<li><p>メニュー</p>
+<p>「電子債権登録仕訳パターン」を登録する場合</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  債権管理
+    入金管理
+      入金仕訳登録
+</pre></div>
+</div>
+<p>「電子債権登録仕訳パターン」以外を登録する場合</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  一般会計
+    仕訳入力
+      仕訳登録
+</pre></div>
+</div>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>「仕訳登録」または「入金仕訳登録」画面から、以下のように仕訳を入力してください。</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>仕訳のヘッダ項目について</p>
+<ul class="simple">
+<li><p>必須項目を全て設定してください。（計上日はパターンを使用する期間の日付を設定してください。計上日は入金仕訳または振替仕訳計上時に、電子債権、電子債務の処理日で上書きされます）</p></li>
+<li><p>仕訳種類には「通常」を設定してください。</p></li>
+<li><p>伝票摘要には、自動生成する入金仕訳、振替仕訳の伝票摘要を設定してください。</p></li>
+</ul>
+</li>
+<li><p>仕訳の明細項目について</p>
+<ul>
+<li><p>入力項目については、以下の表を参照してください。</p>
+<p><strong>登録可能な仕訳パターン</strong></p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>登録可能な仕訳パターン</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>電子債権登録仕訳パターン</p></td>
+<td><p>電子債権を受入に状態変更した際に使用する仕訳パターン</p></td>
+</tr>
+<tr class="row-odd"><td><p>受入決済仕訳パターン</p></td>
+<td><p>電子債権を受入から決済に状態変更した際に使用する仕訳パターン</p></td>
+</tr>
+<tr class="row-even"><td><p>割引仕訳パターン</p></td>
+<td><p>電子債権を割引に状態変更した際に使用する仕訳パターン</p></td>
+</tr>
+<tr class="row-odd"><td><p>売却仕訳パターン</p></td>
+<td><p>電子債務を発生から決済に状態変更した際に使用する仕訳パターン</p></td>
+</tr>
+<tr class="row-even"><td><p>発生決済仕訳パターン</p></td>
+<td><p>電子債権を割引から決済に状態変更した際に使用する仕訳パターン</p></td>
+</tr>
+<tr class="row-odd"><td><p>不渡仕訳パターン</p></td>
+<td><p>電子債権を不渡に状態変更した際に使用する仕訳パターン</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>仕訳の発生取引と、代表的な仕訳例</strong></p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 26.3%" />
+<col style="width: 10.5%" />
+<col style="width: 15.8%" />
+<col style="width: 15.8%" />
+<col style="width: 15.8%" />
+<col style="width: 15.8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>登録可能な仕訳パターン</p></th>
+<th class="head"><p>行番号</p></th>
+<th class="head"><p>電子記録債権状態（前）</p></th>
+<th class="head"><p>電子記録債権状態（後）</p></th>
+<th class="head"><p>借方科目</p></th>
+<th class="head"><p>貸方科目</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>電子債権登録仕訳パターン</p></td>
+<td><p>1</p></td>
+<td><p>－</p></td>
+<td><p>受入</p></td>
+<td><p>入力不要<a class="footnote-reference brackets" href="#f1" id="id43" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+<td><p>仮受金</p></td>
+</tr>
+<tr class="row-odd"><td><p>受入決済仕訳パターン</p></td>
+<td><p>1</p></td>
+<td><p>受入</p></td>
+<td><p>決済</p></td>
+<td><p>入力不要<a class="footnote-reference brackets" href="#f2" id="id44" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+<td><p>入力不要<a class="footnote-reference brackets" href="#f1" id="id45" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>割引仕訳パターン</p></td>
+<td><p>1</p></td>
+<td><p>受入</p></td>
+<td><p>割引</p></td>
+<td><p>入力不要<a class="footnote-reference brackets" href="#f2" id="id46" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+<td><p>入力不要<a class="footnote-reference brackets" href="#f1" id="id47" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>2</p></td>
+<td></td>
+<td></td>
+<td><p>電子記録債権売却損</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>売却仕訳パターン</p></td>
+<td><p>1</p></td>
+<td><p>受入</p></td>
+<td><p>売却</p></td>
+<td><p>信託受託権</p></td>
+<td><p>入力不要<a class="footnote-reference brackets" href="#f1" id="id48" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>発生決済仕訳パターン</p></td>
+<td><p>1</p></td>
+<td><p>発生</p></td>
+<td><p>決済</p></td>
+<td><p>入力不要<a class="footnote-reference brackets" href="#f1" id="id49" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+<td><p>入力不要<a class="footnote-reference brackets" href="#f2" id="id50" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>不渡仕訳パターン</p></td>
+<td><p>1</p></td>
+<td><p>受入</p>
+<p>担保</p>
+</td>
+<td><p>不渡</p></td>
+<td><p>不渡電子記録債権</p></td>
+<td><p>入力不要<a class="footnote-reference brackets" href="#f1" id="id51" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id43">1</a>,<a role="doc-backlink" href="#id45">2</a>,<a role="doc-backlink" href="#id47">3</a>,<a role="doc-backlink" href="#id48">4</a>,<a role="doc-backlink" href="#id49">5</a>,<a role="doc-backlink" href="#id51">6</a>)</span>
+<p>電子記録債権台帳に登録している勘定科目が設定されます。</p>
+</aside>
+<aside class="footnote brackets" id="f2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id44">1</a>,<a role="doc-backlink" href="#id46">2</a>,<a role="doc-backlink" href="#id50">3</a>)</span>
+<p>社内口座管理に登録している勘定科目が設定されます。</p>
+</aside>
+</aside>
+</div></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>仕訳入力後、「SF12:パターン」ボタンを押下し、仕訳パターン登録ダイアログを表示します。</p></li>
+<li><p>任意のパターンコードを入力し、「F5:登録」ボタンを押下して仕訳パターンを登録してください。</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>仕訳パターンに設定する仕訳の詳細につきましては、Biz∫会計ヘルプ『Appendix＞基本仕様＞自動生成される仕訳や仕訳明細への値補完について』を参照下さい。</p>
+</div>
+</section>
+<section id="fms-cookbook-introduce-pattern-ec-jrnlptn-ec-do-parameter">
+<span id="id52"></span><h3>パラメータの設定<a class="headerlink" href="#fms-cookbook-introduce-pattern-ec-jrnlptn-ec-do-parameter" title="Link to this heading">¶</a></h3>
+<p>Biz∫会計管理者アカウントでポータル画面にログインし、対象モジュール「電子記録債権管理」のパラメータ(上記の「登録可能な仕訳パターン」)に登録した仕訳パターンのコードを設定してください。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  会計コア
+    マスタメンテナンス
+      基本設定管理
+        パラメータ管理
+</pre></div>
+</div>
+</li>
+</ul>
+<p>なお、未決済電子記録債権の移行を行う場合は、会社ダミーコードを設定します。<a class="reference internal" href="../../dtlshift/ermc.html#fms-cookbook-introduce-dtlshift-ermc"><span class="std std-ref">未決済電子記録債権の登録</span></a>が完了した後に仕訳パターンコードを設定してください。</p>
+</section>
+</section>
+<section id="fms-cookbook-introduce-pattern-ec-jrnlptn-ec-endconditions">
+<span id="id53"></span><h2>完了条件<a class="headerlink" href="#fms-cookbook-introduce-pattern-ec-jrnlptn-ec-endconditions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>登録した仕訳パターンコードが「パラメータ」検索画面の「電子記録債権管理」のパラメータ(上記の「登録可能な仕訳パターン」)に設定されていることを確認します。</p></li>
+<li><p>仕訳パターンマスタのプルーフリストを出力し、仕訳パターンコードが正しく登録されていることを確認します。</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../../index.html" >導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="../index.html" >仕訳の自動作成に使用する仕訳パターンを登録する</a></li>
+        <li class="nav-item nav-item-4 breadcrumbs-item"><a href="index.html" >電子記録債権管理</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">電子記録債権管理仕訳パターンの登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

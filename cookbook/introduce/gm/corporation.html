@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>グループ会社を変更する（既存導入会社の追加・除外） &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="REST API を使用した外部連携" href="../restApiIntegration/index.html" />
+    <link rel="prev" title="グループ連結オペレーション" href="index.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">グループ連結オペレーション</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">グループ会社を変更する（既存導入会社の追加・除外）</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="index.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="../restApiIntegration/index.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">逆引き(Cookbook)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../setting/index.html">開発/動作環境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spec/index.html">性能改善</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">ワークフロー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sms/index.html">Biz∫販売連携</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../invoice/index.html">請求書レイアウトの変更</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">導入</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../pattern/index.html">仕訳の自動作成に使用する仕訳パターンを登録する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../balanceshift/index.html">残高移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dtlshift/index.html">明細移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../batch/index.html">ジョブ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reportLayout.html">帳票レイアウトを使い分けるための設定を行う</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ef/index.html">着地見込管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gt/index.html">グループ会社間取引</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">グループ連結オペレーション</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">グループ会社を変更する（既存導入会社の追加・除外）</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-cookbook-introduce-gm-corporation-do-pattern">グループ連結対象の会社が追加された場合</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id41">グループ連結対象の会社がグループ会社から除外された場合</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../restApiIntegration/index.html">REST API を使用した外部連携</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-cookbook-introduce-gm-corporation">
+<span id="id39"></span><h1>グループ会社を変更する（既存導入会社の追加・除外）<a class="headerlink" href="#fms-cookbook-introduce-gm-corporation" title="Link to this heading">¶</a></h1>
+<p>グループ連結オペレーションのグループ会社に変更がある場合、グループ連結オペレーションを導入済の会社にて、法人の追加、または、グループ連結対象の法人グループからの解除を行います。</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>グループ連結対象法人のコード体系を統一するため、グループ会社の追加や除外が発生した場合はグループ会社すべてに反映してください。</p>
+</div>
+</div></blockquote>
+<section id="fms-cookbook-introduce-gm-corporation-do-pattern">
+<span id="id40"></span><h2>グループ連結対象の会社が追加された場合<a class="headerlink" href="#fms-cookbook-introduce-gm-corporation-do-pattern" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>追加されたグループ会社を法人として登録し、グループ連結対象となる法人グループに所属させます。</p>
+<p>手順については、<a class="reference internal" href="../../../introduce/module/gt/corporation.html#fms-introduce-module-gt-corporation-do-pattern-corporation"><span class="std std-ref">法人情報登録</span></a>を参照してください。</p>
+</li>
+<li><p>追加されたグループ会社が、導入済の会社の取引先マスタとして既に登録されている場合、その取引先コードに設定している法人コードを変更します。</p>
+<p>手順については、<a class="reference internal" href="../../../introduce/module/gt/corporation.html#fms-introduce-module-gt-corporation-do-pattern-customer"><span class="std std-ref">取引先登録</span></a>を参照し、法人コードを変更してください。</p>
+</li>
+</ul>
+</section>
+<section id="id41">
+<h2>グループ連結対象の会社がグループ会社から除外された場合<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>該当の法人コードをグループ会社の法人グループから解除します。</p>
+<p>手順については、イントラマート社提供のマニュアル<a class="reference external" href="http://www.intra-mart.jp/document/library/iap/public/im_master/im_master_administrator_guide/texts/basic_guide/basic_guide_8.html">IM-共通マスタ 管理者操作ガイド -&gt;法人グループ</a>の「所属を解除する場合」を参照してください。</p>
+</li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >グループ連結オペレーション</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">グループ会社を変更する（既存導入会社の追加・除外）</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
