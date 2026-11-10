@@ -1,0 +1,48 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_tran:
+
+===================================================
+トランザクション一括取込
+===================================================
+
+.. toctree::
+   :maxdepth: 2
+   
+   jrnl_deal
+   reconcile_request
+   bank_deal
+   fund_xfer
+   bill
+   ermc
+   budget
+   expected
+   asset
+   asset_history
+   plan
+   impairment
+   appendix16_history
+   contact
+   dissolutioncontact
+   project_budget
+   actual_operation
+
+.. only:: internal
+
+   jrnl_deal            :仕訳／取引一括取込
+   reconcile_request    :消込依頼一括取込
+   bank_deal            :銀行ファイル取込
+   fund_xfer            :資金移動一括取込
+   bill                 :手形一括取込
+   ermc                 :電子記録債権一括取込
+   budget               :予算一括取込
+   expected             :見込一括取込
+   asset                :資産一括取込
+   asset_history        :資産履歴一括取込
+   plan                 :設備投資資産一括取込
+   impairment           :減損一括取込
+   appendix16_history   :別表十六履歴一括取込
+   contact              :契約一括取込
+   dissolutioncontact   :中途解約一括取込
+   project_budget       :プロジェクト計画
+   actual_operation     :稼働実績

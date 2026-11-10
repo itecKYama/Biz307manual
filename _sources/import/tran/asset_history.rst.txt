@@ -1,0 +1,241 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-asset_history:
+
+===================================================
+資産履歴一括取込
+===================================================
+資産履歴に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-asset_history-acquisition:
+
+資産履歴一括取込（登録）
+===================================================
+資産履歴の登録を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        更新処理
+          資産履歴一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-dcd-depreciation_calculate_define`
+       - 
+     * - :ref:`FMS_import_mst-declare_tax_office-declare_tax_office`
+       - 
+     * - :ref:`FMS_import_mst-ksd-kind_structure_detail`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-allocate-allocate`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 資産履歴一括取込（登録）
+       - :download:`ダウンロード<./download/assetAcquisitionHistory_itm.xlsx>`
+       - :download:`ダウンロード<./download/assetAcquisitionHistory_sample.xlsx>`
+       - :download:`ダウンロード<./download/assetAcquisitionHistory.csv>`
+       - 申請取引区分に「一括登録取込」を選択して登録
+
+.. _FMS_import_mst-asset_history-shift:
+
+資産履歴一括取込（移動）
+===================================================
+資産履歴の移動を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        更新処理
+          資産履歴一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-declare_tax_office-declare_tax_office`
+       - 
+     * - :ref:`FMS_import_mst-ksd-kind_structure_detail`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 資産履歴一括取込（移動）
+       - :download:`ダウンロード<./download/assetShiftHistory_itm.xlsx>`
+       - :download:`ダウンロード<./download/assetShiftHistory_sample.xlsx>`
+       - :download:`ダウンロード<./download/assetShiftHistory.csv>`
+       - 申請取引区分に「一括移動取込」を選択して登録
+
+.. _FMS_import_mst-asset_history-retirement:
+
+資産履歴一括取込（除却）
+===================================================
+資産履歴の除却を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        更新処理
+          資産履歴一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-declare_tax_office-declare_tax_office`
+       - 
+     * - :ref:`FMS_import_mst-ksd-kind_structure_detail`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 資産履歴一括取込（除却）
+       - :download:`ダウンロード<./download/assetRetirementHistory_itm.xlsx>`
+       - :download:`ダウンロード<./download/assetRetirementHistory_sample.xlsx>`
+       - :download:`ダウンロード<./download/assetRetirementHistory.csv>`
+       - 申請取引区分に「一括除却取込」を選択して登録
+
+.. _FMS_import_mst-asset_history-sale:
+
+資産履歴一括取込（売却）
+===================================================
+資産履歴の売却を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        更新処理
+          資産履歴一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-declare_tax_office-declare_tax_office`
+       - 
+     * - :ref:`FMS_import_mst-ksd-kind_structure_detail`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 資産履歴一括取込（売却）
+       - :download:`ダウンロード<./download/assetSaleHistory_itm.xlsx>`
+       - :download:`ダウンロード<./download/assetSaleHistory_sample.xlsx>`
+       - :download:`ダウンロード<./download/assetSaleHistory.csv>`
+       - 申請取引区分に「一括売却取込」を選択して登録
+
+.. _FMS_import_mst-asset_history-retirement_obligations:
+
+資産履歴一括取込（除去債務）
+===================================================
+資産履歴の除去債務を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        更新処理
+          資産履歴一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 資産履歴一括取込（除去債務）
+       - :download:`ダウンロード<./download/assetRetirementObligationsHistory_itm.xlsx>`
+       - :download:`ダウンロード<./download/assetRetirementObligationsHistory_sample.xlsx>`
+       - :download:`ダウンロード<./download/assetRetirementObligationsHistory.csv>`
+       - 申請取引区分に「一括除去債務取込」を選択して登録

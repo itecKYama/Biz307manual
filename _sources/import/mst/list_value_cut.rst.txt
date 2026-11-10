@@ -1,0 +1,39 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-list_value_cut:
+
+===================================================
+リスト値除外
+===================================================
+リスト値除外に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-list_value_cut-list_value_cut:
+
+リスト値除外
+===================================================
+リスト値除外を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            リスト値除外登録
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - リスト値除外
+       - :download:`ダウンロード<./download/listValueCutMaintenance_itm.xlsx>`
+       - :download:`ダウンロード<./download/listValueCutMaintenance_sample.xlsx>`
+       - :download:`ダウンロード<./download/listValueCutMaintenance.csv>`
+       - 

@@ -1,0 +1,53 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-actual_operation:
+
+===================================================
+稼働実績
+===================================================
+稼働実績に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-actual_operation-actual_operation:
+
+稼働実績取込
+===================================================
+稼働実績を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      プロジェクト原価管理
+        労務費・間接費管理
+          稼働実績取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-project-project`
+       -
+     * - :ref:`FMS_import_mst-department-dept`
+       -
+     * - :ref:`FMS_import_mst-rank-rank`
+       -
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 稼働実績
+       - :download:`ダウンロード<./download/actualOperation_itm.xlsx>`
+       - :download:`ダウンロード<./download/actualOperation_sample.xlsx>`
+       - :download:`ダウンロード<./download/actualOperation.csv>`
+       - ファイル形式はCSVのみとなります。

@@ -1,0 +1,55 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-dissolutioncontact:
+
+===================================================
+中途解約一括取込
+===================================================
+契約に関する中途解約一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-contact-dissolutioncontact_entry:
+
+中途解約一括取込
+===================================================
+契約を一括で解約するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      契約管理・リース管理
+        取引入力
+          中途解約
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - 契約種別マスタ
+       - 
+     * - 契約決済方法マスタ
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 中途解約一括取込
+       - :download:`ダウンロード<./download/dissolutionExecution_itm.xlsx>`
+       - :download:`ダウンロード<./download/dissolutionExecution_sample.xlsx>`
+       - :download:`ダウンロード<./download/dissolutionExecution.csv>`
+       - 

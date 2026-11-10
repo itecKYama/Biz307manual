@@ -1,0 +1,50 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-ovrss_rmttnc_report_item_config:
+
+===================================================
+海外送金出力項目定義
+===================================================
+海外送金出力項目定義の一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-ovrss_rmttnc_report_item_config-ovrss_rmttnc_report_item_config:
+
+海外送金出力項目定義
+===================================================
+海外送金出力項目定義を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      債務管理
+        支払管理
+          海外送金出力項目定義
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-bank-bank`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 海外送金出力項目定義
+       - :download:`ダウンロード<./download/overseasRemittanceReportItemConfig_itm.xlsx>`
+       - :download:`ダウンロード<./download/overseasRemittanceReportItemConfig_sample.xlsx>`
+       - :download:`ダウンロード<./download/overseasRemittanceReportItemConfig.csv>`
+       - 
+       

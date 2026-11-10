@@ -1,0 +1,55 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-tax:
+
+===================================================
+間接税
+===================================================
+間接税に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-tax-indirect_tax:
+
+間接税
+===================================================
+間接税を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      マスタ管理
+        間接税
+          間接税管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 
+       - :ref:`FMS_import_mst-field-field`
+     * - 
+       - :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+     * - 
+       - :ref:`FMS_import_mst-lc_jrnl-contract_class_jrnl`
+     * - 
+       - :ref:`FMS_import_mst-jc_intface-labor_jrnl`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 間接税
+       - :download:`ダウンロード<./download/consumptionTax_itm.xlsx>`
+       - :download:`ダウンロード<./download/consumptionTax_sample.xlsx>`
+       - :download:`ダウンロード<./download/consumptionTax.csv>`
+       - 

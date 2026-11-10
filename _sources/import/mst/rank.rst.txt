@@ -1,0 +1,49 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-rank:
+
+===================================================
+ランク情報
+===================================================
+ランク情報に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-rank-rank:
+
+ランク情報
+===================================================
+ランク情報を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      プロジェクト原価管理
+        マスタメンテナンス
+          ランク情報管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - ランク区分
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - ランク情報
+       - :download:`ダウンロード<./download/rankInformation_itm.xlsx>`
+       - :download:`ダウンロード<./download/rankInformation_sample.xlsx>`
+       - :download:`ダウンロード<./download/rankInformation.csv>`
+       - 

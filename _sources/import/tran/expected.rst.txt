@@ -1,0 +1,59 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-expected:
+
+===================================================
+見込一括取込
+===================================================
+見込一括取込に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-expected-expected:
+
+見込一括取込
+===================================================
+見込を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      管理会計
+        着地見込管理
+          見込一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+     * - 見込明細
+       - :download:`ダウンロード<./download/expectation_itm.xlsx>`
+       - :download:`ダウンロード<./download/expectation_sample.xlsx>`
+       - :download:`ダウンロード<./download/expectation.csv>`

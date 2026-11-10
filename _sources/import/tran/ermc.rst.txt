@@ -1,0 +1,114 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-ermc:
+
+===================================================
+電子記録債権一括取込
+===================================================
+電子記録債権に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-ermc-receivable:
+
+電子債権一括取込
+===================================================
+電子債権を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      電子記録債権管理
+        電子債権管理
+          電子債権登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+     * - :ref:`FMS_import_mst-bank-bank`
+       - 
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 電子債権一括取込
+       - :download:`ダウンロード<./download/ermcMaintenance_ermcReceivableSearch_entry_itm.xlsx>`
+       - :download:`ダウンロード<./download/ermcMaintenance_ermcReceivableSearch_entry_sample.xlsx>`
+       - :download:`ダウンロード<./download/ermcMaintenance_ermcReceivableSearch_entry.csv>`
+       - 
+
+.. _FMS_import_mst-ermc-payable:
+
+電子債務一括取込
+===================================================
+電子債務を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      電子記録債権管理
+        電子債務管理
+          電子債務登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+     * - :ref:`FMS_import_mst-bank-bank`
+       - 
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 電子債務一括取込
+       - :download:`ダウンロード<./download/ermcMaintenance_ermcPayableSearch_entry_itm.xlsx>`
+       - :download:`ダウンロード<./download/ermcMaintenance_ermcPayableSearch_entry_sample.xlsx>`
+       - :download:`ダウンロード<./download/ermcMaintenance_ermcPayableSearch_entry.csv>`
+       - 

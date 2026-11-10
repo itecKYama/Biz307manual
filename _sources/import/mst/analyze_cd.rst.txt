@@ -1,0 +1,80 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-analyze_cd:
+
+===================================================
+分析コード関連
+===================================================
+分析コードに関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-analyze_cd-analyze:
+
+分析コード
+===================================================
+分析コードを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      マスタ管理
+        分析コード
+          分析コード管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 
+       - :ref:`FMS_import_mst-field-field`
+     * - 
+       - :ref:`FMS_import_mst-allocate-allocate`
+     * - 
+       - :ref:`FMS_import_mst-allocate-ex_allocate`
+     * - 
+       - :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+     * - 
+       - :ref:`FMS_import_mst-lc_jrnl-contract_class_jrnl`
+     * - 
+       - 分析フィールド設定
+     * - 
+       - :ref:`FMS_import_mst-project-project`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 分析コード種別
+       - :download:`ダウンロード<./download/analysisCode_itm.xlsx>`
+       - :download:`ダウンロード<./download/analysisCode_sample.xlsx>`
+       - :download:`ダウンロード<./download/analyzeClass.csv>`
+       - 
+     * - 分析コード [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/analysisCode.csv>`
+       - 「分析コード」ボタンより遷移する「分析コード検索」画面で登録
+     * - 分析コード体系 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/analyzeSys.csv>`
+       - 「分析体系」ボタンより遷移する「分析体系検索」画面で登録
+     * - 分析コード階層 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/analyzeHierarchy.csv>`
+       - 「分析体系検索」画面の「階層」ボタンより遷移する「分析コード階層登録」画面で登録
+
+  .. rubric:: 脚注
+
+  .. [#f1] 項目説明およびサンプルは「分析コード種別」に含まれます。

@@ -1,0 +1,220 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-corp_cstm:
+
+===================================================
+法人・取引先
+===================================================
+法人・取引先に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-corp_cstm-corporation:
+
+法人・法人グループ
+===================================================
+法人と法人グループを登録するメニューは以下の通りとなります。（テナント管理者でログインします）
+
+* メニュー ::
+
+    テナント管理
+      ジョブ管理
+        ジョブネット設定
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 
+       - :ref:`FMS_import_mst-corp_cstm-customer`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 法人グループ
+       - :download:`ダウンロード<./download/corporationGroup_itm.xlsx>`
+       - :download:`ダウンロード<./download/corporationGroup_sample.xlsx>`
+       - :download:`ダウンロード<./download/corporationGroup.csv>`
+       - 
+     * - 法人グループ内包 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/corporationGrpIncAth.csv>`
+       - 
+     * - 法人グループ所属 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/corporationGrpAth.csv>`
+       - 
+     * - 法人
+       - :download:`ダウンロード<./download/corporation_itm.xlsx>`
+       - :download:`ダウンロード<./download/corporation_sample.xlsx>`
+       - :download:`ダウンロード<./download/corporation.csv>`
+       - 
+
+  .. rubric:: 脚注
+
+  .. [#f1] 項目説明およびサンプルは「法人」に含まれます。
+
+.. _FMS_import_mst-corp_cstm-customer:
+
+取引先
+===================================================
+取引先を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            取引先マスタ管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-corporation`
+       - :ref:`FMS_import_mst-corp_cstm-income_payment_ctrl`
+     * - :ref:`FMS_import_mst-department-dept`
+       - :ref:`FMS_import_mst-field-field`
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+     * - :ref:`FMS_import_mst-bank-bank`
+       - 契約者番号
+     * - 
+       - :ref:`FMS_import_mst-project-project`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 取引先
+       - :download:`ダウンロード<./download/customerMaintenance_itm.xlsx>`
+       - :download:`ダウンロード<./download/customerMaintenance_sample.xlsx>`
+       - :download:`ダウンロード<./download/customerMaintenance.csv>`
+       - 
+     * - 取引先管理組織 [#f2]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/customerMaintenance_mngDepartment.csv>`
+       - 
+     * - 取引先サイト [#f2]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/customerMaintenance_sight.csv>`
+       - 
+     * - 取引先口座 [#f2]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/customerMaintenance_account.csv>`
+       - 
+
+  .. rubric:: 脚注
+
+  .. [#f2] 項目説明およびサンプルは「取引先」に含まれます。
+
+.. _FMS_import_mst-corp_cstm-income_payment_ctrl:
+
+取引先入金支払手段制御
+===================================================
+取引先入金支払手段制御を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            入金支払手段制御
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 取引先入金支払手段制御
+       - :download:`ダウンロード<./download/incomePaymentInstrumentControl_itm.xlsx>`
+       - :download:`ダウンロード<./download/incomePaymentInstrumentControl_sample.xlsx>`
+       - :download:`ダウンロード<./download/incomePaymentInstrumentControl.csv>`
+       - 
+
+.. _FMS_import_mst-corp_cstm-invoice_data_interface_department:
+
+請求データ連携用組織情報
+===================================================
+請求データ連携用組織情報を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            請求データ連携用組織情報登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 請求データ連携用組織情報
+       - :download:`ダウンロード<./download/invoiceDataInterfaceDepartment_itm.xlsx>`
+       - :download:`ダウンロード<./download/invoiceDataInterfaceDepartment_sample.xlsx>`
+       - :download:`ダウンロード<./download/invoiceDataInterfaceDepartment.csv>`
+       - 

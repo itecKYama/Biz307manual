@@ -1,0 +1,38 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-sp_depreciation:
+
+===================================================
+特別償却
+===================================================
+特別償却に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-sp_depreciation-special_depreciation:
+
+特別償却
+===================================================
+特別償却を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        マスタメンテナンス
+          特別償却管理
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 特別償却
+       - :download:`ダウンロード<./download/specialDepreciation_itm.xlsx>`
+       - :download:`ダウンロード<./download/specialDepreciation_sample.xlsx>`
+       - :download:`ダウンロード<./download/specialDepreciation.csv>`
+       - 

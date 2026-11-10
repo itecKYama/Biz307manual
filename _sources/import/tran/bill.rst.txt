@@ -1,0 +1,112 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-bill:
+
+===================================================
+手形一括取込
+===================================================
+手形に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-bill-receivable:
+
+受取手形一括取込
+===================================================
+受取手形を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      手形管理
+        受取手形管理
+          受取手形登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+     * - :ref:`FMS_import_mst-bank-bank`
+       - 
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 受取手形一括取込
+       - :download:`ダウンロード<./download/billMaintenance_billReceivableSearch_entry_itm.xlsx>`
+       - :download:`ダウンロード<./download/billMaintenance_billReceivableSearch_entry_sample.xlsx>`
+       - :download:`ダウンロード<./download/billMaintenance_billReceivableSearch_entry.csv>`
+       - 
+
+.. _FMS_import_mst-bill-payable:
+
+支払手形一括取込
+===================================================
+支払手形を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      手形管理
+        支払手形管理
+          支払手形登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 支払手形一括取込
+       - :download:`ダウンロード<./download/billMaintenance_billPayableSearch_entry_itm.xlsx>`
+       - :download:`ダウンロード<./download/billMaintenance_billPayableSearch_entry_sample.xlsx>`
+       - :download:`ダウンロード<./download/billMaintenance_billPayableSearch_entry.csv>`
+       - 

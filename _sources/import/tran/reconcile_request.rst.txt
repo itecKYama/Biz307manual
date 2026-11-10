@@ -1,0 +1,49 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-reconcile_request:
+
+===================================================
+消込依頼一括取込
+===================================================
+消込依頼に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-reconcile_request-reconcile_request:
+
+消込依頼一括取込
+===================================================
+消込依頼を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      債権管理
+        消込管理
+          消込依頼データ取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 消込依頼一括取込
+       - :download:`ダウンロード<./download/reconcileRequest_itm.xlsx>`
+       - :download:`ダウンロード<./download/reconcileRequest_sample.xlsx>`
+       - :download:`ダウンロード<./download/reconcileRequest.csv>`
+       - 

@@ -1,0 +1,49 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-impairment:
+
+===================================================
+減損一括取込
+===================================================
+減損に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-impairment-detail:
+
+減損明細一括取込
+===================================================
+減損明細を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        減損管理
+          減損グループ管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 減損グループ
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 減損明細一括取込
+       - :download:`ダウンロード<./download/impairmentDetail_itm.xlsx>`
+       - :download:`ダウンロード<./download/impairmentDetail_sample.xlsx>`
+       - :download:`ダウンロード<./download/impairmentDetail.csv>`
+       - 

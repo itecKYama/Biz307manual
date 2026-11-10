@@ -1,0 +1,80 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-contact:
+
+===================================================
+契約一括取込
+===================================================
+契約に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-contact-contact_entry:
+
+契約一括取込
+===================================================
+契約を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      契約管理・リース管理
+        取引入力
+          契約登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-lc_jrnl-contract_class_jrnl`
+       - 
+     * - 契約種別マスタ
+       - 
+     * - 契約決済方法マスタ
+       - 
+     * - :ref:`FMS_import_mst-declare_tax_office-declare_tax_office`
+       - 
+     * - :ref:`FMS_import_mst-ksd-kind_structure_detail`
+       - 
+     * - :ref:`FMS_import_mst-fa_jrnl_set-fa_jrnl_set`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 契約一括取込
+       - :download:`ダウンロード<./download/contractEntry_itm.xlsx>`
+       - :download:`ダウンロード<./download/contractEntry_sample.xlsx>`
+       - :download:`ダウンロード<./download/contractEntry.csv>`
+       - 
+     * - 契約資産一括取込
+       - :download:`ダウンロード<./download/contractAssetEntry_itm.xlsx>`
+       - :download:`ダウンロード<./download/contractAssetEntry_sample.xlsx>`
+       - :download:`ダウンロード<./download/contractAssetEntry.csv>`
+       - 

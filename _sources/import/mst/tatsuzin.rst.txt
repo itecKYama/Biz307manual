@@ -1,0 +1,73 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-tatsuzin:
+
+===================================================
+達人連携マスタ
+===================================================
+達人シリーズにデータ連携するためのマスタに関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-tatsuzin-project:
+
+達人連携マスタ
+===================================================
+達人連携マスタを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        達人連携
+          達人連携マスタ登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-account`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - :ref:`FMS_import_mst-declare_tax_office`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 8, 8, 8, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 法人税の達人（決算書用）
+       - :download:`ダウンロード<./download/tatsuzinCorpTaxFinance_itm.xlsx>`
+       - :download:`ダウンロード<./download/tatsuzinCorpTaxFinance_sample.xlsx>`
+       - :download:`ダウンロード<./download/tatsuzinCorpTaxFinance.csv>`
+       - 
+     * - 内訳概況書の達人（財務会計用[内訳書]）
+       - :download:`ダウンロード<./download/tatsuzinAccountBreakdown_itm.xlsx>`
+       - :download:`ダウンロード<./download/tatsuzinAccountBreakdown_sample.xlsx>`
+       - :download:`ダウンロード<./download/tatsuzinAccountBreakdown.csv>`
+       - 
+     * - 消費税の達人（財務会計用）
+       - :download:`ダウンロード<./download/tatsuzinIndirectTax_itm.xlsx>`
+       - :download:`ダウンロード<./download/tatsuzinIndirectTax_sample.xlsx>`
+       - :download:`ダウンロード<./download/tatsuzinIndirectTax.csv>`
+       - 
+     * - 電子申告の達人（法人情報）
+       - :download:`ダウンロード<./download/tatsuzinDeclareRptCorp_itm.xlsx>`
+       - :download:`ダウンロード<./download/tatsuzinDeclareRptCorp_sample.xlsx>`
+       - :download:`ダウンロード<./download/tatsuzinDeclareRptCorp.csv>`
+       - 
+     * - 電子申告の達人（事業所情報）
+       - :download:`ダウンロード<./download/tatsuzinDeclareRptOfc_itm.xlsx>`
+       - :download:`ダウンロード<./download/tatsuzinDeclareRptOfc_sample.xlsx>`
+       - :download:`ダウンロード<./download/tatsuzinDeclareRptOfc.csv>`
+       - 

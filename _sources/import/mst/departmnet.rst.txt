@@ -1,0 +1,320 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-department:
+
+===================================================
+組織関連
+===================================================
+組織に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-department-dept:
+
+組織
+===================================================
+組織を登録するメニューは以下の通りとなります。（テナント管理者でログインします）
+
+* メニュー ::
+
+    テナント管理
+      ジョブ管理
+        ジョブネット設定
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-user-user`
+       - :ref:`FMS_import_mst-department-dept_group`
+     * - 
+       - :ref:`FMS_import_mst-department-cmp_account`
+     * - 
+       - :ref:`FMS_import_mst-department-dept_upd`
+     * - 
+       - :ref:`FMS_import_mst-corp_cstm-customer`
+     * - 
+       - :ref:`FMS_import_mst-field-field`
+     * - 
+       - :ref:`FMS_import_mst-allocate-allocate`
+     * - 
+       - :ref:`FMS_import_mst-allocate-ex_allocate`
+     * - 
+       - :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+     * - 
+       - :ref:`FMS_import_mst-lc_jrnl-contract_class_jrnl`
+     * - 
+       - 本支店仕訳情報
+     * - 
+       - 契約者番号
+     * - 
+       - :ref:`FMS_import_mst-project-project`
+     * - 
+       - 単金
+     * - 
+       - :ref:`FMS_import_mst-jc_intface-labor_jrnl`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 組織
+       - :download:`ダウンロード<./download/department_itm.xlsx>`
+       - :download:`ダウンロード<./download/department_sample.xlsx>`
+       - :download:`ダウンロード<./download/department.csv>`
+       - 
+     * - 組織所属 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/departmentAth.csv>`
+       - 
+     * - 組織内包 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/departmentIncAth.csv>`
+       - 
+
+  .. rubric:: 脚注
+
+  .. [#f1] 項目説明およびサンプルは「組織」に含まれます。
+
+.. _FMS_import_mst-department-dept_group:
+
+組織グループ
+===================================================
+組織グループを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      マスタ管理
+        組織グループ
+          組織グループ管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-dept`
+       - :ref:`FMS_import_mst-user-auth_group`
+     * - 
+       - :ref:`FMS_import_mst-allocate-allocate`
+     * - 
+       - 本支店仕訳情報
+     * -
+       - :ref:`FMS_import_mst-department-grp-dept_upd`
+     * - 
+       - :ref:`FMS_import_mst-project-project`
+     * - 
+       - 間接費組織グループ
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 組織グループ
+       - :download:`ダウンロード<./download/departmentGroup_itm.xlsx>`
+       - :download:`ダウンロード<./download/departmentGroup_sample.xlsx>`
+       - :download:`ダウンロード<./download/departmentGroup.csv>`
+       - 
+     * - 組織グループ所属 [#f2]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/departmentGroupAth.csv>`
+       - 「所属」ボタンより遷移する「組織グループ所属検索」画面で登録
+
+  .. rubric:: 脚注
+
+  .. [#f2] 項目説明およびサンプルは「組織グループ」に含まれます。
+
+.. _FMS_import_mst-department-dept_upd:
+
+組織コード変更情報
+===================================================
+組織コード変更情報を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      業務共通
+        組織変更
+          組織変更情報登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 組織コード変更情報
+       - :download:`ダウンロード<./download/dept_upd_itm.xlsx>`
+       - :download:`ダウンロード<./download/dept_upd_sample.xlsx>`
+       - :download:`ダウンロード<./download/dept_upd.csv>`
+       - 
+
+.. _FMS_import_mst-department-grp-dept_upd:
+
+組織グループコード変更情報
+===================================================
+組織グループコード変更情報を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      業務共通
+        組織変更
+          組織変更情報登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-dept_group`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 組織グループコード変更情報
+       - :download:`ダウンロード<./download/dept_grp_upd_itm.xlsx>`
+       - :download:`ダウンロード<./download/dept_grp_upd_sample.xlsx>`
+       - :download:`ダウンロード<./download/dept_grp_upd.csv>`
+       - 
+
+.. _FMS_import_mst-organizational_change-by-project:
+
+プロジェクト別組織コード変更情報
+===================================================
+プロジェクト別組織コード変更情報を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      プロジェクト原価管理
+        組織変更
+          プロジェクト別組織変更実行
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-project-project`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 組織グループコード変更情報
+       - :download:`ダウンロード<./download/organizationalChangeByProject_itm.xlsx>`
+       - :download:`ダウンロード<./download/organizationalChangeByProject_sample.xlsx>`
+       - :download:`ダウンロード<./download/organizationalChangeByProject.csv>`
+       - 
+
+.. _FMS_import_mst-department-cmp_account:
+
+社内口座
+===================================================
+社内口座を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      マスタ管理
+        口座
+          社内口座管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-account-account`
+       - :ref:`FMS_import_mst-corp_cstm-customer`
+     * - :ref:`FMS_import_mst-department-dept`
+       - :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+     * - :ref:`FMS_import_mst-bank-bank`
+       - 
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 社内口座
+       - :download:`ダウンロード<./download/companyBankAccount_itm.xlsx>`
+       - :download:`ダウンロード<./download/companyBankAccount_sample.xlsx>`
+       - :download:`ダウンロード<./download/companyBankAccount.csv>`
+       - 

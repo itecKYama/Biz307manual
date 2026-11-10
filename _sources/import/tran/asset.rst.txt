@@ -1,0 +1,269 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-asset:
+
+===================================================
+資産一括取込
+===================================================
+資産に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-asset-acquisition:
+
+資産一括取込（登録）
+===================================================
+資産の登録を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        更新処理
+          資産一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-dcd-depreciation_calculate_define`
+       - 
+     * - :ref:`FMS_import_mst-declare_tax_office-declare_tax_office`
+       - 
+     * - :ref:`FMS_import_mst-ksd-kind_structure_detail`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-sp_depreciation-special_depreciation`
+       - 
+     * - :ref:`FMS_import_mst-allocate-allocate`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 資産一括取込（登録）
+       - :download:`ダウンロード<./download/assetAcquisition_itm.xlsx>`
+       - :download:`ダウンロード<./download/assetAcquisition_sample.xlsx>`
+       - :download:`ダウンロード<./download/assetAcquisition.csv>`
+       - 申請取引区分に「一括登録取込」を選択して登録
+
+.. _FMS_import_mst-asset-modify:
+
+資産一括取込（変更）
+===================================================
+資産の変更を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        更新処理
+          資産一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-dcd-depreciation_calculate_define`
+       - 
+     * - :ref:`FMS_import_mst-declare_tax_office-declare_tax_office`
+       - 
+     * - :ref:`FMS_import_mst-ksd-kind_structure_detail`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-sp_depreciation-special_depreciation`
+       - 
+     * - :ref:`FMS_import_mst-allocate-allocate`
+       - 
+     * - :ref:`FMS_import_mst-fa_jrnl_set-fa_jrnl_set`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 資産一括取込（変更）
+       - :download:`ダウンロード<./download/assetModify_itm.xlsx>`
+       - :download:`ダウンロード<./download/assetModify_sample.xlsx>`
+       - :download:`ダウンロード<./download/assetModify.csv>`
+       - 申請取引区分に「一括変更取込」を選択して登録
+
+.. _FMS_import_mst-asset-shift:
+
+資産一括取込（移動）
+===================================================
+資産の移動を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        更新処理
+          資産一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-declare_tax_office-declare_tax_office`
+       - 
+     * - :ref:`FMS_import_mst-ksd-kind_structure_detail`
+       - 
+     * - :ref:`FMS_import_mst-allocate-allocate`
+       - 
+     * - :ref:`FMS_import_mst-fa_jrnl_set-fa_jrnl_set`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 資産一括取込（移動）
+       - :download:`ダウンロード<./download/assetShift_itm.xlsx>`
+       - :download:`ダウンロード<./download/assetShift_sample.xlsx>`
+       - :download:`ダウンロード<./download/assetShift.csv>`
+       - 申請取引区分に「一括移動取込」を選択して登録
+
+.. _FMS_import_mst-asset-retirement:
+
+資産一括取込（除却）
+===================================================
+資産の除却を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        更新処理
+          資産一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-fa_jrnl_set-fa_jrnl_set`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 資産一括取込（除却）
+       - :download:`ダウンロード<./download/assetRetirement_itm.xlsx>`
+       - :download:`ダウンロード<./download/assetRetirement_sample.xlsx>`
+       - :download:`ダウンロード<./download/assetRetirement.csv>`
+       - 申請取引区分に「一括除却取込」を選択して登録
+
+.. _FMS_import_mst-asset-sale:
+
+資産一括取込（売却）
+===================================================
+資産の売却を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        更新処理
+          資産一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - :ref:`FMS_import_mst-fa_jrnl_set-fa_jrnl_set`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 資産一括取込（売却）
+       - :download:`ダウンロード<./download/assetSale_itm.xlsx>`
+       - :download:`ダウンロード<./download/assetSale_sample.xlsx>`
+       - :download:`ダウンロード<./download/assetSale.csv>`
+       - 申請取引区分に「一括売却取込」を選択して登録

@@ -1,0 +1,57 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-budget:
+
+===================================================
+予算一括取込
+===================================================
+予算に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-budget-budget:
+
+予算一括取込
+===================================================
+予算を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      管理会計
+        予算管理
+          予算取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 予算一括取込
+       - :download:`ダウンロード<./download/budget_itm.xlsx>`
+       - :download:`ダウンロード<./download/budget_sample.xlsx>`
+       - :download:`ダウンロード<./download/budget.csv>`
+       - 

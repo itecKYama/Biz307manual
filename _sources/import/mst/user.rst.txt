@@ -1,0 +1,209 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-user:
+
+===================================================
+ユーザ関連
+===================================================
+ユーザに関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-user-user:
+
+ユーザ
+===================================================
+ユーザを登録するメニューは以下の通りとなります。（テナント管理者でログインします）
+
+* メニュー ::
+
+    テナント管理
+      ジョブ管理
+        ジョブネット設定
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 
+       - :ref:`FMS_import_mst-user-access`
+     * - 
+       - :ref:`FMS_import_mst-user-auth_group`
+     * - 
+       - :ref:`FMS_import_mst-user-emp_account`
+     * - 
+       - :ref:`FMS_import_mst-department-dept`
+     * - 
+       - :ref:`FMS_import_mst-field-field`
+     * - 
+       - :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - ユーザ
+       - :download:`ダウンロード<./download/user_itm.xlsx>`
+       - :download:`ダウンロード<./download/user_sample.csv>`
+       - :download:`ダウンロード<./download/user.csv>`
+       - 
+
+.. _FMS_import_mst-user-access:
+
+アクセスセキュリティ情報
+===================================================
+アクセスセキュリティを登録するメニューは以下の通りとなります。（テナント管理者でログインします）
+
+* メニュー ::
+
+    テナント管理
+      ジョブ管理
+        ジョブネット設定
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+     * - ロール
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - アクセスセキュリティ情報
+       - :download:`ダウンロード<./download/accessSecurity_itm.xlsx>`
+       - :download:`ダウンロード<./download/accessSecurity_sample.csv>`
+       - :download:`ダウンロード<./download/accessSecurity.csv>`
+       - 
+
+.. _FMS_import_mst-user-auth_group:
+
+権限グループ
+===================================================
+権限グループを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      システム管理
+        権限グループ
+          権限グループ管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+     * - :ref:`FMS_import_mst-department-dept_group`
+       - 
+     * - 権限
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 権限グループ
+       - :download:`ダウンロード<./download/authPrivGroup_itm.xlsx>`
+       - :download:`ダウンロード<./download/authPrivGroup_sample.xlsx>`
+       - :download:`ダウンロード<./download/authPrivGroup.csv>`
+       - 
+     * - 権限グループ所属 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/authPrivPrivGrpAth.csv>`
+       - 「所属」ボタンより遷移する「権限グループ所属検索」画面で登録
+     * - ユーザ権限グループ所属 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/authPrivGrpAth.csv>`
+       - 「ユーザ」ボタンより遷移する「ユーザ権限グループ所属検索」画面で登録
+     * - 組織データアクセス制御 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/authDepartGrpAccess.csv>`
+       - 「組織」ボタンより遷移する「組織データアクセス制御検索」画面で登録
+
+  .. rubric:: 脚注
+
+  .. [#f1] 項目説明およびサンプルは「権限グループ」に含まれます。
+
+.. _FMS_import_mst-user-emp_account:
+
+従業員口座
+===================================================
+従業員口座を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      マスタ管理
+        口座
+          従業員口座管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+     * - :ref:`FMS_import_mst-bank-bank`
+       - 
+     * - :ref:`FMS_import_mst-department-dept_group`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 従業員口座
+       - :download:`ダウンロード<./download/employeeBankAccount_itm.xlsx>`
+       - :download:`ダウンロード<./download/employeeBankAccount_sample.xlsx>`
+       - :download:`ダウンロード<./download/employeeBankAccount.csv>`
+       - 

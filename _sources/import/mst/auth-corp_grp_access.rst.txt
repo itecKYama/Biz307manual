@@ -1,0 +1,51 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-auth-corp_grp_access:
+
+===================================================
+法人データアクセス制御
+===================================================
+法人データアクセス制御に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-auth-corp_grp_access-auth-corp_grp_access:
+
+法人データアクセス制御
+===================================================
+法人データアクセス制御を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      グループ連結オペレーション
+        マスタメンテナンス
+          法人データアクセス制御管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 法人グループ( :ref:`FMS_import_mst-corp_cstm-corporation` )
+       - 
+     * - :ref:`FMS_import_mst-user-auth_group`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 法人データアクセス制御
+       - :download:`ダウンロード<./download/authCorporationGrpAccess_itm.xlsx>`
+       - :download:`ダウンロード<./download/authCorporationGrpAccess_sample.xlsx>`
+       - :download:`ダウンロード<./download/authCorporationGrpAccess.csv>`
+       - 

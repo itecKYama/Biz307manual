@@ -1,0 +1,104 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-allocate:
+
+===================================================
+配賦関連
+===================================================
+配賦に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-allocate-allocate:
+
+配賦
+===================================================
+配賦を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            配賦元・先マスタ管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-allocate-ex_allocate`
+       - :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+     * - :ref:`FMS_import_mst-account-account_structure`
+       - 配賦段階パターン
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-department-dept_group`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 配賦
+       - :download:`ダウンロード<./download/allocateMaintenance_itm.xlsx>`
+       - :download:`ダウンロード<./download/allocateMaintenance_sample.xlsx>`
+       - :download:`ダウンロード<./download/allocateMaintenance.csv>`
+       - 
+
+.. _FMS_import_mst-allocate-ex_allocate:
+
+外部配賦基準
+===================================================
+外部配賦基準を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            外部配賦基準取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-dept`
+       - :ref:`FMS_import_mst-allocate-allocate`
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 外部配賦基準
+       - :download:`ダウンロード<./download/externalAllocationBase_itm.xlsx>`
+       - :download:`ダウンロード<./download/externalAllocationBase_sample.xlsx>`
+       - :download:`ダウンロード<./download/externalAllocationBase.csv>`
+       - 

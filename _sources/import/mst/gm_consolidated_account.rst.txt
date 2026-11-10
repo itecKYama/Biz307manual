@@ -1,0 +1,59 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-gm_consolidated_account:
+
+===================================================
+連結科目マスタ
+===================================================
+連結科目マスタに関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-gm_consolidated_account-gm_consolidated_account:
+
+連結科目マスタ
+===================================================
+連結科目マスタを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      グループ連結オペレーション
+        マスタメンテナンス
+          連結科目マスタ管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-account`
+       - :ref:`FMS_import_mst-gm_match_consolidated_account_grp`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 連結科目
+       - :download:`ダウンロード<./download/consolidatedAccount_itm.xlsx>`
+       - :download:`ダウンロード<./download/consolidatedAccount_sample.xlsx>`
+       - :download:`ダウンロード<./download/consolidatedAccount.csv>`
+       - 
+     * - 連結科目所属 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/consolidatedAccountAth.csv>`
+       - 
+
+  .. rubric:: 脚注
+
+  .. [#f1] 項目説明およびサンプルは「連結科目」に含まれます。
+  

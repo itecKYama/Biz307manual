@@ -1,0 +1,59 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-project_budget:
+
+===================================================
+プロジェクト計画一括取込
+===================================================
+プロジェクト計画に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-project_budget-project_budget:
+
+プロジェクト計画一括取込
+===================================================
+プロジェクト計画を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      プロジェクト原価管理
+        申請書
+          プロジェクト計画一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-project-project`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - 原価集計コード
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - プロジェクト計画取込
+       - :download:`ダウンロード<./download/projectBudget_itm.xlsx>`
+       - :download:`ダウンロード<./download/projectBudget_sample.xlsx>`
+       - :download:`ダウンロード<./download/projectBudget.csv>`
+       - ファイル形式はCSVのみとなります。

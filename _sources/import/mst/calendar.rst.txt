@@ -1,0 +1,47 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-calendar:
+
+===================================================
+カレンダ
+===================================================
+カレンダに関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-calendar-cal:
+
+カレンダ
+===================================================
+カレンダを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      マスタ管理
+        カレンダ
+          カレンダ管理
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - カレンダ
+       - :download:`ダウンロード<./download/calendar_itm.xlsx>`
+       - :download:`ダウンロード<./download/calendar_sample.xlsx>`
+       - :download:`ダウンロード<./download/calendar.csv>`
+       - 
+     * - カレンダ日付 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/calendarDate.csv>`
+       - 
+
+  .. rubric:: 脚注
+
+  .. [#f1] 項目説明およびサンプルは「カレンダ」に含まれます。

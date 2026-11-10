@@ -1,0 +1,59 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-lc_jrnl:
+
+===================================================
+契約種別仕訳マスタ
+===================================================
+契約種別仕訳マスタに関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-lc_jrnl-contract_class_jrnl:
+
+契約種別仕訳マスタ
+===================================================
+契約種別仕訳マスタを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      契約管理・リース管理
+        マスタメンテナンス
+          契約種別仕訳マスタ管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - 会計種別
+       - 
+     * - 契約種別マスタ
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 契約種別仕訳マスタ
+       - :download:`ダウンロード<./download/contractClassJournalMaintenance_itm.xlsx>`
+       - :download:`ダウンロード<./download/contractClassJournalMaintenance_sample.xlsx>`
+       - :download:`ダウンロード<./download/contractClassJournalMaintenance.csv>`
+       - 

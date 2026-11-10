@@ -1,0 +1,143 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-bank_deal:
+
+===================================================
+銀行ファイル取込
+===================================================
+銀行取引ファイルに関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-bank_deal-transfer_income:
+
+振込入金取込
+===================================================
+振込入金取込を行うメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      債権管理
+        入金管理
+          振込入金取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 振込入金取込
+       - :download:`ダウンロード<./download/transferIncome_itm.xlsx>`
+       - :download:`ダウンロード<./download/transferIncome_sample.xlsx>`
+       - 
+       - 振込入金通知テキストファイル
+
+         入出金取引明細テキストファイル
+
+.. _FMS_import_mst-bank_deal-automatic_debit:
+
+自動引落取込
+===================================================
+自動引落取込を行うメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      債務管理
+        支払管理
+          自動引落取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+     * - :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+       - 
+     * - 振込依頼人
+       - 
+     * - 契約者番号
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 自動引落取込
+       - :download:`ダウンロード<./download/automaticDebit_itm.xlsx>`
+       - :download:`ダウンロード<./download/automaticDebit_sample.xlsx>`
+       - 
+       - 入出金取引明細テキストファイル
+
+.. _FMS_import_mst-bank_deal-bank_account_transfer_result_import:
+
+口座振替結果ファイル取込
+===================================================
+口座振替結果ファイル取込を行うメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      債権管理
+        入金管理
+          口座振替結果ファイル取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 口座振替結果ファイル取込
+       - :download:`ダウンロード<./download/bankAccountTransferResultImport_itm.xlsx>`
+       - :download:`ダウンロード<./download/bankAccountTransferResultImport_sample.xlsx>`
+       - 
+       - 預金口座振替（処理結果明細）テキストファイル

@@ -1,0 +1,82 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst:
+
+===================================================
+マスタ一括取込
+===================================================
+
+.. toctree::
+   :maxdepth: 2
+
+   calendar
+   currency
+   bank
+   departmnet
+   account
+   tax
+   cash_flow
+   account_revaluate_target_control
+   user
+   corp_cstm
+   auth-corp_grp_access
+   analyze_cd
+   field
+   jrnl_ptn
+   regular_journals
+   ovrss_rmttnc_report_item_config
+   allocate
+   ai
+   bill_splt
+   list_value_cut
+   ksd
+   dcd
+   sp_depreciation
+   declare_tax_office
+   fa_jrnl_set
+   lc_jrnl
+   project
+   rank
+   jc_intface
+   gt_gtJrnl
+   gm_consolidated_account
+   gm_match_consolidated_account_grp
+   tatsuzin
+   matter_property_mapping
+
+.. only:: internal
+
+   calendar                          :カレンダ
+   currency                          :通貨関連
+   bank                              :銀行関連
+   departmnet                        :組織関連
+   account                           :科目関連
+   tax                               :間接税
+   cash_flow                         :キャッシュフロー
+   account_revaluate_target_control  :科目評価替対象管理
+   user                              :ユーザ関連
+   corp_cstm                         :法人・取引先
+   auth-corp_grp_access              :法人データアクセス制御
+   analyze_cd                        :分析コード関連
+   field                             :フィールド関連
+   jrl_ptn                           :仕訳パターン
+   regular_journals                  :定期仕訳
+   ovrss_rmttnc_report_item_config   :海外送金出力項目定義
+   allocate                          :配賦関連
+   ai                                :会計連携関連
+   bill_splt                         :手形分割
+   list_value_cut                    :リスト値除外
+   ksd                               :種類構造細目
+   dcd                               :償却計算方法設定
+   sp_depreciation                   :特別償却
+   declare_tax_office                :償却資産申告
+   fa_jrnl_set                       :資産管理仕訳設定
+   lc_jrnl                           :契約種別仕訳マスタ
+   project                           :プロジェクト
+   rank                              :ランク情報
+   jc_intface                        :プロジェクト原価・他システム連動
+   gt_gtJrnl                         :グループ会社間取引
+   gm_consolidated_account           :連結科目マスタ
+   gm_match_consolidated_account_grp :照合用連結科目グループマスタ
+   tasuzin                           :達人連携マスタ
+   matter_property_mapping           :案件プロパティマッピング

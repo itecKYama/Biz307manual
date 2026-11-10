@@ -1,0 +1,367 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-jrnl_deal:
+
+===================================================
+仕訳／取引一括取込
+===================================================
+仕訳／取引に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-jrnl_deal-jrnl:
+
+仕訳一括取込
+===================================================
+仕訳を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      一般会計
+        仕訳取込処理
+          仕訳一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-allocate-allocate`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 仕訳一括取込
+       - :download:`ダウンロード<./download/glJournal_itm.xlsx>`
+       - :download:`ダウンロード<./download/glJournal_sample.xlsx>`
+       - :download:`ダウンロード<./download/glJournal.csv>`
+       - 
+
+.. _FMS_import_mst-jrnl_deal-deal_ar:
+
+債権一括取込
+===================================================
+債権を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      債権管理
+        債権管理
+          債権データ取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-allocate-allocate`
+       - 
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 債権一括取込
+       - :download:`ダウンロード<./download/arJournal_itm.xlsx>`
+       - :download:`ダウンロード<./download/arJournal_sample.xlsx>`
+       - :download:`ダウンロード<./download/arJournal.csv>`
+       - 
+
+.. _FMS_import_mst-jrnl_deal-deal_ap:
+
+債務一括取込
+===================================================
+債務を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      債務管理
+        債務管理
+          債務データ取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-allocate-allocate`
+       - 
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+     * - :ref:`FMS_import_mst-bank-bank`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 債務一括取込
+       - :download:`ダウンロード<./download/apJournal_itm.xlsx>`
+       - :download:`ダウンロード<./download/apJournal_sample.xlsx>`
+       - :download:`ダウンロード<./download/apJournal.csv>`
+       - 
+
+.. _FMS_import_mst-jrnl_deal-deal_ic:
+
+入金一括取込
+===================================================
+入金仕訳を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      債権管理
+        入金管理
+          入金データ取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-allocate-allocate`
+       - 
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 入金一括取込
+       - :download:`ダウンロード<./download/incomeJournal_itm.xlsx>`
+       - :download:`ダウンロード<./download/incomeJournal_sample.xlsx>`
+       - :download:`ダウンロード<./download/incomeJournal.csv>`
+       - 
+
+.. _FMS_import_mst-jrnl_deal-deal_py:
+
+支払一括取込
+===================================================
+支払依頼を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      債務管理
+        支払管理
+          支払データ取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-allocate-allocate`
+       - 
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+     * - :ref:`FMS_import_mst-bank-bank`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 支払一括取込
+       - :download:`ダウンロード<./download/paymentJournal_itm.xlsx>`
+       - :download:`ダウンロード<./download/paymentJournal_sample.xlsx>`
+       - :download:`ダウンロード<./download/paymentJournal.csv>`
+       - 
+
+.. _FMS_import_mst-jrnl_deal-deal_gtAp:
+
+グループ会社間取引債務一括取込
+===================================================
+グループ会社間取引の債務を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      債務管理
+        債務管理
+          債務登録対象検索
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-allocate-allocate`
+       - 
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+     * - :ref:`FMS_import_mst-bank-bank`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - グループ会社間取引債務一括取込
+       - :download:`ダウンロード<./download/gtApJournal_itm.xlsx>`
+       - :download:`ダウンロード<./download/gtApJournal_sample.xlsx>`
+       - :download:`ダウンロード<./download/gtApJournal.csv>`
+       - 
+

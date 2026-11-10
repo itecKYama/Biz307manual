@@ -1,0 +1,17 @@
+
+.. _FMS_setup_bizSetting:
+
+========================
+Biz∫環境のセットアップ
+========================
+
+次の手順でBiz∫環境をセットアップしてください。
+
+.. toctree::
+   :maxdepth: 1
+
+   fms-setup
+   create-admin-account
+   create-wfadmin-account
+   delete_data_batch
+

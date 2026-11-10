@@ -1,0 +1,49 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-ksd:
+
+===================================================
+種類構造細目
+===================================================
+種類構造細目に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-ksd-kind_structure_detail:
+
+種類構造細目
+===================================================
+種類構造細目を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        マスタメンテナンス
+          種類／構造／細目管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 
+       - :ref:`FMS_import_mst-fa_jrnl_set-fa_jrnl_set`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 種類構造細目
+       - :download:`ダウンロード<./download/kindStructureDetail_itm.xlsx>`
+       - :download:`ダウンロード<./download/kindStructureDetail_sample.xlsx>`
+       - :download:`ダウンロード<./download/kindStructureDetail.csv>`
+       - 

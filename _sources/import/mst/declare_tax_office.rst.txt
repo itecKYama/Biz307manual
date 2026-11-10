@@ -1,0 +1,38 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-declare_tax_office:
+
+===================================================
+償却資産申告
+===================================================
+償却資産申告に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-declare_tax_office-declare_tax_office:
+
+償却資産申告
+===================================================
+償却資産申告を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        マスタメンテナンス
+          償却資産申告先管理
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 償却資産申告
+       - :download:`ダウンロード<./download/declareTaxOffice_itm.xlsx>`
+       - :download:`ダウンロード<./download/declareTaxOffice_sample.xlsx>`
+       - :download:`ダウンロード<./download/declareTaxOffice.csv>`
+       - 

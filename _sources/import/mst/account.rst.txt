@@ -1,0 +1,122 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-account:
+
+===================================================
+科目関連
+===================================================
+科目に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-account-account:
+
+科目
+===================================================
+科目を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            科目マスタ管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 
+       - :ref:`FMS_import_mst-department-cmp_account`
+     * - 
+       - :ref:`FMS_import_mst-account-account_structure`
+     * - 
+       - :ref:`FMS_import_mst-field-field`
+     * - 
+       - :ref:`FMS_import_mst-allocate-allocate`
+     * - 
+       - :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+     * - 
+       - :ref:`FMS_import_mst-lc_jrnl-contract_class_jrnl`
+     * - 
+       - 本支店仕訳情報
+     * - 
+       - 入金支払方法
+     * - 
+       - 経過勘定振替
+     * - 
+       - 契約決済方法
+     * - 
+       - 建設仮勘定科目
+     * - 
+       - 原価計算種別
+     * - 
+       - 契約形態
+     * - 
+       - :ref:`FMS_import_mst-jc_intface-labor_jrnl`
+     * - 
+       - :ref:`FMS_import_mst-gm_consolidated_account-gm_consolidated_account`
+     * - 
+       - :ref:`FMS_import_mst-account_revaluate_target_control-account_revaluate_target_control`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 科目
+       - :download:`ダウンロード<./download/accountMaintenance_itm.xlsx>`
+       - :download:`ダウンロード<./download/accountMaintenance_sample.xlsx>`
+       - :download:`ダウンロード<./download/accountMaintenance.csv>`
+       - 
+
+.. _FMS_import_mst-account-account_structure:
+
+科目構成
+===================================================
+科目構成を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            科目構成マスタ管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-account-account`
+       - :ref:`FMS_import_mst-allocate-allocate`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 科目構成
+       - :download:`ダウンロード<./download/accountStructureMaintenance_itm.xlsx>`
+       - :download:`ダウンロード<./download/accountStructureMaintenance_sample.xlsx>`
+       - :download:`ダウンロード<./download/accountStructureMaintenance.csv>`
+       - 

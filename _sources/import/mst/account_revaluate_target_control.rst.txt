@@ -1,0 +1,52 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-account_revaluate_target_control:
+
+===================================================
+科目評価替対象
+===================================================
+科目評価替対象に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-account_revaluate_target_control-account_revaluate_target_control:
+
+科目評価替対象
+===================================================
+科目評価替対象を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            科目評価替対象管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-account-account`
+       -
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       -
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 科目評価替対象
+       - :download:`ダウンロード<./download/accountRevaluateTargetControl_itm.xlsx>`
+       - :download:`ダウンロード<./download/accountRevaluateTargetControl_sample.xlsx>`
+       - :download:`ダウンロード<./download/accountRevaluateTargetControl.csv>`
+       -

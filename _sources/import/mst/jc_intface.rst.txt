@@ -1,0 +1,91 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-jc_intface:
+
+===================================================
+プロジェクト原価・他システム連動
+===================================================
+プロジェクト原価と他システムの連動のためのマスタに関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-jc_intface-labor_jrnl:
+
+給与仕訳連携設定
+===================================================
+給与仕訳連携設定を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      プロジェクト原価管理
+        業務連動
+          マスタメンテナンス
+            給与仕訳連携設定管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-project-project`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 給与仕訳連携設定
+       - :download:`ダウンロード<./download/personJournalEntryInterface_itm.xlsx>`
+       - :download:`ダウンロード<./download/personJournalEntryInterface_sample.xlsx>`
+       - :download:`ダウンロード<./download/personJournalEntryInterface.csv>`
+       - 
+
+.. _FMS_import_mst-jc_intface-front_intface:
+
+フロント連携定義
+===================================================
+フロント連携定義を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      プロジェクト原価管理
+        業務連動
+          マスタメンテナンス
+            フロント連携出力管理
+
+**関連マスタ**
+
+  なし
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - フロント連携定義
+       - :download:`ダウンロード<./download/frontFileOuput_itm.xlsx>`
+       - :download:`ダウンロード<./download/frontFileOuput_sample.xlsx>`
+       - :download:`ダウンロード<./download/frontFileOuput.csv>`
+       - 

@@ -1,0 +1,52 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-regular_journals:
+
+===================================================
+定期仕訳
+===================================================
+定期仕訳に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-regular_journals-regular_journals:
+
+定期仕訳
+===================================================
+定期仕訳を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            定期仕訳マスタ登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+       - 
+     * - :ref:`FMS_import_mst-department-dept_group`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 定期仕訳
+       - :download:`ダウンロード<./download/regularJrnlMaintenance_itm.xlsx>`
+       - :download:`ダウンロード<./download/regularJrnlMaintenance_sample.xlsx>`
+       - :download:`ダウンロード<./download/regularJrnlMaintenance.csv>`
+       - 

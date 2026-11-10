@@ -1,0 +1,70 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-jrnl_ptn:
+
+===================================================
+仕訳パターン
+===================================================
+仕訳パターンに関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-jrnl_ptn-jrnl_ptn:
+
+仕訳パターン
+===================================================
+仕訳パターンを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            仕訳パターンマスタ登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-currency-cur`
+       - :ref:`FMS_import_mst-fa_jrnl_set-fa_jrnl_set`
+     * - :ref:`FMS_import_mst-department-dept`
+       - 契約者番号
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-allocate-allocate`
+       - 
+     * - :ref:`FMS_import_mst-department-cmp_account`
+       - 
+     * - :ref:`FMS_import_mst-bank-bank`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 仕訳パターン
+       - :download:`ダウンロード<./download/journalPatternMaintenance_itm.xlsx>`
+       - :download:`ダウンロード<./download/journalPatternMaintenance_sample.xlsx>`
+       - :download:`ダウンロード<./download/journalPatternMaintenance.csv>`
+       - 

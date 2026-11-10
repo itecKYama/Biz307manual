@@ -1,0 +1,153 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-plan:
+
+===================================================
+設備投資資産一括取込
+===================================================
+設備投資資産に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-plan-acquisition:
+
+設備投資資産一括取込（取得予定）
+===================================================
+設備投資資産の取得予定を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        予定資産管理
+          設備投資資産一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-dcd-depreciation_calculate_define`
+       - 
+     * - :ref:`FMS_import_mst-declare_tax_office-declare_tax_office`
+       - 
+     * - :ref:`FMS_import_mst-ksd-kind_structure_detail`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-sp_depreciation-special_depreciation`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 設備投資資産一括取込（取得予定）
+       - :download:`ダウンロード<./download/planAcquisition_itm.xlsx>`
+       - :download:`ダウンロード<./download/planAcquisition_sample.xlsx>`
+       - :download:`ダウンロード<./download/planAcquisition.csv>`
+       - 予定資産区分に「取得予定」を選択して登録
+
+.. _FMS_import_mst-plan-shift:
+
+設備投資資産一括取込（移動予定）
+===================================================
+設備投資資産の移動予定を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        予定資産管理
+          設備投資資産一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-declare_tax_office-declare_tax_office`
+       - 
+     * - :ref:`FMS_import_mst-ksd-kind_structure_detail`
+       - 
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 設備投資資産一括取込（移動予定）
+       - :download:`ダウンロード<./download/planShift_itm.xlsx>`
+       - :download:`ダウンロード<./download/planShift_sample.xlsx>`
+       - :download:`ダウンロード<./download/planShift.csv>`
+       - 予定資産区分に「移動予定」を選択して登録
+
+.. _FMS_import_mst-plan-retirement_sale:
+
+設備投資資産一括取込（除売却予定）
+===================================================
+設備投資資産の除売却予定を一括取込するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        予定資産管理
+          設備投資資産一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 設備投資資産一括取込（除売却予定）
+       - :download:`ダウンロード<./download/planRetirementSale_itm.xlsx>`
+       - :download:`ダウンロード<./download/planRetirementSale_sample.xlsx>`
+       - :download:`ダウンロード<./download/planRetirementSale.csv>`
+       - 予定資産区分に「除売却予定」を選択して登録

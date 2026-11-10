@@ -1,0 +1,59 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-project:
+
+===================================================
+プロジェクト一括取込
+===================================================
+プロジェクトに関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-project-project:
+
+プロジェクト
+===================================================
+プロジェクトを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      プロジェクト原価管理
+        申請書
+          プロジェクト一括取込
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 原価計算種別
+       - 原価集計コード
+     * - 契約形態
+       - :ref:`FMS_import_mst-jc_intface-labor_jrnl`
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-department-dept_group`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - プロジェクト
+       - :download:`ダウンロード<./download/project_itm.xlsx>`
+       - :download:`ダウンロード<./download/project_sample.xlsx>`
+       - :download:`ダウンロード<./download/project.csv>`
+       - ファイル形式はCSVのみとなります。

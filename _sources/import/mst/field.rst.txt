@@ -1,0 +1,71 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-field:
+
+===================================================
+フィールド関連
+===================================================
+フィールド関連に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-field-field:
+
+フィールド関連
+===================================================
+フィールド関連を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            フィールド関連入力制限一括登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-analyze_cd-analyze`
+       - 
+     * - :ref:`FMS_import_mst-account-account`
+       - 
+     * - :ref:`FMS_import_mst-department-dept`
+       - 
+     * - :ref:`FMS_import_mst-tax-indirect_tax`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-customer`
+       - 
+     * - :ref:`FMS_import_mst-user-user`
+       - 
+     * - :ref:`FMS_import_mst-cash_flow-cash_flow`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - フィールド関連
+       - :download:`ダウンロード<./download/fieldRelationMaintenance_itm.xlsx>`
+       - :download:`ダウンロード<./download/fieldRelationMaintenance_sample.xlsx>`
+       - :download:`ダウンロード<./download/fieldRelationMaintenance.csv>`
+       - 入力制限に関する設定を追加/更新する場合に利用します。
+     * - 関連フィールド入力制限
+       - :download:`ダウンロード<./download/fieldRelationInputLimit_itm.xlsx>`
+       - :download:`ダウンロード<./download/fieldRelationInputLimit_sample.xlsx>`
+       - :download:`ダウンロード<./download/fieldRelationInputLimit.csv>`
+       - 以下の項目を追加/更新/削除する場合に利用します。
+
+         ・関連フィールド条件一致区分
+
+         ・入力制限対象関連フィールドマスタコード

@@ -1,0 +1,52 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-gt_gtJrnl:
+
+===================================================
+グループ会社間取引
+===================================================
+グループ会社間取引に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-gt_gtJrnl-gt_gtJrnl:
+
+グループ会社間取引仕訳設定マスタ
+===================================================
+グループ会社間取引仕訳設定マスタを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            グループ会社間取引仕訳設定マスタ登録
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-jrnl_ptn`
+       - 
+     * - :ref:`FMS_import_mst-corp_cstm-corporation`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - グループ会社間取引仕訳設定マスタ
+       - :download:`ダウンロード<./download/gtJrnlStMaintenance_itm.xlsx>`
+       - :download:`ダウンロード<./download/gtJrnlStMaintenance_sample.xlsx>`
+       - :download:`ダウンロード<./download/gtJrnlStMaintenance.csv>`
+       - 

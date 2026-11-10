@@ -1,0 +1,232 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-ai:
+
+===================================================
+会計連携関連
+===================================================
+会計連携に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-ai-import_config:
+
+取込設定
+===================================================
+取込設定を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          基本設定管理
+            会計連携取込設定管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 取込設定
+       - :download:`ダウンロード<./download/importConfig_itm.xlsx>`
+       - :download:`ダウンロード<./download/importConfig_sample.xlsx>`
+       - :download:`ダウンロード<./download/importConfig.csv>`
+       - 
+     * - 取込項目 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/importItm.csv>`
+       - 「詳細」ボタンより遷移する「取込項目検索」画面で登録
+
+  .. rubric:: 脚注
+
+  .. [#f1] 項目説明およびサンプルは「取込設定」に含まれます。
+
+.. _FMS_import_mst-ai-slip_type:
+
+伝票区分
+===================================================
+伝票区分を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            会計連携伝票区分管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 伝票区分
+       - :download:`ダウンロード<./download/slipType_itm.xlsx>`
+       - :download:`ダウンロード<./download/slipType_sample.xlsx>`
+       - :download:`ダウンロード<./download/slipType.csv>`
+       - 
+
+.. _FMS_import_mst-ai-cnv_ptn:
+
+変換パターン
+===================================================
+変換パターンを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            会計連携変換パターン管理
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 変換パターン
+       - :download:`ダウンロード<./download/cnvPattern_itm.xlsx>`
+       - :download:`ダウンロード<./download/cnvPattern_sample.xlsx>`
+       - :download:`ダウンロード<./download/cnvPattern.csv>`
+       - 
+     * - 変換パターン明細 [#f2]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/cnvPatternDtl.csv>`
+       - 「詳細」ボタンより遷移する「変換パターン明細検索」画面で登録
+
+  .. rubric:: 脚注
+
+  .. [#f2] 項目説明およびサンプルは「変換パターン」に含まれます。
+
+.. _FMS_import_mst-ai-text_cnv_ptn:
+
+文字列変換パターン
+===================================================
+文字列変換パターンを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            会計連携文字列変換パターン管理
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 変換パターン
+       - :download:`ダウンロード<./download/textCnvPattern_itm.xlsx>`
+       - :download:`ダウンロード<./download/textCnvPattern_sample.xlsx>`
+       - :download:`ダウンロード<./download/textCnvPattern.csv>`
+       - 
+     * - 変換パターン明細 [#f4]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/textCnvPatternDtl.csv>`
+       - 「詳細」ボタンより遷移する「文字列変換パターン明細検索」画面で登録
+
+  .. rubric:: 脚注
+
+  .. [#f4] 項目説明およびサンプルは「文字列変換パターン」に含まれます。
+
+.. _FMS_import_mst-ai-slip_itm:
+
+伝票項目
+===================================================
+伝票項目を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            会計連携伝票項目管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 会計種別
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 伝票項目
+       - :download:`ダウンロード<./download/slipItm_itm.xlsx>`
+       - :download:`ダウンロード<./download/slipItm_sample.xlsx>`
+       - :download:`ダウンロード<./download/slipItm.csv>`
+       - 
+     * - 伝票項目フィールド設定 [#f3]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/slipItmFldConfig.csv>`
+       - 「詳細」ボタンより遷移する「伝票項目フィールド設定検索」画面で登録
+
+  .. rubric:: 脚注
+
+  .. [#f3] 項目説明およびサンプルは「伝票項目」に含まれます。

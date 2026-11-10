@@ -1,0 +1,39 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-bill_splt:
+
+===================================================
+手形分割
+===================================================
+手形分割に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-bill_splt-bill_splt:
+
+手形分割
+===================================================
+手形分割を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            手形分割登録
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 手形分割
+       - :download:`ダウンロード<./download/billSpltMaintenance_itm.xlsx>`
+       - :download:`ダウンロード<./download/billSpltMaintenance_sample.xlsx>`
+       - :download:`ダウンロード<./download/billSpltMaintenance.csv>`
+       - 

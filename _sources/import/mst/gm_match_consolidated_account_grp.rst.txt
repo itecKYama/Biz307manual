@@ -1,0 +1,58 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-gm_match_consolidated_account_grp:
+
+===================================================
+照合用連結科目グループマスタ
+===================================================
+照合用連結科目グループマスタに関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-gm_match_consolidated_account_grp-gm_match_consolidated_account_grp:
+
+照合用連結科目グループマスタ
+===================================================
+照合用連結科目グループマスタを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ 会計
+      グループ連結オペレーション
+        マスタメンテナンス
+          照合用連結科目グループマスタ管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-gm_consolidated_account`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 照合用連結科目グループ
+       - :download:`ダウンロード<./download/matchingConsolidatedAccountGrp_itm.xlsx>`
+       - :download:`ダウンロード<./download/matchingConsolidatedAccountGrp_sample.xlsx>`
+       - :download:`ダウンロード<./download/matchingConsolidatedAccountGrp.csv>`
+       - 
+     * - 照合用連結科目グループ所属 [#f1]_
+       - 
+       - 
+       - :download:`ダウンロード<./download/matchingConsolidatedAccountGrpAth.csv>`
+       - 
+
+  .. rubric:: 脚注
+
+  .. [#f1] 項目説明およびサンプルは「照合用連結科目グループ」に含まれます。

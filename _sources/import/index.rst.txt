@@ -1,0 +1,22 @@
+.. include:: ../include/definition.txt
+
+.. _FMS_import:
+
+===================================================
+一括取込マニュアル
+===================================================
+
+.. toctree::
+   :maxdepth: 3
+   
+   explanation
+   supplementary_item
+   mst/index
+   tran/index
+
+.. only:: internal
+
+   explanation        :共通の説明
+   supplementary_item :共通の補足事項
+   mst/index          :マスタ一括取込
+   tran/index         :トランザクション一括取込

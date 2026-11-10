@@ -1,0 +1,225 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_import_mst-currency:
+
+===================================================
+通貨関連
+===================================================
+通貨に関する一括取込マニュアルを記載します。
+
+.. _FMS_import_mst-currency-cur:
+
+通貨
+===================================================
+通貨を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      マスタ管理
+        通貨
+          通貨管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 
+       - :ref:`FMS_import_mst-user-emp_account`
+     * - 
+       - :ref:`FMS_import_mst-department-cmp_account`
+     * - 
+       - :ref:`FMS_import_mst-currency-cur_precision`
+     * - 
+       - :ref:`FMS_import_mst-currency-cur_conv_rate`
+     * - 
+       - :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 通貨
+       - :download:`ダウンロード<./download/currency_itm.xlsx>`
+       - :download:`ダウンロード<./download/currency_sample.xlsx>`
+       - :download:`ダウンロード<./download/currency.csv>`
+       - 
+
+.. _FMS_import_mst-currency-cur_precision_type:
+
+通貨精度区分
+===================================================
+通貨精度区分を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      マスタ管理
+        通貨
+          通貨精度区分管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 
+       - :ref:`FMS_import_mst-currency-cur_precision`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 通貨精度区分
+       - :download:`ダウンロード<./download/currencyPrecisionType_itm.xlsx>`
+       - :download:`ダウンロード<./download/currencyPrecisionType_sample.xlsx>`
+       - :download:`ダウンロード<./download/currencyPrecisionType.csv>`
+       - 
+
+.. _FMS_import_mst-currency-cur_precision:
+
+通貨精度
+===================================================
+通貨精度を登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      マスタ管理
+        通貨
+          通貨精度管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+     * - :ref:`FMS_import_mst-currency-cur_precision_type`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 通貨精度
+       - :download:`ダウンロード<./download/currencyPrecision_itm.xlsx>`
+       - :download:`ダウンロード<./download/currencyPrecision_sample.xlsx>`
+       - :download:`ダウンロード<./download/currencyPrecision.csv>`
+       - 
+
+.. _FMS_import_mst-currency-cur_conv_cd:
+
+通貨換算コード
+===================================================
+通貨換算コードを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      マスタ管理
+        通貨
+          通貨換算コード管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - 
+       - :ref:`FMS_import_mst-currency-cur_conv_rate`
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 通貨換算コード
+       - :download:`ダウンロード<./download/currencyConversion_itm.xlsx>`
+       - :download:`ダウンロード<./download/currencyConversion_sample.xlsx>`
+       - :download:`ダウンロード<./download/currencyConversion.csv>`
+       - 
+
+.. _FMS_import_mst-currency-cur_conv_rate:
+
+通貨換算レート
+===================================================
+通貨換算レートを登録するメニューは以下の通りとなります。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      マスタ管理
+        通貨
+          通貨換算レート管理
+
+**関連マスタ**
+
+  .. list-table::
+     :widths: 5, 5
+     :header-rows: 1
+
+     * - 参照するマスタ
+       - 参照されるマスタ
+     * - :ref:`FMS_import_mst-currency-cur`
+       - 
+     * - :ref:`FMS_import_mst-currency-cur_conv_cd`
+       - 
+
+**ダウンロード**
+
+  .. list-table::
+     :widths: 10, 5, 5, 5, 20
+     :header-rows: 1
+
+     * - 対象
+       - 項目説明
+       - サンプル
+       - CSV
+       - 備考
+     * - 通貨換算レート
+       - :download:`ダウンロード<./download/currencyRate_itm.xlsx>`
+       - :download:`ダウンロード<./download/currencyRate_sample.xlsx>`
+       - :download:`ダウンロード<./download/currencyRate.csv>`
+       - 
