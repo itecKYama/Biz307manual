@@ -1,0 +1,10 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_cookbook_invoice_invoiceSms:
+
+===================================================
+Biz∫販売用の請求書に変更する
+===================================================
+以下のページを参考に帳票レイアウトの変更を行います。
+
+* :ref:`FMS_cookbook_sms_invoiceLayout`
