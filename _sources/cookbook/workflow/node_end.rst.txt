@@ -1,0 +1,270 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_cookbook_workflow_node_end:
+
+======================================================================================================
+案件の終了ノードでエラーが発生した案件に対して、ユーザプログラムを無効化し完了または案件の削除を行う
+======================================================================================================
+
+
+本項では、ルート上の最後の承認ノードにおいて承認処理が行われているが、終了ノードでエラーが発生した案件に対して、ユーザプログラムを無効化し完了または案件の削除を行う手順を紹介します。
+
+.. note::
+
+  Biz∫会計では、未完了の案件に対して削除処理を実施することや、終了ノードへの移動操作は許可しておりません。
+  
+  これは最終承認の処理や否認、取止めなど案件が終了する際に呼び出される処理が実行されないとトランザクションデータ（仕訳など）が承認中のままとなってしまい、処理が行えなくなるためです。
+  
+  
+  本項で案内する手順は、ルート上の最後の承認ノードにおいて承認処理が行われていることを前提にしております。
+  
+  あらかじめ承認処理が行われていることをご確認の上で実施するようにしてください。
+
+.. _FMS_cookbook_workflow_node_end-matterHandle:
+
+案件を終了ノードへ移動する手順
+===================================================
+
+以下の手順は、終了ノードへのノードの移動を制御しているアクション処理を無効化した上で、案件操作にて終了ノードへ移動を行います。
+
+.. note::
+
+  対象の案件は、終了ノードへ移動後に完了案件となります。完了案件の一覧より審議の内容を確認することができます。
+
+1. |WF-ADMIN| アカウントでログインし、終了ノードへ移動する案件の『案件番号』を確認します。
+
+  * メニュー ::
+
+      ワークフロー
+        ワークフロー管理者
+          参照
+
+  * 「未完了案件」タブを選択します。
+  * 未完了案件一覧の中から、対象となる案件の案件番号を控えます。
+
+2. 各種DB管理ツールを使用し、未完了案件テーブル（IMW_T_ACTV_MATTER）から対象となる案件のシステム案件ID（SYSTEM_MATTER_ID）、ディレクトリパス（FILE_DIR_PATH）、最終タスク処理ID（LAST_PROCESS_ID）を取得します。
+  
+  下記のSQLを実行します。 ::
+
+      SELECT
+        SYSTEM_MATTER_ID,
+        FILE_DIR_PATH,
+        LAST_PROCESS_ID
+      FROM
+        IMW_T_ACTV_MATTER
+      WHERE
+        MATTER_NUMBER = '1.で控えた案件番号';
+
+3. 対象となる案件のflow.xmlを特定します。
+
+  以下が対象となる案件のflow.xmlのパスになります。 ::
+
+      ${RESIN_HOME}/storage-files/public/storage/{テナントID}/im_workflow/data/{テナントID}/transaction/{YYYYMM}/{DD}/{HH}/{2で取得したシステム案件ID}/task/{2で取得した最終タスク処理ID}/flow.xml
+
+  .. note::
+
+    上記パスの「/im_workflow/data/{テナントID}/transaction/{YYYYMM}/{DD}/{HH}/」が2で取得したディレクトリパスになります。
+
+  .. note::
+
+    ワークフローパラメータで、未完了案件のトランザクションデータの保存先を「データベース」に設定している場合※、一度トランザクションデータをBLOBデータからXMLデータに変換した上で対応を行います。
+
+    ※対象のワークフローパラメータの設定については、「 `IM-Workflow 仕様書`_ 」-「 `データ保存の設定`_ 」を参照してください。
+
+    以下の手順で操作してください。
+
+    1.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブ設定」をクリックします。
+    
+    2.ジョブ一覧から「 IM-Workflow 」→「未完了案件XMLデータ移行(Database LOB->File)」をクリックします。
+    
+    3.「編集」をクリックします。
+    
+    4.「実行パラメータ」を以下の通りに変更します。
+    
+        ・systemMatterId : 対象の案件のシステム案件ID
+        
+        ・deleteFlag : true
+        
+    5.「更新」をクリックします。
+    
+    6.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブネット設定」をクリックします。
+    
+    7.ジョブネット一覧から「 IM-Workflow 」→「未完了案件XMLデータ移行(Database LOB->File)」をクリックします。
+    
+    8.以下のいずれかの方法で、「未完了案件XMLデータ移行(Database LOB->File)」のジョブネットを実行します。
+    
+        ・「即時実行」をクリックし、ジョブネットを実行します。
+        
+        ・「編集」をクリックし、トリガ設定を変更することで、ジョブネットを実行します
+
+  .. note::
+
+    ワークフローパラメータで、トランザクションファイル（XMLファイル）圧縮可否を「圧縮する」としている場合※、一度トランザクションデータを解凍した上で対応を行います。
+
+    ※対象のワークフローパラメータの設定については、「 `IM-Workflow 仕様書`_ 」-「 `トランザクションファイル(XMLファイル)圧縮可否`_ 」を参照してください。
+
+    以下の手順で操作してください。
+
+    1.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブ設定」をクリックします。
+    
+    2.ジョブ一覧から「 IM-Workflow 」→「未完了案件トランザクションXMLファイル解凍」をクリックします。
+    
+    3.「編集」をクリックします。
+    
+    4.「実行パラメータ」を以下の通りに変更します。
+    
+        ・systemMatterId : 対象の案件のシステム案件ID
+    
+    5.「更新」をクリックします。
+    
+    6.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブネット設定」をクリックします。
+    
+    7.ジョブネット一覧から「 IM-Workflow 」→「未完了案件トランザクションXMLファイル解凍」をクリックします。
+    
+    8.以下のいずれかの方法で、「未完了案件トランザクションXMLファイル解凍」のジョブネットを実行します。
+    
+        ・「即時実行」をクリックし、ジョブネットを実行します。
+    
+        ・「編集」をクリックし、トリガ設定を変更することで、ジョブネットを実行します
+    
+
+4. 対象となる案件のflow.xmlを修正し、 |FMS| のユーザプログラム（アクション処理）を無効化します。
+
+  .. note::
+
+    修正前にはflow.xmlが格納されているフォルダのバックアップを取得してください。
+
+  下記は一般会計のワークフロー申請の場合の例になります。 ::
+
+      <extensionProcess>
+        <extensionPoint name="jp.co.intra_mart.workflow.plugin.event.node.action.process">
+          <plugin extensionPoint="jp.co.intra_mart.workflow.plugin.event.node.action.process" id="jp.co.intra_mart.workflow.plugin.event.node.action.process.pluginJavaExecutor">
+            <parameter>com.biz_integral.fms.fcwf.domain.plugin.process.SelfApproveActionProcessPlugin</parameter>
+          </plugin>
+          <plugin extensionPoint="jp.co.intra_mart.workflow.plugin.event.node.action.process" id="jp.co.intra_mart.workflow.plugin.event.node.action.process.pluginJavaExecutor">
+            <parameter>com.biz_integral.fms.glwf.domain.plugin.process.GlActionProcessPlugin</parameter>
+          </plugin>
+        </extensionPoint>
+      </extensionProcess>
+
+  上記を以下の内容に書き換えます。 ::
+
+      <extensionProcess/>
+
+  .. note::
+
+    案件終了処理や終了ノードでの到達処理を使用している場合には、 |IM| IM-Workflow トラブルシューティングの、 `4.16.3. 案件の終了ノードでエラーが発生した案件に対して、ユーザプログラムの処理・利用者による操作を行わずに完了させる`_ における `解決方法`_  に従い、flow.xmlから案件終了処理や終了ノードでの到達処理を無効化してください。
+
+  .. note::
+
+    3.の手順でトランザクションデータを解凍した場合、flow.xmlを修正した後にトランザクションデータを圧縮する必要があります。
+
+    以下の手順で操作してください。
+
+    1.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブ設定」をクリックします。
+    
+    2.ジョブ一覧から「 IM-Workflow 」→「未完了案件トランザクションXMLファイル圧縮」をクリックします。
+    
+    3.「編集」をクリックします。
+    
+    4.「実行パラメータ」を以下の通りに変更します。
+    
+        ・systemMatterId : 対象の案件のシステム案件ID
+    
+    5.「更新」をクリックします。
+    
+    6.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブネット設定」をクリックします。
+    
+    7.ジョブネット一覧から「 IM-Workflow 」→「未完了案件トランザクションXMLファイル圧縮」をクリックします。
+    
+    8.以下のいずれかの方法で、「未完了案件トランザクションXMLファイル圧縮」のジョブネットを実行します。
+    
+        ・「即時実行」をクリックし、ジョブネットを実行します。
+
+        ・「編集」をクリックし、トリガ設定を変更することで、ジョブネットを実行します。
+
+  .. note::
+
+    3.の手順でトランザクションデータをBLOBデータからXMLデータに変換した場合、flow.xmlを修正した後にトランザクションデータをBLOBデータに再変換する必要があります。
+
+    以下の手順で操作してください。
+
+    1.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブ設定」をクリックします。
+
+    2.ジョブ一覧から「 IM-Workflow 」→「未完了案件XMLデータ移行(File->Database LOB)」をクリックします。
+
+    3.「編集」をクリックします。
+
+    4.「実行パラメータ」を以下の通りに変更します。
+
+        ・systemMatterId : 対象の案件のシステム案件ID
+
+        ・deleteFlag : true
+
+    5.「更新」をクリックします。
+
+    6.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブネット設定」をクリックします。
+
+    7.ジョブネット一覧から「 IM-Workflow 」→「未完了案件XMLデータ移行(File->Database LOB)」をクリックします。
+
+    8.以下のいずれかの方法で、「未完了案件XMLデータ移行(File->Database LOB)」のジョブネットを実行します。
+
+        ・「即時実行」をクリックし、ジョブネットを実行します。
+
+        ・「編集」をクリックし、トリガ設定を変更することで、ジョブネットを実行します。
+
+5. |WF-ADMIN| アカウントでログインし、案件を終了ノードへ移動します。
+
+  * メニュー ::
+
+      ワークフロー
+        ワークフロー管理者
+          参照
+
+  * 「未完了案件」タブを選択し、終了ノードへ移動する案件の「操作」ボタンを押下します。
+  * |iAP| IM-Workflow 管理者操作ガイドの、 `ノードの移動`_ に従い、案件を一旦ルート上の最後の承認ノードに移動した上で、終了ノードへ移動します。
+
+.. _FMS_cookbook_workflow_node_end-matterDelete:
+
+案件を削除する手順
+===================================================
+
+以下の手順は、未完了案件削除処理を制御するユーザプログラムを無効化した上で、案件操作にて案件の削除を行います。
+
+.. note::
+
+  対象の案件のトランザクションデータ（仕訳など）には影響を与えませんが、ワークフロー上から参照することができなくなりますのでご注意ください。
+  完了案件一覧にて案件を表示する必要がある場合には、 :ref:`FMS_cookbook_workflow_node_end-matterHandle` を実施してください。
+
+1. :ref:`FMS_cookbook_workflow_node_end-matterHandle` の手順1～3を実施します。
+
+2. 対象となる案件のflow.xmlを修正し、 |FMS| のユーザプログラム（未完了案件削除処理）を無効化します。
+
+  .. note::
+
+    修正前にはflow.xmlが格納されているフォルダのバックアップを取得してください。
+
+  ::
+
+      <listener>
+        <extensionPoint name="jp.co.intra_mart.workflow.plugin.event.matter.active.delete.process">
+          <plugin extensionPoint="jp.co.intra_mart.workflow.plugin.event.matter.active.delete.process" id="jp.co.intra_mart.workflow.plugin.event.matter.active.delete.process.pluginJavaExecutor">
+            <parameter>com.biz_integral.fms.fcwf.domain.plugin.listener.FinanceActvMatterDeleteListenerPlugin</parameter>
+          </plugin>
+        </extensionPoint>
+      </listener>
+
+  上記を以下の内容に書き換えます。 ::
+
+      <listener/>
+
+3. |WF-ADMIN| アカウントでログインし、案件を削除します。
+
+  * メニュー ::
+
+      ワークフロー
+        ワークフロー管理者
+          参照
+
+  * 「未完了案件」タブを選択し、終了ノードへ移動する案件の「操作」ボタンを押下します。
+  * |iAP| IM-Workflow 管理者操作ガイドの、 `案件削除`_ に従い、案件を削除します。

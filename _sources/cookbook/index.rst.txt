@@ -1,0 +1,28 @@
+.. include:: ../include/definition.txt
+
+.. _FMS_cookbook:
+
+===================================================
+逆引き(Cookbook)
+===================================================
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+   
+   setting/index
+   spec/index
+   workflow/index
+   sms/index
+   invoice/index
+   introduce/index
+
+.. only:: internal
+
+   setting/index    :開発/動作環境
+   spec/index       :性能改善
+   workflow/index   :ワークフロー
+   sms/index        :Biz∫販売連携
+   invoice/index    :請求書レイアウトの変更
+   introduce/index  :導入
+

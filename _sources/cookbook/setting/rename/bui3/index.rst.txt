@@ -1,0 +1,36 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_setting_rename_bui3:
+
+===================================================
+画面項目の名称を変更する（Biz∫UI3）
+===================================================
+
+| Biz∫UI3の画面に表示する項目名称を変更する場合の手順を解説します。
+
+.. _FMS_cookbook_setting_rename_bui3_operation:
+
+実行手順
+===================================
+
+1. 以下のファイルを参照し、変更する名称のIDを確認します。
+    * 確認対象ファイル::
+    
+      <Webアプリケーションルート>/bui/resources/locales/biz-integral/fms-fc_ja.json
+  
+
+    * 確認例
+    
+      Biz∫UI3の画面項目「分析フィールド1」の名称を変更する場合：
+        1. fms-fc_ja.json内を項目名称で検索する。
+        2. 「”label-analyzeField1”: “分析フィールド1”」を確認する。
+        3. 名称IDを「FMS.FC.label-analyzeField1」として控える。
+
+        .. note::
+            「FMS.FC.<2で確認したID>」が名称IDとなります。
+
+2. 以下のドキュメントの「データベースへの名称の登録」以降を実施し、名称の変更反映を行います。
+    * ドキュメント::
+    
+       Biz∫APF Documentation Library / リファレンス / フレームワーク / ドメインサービス / 名称のカスタマイズ
+  

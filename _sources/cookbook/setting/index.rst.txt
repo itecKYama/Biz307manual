@@ -1,0 +1,41 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_cookbook_setting:
+
+===================================================
+開発/動作環境
+===================================================
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+   
+   001
+   002
+   003
+   file_import
+   004
+   006
+   rename/index
+   rename/bui3/index
+   incm_pymnt_set
+   list_value_cut_sort_key
+   monthly_fix_addon_set
+   storage
+   setup-di
+
+.. only:: internal
+
+   001                     :ログ出力設定を行う
+   002                     :外部ソフトウェア接続方式を利用したバッチ処理実行環境を構築する
+   003                     :会計連携ファイル取込のファイルを配備するディレクトリを作成する
+   file_import             :ジョブ実行における取込ファイルを配備するディレクトリを作成する
+   004                     :ファイル入出力の設定を変更する
+   006                     :ページング機能を持つグリッドの1頁あたりの最大表示件数を変更する
+   rename/index            :名称を変更する
+   rename/bui3/index       :画面項目の名称を変更する（Biz∫UI3）
+   incm_pymnt_set          :入金支払手段および入金支払方法を変更する
+   list_value_cut_sort_key :仕訳取引明細検索／仕訳明細検索のソートキーの選択肢を絞り込む
+   monthly_fix_addon_set   :原価処理手順にアドオン機能の手順を組み込む
+   storage                 :ストレージルートを確認する
+   setup-di                :Biz∫APF データ連携の設定をする

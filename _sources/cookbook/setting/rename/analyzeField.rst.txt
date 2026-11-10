@@ -1,0 +1,406 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_setting_rename_analyzeField:
+
+===================================================
+分析フィールドの名称を変更する
+===================================================
+
+設定する値に沿うように、仕訳登録や取引登録などの画面に表示される”分析フィールド1”～ ”分析フィールド10”、”分析フィールド21”～ ”分析フィールド30”の名称を変更します。
+
+.. note::
+
+  分析フィールドは、「商品」や「事業所」など、任意の分割・任意のレベルでのセグメント管理を行うための項目です。
+
+.. _FMS_cookbook_setting_rename_analyzeField-preConditions:
+
+前提条件
+===================================================
+
+本手順は、画面やファイル出力時のヘッダに表示する名称を変更する手順です。名称を変更しない場合は実施する必要はありません。
+
+.. _FMS_cookbook_setting_rename_analyzeField-do:
+
+実行手順
+===================================================
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-display:
+
+画面に表示する名称の変更
+-----------------------------------------------------------------------
+
+画面に表示する名称は、 |BAPF| の開発リファレンス(アプリケーション) `名称のカスタマイズ`_ に従って変更します。
+
+以下では、モジュール別の分析フィールドの変更方法を説明します。
+
+.. note::
+
+  会計連携モジュールの場合には、別テーブルの変更が必要となります。
+  
+.. note::
+
+  Biz∫においては、 `Widgetの幅`_ にあるとおり、プロポーショナルフォントの利用を想定しています。
+  
+  そのため、利用する文字により表示可能文字数が異なりますので、名称を変更する際には十分に検証を行ってください。
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-display-cmn:
+
+モジュール共通の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+名称テーブル（biz_named_item）を以下のように設定してください。
+
+.. note::
+
+    application_idに'fms'を設定します。
+    
+    module_idに'fc'を設定します。
+
+分析フィールド
+
+* 名称IDフィールド（item_id） ::
+
+   FMS.FC.analyzeField1 ～ FMS.FC.analyzeField10
+   FMS.FC.analyzeField21 ～ FMS.FC.analyzeField30
+
+* Biz∫UI3用名称IDフィールド（item_id） ::
+
+   FMS.FC.label-analyzeField1 ～ FMS.FC.label-analyzeField10
+   FMS.FC.label-analyzeField21 ～ FMS.FC.label-analyzeField30
+
+* 名称フィールド（item_name） ::
+
+   任意のフィールド名（例：分析フィールド1）
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-display-ai:
+
+会計連携の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+伝票項目フィールド初期データ（fms_ai_slip_itm_fld_def）テーブル、取込項目初期データ（fms_ai_import_itm_def）テーブルを以下のように変更してください。
+
+分析フィールド
+
+* 対象フィールド ::
+  
+   field_name
+
+* 変更条件
+
+  変更対象のレコードは以下の条件で特定します。
+
+  * field_id
+    
+    analyze_field1 ～ analyze_field10
+
+    analyze_field21 ～ analyze_field30
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-display-fa:
+
+資産管理の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+名称テーブル（biz_named_item）を以下のように設定してください。
+
+.. note::
+
+    application_idに'fms'を設定します。
+
+    module_idに'fa'を設定します。
+
+分析フィールド
+
+* 名称IDフィールド（item_id） ::
+
+   FMS.FA.analyzeField1 ～ FMS.FA.analyzeField10
+   FMS.FA.analyzeField21 ～ FMS.FA.analyzeField30
+
+* 名称フィールド（item_name） ::
+
+   任意のフィールド名（例：分析フィールド1）
+
+FA分析フィールド
+
+* 名称IDフィールド（item_id） ::
+
+   FMS.FA.faAnalyzeField1 ～ FMS.FA.faAnalyzeField10
+
+* 名称フィールド（item_name） ::
+
+   任意のフィールド名（例：FA分析フィールド1）
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-display-lc:
+
+契約管理・リース管理の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+名称テーブル（biz_named_item）を以下のように設定してください。
+
+.. note::
+
+    application_idに'fms'を設定します。
+
+    module_idに'lc'を設定します。
+
+LC分析フィールド
+
+* 名称IDフィールド（item_id） ::
+
+   FMS.LC.lcAnalyzeField1 ～ FMS.LC.lcAnalyzeField10
+
+* 名称フィールド（item_name） ::
+
+   任意のフィールド名（例：LC分析フィールド1）
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-display-pc:
+
+プロジェクト原価管理の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+名称テーブル（biz_named_item）を以下のように設定してください。
+
+.. note::
+
+    application_idに'fms'を設定します。
+
+    module_idに'jc'を設定します。
+
+PJ分析フィールド
+
+* 名称IDフィールド（item_id） ::
+
+   FMS.JC.analyzeField1 ～ FMS.JC.analyzeField30
+
+* 名称フィールド（item_name） ::
+
+   任意のフィールド名（例：PJ分析フィールド1）
+
+PJ分析フィールド（プロジェクトマスタなどのプルーフリスト）
+
+* 名称IDフィールド（item_id） ::
+
+   FMS.JC.analyzeCd01 ～ FMS.JC.analyzeCd30
+
+* 名称フィールド（item_name） ::
+
+   任意のフィールド名（例：PJ分析フィールド1）
+
+PJ分析フィールド（プロジェクト原価チェックリストなどのファイル出力）
+
+* 名称IDフィールド（item_id） ::
+
+   FMS.JC.prjAnalyzeCd1 ～ FMS.JC.prjAnalyzeCd20
+
+* 名称フィールド（item_name） ::
+
+   任意のフィールド名（例：PJ分析フィールド1）
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-cmb:
+
+コンボボックスに表示される名称の変更
+-----------------------------------------------------------------------
+
+コンボボックスに表示する名称を変更する場合には、区分プロパティや会計種別明細テーブル（fms_fc_finance_class_dtl）の変更を行います。
+
+以下では、モジュール別の分析フィールドの変更方法を説明します。
+
+.. note::
+
+  分析種別を割り当てている分析フィールドについては「モジュール共通の変更」の対応は不要です。
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-cmb-cmn:
+
+モジュール共通の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+区分プロパティの修正が必要となりますので、 :ref:`FMS_cookbook_setting_rename_analyzeField-do-properties` を参考に区分プロパティを変更してください。
+
+.. list-table::
+   :widths: 15, 20, 50
+   :header-rows: 1
+
+   * - モジュール
+     - プロパティファイル [#cmb_ppt]_
+     - 名称変更項目
+   * - モジュール共通
+     - fms_fc-types_ja.properties
+     - fms.fc.AnalyzeFieldKind.ANALYZE_FIELD1 ～ fms.fc.AnalyzeFieldKind.ANALYZE_FIELD10、fms.fc.AnalyzeFieldKind.ANALYZE_FIELD21 ～ fms.fc.AnalyzeFieldKind.ANALYZE_FIELD30
+
+会計種別明細テーブル（fms_fc_finance_class_dtl）の修正が必要です。 
+
+* 対象フィールド ::
+  
+   finance_class_dtl_name
+
+* 変更条件（仕訳取引明細検索／仕訳明細検索のソート順）
+    
+  変更対象のレコードは以下の条件で特定します。
+    
+  * finance_class_cd
+    
+    FC006
+    
+  * finance_class_detail_cd
+    
+    ‘analyzeField1’～‘analyzeField10’(分析フィールド01～10に対応)
+
+    ‘analyzeField21’～‘analyzeField30’(分析フィールド21～30に対応)
+
+.. [#cmb_ppt] 会社ごとにプロパティファイルを分ける場合はプロパティファイル名を「fms_fc-[会社コード]_types_ja.properties」としてください。
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-cmb-fa:
+
+資産管理の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+会計種別明細テーブル（fms_fc_finance_class_dtl）の修正が必要です。 
+
+* 対象フィールド ::
+  
+   finance_class_dtl_name
+
+* 変更条件1(合計行表示用)
+    
+  変更対象のレコードは以下の条件で特定します。
+    
+  * finance_class_cd
+    
+    TotalLineKind
+    
+  * finance_class_detail_cd
+    
+    ‘50’～‘59’(分析フィールド01～10に対応)
+
+    ‘60’～‘69’(FA分析フィールド01～10に対応)
+    
+    ‘70’～‘79’(分析フィールド21～30に対応)
+
+* 変更条件2(予測の実行単位表示用)
+    
+  変更対象のレコードは以下の条件で特定します。
+    
+  * finance_class_cd
+    
+    PredictionConfigUnitKind
+    
+  * finance_class_detail_cd
+    
+    ‘08’～‘17’(分析フィールド01～10に対応)
+
+    ‘18’～‘27’(FA分析フィールド01～10に対応)
+
+    ‘29’～‘38’(分析フィールド21～30に対応)
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-cmb-lc:
+
+契約管理・リース管理の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+会計種別明細テーブル（fms_fc_finance_class_dtl）の修正が必要です。 
+
+* 対象フィールド ::
+  
+   finance_class_dtl_name
+
+* 変更条件
+  
+  変更対象のレコードは以下の条件で特定します。
+  
+  * finance_class_cd
+    
+    AnalyzeFieldKind
+    
+  * finance_class_detail_cd
+    
+    ‘FC01’～‘FC10’(分析フィールド01～10に対応)
+
+    ‘FC21’～‘FC30’(分析フィールド21～30に対応)
+
+    ‘LC01’～‘LC10’(LC分析フィールド01～10に対応)
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-etc:
+
+その他名称の変更
+-----------------------------------------------------------------------
+
+画面名称やコンボボックス以外で利用している分析フィールドの名称を変更する場合には、会計種別明細テーブル（fms_fc_finance_class_dtl）の変更を行います。
+
+以下では、モジュール別の分析フィールドの変更方法を説明します。
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-etc-fa:
+
+資産管理の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+会計種別明細テーブル（fms_fc_finance_class_dtl）の修正が必要です。 
+
+* 対象フィールド ::
+  
+   finance_class_dtl_name
+
+* 変更条件（帳票の表示用、エラーメッセージ表示用）
+    
+  変更対象のレコードは以下の条件で特定します。
+    
+  * finance_class_cd
+    
+    FA016
+    
+  * finance_class_detail_cd
+    
+    ‘FC01’～’FC10’（それぞれ分析フィールド01～10に対応）
+
+    ‘FC21’～’FC30’（それぞれ分析フィールド21～30に対応）
+
+    ‘FA01’～’FA10’（それぞれFA分析フィールド01～10に対応）
+
+.. [#xls_ppt] 会社ごとにプロパティファイルを分ける場合はプロパティファイル名を「fms_[モジュールID]-[会社コード]_names_ja.properties」としてください。
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-properties:
+
+プロパティファイルの変更
+-----------------------------------------------------------------------
+
+プロパティファイルを変更します。
+
+環境への適用方法は :ref:`FMS_cookbook_setting_rename_analyzeField-do-properties-apply` を参照してください。
+
+.. note::
+
+  JDKがインストール済みの環境で実施してください。
+
+  eclipseで修正することも可能です。
+
+1. 出荷物のfilesフォルダ配下にある以下のファイルを展開し、変更対象の区分プロパティを抽出します。 ::
+
+    fms_{モジュールID}_files-{バージョン}-RELEASE.zip
+
+2. native2asciiコマンドを利用し、テキストエディタで開けるように文字コードを変換します。 ::
+
+    native2ascii -reverse <抽出したプロパティファイル名> <任意のファイル名>
+
+3. 変換したファイルに対して名称を変更する項目を修正してください。
+
+4. native2asciiコマンドを利用し、元の文字コードに戻します。 ::
+
+    native2ascii <任意のファイル名> <抽出したプロパティファイル名>
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-properties-apply:
+
+プロパティファイルを環境に適用する
+-----------------------------------------------------------------------
+
+変更したプロパティファイルを環境に適用します。
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-properties-apply-juggling:
+
+Jugglingプロジェクトにプロパティファイルを適用
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IM-Jugglingを起動し、変更したプロパティファイルをコピーし、Juggling プロジェクトに適用します。
+
+* プロパティファイル配備後の状態 ::
+
+    <Juggling プロジェクト>      …Juggling プロジェクト
+     └─classes
+        └─fms_xx-xxx.properties …変更した名称プロパティファイルや区分プロパティファイル
+
+.. _FMS_cookbook_setting_rename_analyzeField-do-properties-apply-war:
+
+WARファイルの作成とデプロイ
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ `WARファイルと静的コンテンツの作成`_ を参照してください。
+
+デプロイ済みのResinを利用する場合は、 `warファイルのアンデプロイ`_ を参照し、アンデプロイ後にデプロイしてください。

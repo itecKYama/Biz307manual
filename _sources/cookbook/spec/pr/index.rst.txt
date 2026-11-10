@@ -1,0 +1,13 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_spec_pr:
+
+===================================================
+債権債務
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   journalReference
+

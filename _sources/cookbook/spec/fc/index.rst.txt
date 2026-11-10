@@ -1,0 +1,13 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_spec_fc:
+
+===================================================
+会計コア
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   journalReference
+

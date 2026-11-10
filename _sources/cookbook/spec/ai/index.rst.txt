@@ -1,0 +1,13 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_spec_ai:
+
+===================================================
+会計連携
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   performance
+

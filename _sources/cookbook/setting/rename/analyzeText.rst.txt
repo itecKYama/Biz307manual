@@ -1,0 +1,250 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_setting_rename_analyzeText:
+
+===================================================
+分析テキストの名称を変更する
+===================================================
+
+設定する値に沿うように、仕訳登録や取引登録などの画面に表示される”分析テキスト11”～ ”分析テキスト20”、”分析テキスト31”～ ”分析テキスト40”の名称と、
+分析テキストを用いて、帳票出力画面や検索画面で検索条件として絞り込む際に利用するコンボボックスに表示される”分析11に設定された名称”～ ”分析20に設定された名称”、”分析31に設定された名称”～ ”分析40に設定された名称”の名称を変更します。
+
+.. note::
+
+  分析テキストは、マスタ管理しない任意の文字列を分析目的で設定可能な項目です。
+
+.. _FMS_cookbook_setting_rename_analyzeText-preConditions:
+
+前提条件
+===================================================
+
+本手順は、画面やファイル出力時のヘッダに表示する名称を変更する手順です。
+名称を変更しない場合は実施する必要はありません。
+
+.. _FMS_cookbook_setting_rename_analyzeText-do:
+
+実行手順
+===================================================
+
+.. _FMS_cookbook_setting_rename_analyzeText-do-display:
+
+画面に表示する名称の変更
+-------------------------------------------------------------------------------------
+
+画面に表示する名称は、 |BAPF| の開発リファレンス(アプリケーション) `名称のカスタマイズ`_ に従って変更します。
+
+以下では、モジュール別の分析テキストの変更方法を列挙します。
+
+.. note::
+
+  会計連携モジュールの場合には、別テーブルの変更が必要となります。
+
+.. _FMS_cookbook_setting_rename_analyzeText-do-display-cmn:
+
+モジュール共通の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+名称テーブル（biz_named_item）を以下のように設定してください。
+
+.. note::
+
+    application_idに'fms'を設定します。
+    
+    module_idに'fc'を設定します。
+
+分析テキスト
+
+* 名称IDフィールド（item_id） ::
+
+   FMS.FC.analyzeText11 ～ FMS.FC.analyzeText20
+   FMS.FC.analyzeText31 ～ FMS.FC.analyzeText40
+
+* Biz∫UI3用名称IDフィールド（item_id） ::
+
+   FMS.FC.label-analyzeText11 ～ FMS.FC.label-analyzeText20
+   FMS.FC.label-analyzeText31 ～ FMS.FC.label-analyzeText40
+
+* 名称フィールド（item_name） ::
+
+   任意のテキスト名（例：分析テキスト11）
+
+.. _FMS_cookbook_setting_rename_analyzeText-do-display-ai:
+
+会計連携の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+伝票項目フィールド初期データ（fms_ai_slip_itm_fld_def）テーブル、取込項目初期データ（fms_ai_import_itm_def）テーブルを以下のように変更してください。
+
+分析テキスト
+
+* 対象フィールド ::
+  
+   field_name
+
+* 変更条件
+
+  変更対象のレコードは以下の条件で特定します。
+
+  * field_id
+    
+    analyze_text11 ～ analyze_text20
+
+    analyze_text31 ～ analyze_text40
+
+.. _FMS_cookbook_setting_rename_analyzeText-do-display-fa:
+
+資産管理の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+名称テーブル（biz_named_item）を以下のように設定してください。
+
+.. note::
+
+    application_idに'fms'を設定します。
+
+    module_idに'fa'を設定します。
+
+分析テキスト
+
+* 名称IDフィールド（item_id） ::
+
+   FMS.FA.analyzeText11 ～ FMS.FA.analyzeText20
+   FMS.FA.analyzeText31 ～ FMS.FA.analyzeText40
+
+* 名称フィールド（item_name） ::
+
+   任意のテキスト名（例：分析テキスト11）
+
+FA分析テキスト
+
+* 名称IDフィールド（item_id） ::
+
+   FMS.FA.faAnalyzeText11 ～ FMS.FA.faAnalyzeText20
+
+* 名称フィールド（item_name） ::
+
+   任意のテキスト名（例：FA分析テキスト11）
+
+.. _FMS_cookbook_setting_rename_analyzeText-do-display-lc:
+
+契約管理・リース管理の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+名称テーブル（biz_named_item）を以下のように設定してください。
+
+.. note::
+
+    application_idに'fms'を設定します。
+
+    module_idに'lc'を設定します。
+
+LC分析テキスト
+
+* 名称IDフィールド（item_id） ::
+
+   FMS.LC.lcAnalyzeText11 ～ FMS.LC.lcAnalyzeText20
+
+* 名称フィールド（item_name） ::
+
+   任意のテキスト名（例：LC分析テキスト11）
+
+
+.. _FMS_cookbook_setting_rename_analyzeText-do-cmb:
+
+コンボボックスに表示する名称の変更
+-------------------------------------------------------------------------------------
+
+.. _FMS_cookbook_setting_rename_analyzeText-do-cmb-cmn:
+
+モジュール共通の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+会計種別明細テーブル（fms_fc_finance_class_dtl）の修正が必要です。 
+
+* 対象フィールド ::
+  
+   finance_class_dtl_name
+
+* 変更条件1（各画面のコンボボックス）
+    
+  変更対象のレコードは以下の条件で特定します。
+    
+  * finance_class_cd
+    
+    AnalyzeTextSelectType
+    
+  * finance_class_detail_cd
+    
+    ‘11’～‘20’(分析11に設定された名称～分析20に設定された名称に対応)
+
+    ‘31’～‘40’(分析31に設定された名称～分析40に設定された名称に対応)
+
+* 変更条件2（仕訳取引明細検索／仕訳明細検索のソート順）
+    
+  変更対象のレコードは以下の条件で特定します。
+    
+  * finance_class_cd
+    
+    FC006
+    
+  * finance_class_detail_cd
+    
+    ‘analyzeText11’～‘analyzeText20’(分析テキスト11～20に対応)
+
+    ‘analyzeText31’～‘analyzeText40’(分析テキスト31～40に対応)
+
+.. _FMS_cookbook_setting_rename_analyzeText-do-cmb-lc:
+
+契約管理・リース管理の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+会計種別明細テーブル（fms_fc_finance_class_dtl）の修正が必要です。 
+
+* 対象フィールド ::
+  
+    finance_class_dtl_name
+
+* 変更条件
+  
+  変更対象のレコードは以下の条件で特定します。
+  
+  * finance_class_cd
+
+    LcAnalyzeTextSelectType
+
+  * finance_class_detail_cd
+
+    ‘11’～‘20’(それぞれ分析11に設定された名称～分析20に設定された名称に対応)
+
+.. note::
+
+    'finance_class_cd'が”LcAnalyzeTextSelectType”のレコードは、契約管理・リース管理モジュールのLC分析テキストを検索条件として絞り込む際に利用するコンボボックスに表示されるものとなります。
+
+.. _FMS_cookbook_setting_rename_analyzeText-do-etc:
+
+その他名称の変更
+-----------------------------------------------------------------------
+
+画面名称やコンボボックス以外で利用している分析テキストの名称を変更する場合には、会計種別明細テーブル（fms_fc_finance_class_dtl）の変更を行います。
+
+以下では、モジュール別の分析テキストの変更方法を説明します。
+
+.. _FMS_cookbook_setting_rename_analyzeText-do-etc-fa:
+
+資産管理の変更
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+会計種別明細テーブル（fms_fc_finance_class_dtl）の修正が必要です。 
+
+* 対象フィールド ::
+  
+   finance_class_dtl_name
+
+* 変更条件（帳票の表示用、エラーメッセージ表示用）
+    
+  変更対象のレコードは以下の条件で特定します。
+    
+  * finance_class_cd
+    
+    FA016
+    
+  * finance_class_detail_cd
+    
+    ‘FC11’～’FC20’（それぞれ分析テキスト11～20に対応）
+
+    ‘FC31’～’FC40’（それぞれ分析テキスト31～40に対応）
+
+    ‘FA11’～’FA20’（それぞれFA分析テキスト11～20に対応）

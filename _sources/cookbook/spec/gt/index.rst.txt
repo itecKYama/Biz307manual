@@ -1,0 +1,13 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_spec_gt:
+
+===================================================
+グループ会社間取引
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   delete_apbase_info_batch
+

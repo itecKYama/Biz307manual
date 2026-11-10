@@ -1,0 +1,21 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_cookbook_workflow:
+
+===================================================
+ワークフロー
+===================================================
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+   
+   self_approve
+   node_end
+   comma_separate
+
+.. only:: internal
+
+   self_approve    :自己承認制御を無効化する
+   node_end        :案件の終了ノードでエラーが発生した案件に対して、ユーザプログラムを無効化し完了または案件の削除を行う
+   comma_separate  :金額項目のカンマ区切り表示を変更する

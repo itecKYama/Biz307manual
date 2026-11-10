@@ -1,0 +1,75 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_setting-rename-amountUnit:
+
+=======================================================================
+金額単位名を変更する
+=======================================================================
+
+基準通貨やロケールに合うように、一般会計や管理会計の帳票における金額単位の名称を変更します。
+
+帳票指示画面の名称を変更する
+=======================================================================
+
+
+|BAPF| の開発リファレンス(アプリケーション) `名称のカスタマイズ`_ を参照して下さい。
+
+  * 上述を参照し、biz_named_itemテーブルのitem_idとitem_nameを以下のように設定してください。:
+
+  .. note::
+
+      application_idに'fms'を設定します。
+
+      module_idに'fc'を設定します。
+
+  .. list-table::
+     :widths: 20, 25, 30
+     :header-rows: 1
+
+     * - item_id
+       - item_id(Biz∫UI3)
+       - item_name
+     * - FMS.FC.yen
+       - FMS.FC.label-yen
+       - 基準通貨の単位で出力します。
+
+         例:円, U.S.dollars
+     * - FMS.FC.oneThousandYen
+       - FMS.FC.label-oneThousandYen
+       - 千単位で出力します。
+
+         例:千円, Thousands of U.S. dollars
+     * - FMS.FC.oneMillionYen
+       - FMS.FC.label-oneMillionYen
+       - 百万単位で出力します。
+
+         例:百万円, Millions of U.S. dollars
+
+帳票に出力される名称を変更する
+=======================================================================
+
+  直接のDB操作を必要とします。
+  以下の箇所を変更してください。（サーバの再起動は必要ありません）
+
+  * 対象テーブル::
+
+      FMS_FC_FINANCE_CLASS_DTL
+
+  * 変更対象フィールド::
+
+      FINANCE_CLASS_DTL_NAME
+
+  * 変更条件
+
+    変更対象のレコードは以下の条件で特定します。
+
+    * FINANCE_CLASS_CD
+
+      AmtUnitClass
+
+    * FINANCE_CLASS_DETAIL_CD
+
+      | '0'（基準通貨の単位：円）
+      | '1'（千単位：千円）
+      | '2'（百万単位：尺万円）
+

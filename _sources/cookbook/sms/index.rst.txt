@@ -1,0 +1,12 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_cookbook_sms:
+
+===================================================
+Biz∫販売連携
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   invoiceLayout
