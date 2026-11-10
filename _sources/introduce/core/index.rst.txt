@@ -1,0 +1,57 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_introduce_core:
+
+===================================================
+会計コアマスタの設定
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+
+   parameter
+   accounting_period
+   account
+   account_structure
+   branch_accounting
+   cash_flow
+   account_revaluate_target_control
+   finance_module
+   monthly_open
+   analysis_field
+   field_relation
+   accounting_type
+   restrict_batch
+   deferred_accounts_transfer
+   balance_carryover_set
+   allocate
+   external_allocation_base_import
+   jrnlptn
+   monthly_update
+   tatsuzin
+   report_batch
+
+.. only:: internal
+
+   parameter                       :パラメータ登録
+   accounting_period               :会計期間登録
+   account                         :科目登録
+   account_structure               :科目構成登録
+   branch_accounting               :本支店仕訳情報登録
+   cash_flow                       :キャッシュフロー項目登録
+   account_revaluate_target_control:科目評価替対象登録
+   finance_module                  :入力制限／月次更新対象外設定
+   monthly_open                    :会計月度オープン処理
+   analysis_field                  :分析フィールド登録
+   field_relation                  :フィールド関連マスタ登録
+   accounting_type                 :会計種別設定
+   restrict_batch                  :入力制限ジョブ登録
+   deferred_accounts_transfer      :経過勘定振替マスタ登録
+   balance_carryover_set           :残高繰越設定
+   allocate                        :配賦元・先マスタ登録
+   external_allocation_base_import :外部配賦基準登録
+   jrnlptn                         :仕訳パターンの登録
+   monthly_update                  :月次更新ジョブ登録
+   tatsuzin                        :達人連携設定
+   report_batch                    :帳票出力ジョブの登録

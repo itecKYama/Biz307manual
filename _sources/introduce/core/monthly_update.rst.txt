@@ -1,0 +1,148 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_introduce_core-monthly_update:
+
+===================================================
+月次更新ジョブ登録
+===================================================
+月次確定及び仮実行を行うジョブを登録します。
+
+ジョブの実行については、以下の方法があり、それぞれの設定方法についてまとめています。
+
+* コマンドラインから実行する
+
+* |IM| ジョブネット管理から実行する
+
+各システムの運用を考慮して、どの方式で処理を行うか検討します。
+
+.. _FMS_introduce_core-monthly_update-startConditions:
+
+着手条件
+===================================================
+実行ディレクトリの作成が完了していること。 [#f1]_
+
+.. note::
+
+  実行ディレクトリの作成については |BAPF| のフレームワーク `バッチブートストラップ`_ を参照して下さい。
+
+.. rubric:: 脚注
+
+.. [#f1] コマンドラインから実行する場合のみ設定が必要です。
+
+
+.. _FMS_introduce_core-monthly_update-do:
+
+実行手順
+===================================================
+.. note::
+
+  本バッチは、会社単位での設定が必要となります。
+
+  以下の :ref:`FMS_introduce_core-monthly_update-do-bapf` 、 :ref:`FMS_introduce_core-monthly_update-do-im` の設定及び、 :ref:`FMS_introduce_core-monthly_update-endConditions` の確認は会社ごとに実施してください。
+
+.. _FMS_introduce_core-monthly_update-do-bapf:
+
+|BAPF| へのジョブ登録
+---------------------------------------------------
+1. Biz∫会計管理者アカウントでポータル画面にログインし、「ジョブ管理」画面を起動します。
+
+  * メニュー ::
+
+      Biz∫ APF アドミニストレーション 
+        システム管理（会社共通）
+          ジョブ
+            ジョブ管理
+
+2. ジョブの登録
+
+   新規ボタンを押下し、ジョブ設定登録の基本情報タブにおいて下表の項目を設定し、新規のジョブを登録してください。
+
+  .. list-table::
+     :widths: 10, 20
+     :header-rows: 1
+
+     * - 項目名
+       - 設定値
+     * - ジョブコード
+       - 任意
+     * - ロケールID
+       - ジョブ名表示用のロケールID
+     * - 名称
+       - 任意
+     * - 実行ユーザコード
+       - ジョブ実行時に利用するユーザのID [#user]_
+     * - コンポーネントクラス名
+       - ジョブ実行のコンポーネントクラス名。
+
+         com.biz_integral.fms.fc.application.web.monthlyFix.MonthlyFixExecutionBatch
+
+         （1行で記述します）
+
+  .. rubric:: 脚注
+
+  .. [#user] 実行ユーザコードに指定するユーザに必要な権限については、 :ref:`ジョブ実行ユーザの権限<FMS_cookbook_introduce_batch-user-fc-monthly>` を参照してください。
+
+3. ジョブパラメータの登録
+
+   ジョブ設定登録のジョブパラメータタブにて、ジョブパラメータを登録します。
+
+  .. list-table::
+     :widths: 10, 20, 5
+     :header-rows: 1
+
+     * - パラメータキー
+       - パラメータ値
+       - 必須/任意
+     * - companyCd
+       - 月次更新実行及び仮実行を行う会社コードを設定します。
+       - 必須
+     * - temporaryExecutionFlag
+       - 仮実行処理を実施するかを表すフラグを設定します。
+
+         0：確定実行処理を実施、1：仮実行処理を実施
+       - 必須
+     * - targetYearMonth
+       - 月次更新実行及び仮実行を行う年月を設定します。
+
+         未設定の場合、会社単位の最古オープン月が設定されます。
+       - 任意
+     * - headBranchDepartmentGroupCd
+       - 月次更新実行及び仮実行を行う本支店組織グループコードを設定します。
+
+         未設定の場合、全ての本支店の組織グループが更新対象となります。
+       - 任意
+     * - executionModuleCategory
+       - 月次更新実行及び仮実行を行うモジュール分類を設定します。
+
+         gl（一般会計）、ap（債務管理）、ar（債権管理）、ma（管理会計）、fe（外貨管理）、bn（手形管理）、ec（電子記録債権管理）、fa（資産管理）、lc（契約管理・リース管理）のいずれかを設定します。
+
+         未設定の場合、全てのモジュールが更新対象となります。
+       - 任意
+
+.. _FMS_introduce_core-monthly_update-do-im:
+
+|IM| へのジョブ登録
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-job` を参照してください。
+
+.. _FMS_introduce_core-monthly_update-endConditions:
+
+完了条件
+===================================================
+以下の確認は、 :ref:`FMS_introduce_core-monthly_update-do` で作成した全ジョブに対して実施してください。
+
+* :ref:`FMS_introduce_core-monthly_update-do-bapf` で起動した「ジョブ設定登録/照会」画面から登録したジョブが検索結果に表示されることを確認します。
+
+* :ref:`FMS_introduce_core-monthly_update-do-im` で起動したジョブ管理画面で登録したジョブが表示されることを確認します。
+
+* 登録したジョブが実行できることを確認します。
+
+  **intra-martジョブネット管理から起動する場合**
+
+    :ref:`FMS_cookbook_introduce_batch-job-run` を参照してください。
+
+  **コマンドラインから起動する場合**
+
+    :ref:`FMS_cookbook_introduce_batch_fc-monthly_update_batch` を参照してください。
+

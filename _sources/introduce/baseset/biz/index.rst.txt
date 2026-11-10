@@ -1,0 +1,24 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_baseset-biz:
+
+===================================================
+|BIZ| 共通マスタ設定
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   configuration
+   currency
+   calendar
+   indirect_tax
+   analysis_class
+
+.. only:: internal
+
+   configuration    :コンフィグレーション設定
+   currency         :通貨登録
+   calendar         :カレンダ登録
+   indirect_tax     :間接税登録
+   analysis_class   :分析コード登録

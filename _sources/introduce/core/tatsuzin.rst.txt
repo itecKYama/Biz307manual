@@ -1,0 +1,21 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_introduce_core_tatsuzin:
+
+===================================================
+達人連携設定
+===================================================
+Biz∫会計より達人シリーズへ連携するための設定手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+
+   tatsuzin/parameter
+   tatsuzin/mst
+   tatsuzin/limitations
+
+.. only:: internal
+
+   tatsuzin/parameter     :パラメータ設定
+   tatsuzin/mst           :達人連携マスタ登録
+   tatsuzin/limitations   :制限事項

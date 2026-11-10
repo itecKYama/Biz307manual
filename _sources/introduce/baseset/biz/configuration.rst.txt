@@ -1,0 +1,143 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_baseset_biz-configuration:
+
+===================================================
+コンフィグレーション設定
+===================================================
+
+|FMS| の動作条件のうち、 |BAPF| の管理するパラメータを設定します。
+
+.. _FMS_introduce_baseset_biz-configuration-startConditions:
+
+着手条件
+===================================================
+
+:ref:`FMS_introduce_baseset_auth` までの作業を終えていること。
+
+.. _FMS_introduce_baseset_biz-configuration-do:
+
+実行手順
+===================================================
+
+.. _FMS_introduce_baseset_biz-configuration-do-cmp:
+
+会社選択
+---------------------------------------------------
+
+|FMS| 管理者アカウントでポータル画面にログインし、コンフィグレーション設定を行う会社をツリーを操作し、会社を選択します。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      システム管理（会社共通）
+        コンフィグレーション
+          コンフィグレーション管理
+
+  例として、会社コードC000000001の会社が用いるパラメータを設定するためには、
+  application/biz/companies/ を右クリックし、「新規」からC000000001のコンテナを作成します。 ::
+
+    application
+     ├biz
+       ├defaultCompany
+       ├companies
+         ├C000000001
+
+
+.. _FMS_introduce_baseset_biz-configuration-do-entry:
+
+エントリ追加
+---------------------------------------------------
+
+:ref:`FMS_introduce_baseset_biz-configuration-do-cmp` で作成したコンテナを選択し、以下のパラメータのキーと値を、「F5:エントリの追加」から追加します。
+パラメータ値は導入条件に合わせて編集してください。
+
+.. list-table::
+   :widths: 5, 15, 20, 15
+   :header-rows: 1
+
+   * - No.
+     - パラメータキー
+     - 設定内容
+     - パラメータ値
+   * - 1
+     - bankHolidayCalendarCd
+     - 銀行休日カレンダコード
+     - 0000000002など
+   * - 2
+     - errorLogLimit
+     - ログ出力件数の限界値
+     - 100など。
+   * - 3
+     - fiscalDepartmentSetCd
+     - 計上組織セットコード
+     - C000000001 など。 [#f1]_ 
+   * - 4
+     - importFileLimit
+     - インポートファイル数の限界値
+     - 100など
+   * - 5
+     - importLineLimit
+     - 読み込み行数の限界値
+     - 1000など
+   * - 6
+     - maxTransferAmount
+     - 振込手数料最大金額
+     - 99999999999999など
+   * - 7
+     - projectAnalyzeClassCode
+     - プロジェクト分析種別
+     - PRJ など。 [#f2]_
+   * - 8
+     - workflowMatterNameMaxByteLength
+     - ワークフロー案件名利用可能バイト数（ワークフローの案件名は本パラメータ値のバイト数を上限として切り取られる）
+     - 400 など。
+   * - 9
+     - workflowProcessCommentMaxByteLength
+     - ワークフロー処理コメント利用可能バイト数（ワークフローのコメントは本パラメータ値のバイト数を上限として切り取られる）
+     - 2000 など。
+   * - 10
+     - taxIdentifier
+     - 適格請求書発行事業者登録番号
+     - 「T」（ローマ字）＋法人番号 など。
+   * - 11
+     - fbEncoding [#f3]_
+     - FBファイルの文字エンコード
+     - 「UTF-8」 など。
+   * - 12
+     - transitionalMeasuresRoundingType
+     - 経過措置端数処理区分（みなし仕入税額端数処理）
+     - "0":切捨て 、"2":四捨五入
+   * - 13
+     - deemedPurchaseTax80
+     - みなし仕入税（80%控除対象）の間接税コード
+     - ","(カンマ）区切りで、対象となる間接税コードを指定する
+   * - 14
+     - deemedPurchaseTax70
+     - みなし仕入税（70%控除対象）の間接税コード
+     - ","(カンマ）区切りで、対象となる間接税コードを指定する
+   * - 15
+     - deemedPurchaseTax50
+     - みなし仕入税（50%控除対象）の間接税コード
+     - ","(カンマ）区切りで、対象となる間接税コードを指定する
+   * - 16
+     - deemedPurchaseTax30
+     - みなし仕入税（30%控除対象）の間接税コード
+     - ","(カンマ）区切りで、対象となる間接税コードを指定する
+
+
+.. rubric:: 脚注
+
+.. [#f1] 基本組織セットと計上組織セットを同一のコードにしている場合には会社コードを設定してください。別々の場合には、 :ref:`FMS_introduce_baseset_im_master-company-do-dptSet` で定めた計上組織セットコードを設定してください。
+
+.. [#f2] プロジェクト原価管理モジュールで使用するプロジェクトが割り当てられた分析種別を設定してください。
+
+.. [#f3] FBファイルの文字エンコードを「Windows-31J」から変更する必要がない場合は登録不要です。
+
+.. _FMS_introduce_baseset_biz-configuration-endConditions:
+
+完了条件
+===================================================
+
+同画面より登録されたことを目視で確認します。
+

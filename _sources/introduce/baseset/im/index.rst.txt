@@ -1,0 +1,28 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_baseset_im_master:
+
+===================================================
+|IM_MST| の設定
+===================================================
+
+
+.. toctree::
+   :maxdepth: 1
+   
+   company
+   department
+   corporation
+   role
+   user
+   authorization
+
+.. only:: internal
+
+   company        :会社コード・計上組織セットコード登録
+   department     :組織登録
+   corporation    :法人登録
+   role           :ロール登録
+   user           :ユーザ・従業員登録
+   authorization  :認可設定
+

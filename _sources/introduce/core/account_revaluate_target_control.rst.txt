@@ -1,0 +1,43 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_introduce_core-account_revaluate_target_control:
+
+===================================================
+科目評価替対象登録
+===================================================
+|FMS| の用いる科目評価替対象を設定します。
+
+.. _FMS_introduce_core-account_revaluate_target_control-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_core-account` を終えていること。
+
+:ref:`FMS_introduce_core-cash_flow` を終えていること。
+
+.. _FMS_introduce_core-account_revaluate_target_control-do:
+
+実行手順
+===================================================
+Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューより、一括取込マニュアルの :ref:`FMS_import_mst-account_revaluate_target_control-account_revaluate_target_control` を参考に取込ファイルを準備し、同メニューの「SF5:一括登録」より登録します。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            科目評価替対象管理
+
+.. _FMS_introduce_core-account_revaluate_target_control-endConditions:
+
+完了条件
+===================================================
+* 同メニューからプルーフリストを出力し、登録結果を確認します。
+
+* 一括登録は非同期タスクとして実行されます。一括登録を行った場合、以下のメニューより「科目評価替対象管理一括登録」がエラーなく終了していることを併せて確認します。 ::
+
+    Biz∫ APF アドミニストレーション
+      システム管理（会社共通）
+        非同期タスク
+          非同期タスクモニタ

@@ -1,0 +1,25 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_introduce_baseset:
+
+===================================================
+|BIZ| 基盤の設定
+===================================================
+
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   im/index
+   auth/index
+   biz/index
+   jobnet
+
+.. only:: internal
+
+   im/index   : 共通マスタの設定
+   auth/index : アクセス権設定
+   biz/index  : Biz∫共通マスタ設定
+   jobnet     : ジョブネット設定
+

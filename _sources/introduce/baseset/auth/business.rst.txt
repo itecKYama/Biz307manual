@@ -1,0 +1,48 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_baseset_auth-business:
+
+===================================================================
+権限グループと権限の関連づけ（業務権限グループ）
+===================================================================
+
+:ref:`FMS_introduce_baseset_auth-priv_grp` で設けた権限グループに権限を関連づけます。
+
+
+.. _FMS_introduce_baseset_auth-business-startConditions:
+
+着手条件
+===================================================
+
+:ref:`FMS_introduce_baseset_im_master-company` までの手順を終えていること。
+
+.. _FMS_introduce_baseset_auth-business-do:
+
+実行手順
+===================================================
+
+|FMS| 管理者アカウントでポータル画面にログインし、 :ref:`FMS_introduce_baseset_auth-priv_grp` で作成した権限グループに対して、所属を設定します。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      システム管理
+        権限グループ
+          権限グループ管理
+
+1. 「F6：検索」を押下し、権限グループ一覧を取得します。
+2. 権限グループを選択し、「所属」を押下します。
+3. 「F5:新規」から権限IDと有効期間を指定し、登録します。
+
+.. note::
+
+  一括登録の場合、シート「authPrivPrivGrpAth.csv」の所定のフォーマットに従って項目を埋めたcsvファイルを準備し、同メニューの「SF5:一括登録」より登録します。
+  
+  ※権限の一覧は「 :download:`参考資料_権限一覧<../../reference/download/auth_reference.xlsx>` 」を参照してください。
+
+.. _FMS_introduce_baseset_auth-business-endConditions:
+
+完了条件
+===================================================
+
+権限グループと権限の関係を確認する場合は、当該権限グループの「所属」を表示後、プルーフリストを取得し、登録結果を確認します。

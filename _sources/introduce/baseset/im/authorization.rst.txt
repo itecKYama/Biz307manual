@@ -1,0 +1,100 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_baseset_im_master-authorization:
+
+===================================================
+認可設定
+===================================================
+
+登録されたロールに対して、メニュー表示やプロセス実行権限を割り当てます。
+
+.. note::
+
+  認可についての詳細な説明や操作方法については、 |IAP| テナント管理者操作ガイドの `基本設定 / 認可を設定する`_ をご確認ください。
+
+.. _FMS_introduce_baseset_im_master-authorization-startConditions:
+
+着手条件
+===================================================
+
+:ref:`FMS_introduce_baseset_im_master-role` を終えていること。
+
+
+.. _FMS_introduce_baseset_im_master-authorization-do:
+
+実行手順
+===================================================
+
+テナント管理者権限でテナント管理画面にログインし、認可を設定します。以下は、画面からの設定方法です。
+
+* メニュー ::
+
+    テナント管理
+      認可
+
+.. note::
+
+  ジョブ/ジョブネットを利用して認可を一括取込する場合は、「 `IM-Authz（認可）インポート・エクスポート仕様書`_ 」を参照してください。
+
+
+
+
+.. _FMS_introduce_baseset_im_master-authorization-do-menu:
+
+メニュー設定
+--------------
+リソース種類に「メニュー設定」を選択し、メニューグループの認可設定を行います。
+
+「グローバルナビ（PC用）」と「サイトマップ（PC用）」配下のリソースグループ名「Biz∫ 会計」に認可設定を行ってください。
+
+.. _FMS_introduce_baseset_im_master-authorization-do-screen:
+
+画面・処理
+------------
+リソース種類に「画面・処理」を選択し、各画面の認可設定を行います。
+
+特定のユーザに特定のメニューを表示しない設定を行う場合には、画面ごとの認可を外す設定を行います。
+
+
+.. note::
+
+  会計のメニューの一覧は「 :download:`参考資料_メニュー一覧<../../reference/download/menu_reference.xlsx>` 」を参照してください。
+
+.. warning::
+
+  以下のメニューは外部システムとのインターフェイス用の機能となります。
+
+  フロント連携出力管理は任意のSQLを登録する機能であり、フロント連携ファイル出力はそのSQLを実行する機能であるため、実行者の権限の及ばないデータにアクセスされる危険性があります。
+  その結果、本来権限を保有するユーザの権限が害される可能性があります。
+  
+  上記の点を考慮し、本機能のメニューは内部統制上の職務規定に適合するユーザ以外には開放しないでください。
+
+  * メニュー
+
+    * 「Biz∫ 会計」－「プロジェクト原価管理」－「業務連動」－「マスタメンテナンス」－「フロント連携出力管理」
+
+    * 「Biz∫ 会計」－「プロジェクト原価管理」－「業務連動」－「更新処理」－「フロント連携ファイル出力」
+
+.. _FMS_introduce_baseset_im_master-authorization-do-process:
+
+プロセス実行権限
+------------------
+リソース種類に「プロセス実行権限」を選択し、プロセス実行権限の制御に関する設定を行います。
+
+.. note::
+
+  会計のプロセス権限の概要は「 :download:`参考資料_プロセス権限設定一覧<../../reference/download/processAuth_reference.xlsx>` 」を参照してください。
+
+.. _FMS_introduce_baseset_im_master-authorization-do-rest:
+
+「REST API」の認可について
+------------------------------
+
+「REST API」の認可については、|BAPF| / REST API プログラミングガイドの `認可 <https://apf-docs.biz-integral.net/docs/LATEST/apf/document/bui3/rest-api/how-to-build-rest-api.html#bapf-biz-rest-api-how-to-build-rest-api-authentication>`_ をご参照ください。
+
+.. _FMS_introduce_baseset_im_master-authorization-endConditions:
+
+完了条件
+===================================================
+
+同メニューから設定した認可が表示できることを確認します。

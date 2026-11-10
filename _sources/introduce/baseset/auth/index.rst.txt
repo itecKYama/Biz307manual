@@ -1,0 +1,29 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_baseset_auth:
+
+===================================================
+アクセス権設定
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   summary
+   conf
+   priv_grp
+   business
+   dept_group
+   dept_grp_access
+   user
+
+.. only:: internal
+
+   summary          :アクセス権設定の概要
+   conf             :権限の確認
+   priv_grp         :権限グループ登録
+   business         :権限グループと権限の関連づけ（業務権限グループ）
+   dept_group       :組織グループ登録
+   dept_grp_access  :権限グループと権限、組織グループの関連づけ（組織データアクセス権限グループ）
+   user             :権限グループとユーザの関連づけ
+
