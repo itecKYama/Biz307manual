@@ -1,0 +1,20 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_deptchg_base:
+
+===================================================
+組織の基本説明
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   mst
+   balance
+   auth
+   
+.. only:: internal
+
+   mst            :Biz∫会計の組織関連のマスタについて
+   balance        :Biz∫会計の組織別の残高管理について
+   auth           :Biz∫会計の権限の付与について

@@ -1,0 +1,26 @@
+.. include:: ../include/definition.txt
+
+.. _FMS_deptchg:
+
+===================================================
+組織変更ガイド
+===================================================
+
+.. toctree::
+   :numbered:
+   :titlesonly:
+   :maxdepth: 2
+   
+   preface/index
+   base/index
+   preparation/index
+   set/index
+   deptgrouopchg/index
+   
+.. only:: internal
+
+   preface/index       :はじめに
+   base/index          :組織の基本説明
+   preparation/index   :組織変更事前準備
+   set/index           :組織変更設定手順
+   deptgrouopchg/index :組織グループ変更手順

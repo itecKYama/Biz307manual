@@ -1,0 +1,30 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_deptchg_set-term_division:
+
+===================================================
+組織の有効期間分割
+===================================================
+残高の移行が完了した後、廃止する組織の有効期間を分割します。
+
+.. _FMS_deptchg_set-term_division-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_deptchg_set-balanceshift` までの作業が完了していること。
+
+.. _FMS_deptchg_set-term_division-do:
+
+実行手順
+===================================================
+:ref:`FMS_introduce_baseset_im_master-department` の手順と :ref:`FMS_introduce_baseset_auth-dept_group` の手順を実施し、組織マスタと組織グループ所属マスタの期間分割を行ってください。
+
+その際、組織と組織グループ所属の有効期間は、組織変更日まで有効にしてください。
+
+.. _FMS_deptchg_set-term_division-endConditions:
+
+完了条件
+===================================================
+* 登録した組織を組織登録画面から確認します。
+
+* 登録した組織グループ所属を、組織グループ所属登録画面から確認します。

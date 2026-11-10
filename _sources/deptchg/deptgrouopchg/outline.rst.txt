@@ -1,0 +1,18 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_deptchg_deptgroupchg-outline:
+
+===================================================
+組織グループ変更の概要
+===================================================
+本項では、組織グループマスタとそれに関連するマスタの変更について説明します。この手順について「組織グループ変更」と呼びます。なお、組織マスタとそれに関連するマスタの変更、及び残高の移行は「組織変更」と呼び、 :ref:`FMS_deptchg_set` で説明します。
+
+組織グループ変更を実施する場合、実施しなければいけない手順は以下の通りです。
+
+  5.2. :ref:`FMS_deptchg_deptgroupchg-add`
+
+  5.3. :ref:`FMS_deptchg_deptgroupchg-attach_mod`
+
+  5.4. :ref:`FMS_deptchg_deptgroupchg-mst`
+
+なお、組織グループを変更する日付を「組織変更日」とします。この組織変更日は、組織変更の場合と同じであるため、 :ref:`FMS_deptchg_set-outline` を参照してください。

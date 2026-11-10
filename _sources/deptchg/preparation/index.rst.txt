@@ -1,0 +1,22 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_deptchg_preparation:
+
+===================================================
+組織変更事前準備
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+
+   outline
+   shiftlist
+   setex
+   restrictions
+
+.. only:: internal
+
+   outline      :組織変更事前準備の概要
+   shiftlist    :新旧移行表の作成
+   setex        :設定例
+   restrictions :制限事項

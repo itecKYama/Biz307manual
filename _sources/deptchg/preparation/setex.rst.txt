@@ -1,0 +1,154 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_deptchg_preparation-setex:
+
+===================================================
+設定例
+===================================================
+
+組織変更をする場合、以下の各作業を実施する必要があります。
+
+4. :ref:`FMS_deptchg_set`
+
+  4.2. :ref:`FMS_deptchg_set-add`
+
+  4.3. :ref:`FMS_deptchg_set-mst`
+
+  4.4. :ref:`FMS_deptchg_set-hstry`
+
+  4.5. :ref:`FMS_deptchg_set-journal`
+
+  4.6. :ref:`FMS_deptchg_set-balanceshift_nrcncl`
+
+  4.7. :ref:`FMS_deptchg_set-balanceshift`
+
+  4.8. :ref:`FMS_deptchg_set-term_division`
+
+5. :ref:`FMS_deptchg_deptgroupchg`
+
+  5.2. :ref:`FMS_deptchg_deptgroupchg-add`
+
+  5.3. :ref:`FMS_deptchg_deptgroupchg-attach_mod`
+
+  5.4. :ref:`FMS_deptchg_deptgroupchg-mst`
+
+  5.5. :ref:`FMS_deptchg_deptgroupchg-term_division`
+
+組織変更の代表的なパターンについて、必要な作業を以下に示します。
+
+.. figure:: ./images/setex_001.png
+
+.. _FMS_deptchg_preparation-setex-add:
+
+組織が新設される場合
+============================================================
+
+新しい組織を登録し、関連するマスタに対してその組織を設定します。
+
+.. _FMS_deptchg_preparation-setex-split:
+
+組織が分割される場合
+============================================================
+
+分割するため新しい組織を登録します（ :ref:`FMS_deptchg_preparation-setex-add`  の作業）。分割元の組織について、分割後の期間に計上された仕訳の対処をします。
+
+その後、残高を分割するため、新組織に対して残高を移行してください。
+
+.. _FMS_deptchg_preparation-setex-dis:
+
+組織が廃止される場合
+============================================================
+
+廃止する組織を使用している関連マスタを更新します。そして、廃止後の期間にその組織に計上された仕訳の対処をし、残高を移行してください。
+
+.. _FMS_deptchg_preparation-setex-merge_pre:
+
+複数の組織が一つになる場合（既存組織に統合)
+============================================================
+
+統合後に存続しない組織について :ref:`FMS_deptchg_preparation-setex-dis` の作業を実施します。残高の移行先は、統合先の組織となります。
+
+.. _FMS_deptchg_preparation-setex-merge_new:
+
+複数の組織が一つになる場合（新組織に統合）
+============================================================
+
+統合する新組織を :ref:`FMS_deptchg_preparation-setex-add` の作業で作成します。その後、統合後に存続しない組織について :ref:`FMS_deptchg_preparation-setex-dis` の作業を実施します。
+
+.. _FMS_deptchg_preparation-setex-move_group:
+
+組織が組織グループを移動する場合
+============================================================
+
+組織グループ所属を変更するのみで、組織グループの移動は完了です。
+
+.. _FMS_deptchg_preparation-setex-move_hb:
+
+組織が本支店間を移動する場合
+============================================================
+
+本支店間を移動する場合、本支店勘定を考慮する必要があります。
+
+組織の移動に伴い、その本支店間で本支店勘定を起こす必要がある場合、元の組織を廃止し、移動後の組織を新しい組織コードで作成します。その際は、 :ref:`FMS_deptchg_preparation-setex-dis` と :ref:`FMS_deptchg_preparation-setex-add` の作業を実施してください。
+
+本支店勘定を起こす必要がない場合、 :ref:`FMS_deptchg_preparation-setex-move_group` の作業を実施します。
+
+また、移動する組織が本支店の代表組織の場合、その組織に本支店勘定の残高があります。この残高についても新しい本支店に移動するのか、元の本支店の新しい代表組織に移行するのかを検討してください。
+
+.. _FMS_deptchg_preparation-setex-group_new:
+
+組織グループが新設される場合
+============================================================
+
+新しい組織グループを登録し、関連するマスタに対してその組織グループを設定します。その後、新しい組織グループに組織を所属させます。
+
+.. _FMS_deptchg_preparation-setex-group_split:
+
+組織グループが分割される場合
+============================================================
+
+分割するため新しい組織グループを登録します（ :ref:`FMS_deptchg_preparation-setex-group_new` の作業）。その後、 :ref:`FMS_deptchg_preparation-setex-move_group` の作業を実施し、新しい組織グループに所属する組織を移動します。なお、所属する組織についても同様に分割する場合は、 :ref:`FMS_deptchg_preparation-setex-split` の作業を実施してください。
+
+.. _FMS_deptchg_preparation-setex-group_dis:
+
+組織グループが廃止される場合
+============================================================
+
+廃止する組織グループを使用している関連マスタを更新します。そして、廃止後の期間にその組織グループに所属している組織について、組織グループ所属を更新します。
+
+.. _FMS_deptchg_preparation-setex-merge_group_pre:
+
+組織グループが統合される場合（既存組織グループに統合）
+============================================================
+
+:ref:`FMS_deptchg_preparation-setex-move_group` の作業を実施し、統合後の組織グループに所属する組織を移動します。そして、統合後に存続しない組織グループについて :ref:`FMS_deptchg_preparation-setex-group_dis` の作業を実施します。
+
+.. _FMS_deptchg_preparation-setex-merge_group_new:
+
+組織グループが統合される場合（新組織グループに統合）
+============================================================
+
+統合する新組織グループを :ref:`FMS_deptchg_preparation-setex-group_new` の作業で作成します。その後、 :ref:`FMS_deptchg_preparation-setex-move_group` の作業を実施し、統合後の組織グループに所属する組織を移動します。そして、統合後に存続しない組織グループについて :ref:`FMS_deptchg_preparation-setex-group_dis` の作業を実施します。
+
+.. _FMS_deptchg_preparation-setex-hb_consolidation:
+
+本支店の統廃合
+============================================================
+
+統合するために新組織グループを作成する場合、 :ref:`FMS_deptchg_preparation-setex-group_new` の作業で作成します。その後、 :ref:`FMS_deptchg_preparation-setex-move_hb` の作業で統合先に組織を移動した後、廃止する本支店グループに対して :ref:`FMS_deptchg_preparation-setex-group_dis` の作業を実施します。
+
+なお、統合する本支店間の本支店勘定については、組織グループを統合した後、統合後の組織グループの本支店勘定に振り替えることで、結果的に相殺されます。以下のように、本店勘定と支店勘定を移行してください。
+
+* 統合前の組織グループの代表組織の本店勘定を、統合後の組織グループの本店勘定に移行します。
+* 統合後の組織グループの支店勘定は新しく作成します。統合前の組織グループの支店勘定は、新しい支店勘定に振り替えてください。
+
+パラメータの本支店処理区分が1：支店別の場合、支店の代表組織に計上されている各支店勘定を相殺してください。
+
+.. _FMS_deptchg_preparation-setex-hb_split:
+
+本支店が分割される場合
+============================================================
+
+分割後の新しい組織グループを :ref:`FMS_deptchg_preparation-setex-group_new` の作業で作成します。その後、 :ref:`FMS_deptchg_preparation-setex-move_hb` の作業で分割先に組織を移動します。
+
+組織も分割する場合は :ref:`FMS_deptchg_preparation-setex-split` の作業を実施します。

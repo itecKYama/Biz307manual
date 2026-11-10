@@ -1,0 +1,30 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_deptchg_set:
+
+===================================================
+組織変更設定手順
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+
+   outline
+   add
+   mst
+   hstry
+   journal
+   balanceshift_nrcncl
+   balanceshift
+   term_division
+
+.. only:: internal
+
+   outline             :組織変更手順の概要
+   add                 :組織の追加
+   mst                 :組織に関わるマスタの変更
+   hstry               :台帳系の組織の変更
+   journal             :既に計上された仕訳の対応
+   balanceshift_nrcncl :残高の移行（未消込残高の移行）
+   balanceshift        :残高の移行
+   term_division       :組織の有効期間分割

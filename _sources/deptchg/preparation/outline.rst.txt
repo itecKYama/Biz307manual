@@ -1,0 +1,23 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_deptchg_preparation-outline:
+
+===================================================
+組織変更事前準備の概要
+===================================================
+
+本項では、組織変更を実施する前に確認するべき内容を解説しています。
+
+  3.2. :ref:`FMS_deptchg_preparation-shiftlist`
+
+    組織変更に着手する前に組織変更前後の組織図を作成します。
+
+  3.3. :ref:`FMS_deptchg_preparation-setex`
+
+    設定例となっています。代表的な組織変更のパターンについて紹介していますので、組織変更に着手する前に確認してください。
+
+    :ref:`FMS_deptchg_set` 以降の手順と各パターンがどのように紐付いているかを解説しています。
+
+  3.4. :ref:`FMS_deptchg_preparation-restrictions`
+
+    組織変更の際の制限事項を記載しています。

@@ -1,0 +1,28 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_deptchg_deptgroupchg-term_division:
+
+===================================================
+組織グループの有効期間分割
+===================================================
+組織グループ所属の変更が完了した後、廃止する組織グループの有効期間を分割します。
+
+.. _FMS_deptchg_deptgroupchg-term_division-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_deptchg_deptgroupchg-attach_mod` までの作業が完了していること。
+
+.. _FMS_deptchg_deptgroupchg-term_division-do:
+
+実行手順
+===================================================
+:ref:`FMS_introduce_baseset_auth-dept_group` の手順を実施し、組織グループマスタの期間分割を行ってください。
+
+また、その際、組織グループの有効期間は、組織変更日までは有効にしてください。
+
+.. _FMS_deptchg_deptgroupchg-term_division-endConditions:
+
+完了条件
+===================================================
+登録した組織グループを、組織グループ登録画面から確認します。
