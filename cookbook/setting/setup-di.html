@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Biz∫APF データ連携 の設定をする &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="ワークフロー" href="../workflow/index.html" />
+    <link rel="prev" title="intra-mart のストレージルートのパスを確認する" href="storage.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U">開発/動作環境</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">Biz∫APF データ連携 の設定をする</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="storage.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="../workflow/index.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">逆引き(Cookbook)</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">開発/動作環境</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="001.html">ログ出力設定を行う</a></li>
+<li class="toctree-l3"><a class="reference internal" href="002.html">外部ソフトウェア接続方式を利用したバッチ処理実行環境を構築する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="003.html">会計連携ファイル取込のファイルを配備するディレクトリを作成する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_import.html">ジョブ実行における取込ファイルを配備するディレクトリを作成する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="004.html">ファイル入出力の設定を変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="006.html">ページング機能を持つグリッドの1頁あたりの最大表示件数を変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rename/index.html">名称を変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rename/bui3/index.html">画面項目の名称を変更する（Biz∫UI3）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="incm_pymnt_set.html">入金支払手段および入金支払方法を変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="list_value_cut_sort_key.html">仕訳取引明細検索／仕訳明細検索のソートキーの選択肢を絞り込む</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monthly_fix_addon_set.html">原価計算にアドオン処理を組み込む</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">intra-mart のストレージルートのパスを確認する</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Biz∫APF データ連携 の設定をする</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fms-cookbook-setting-setup-di-pre">前提条件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-cookbook-setting-setup-di-do">実行手順</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-cookbook-setting-setup-di-do-database">データベースを登録する</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-cookbook-setting-setup-di-do-tenant">テナントを登録する</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-cookbook-setting-setup-di-do-company">会社を登録する</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-cookbook-setting-setup-di-do-create-dblink">データベース・リンクを作成する</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-cookbook-setting-setup-di-do-create-wkld">科目マスタの取込ワークロードを実施する</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../spec/index.html">性能改善</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">ワークフロー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sms/index.html">Biz∫販売連携</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../invoice/index.html">請求書レイアウトの変更</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduce/index.html">導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="di">
+<span id="fms-cookbook-setting-setup-di"></span><h1>Biz∫APFデータ連携の設定をする<a class="headerlink" href="#di" title="Link to this heading">¶</a></h1>
+<p>Biz∫APFデータ連携のマスタ設定およびデータベース・リンクの作成を行います。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>Biz∫APFデータ連携のマスタ登録画面の操作方法については、Biz∫APFのBiz∫データ連携モジュール<a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/administration-ext/biz-di/operation/index.html">操作ガイド</a>を参照してください。</p>
+</div>
+<section id="fms-cookbook-setting-setup-di-pre">
+<span id="id39"></span><h2>前提条件<a class="headerlink" href="#fms-cookbook-setting-setup-di-pre" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Biz∫APFデータ連携のインストールが完了していること。</p></li>
+</ul>
+</section>
+<section id="fms-cookbook-setting-setup-di-do">
+<span id="id40"></span><h2>実行手順<a class="headerlink" href="#fms-cookbook-setting-setup-di-do" title="Link to this heading">¶</a></h2>
+<section id="fms-cookbook-setting-setup-di-do-database">
+<span id="id41"></span><h3>データベースを登録する<a class="headerlink" href="#fms-cookbook-setting-setup-di-do-database" title="Link to this heading">¶</a></h3>
+<p>Biz∫APFデータ連携のタスクで利用するデータベースを登録します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF データ連携
+  マスタ管理
+    データベース管理
+</pre></div>
+</div>
+</li>
+<li><p>設定内容</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>テナントデータベースおよびシェアードデータベースを登録します。</p>
+<p>複数テナントに導入している場合、全てのテナントデータベースを登録してください。</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>データベースコード</p></td>
+<td><dl class="simple">
+<dt>・テナントデータベースの場合</dt><dd><p>テナントID</p>
+</dd>
+<dt>・シェアードデータベースの場合</dt><dd><p>shared</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><p>接続ID</p></td>
+<td><p>IM-Jugglingプロジェクト内の設定ファイル「data-source-mapping-config.xml」に指定した接続ID</p>
+<dl class="simple">
+<dt>・テナントデータベースの場合</dt><dd><p>tenant-data-source/tenant-idに指定した値</p>
+</dd>
+<dt>・シェアードデータベースの場合</dt><dd><p>shared-data-source/connect-idに指定した値</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</section>
+<section id="fms-cookbook-setting-setup-di-do-tenant">
+<span id="id42"></span><h3>テナントを登録する<a class="headerlink" href="#fms-cookbook-setting-setup-di-do-tenant" title="Link to this heading">¶</a></h3>
+<p>データ連携を行うテナントを登録します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF データ連携
+  マスタ管理
+    テナント管理
+</pre></div>
+</div>
+</li>
+<li><p>設定内容</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>テナントID</p></td>
+<td><p>データ連携を行うテナントのテナントID</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</section>
+<section id="fms-cookbook-setting-setup-di-do-company">
+<span id="id43"></span><h3>会社を登録する<a class="headerlink" href="#fms-cookbook-setting-setup-di-do-company" title="Link to this heading">¶</a></h3>
+<p>データ連携を行う会社を登録します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF データ連携
+  マスタ管理
+    会社管理
+</pre></div>
+</div>
+</li>
+<li><p>設定内容</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>テナントID</p></td>
+<td><p><a class="reference internal" href="#fms-cookbook-setting-setup-di-do-tenant"><span class="std std-ref">テナントを登録する</span></a>で登録したテナントID</p></td>
+</tr>
+<tr class="row-odd"><td><p>会社コード</p></td>
+<td><p>当該テナントに属する会社の会社コード</p></td>
+</tr>
+<tr class="row-even"><td><p>名称・略称・検索名</p></td>
+<td><p>任意の値</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</section>
+<section id="fms-cookbook-setting-setup-di-do-create-dblink">
+<span id="id44"></span><h3>データベース・リンクを作成する<a class="headerlink" href="#fms-cookbook-setting-setup-di-do-create-dblink" title="Link to this heading">¶</a></h3>
+<p>テナントデータベースからシェアードデータベースへのアクセスにOracleデータベース・リンクを利用しない場合、本手順は不要です。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>データベース・リンクを利用する場合、Biz∫APFデータ連携の「OracleJdbcLoaderサブスクライブタスク」のマスタにデータベース・リンクを設定します。</p>
+<p>複数テナントに導入している場合、全てのテナントユーザに対して実施してください。</p>
+</div>
+<ol class="arabic simple">
+<li><p>管理者ユーザでデータベースにログインします。</p></li>
+<li><p>次のSQLを実行し、テナントユーザに対してデータベース・リンクを作成する権限を付与します。ユーザ名は環境に合わせて変更してください。</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>GRANT CREATE DATABASE LINK TO iap_tenant;
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>テナントユーザでデータベースにログインします。</p></li>
+<li><p>次のSQLを実行し、データベース・リンクを作成します。データベース・リンク名、ユーザ名、パスワード、ホスト、ポート番号、ServiceName名は環境に合わせて変更してください。</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>CREATE DATABASE LINK dblink
+CONNECT TO iap_tenant_shared
+IDENTIFIED BY XXXXXXXX
+USING &#39;(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=orcl)))&#39;;
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="fms-cookbook-setting-setup-di-do-create-wkld">
+<span id="id45"></span><h3>科目マスタの取込ワークロードを実施する<a class="headerlink" href="#fms-cookbook-setting-setup-di-do-create-wkld" title="Link to this heading">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>本章はPostgreSQLを利用する場合の対応となります。</p>
+</div>
+<p>科目マスタの取込ワークロード(FMS.FC.ACCOUNT_SUB_WKLD_{テナントID}_{会社コード})のステップに科目ビューのリフレッシュタスクを追加します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF データ連携
+  マスタ管理
+    ワークロード管理
+</pre></div>
+</div>
+</li>
+<li><p>設定内容</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>実行順</p></td>
+<td><p>既存ステップの実行順の最大値+1</p></td>
+</tr>
+<tr class="row-odd"><td><p>タスクコード</p></td>
+<td><p>FMS.FC.V_ACCOUNT_DML_POSTGRE_{テナントID}</p></td>
+</tr>
+<tr class="row-even"><td><p>ステップ名</p></td>
+<td><p>任意</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" >開発/動作環境</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">Biz∫APF データ連携 の設定をする</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

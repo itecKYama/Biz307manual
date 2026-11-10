@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>案件の終了ノードでエラーが発生した案件に対して、ユーザプログラムを無効化し完了または案件の削除を行う &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="金額項目のカンマ区切り表示を変更する" href="comma_separate.html" />
+    <link rel="prev" title="自己承認制御を無効化する" href="self_approve.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U">ワークフロー</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">案件の終了ノードでエラーが発生した案件に対して、ユーザプログラムを無効化し完了または案件の削除を行う</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="self_approve.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="comma_separate.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">逆引き(Cookbook)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../setting/index.html">開発/動作環境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spec/index.html">性能改善</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ワークフロー</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="self_approve.html">自己承認制御を無効化する</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">案件の終了ノードでエラーが発生した案件に対して、ユーザプログラムを無効化し完了または案件の削除を行う</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fms-cookbook-workflow-node-end-matterhandle">案件を終了ノードへ移動する手順</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-cookbook-workflow-node-end-matterdelete">案件を削除する手順</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="comma_separate.html">金額項目のカンマ区切り表示を変更する</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sms/index.html">Biz∫販売連携</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../invoice/index.html">請求書レイアウトの変更</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduce/index.html">導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-cookbook-workflow-node-end">
+<span id="id39"></span><h1>案件の終了ノードでエラーが発生した案件に対して、ユーザプログラムを無効化し完了または案件の削除を行う<a class="headerlink" href="#fms-cookbook-workflow-node-end" title="Link to this heading">¶</a></h1>
+<p>本項では、ルート上の最後の承認ノードにおいて承認処理が行われているが、終了ノードでエラーが発生した案件に対して、ユーザプログラムを無効化し完了または案件の削除を行う手順を紹介します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>Biz∫会計では、未完了の案件に対して削除処理を実施することや、終了ノードへの移動操作は許可しておりません。</p>
+<p>これは最終承認の処理や否認、取止めなど案件が終了する際に呼び出される処理が実行されないとトランザクションデータ（仕訳など）が承認中のままとなってしまい、処理が行えなくなるためです。</p>
+<p>本項で案内する手順は、ルート上の最後の承認ノードにおいて承認処理が行われていることを前提にしております。</p>
+<p>あらかじめ承認処理が行われていることをご確認の上で実施するようにしてください。</p>
+</div>
+<section id="fms-cookbook-workflow-node-end-matterhandle">
+<span id="id40"></span><h2>案件を終了ノードへ移動する手順<a class="headerlink" href="#fms-cookbook-workflow-node-end-matterhandle" title="Link to this heading">¶</a></h2>
+<p>以下の手順は、終了ノードへのノードの移動を制御しているアクション処理を無効化した上で、案件操作にて終了ノードへ移動を行います。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>対象の案件は、終了ノードへ移動後に完了案件となります。完了案件の一覧より審議の内容を確認することができます。</p>
+</div>
+<ol class="arabic simple">
+<li><p>ワークフロー管理者アカウントでログインし、終了ノードへ移動する案件の『案件番号』を確認します。</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ワークフロー</span>
+  <span class="n">ワークフロー管理者</span>
+    <span class="n">参照</span>
+</pre></div>
+</div>
+</li>
+<li><p>「未完了案件」タブを選択します。</p></li>
+<li><p>未完了案件一覧の中から、対象となる案件の案件番号を控えます。</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>各種DB管理ツールを使用し、未完了案件テーブル（IMW_T_ACTV_MATTER）から対象となる案件のシステム案件ID（SYSTEM_MATTER_ID）、ディレクトリパス（FILE_DIR_PATH）、最終タスク処理ID（LAST_PROCESS_ID）を取得します。</p></li>
+</ol>
+<blockquote>
+<div><p>下記のSQLを実行します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span>
+  <span class="n">SYSTEM_MATTER_ID</span><span class="p">,</span>
+  <span class="n">FILE_DIR_PATH</span><span class="p">,</span>
+  <span class="n">LAST_PROCESS_ID</span>
+<span class="n">FROM</span>
+  <span class="n">IMW_T_ACTV_MATTER</span>
+<span class="n">WHERE</span>
+  <span class="n">MATTER_NUMBER</span> <span class="o">=</span> <span class="s1">&#39;1.で控えた案件番号&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>対象となる案件のflow.xmlを特定します。</p></li>
+</ol>
+<blockquote>
+<div><p>以下が対象となる案件のflow.xmlのパスになります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${RESIN_HOME}/storage-files/public/storage/{テナントID}/im_workflow/data/{テナントID}/transaction/{YYYYMM}/{DD}/{HH}/{2で取得したシステム案件ID}/task/{2で取得した最終タスク処理ID}/flow.xml
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>上記パスの「/im_workflow/data/{テナントID}/transaction/{YYYYMM}/{DD}/{HH}/」が2で取得したディレクトリパスになります。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>ワークフローパラメータで、未完了案件のトランザクションデータの保存先を「データベース」に設定している場合※、一度トランザクションデータをBLOBデータからXMLデータに変換した上で対応を行います。</p>
+<p>※対象のワークフローパラメータの設定については、「<a class="reference external" href="http://www.intra-mart.jp/document/library/iap/public/im_workflow/im_workflow_specification/index.html">IM-Workflow 仕様書</a>」-「<a class="reference external" href="https://www.intra-mart.jp/document/library/iap/public/im_workflow/im_workflow_specification/texts/setting_guide/setting_list/tenant_unit/setting_guide_18.html">データ保存の設定</a>」を参照してください。</p>
+<p>以下の手順で操作してください。</p>
+<p>1.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブ設定」をクリックします。</p>
+<p>2.ジョブ一覧から「IM-Workflow」→「未完了案件XMLデータ移行(Database LOB-&gt;File)」をクリックします。</p>
+<p>3.「編集」をクリックします。</p>
+<p>4.「実行パラメータ」を以下の通りに変更します。</p>
+<blockquote>
+<div><p>・systemMatterId : 対象の案件のシステム案件ID</p>
+<p>・deleteFlag : true</p>
+</div></blockquote>
+<p>5.「更新」をクリックします。</p>
+<p>6.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブネット設定」をクリックします。</p>
+<p>7.ジョブネット一覧から「IM-Workflow」→「未完了案件XMLデータ移行(Database LOB-&gt;File)」をクリックします。</p>
+<p>8.以下のいずれかの方法で、「未完了案件XMLデータ移行(Database LOB-&gt;File)」のジョブネットを実行します。</p>
+<blockquote>
+<div><p>・「即時実行」をクリックし、ジョブネットを実行します。</p>
+<p>・「編集」をクリックし、トリガ設定を変更することで、ジョブネットを実行します</p>
+</div></blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>ワークフローパラメータで、トランザクションファイル（XMLファイル）圧縮可否を「圧縮する」としている場合※、一度トランザクションデータを解凍した上で対応を行います。</p>
+<p>※対象のワークフローパラメータの設定については、「<a class="reference external" href="http://www.intra-mart.jp/document/library/iap/public/im_workflow/im_workflow_specification/index.html">IM-Workflow 仕様書</a>」-「<a class="reference external" href="https://www.intra-mart.jp/document/library/iap/public/im_workflow/im_workflow_specification/texts/setting_guide/setting_list/tenant_unit/setting_guide_31.html">トランザクションファイル(XMLファイル)圧縮可否</a>」を参照してください。</p>
+<p>以下の手順で操作してください。</p>
+<p>1.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブ設定」をクリックします。</p>
+<p>2.ジョブ一覧から「IM-Workflow」→「未完了案件トランザクションXMLファイル解凍」をクリックします。</p>
+<p>3.「編集」をクリックします。</p>
+<p>4.「実行パラメータ」を以下の通りに変更します。</p>
+<blockquote>
+<div><p>・systemMatterId : 対象の案件のシステム案件ID</p>
+</div></blockquote>
+<p>5.「更新」をクリックします。</p>
+<p>6.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブネット設定」をクリックします。</p>
+<p>7.ジョブネット一覧から「IM-Workflow」→「未完了案件トランザクションXMLファイル解凍」をクリックします。</p>
+<p>8.以下のいずれかの方法で、「未完了案件トランザクションXMLファイル解凍」のジョブネットを実行します。</p>
+<blockquote>
+<div><p>・「即時実行」をクリックし、ジョブネットを実行します。</p>
+<p>・「編集」をクリックし、トリガ設定を変更することで、ジョブネットを実行します</p>
+</div></blockquote>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>対象となる案件のflow.xmlを修正し、Biz∫会計のユーザプログラム（アクション処理）を無効化します。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>修正前にはflow.xmlが格納されているフォルダのバックアップを取得してください。</p>
+</div>
+<p>下記は一般会計のワークフロー申請の場合の例になります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">extensionProcess</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">extensionPoint</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;jp.co.intra_mart.workflow.plugin.event.node.action.process&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">plugin</span> <span class="n">extensionPoint</span><span class="o">=</span><span class="s2">&quot;jp.co.intra_mart.workflow.plugin.event.node.action.process&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;jp.co.intra_mart.workflow.plugin.event.node.action.process.pluginJavaExecutor&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span><span class="o">&gt;</span><span class="n">com</span><span class="o">.</span><span class="n">biz_integral</span><span class="o">.</span><span class="n">fms</span><span class="o">.</span><span class="n">fcwf</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">plugin</span><span class="o">.</span><span class="n">process</span><span class="o">.</span><span class="n">SelfApproveActionProcessPlugin</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">plugin</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">plugin</span> <span class="n">extensionPoint</span><span class="o">=</span><span class="s2">&quot;jp.co.intra_mart.workflow.plugin.event.node.action.process&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;jp.co.intra_mart.workflow.plugin.event.node.action.process.pluginJavaExecutor&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span><span class="o">&gt;</span><span class="n">com</span><span class="o">.</span><span class="n">biz_integral</span><span class="o">.</span><span class="n">fms</span><span class="o">.</span><span class="n">glwf</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">plugin</span><span class="o">.</span><span class="n">process</span><span class="o">.</span><span class="n">GlActionProcessPlugin</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">plugin</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">extensionPoint</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">extensionProcess</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>上記を以下の内容に書き換えます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">extensionProcess</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>案件終了処理や終了ノードでの到達処理を使用している場合には、intra-mart IM-Workflowトラブルシューティングの、<a class="reference external" href="http://www.intra-mart.jp/download/product/iap/im_workflow/im_workflow_troubleshooting/texts/troubleshooting/stop_on_end_node.html#id24">4.16.3. 案件の終了ノードでエラーが発生した案件に対して、ユーザプログラムの処理・利用者による操作を行わずに完了させる</a>における<a class="reference external" href="http://www.intra-mart.jp/download/product/iap/im_workflow/im_workflow_troubleshooting/texts/troubleshooting/stop_on_end_node.html#id30">解決方法</a>  に従い、flow.xmlから案件終了処理や終了ノードでの到達処理を無効化してください。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>3.の手順でトランザクションデータを解凍した場合、flow.xmlを修正した後にトランザクションデータを圧縮する必要があります。</p>
+<p>以下の手順で操作してください。</p>
+<p>1.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブ設定」をクリックします。</p>
+<p>2.ジョブ一覧から「IM-Workflow」→「未完了案件トランザクションXMLファイル圧縮」をクリックします。</p>
+<p>3.「編集」をクリックします。</p>
+<p>4.「実行パラメータ」を以下の通りに変更します。</p>
+<blockquote>
+<div><p>・systemMatterId : 対象の案件のシステム案件ID</p>
+</div></blockquote>
+<p>5.「更新」をクリックします。</p>
+<p>6.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブネット設定」をクリックします。</p>
+<p>7.ジョブネット一覧から「IM-Workflow」→「未完了案件トランザクションXMLファイル圧縮」をクリックします。</p>
+<p>8.以下のいずれかの方法で、「未完了案件トランザクションXMLファイル圧縮」のジョブネットを実行します。</p>
+<blockquote>
+<div><p>・「即時実行」をクリックし、ジョブネットを実行します。</p>
+<p>・「編集」をクリックし、トリガ設定を変更することで、ジョブネットを実行します。</p>
+</div></blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>3.の手順でトランザクションデータをBLOBデータからXMLデータに変換した場合、flow.xmlを修正した後にトランザクションデータをBLOBデータに再変換する必要があります。</p>
+<p>以下の手順で操作してください。</p>
+<p>1.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブ設定」をクリックします。</p>
+<p>2.ジョブ一覧から「IM-Workflow」→「未完了案件XMLデータ移行(File-&gt;Database LOB)」をクリックします。</p>
+<p>3.「編集」をクリックします。</p>
+<p>4.「実行パラメータ」を以下の通りに変更します。</p>
+<blockquote>
+<div><p>・systemMatterId : 対象の案件のシステム案件ID</p>
+<p>・deleteFlag : true</p>
+</div></blockquote>
+<p>5.「更新」をクリックします。</p>
+<p>6.「サイトマップ」→「テナント管理」→「ジョブ管理」→「ジョブネット設定」をクリックします。</p>
+<p>7.ジョブネット一覧から「IM-Workflow」→「未完了案件XMLデータ移行(File-&gt;Database LOB)」をクリックします。</p>
+<p>8.以下のいずれかの方法で、「未完了案件XMLデータ移行(File-&gt;Database LOB)」のジョブネットを実行します。</p>
+<blockquote>
+<div><p>・「即時実行」をクリックし、ジョブネットを実行します。</p>
+<p>・「編集」をクリックし、トリガ設定を変更することで、ジョブネットを実行します。</p>
+</div></blockquote>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>ワークフロー管理者アカウントでログインし、案件を終了ノードへ移動します。</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ワークフロー</span>
+  <span class="n">ワークフロー管理者</span>
+    <span class="n">参照</span>
+</pre></div>
+</div>
+</li>
+<li><p>「未完了案件」タブを選択し、終了ノードへ移動する案件の「操作」ボタンを押下します。</p></li>
+<li><p>intra-mart Accel Platform IM-Workflow管理者操作ガイドの、<a class="reference external" href="http://www.intra-mart.jp/download/product/iap/im_workflow/im_workflow_administrator_guide/texts/apply_guide/apply_guide_1.html#id18">ノードの移動</a>に従い、案件を一旦ルート上の最後の承認ノードに移動した上で、終了ノードへ移動します。</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="fms-cookbook-workflow-node-end-matterdelete">
+<span id="id41"></span><h2>案件を削除する手順<a class="headerlink" href="#fms-cookbook-workflow-node-end-matterdelete" title="Link to this heading">¶</a></h2>
+<p>以下の手順は、未完了案件削除処理を制御するユーザプログラムを無効化した上で、案件操作にて案件の削除を行います。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>対象の案件のトランザクションデータ（仕訳など）には影響を与えませんが、ワークフロー上から参照することができなくなりますのでご注意ください。完了案件一覧にて案件を表示する必要がある場合には、<a class="reference internal" href="#fms-cookbook-workflow-node-end-matterhandle"><span class="std std-ref">案件を終了ノードへ移動する手順</span></a>を実施してください。</p>
+</div>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#fms-cookbook-workflow-node-end-matterhandle"><span class="std std-ref">案件を終了ノードへ移動する手順</span></a>の手順1～3を実施します。</p></li>
+<li><p>対象となる案件のflow.xmlを修正し、Biz∫会計のユーザプログラム（未完了案件削除処理）を無効化します。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>修正前にはflow.xmlが格納されているフォルダのバックアップを取得してください。</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">listener</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">extensionPoint</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;jp.co.intra_mart.workflow.plugin.event.matter.active.delete.process&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">plugin</span> <span class="n">extensionPoint</span><span class="o">=</span><span class="s2">&quot;jp.co.intra_mart.workflow.plugin.event.matter.active.delete.process&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;jp.co.intra_mart.workflow.plugin.event.matter.active.delete.process.pluginJavaExecutor&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span><span class="o">&gt;</span><span class="n">com</span><span class="o">.</span><span class="n">biz_integral</span><span class="o">.</span><span class="n">fms</span><span class="o">.</span><span class="n">fcwf</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">plugin</span><span class="o">.</span><span class="n">listener</span><span class="o">.</span><span class="n">FinanceActvMatterDeleteListenerPlugin</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">plugin</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">extensionPoint</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">listener</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>上記を以下の内容に書き換えます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">listener</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>ワークフロー管理者アカウントでログインし、案件を削除します。</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ワークフロー</span>
+  <span class="n">ワークフロー管理者</span>
+    <span class="n">参照</span>
+</pre></div>
+</div>
+</li>
+<li><p>「未完了案件」タブを選択し、終了ノードへ移動する案件の「操作」ボタンを押下します。</p></li>
+<li><p>intra-mart Accel Platform IM-Workflow管理者操作ガイドの、<a class="reference external" href="http://www.intra-mart.jp/download/product/iap/im_workflow/im_workflow_administrator_guide/texts/apply_guide/apply_guide_1.html#id20">案件削除</a>に従い、案件を削除します。</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" >ワークフロー</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">案件の終了ノードでエラーが発生した案件に対して、ユーザプログラムを無効化し完了または案件の削除を行う</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>分析テキストの名称を変更する &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="金額単位名を変更する" href="amountUnit.html" />
+    <link rel="prev" title="分析フィールドの名称を変更する" href="analyzeField.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >開発/動作環境</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">名称を変更する</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">分析テキストの名称を変更する</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="analyzeField.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="amountUnit.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">逆引き(Cookbook)</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">開発/動作環境</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../001.html">ログ出力設定を行う</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../002.html">外部ソフトウェア接続方式を利用したバッチ処理実行環境を構築する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../003.html">会計連携ファイル取込のファイルを配備するディレクトリを作成する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../file_import.html">ジョブ実行における取込ファイルを配備するディレクトリを作成する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../004.html">ファイル入出力の設定を変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../006.html">ページング機能を持つグリッドの1頁あたりの最大表示件数を変更する</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">名称を変更する</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#fms-cookbook-setting-rename-screen">画面項目の名称を変更する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#fms-cookbook-setting-rename-report">帳票上の項目の名称を変更する</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#fms-cookbook-setting-rename-sp">運用に応じて名称変更を行う項目</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="analyzeField.html">分析フィールドの名称を変更する</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">分析テキストの名称を変更する</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#fms-cookbook-setting-rename-analyzetext-preconditions">前提条件</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-cookbook-setting-rename-analyzetext-do">実行手順</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#fms-cookbook-setting-rename-analyzetext-do-display">画面に表示する名称の変更</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#fms-cookbook-setting-rename-analyzetext-do-display-cmn">モジュール共通の変更</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#fms-cookbook-setting-rename-analyzetext-do-display-ai">会計連携の変更</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#fms-cookbook-setting-rename-analyzetext-do-display-fa">資産管理の変更</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#fms-cookbook-setting-rename-analyzetext-do-display-lc">契約管理・リース管理の変更</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="#fms-cookbook-setting-rename-analyzetext-do-cmb">コンボボックスに表示する名称の変更</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#fms-cookbook-setting-rename-analyzetext-do-cmb-cmn">モジュール共通の変更</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#fms-cookbook-setting-rename-analyzetext-do-cmb-lc">契約管理・リース管理の変更</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="#fms-cookbook-setting-rename-analyzetext-do-etc">その他名称の変更</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#fms-cookbook-setting-rename-analyzetext-do-etc-fa">資産管理の変更</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="amountUnit.html">金額単位名を変更する</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bui3/index.html">画面項目の名称を変更する（Biz∫UI3）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../incm_pymnt_set.html">入金支払手段および入金支払方法を変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../list_value_cut_sort_key.html">仕訳取引明細検索／仕訳明細検索のソートキーの選択肢を絞り込む</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../monthly_fix_addon_set.html">原価計算にアドオン処理を組み込む</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../storage.html">intra-mart のストレージルートのパスを確認する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../setup-di.html">Biz∫APF データ連携 の設定をする</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../spec/index.html">性能改善</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">ワークフロー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sms/index.html">Biz∫販売連携</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../invoice/index.html">請求書レイアウトの変更</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduce/index.html">導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-cookbook-setting-rename-analyzetext">
+<span id="id39"></span><h1>分析テキストの名称を変更する<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext" title="Link to this heading">¶</a></h1>
+<p>設定する値に沿うように、仕訳登録や取引登録などの画面に表示される”分析テキスト11”～”分析テキスト20”、”分析テキスト31”～”分析テキスト40”の名称と、分析テキストを用いて、帳票出力画面や検索画面で検索条件として絞り込む際に利用するコンボボックスに表示される”分析11に設定された名称”～”分析20に設定された名称”、”分析31に設定された名称”～”分析40に設定された名称”の名称を変更します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>分析テキストは、マスタ管理しない任意の文字列を分析目的で設定可能な項目です。</p>
+</div>
+<section id="fms-cookbook-setting-rename-analyzetext-preconditions">
+<span id="id40"></span><h2>前提条件<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext-preconditions" title="Link to this heading">¶</a></h2>
+<p>本手順は、画面やファイル出力時のヘッダに表示する名称を変更する手順です。名称を変更しない場合は実施する必要はありません。</p>
+</section>
+<section id="fms-cookbook-setting-rename-analyzetext-do">
+<span id="id41"></span><h2>実行手順<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext-do" title="Link to this heading">¶</a></h2>
+<section id="fms-cookbook-setting-rename-analyzetext-do-display">
+<span id="id42"></span><h3>画面に表示する名称の変更<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext-do-display" title="Link to this heading">¶</a></h3>
+<p>画面に表示する名称は、Biz∫APFの開発リファレンス(アプリケーション) <a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/framework/reference/application/domain_service/named_items.html">名称のカスタマイズ</a>に従って変更します。</p>
+<p>以下では、モジュール別の分析テキストの変更方法を列挙します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>会計連携モジュールの場合には、別テーブルの変更が必要となります。</p>
+</div>
+<section id="fms-cookbook-setting-rename-analyzetext-do-display-cmn">
+<span id="id43"></span><h4>モジュール共通の変更<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext-do-display-cmn" title="Link to this heading">¶</a></h4>
+<p>名称テーブル（biz_named_item）を以下のように設定してください。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>application_idに'fms'を設定します。</p>
+<p>module_idに'fc'を設定します。</p>
+</div>
+<p>分析テキスト</p>
+<ul>
+<li><p>名称IDフィールド（item_id）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>FMS.FC.analyzeText11 ～ FMS.FC.analyzeText20
+FMS.FC.analyzeText31 ～ FMS.FC.analyzeText40
+</pre></div>
+</div>
+</li>
+<li><p>Biz∫UI3用名称IDフィールド（item_id）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>FMS.FC.label-analyzeText11 ～ FMS.FC.label-analyzeText20
+FMS.FC.label-analyzeText31 ～ FMS.FC.label-analyzeText40
+</pre></div>
+</div>
+</li>
+<li><p>名称フィールド（item_name）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>任意のテキスト名（例：分析テキスト11）
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="fms-cookbook-setting-rename-analyzetext-do-display-ai">
+<span id="id44"></span><h4>会計連携の変更<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext-do-display-ai" title="Link to this heading">¶</a></h4>
+<p>伝票項目フィールド初期データ（fms_ai_slip_itm_fld_def）テーブル、取込項目初期データ（fms_ai_import_itm_def）テーブルを以下のように変更してください。</p>
+<p>分析テキスト</p>
+<ul>
+<li><p>対象フィールド</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">field_name</span>
+</pre></div>
+</div>
+</li>
+<li><p>変更条件</p>
+<p>変更対象のレコードは以下の条件で特定します。</p>
+<ul>
+<li><p>field_id</p>
+<p>analyze_text11～analyze_text20</p>
+<p>analyze_text31～analyze_text40</p>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="fms-cookbook-setting-rename-analyzetext-do-display-fa">
+<span id="id45"></span><h4>資産管理の変更<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext-do-display-fa" title="Link to this heading">¶</a></h4>
+<p>名称テーブル（biz_named_item）を以下のように設定してください。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>application_idに'fms'を設定します。</p>
+<p>module_idに'fa'を設定します。</p>
+</div>
+<p>分析テキスト</p>
+<ul>
+<li><p>名称IDフィールド（item_id）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>FMS.FA.analyzeText11 ～ FMS.FA.analyzeText20
+FMS.FA.analyzeText31 ～ FMS.FA.analyzeText40
+</pre></div>
+</div>
+</li>
+<li><p>名称フィールド（item_name）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>任意のテキスト名（例：分析テキスト11）
+</pre></div>
+</div>
+</li>
+</ul>
+<p>FA分析テキスト</p>
+<ul>
+<li><p>名称IDフィールド（item_id）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>FMS.FA.faAnalyzeText11 ～ FMS.FA.faAnalyzeText20
+</pre></div>
+</div>
+</li>
+<li><p>名称フィールド（item_name）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>任意のテキスト名（例：FA分析テキスト11）
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="fms-cookbook-setting-rename-analyzetext-do-display-lc">
+<span id="id46"></span><h4>契約管理・リース管理の変更<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext-do-display-lc" title="Link to this heading">¶</a></h4>
+<p>名称テーブル（biz_named_item）を以下のように設定してください。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>application_idに'fms'を設定します。</p>
+<p>module_idに'lc'を設定します。</p>
+</div>
+<p>LC分析テキスト</p>
+<ul>
+<li><p>名称IDフィールド（item_id）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>FMS.LC.lcAnalyzeText11 ～ FMS.LC.lcAnalyzeText20
+</pre></div>
+</div>
+</li>
+<li><p>名称フィールド（item_name）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>任意のテキスト名（例：LC分析テキスト11）
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="fms-cookbook-setting-rename-analyzetext-do-cmb">
+<span id="id47"></span><h3>コンボボックスに表示する名称の変更<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext-do-cmb" title="Link to this heading">¶</a></h3>
+<section id="fms-cookbook-setting-rename-analyzetext-do-cmb-cmn">
+<span id="id48"></span><h4>モジュール共通の変更<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext-do-cmb-cmn" title="Link to this heading">¶</a></h4>
+<p>会計種別明細テーブル（fms_fc_finance_class_dtl）の修正が必要です。</p>
+<ul>
+<li><p>対象フィールド</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">finance_class_dtl_name</span>
+</pre></div>
+</div>
+</li>
+<li><p>変更条件1（各画面のコンボボックス）</p>
+<p>変更対象のレコードは以下の条件で特定します。</p>
+<ul>
+<li><p>finance_class_cd</p>
+<p>AnalyzeTextSelectType</p>
+</li>
+<li><p>finance_class_detail_cd</p>
+<p>‘11’～‘20’(分析11に設定された名称～分析20に設定された名称に対応)</p>
+<p>‘31’～‘40’(分析31に設定された名称～分析40に設定された名称に対応)</p>
+</li>
+</ul>
+</li>
+<li><p>変更条件2（仕訳取引明細検索／仕訳明細検索のソート順）</p>
+<p>変更対象のレコードは以下の条件で特定します。</p>
+<ul>
+<li><p>finance_class_cd</p>
+<p>FC006</p>
+</li>
+<li><p>finance_class_detail_cd</p>
+<p>‘analyzeText11’～‘analyzeText20’(分析テキスト11～20に対応)</p>
+<p>‘analyzeText31’～‘analyzeText40’(分析テキスト31～40に対応)</p>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="fms-cookbook-setting-rename-analyzetext-do-cmb-lc">
+<span id="id49"></span><h4>契約管理・リース管理の変更<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext-do-cmb-lc" title="Link to this heading">¶</a></h4>
+<p>会計種別明細テーブル（fms_fc_finance_class_dtl）の修正が必要です。</p>
+<ul>
+<li><p>対象フィールド</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">finance_class_dtl_name</span>
+</pre></div>
+</div>
+</li>
+<li><p>変更条件</p>
+<p>変更対象のレコードは以下の条件で特定します。</p>
+<ul>
+<li><p>finance_class_cd</p>
+<p>LcAnalyzeTextSelectType</p>
+</li>
+<li><p>finance_class_detail_cd</p>
+<p>‘11’～‘20’(それぞれ分析11に設定された名称～分析20に設定された名称に対応)</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>'finance_class_cd'が”LcAnalyzeTextSelectType”のレコードは、契約管理・リース管理モジュールのLC分析テキストを検索条件として絞り込む際に利用するコンボボックスに表示されるものとなります。</p>
+</div>
+</section>
+</section>
+<section id="fms-cookbook-setting-rename-analyzetext-do-etc">
+<span id="id50"></span><h3>その他名称の変更<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext-do-etc" title="Link to this heading">¶</a></h3>
+<p>画面名称やコンボボックス以外で利用している分析テキストの名称を変更する場合には、会計種別明細テーブル（fms_fc_finance_class_dtl）の変更を行います。</p>
+<p>以下では、モジュール別の分析テキストの変更方法を説明します。</p>
+<section id="fms-cookbook-setting-rename-analyzetext-do-etc-fa">
+<span id="id51"></span><h4>資産管理の変更<a class="headerlink" href="#fms-cookbook-setting-rename-analyzetext-do-etc-fa" title="Link to this heading">¶</a></h4>
+<p>会計種別明細テーブル（fms_fc_finance_class_dtl）の修正が必要です。</p>
+<ul>
+<li><p>対象フィールド</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">finance_class_dtl_name</span>
+</pre></div>
+</div>
+</li>
+<li><p>変更条件（帳票の表示用、エラーメッセージ表示用）</p>
+<p>変更対象のレコードは以下の条件で特定します。</p>
+<ul>
+<li><p>finance_class_cd</p>
+<p>FA016</p>
+</li>
+<li><p>finance_class_detail_cd</p>
+<p>‘FC11’～’FC20’（それぞれ分析テキスト11～20に対応）</p>
+<p>‘FC31’～’FC40’（それぞれ分析テキスト31～40に対応）</p>
+<p>‘FA11’～’FA20’（それぞれFA分析テキスト11～20に対応）</p>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >開発/動作環境</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >名称を変更する</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">分析テキストの名称を変更する</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

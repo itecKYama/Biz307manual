@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>逆引き(Cookbook) &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../_static/biz_highlight.css" />
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="開発/動作環境" href="setting/index.html" />
+    <link rel="prev" title="5.5. 組織グループの有効期間分割" href="../deptchg/deptgrouopchg/term_division.html" />
+    <script type="text/javascript" src="../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../_static/amy.js"></script>
+    <script type="text/javascript" src="../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../index.html">Biz∫会計</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">逆引き(Cookbook)</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="../deptchg/deptgrouopchg/term_division.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="setting/index.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">逆引き(Cookbook)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setting/index.html">開発/動作環境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec/index.html">性能改善</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow/index.html">ワークフロー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sms/index.html">Biz∫販売連携</a></li>
+<li class="toctree-l2"><a class="reference internal" href="invoice/index.html">請求書レイアウトの変更</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduce/index.html">導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="cookbook">
+<span id="fms-cookbook"></span><h1>逆引き(Cookbook)<a class="headerlink" href="#cookbook" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setting/index.html">開発/動作環境</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setting/001.html">ログ出力設定を行う</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setting/002.html">外部ソフトウェア接続方式を利用したバッチ処理実行環境を構築する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setting/003.html">会計連携ファイル取込のファイルを配備するディレクトリを作成する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setting/file_import.html">ジョブ実行における取込ファイルを配備するディレクトリを作成する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setting/004.html">ファイル入出力の設定を変更する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setting/006.html">ページング機能を持つグリッドの1頁あたりの最大表示件数を変更する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setting/rename/index.html">名称を変更する</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="setting/rename/analyzeField.html">分析フィールドの名称を変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setting/rename/analyzeText.html">分析テキストの名称を変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setting/rename/amountUnit.html">金額単位名を変更する</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="setting/rename/bui3/index.html">画面項目の名称を変更する（Biz∫UI3）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setting/incm_pymnt_set.html">入金支払手段および入金支払方法を変更する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setting/list_value_cut_sort_key.html">仕訳取引明細検索／仕訳明細検索のソートキーの選択肢を絞り込む</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setting/monthly_fix_addon_set.html">原価計算にアドオン処理を組み込む</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setting/storage.html">intra-mart のストレージルートのパスを確認する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setting/setup-di.html">Biz∫APF データ連携 の設定をする</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="spec/index.html">性能改善</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spec/001.html">JVM起動オプションを Biz∫会計 推奨設定値に変更する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec/004.html">ワークテーブルの統計情報を削除する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec/005.html">ワークテーブルの不要データを削除する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec/trouble.html">性能トラブルを調査する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec/fc/index.html">会計コア</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spec/fc/journalReference.html">仕訳取引明細検索画面の性能について</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spec/pr/index.html">債権債務</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spec/pr/journalReference.html">消込選択における分析フィールド指定検索の性能改善</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spec/ai/index.html">会計連携</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spec/ai/performance.html">会計データ取込の性能を改善する</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spec/gt/index.html">グループ会社間取引</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spec/gt/delete_apbase_info_batch.html">グループ会社間取引の債務基礎情報を削除する</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spec/gm/index.html">グループ連結オペレーション</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spec/gm/matching.html">グループ会社間取引照合の検索処理について</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="workflow/index.html">ワークフロー</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workflow/self_approve.html">自己承認制御を無効化する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow/node_end.html">案件の終了ノードでエラーが発生した案件に対して、ユーザプログラムを無効化し完了または案件の削除を行う</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow/comma_separate.html">金額項目のカンマ区切り表示を変更する</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sms/index.html">Biz∫販売連携</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sms/invoiceLayout.html">Biz∫販売用の請求書に変更する</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="invoice/index.html">請求書レイアウトの変更</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="invoice/invoiceQualified.html">適格請求書に変更する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="invoice/invoiceClassification.html">区分記載請求書に変更する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="invoice/invoiceSms.html">Biz∫販売用の請求書に変更する</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduce/index.html">導入</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduce/pattern/index.html">仕訳の自動作成に使用する仕訳パターンを登録する</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduce/pattern/fc/index.html">会計コア</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/pattern/gl/index.html">一般会計</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/pattern/pr/index.html">債権債務</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/pattern/bn/index.html">手形管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/pattern/ec/index.html">電子記録債権管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/pattern/cm/index.html">資金管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/pattern/fe/index.html">外貨管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/pattern/fa/index.html">資産管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/pattern/om/index.html">組織変更</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduce/balanceshift/index.html">残高移行</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduce/balanceshift/gl/index.html">残高移行（一般会計）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/balanceshift/pr/index.html">残高移行（債権債務）</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduce/dtlshift/index.html">明細移行</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/process.html">1. 実施手順概要</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/master.html">2. 仕訳明細移行のためのマスタ設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/import.html">3. 年度毎の仕訳明細取り込み</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/reconciled.html">4. 消込済仕訳の登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/is_balance.html">5. 科目マスタの残高管理対象フラグ編集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/not_reconciled_jrnl.html">6. 未消込振替仕訳の登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/not_reconciled_pr.html">7. 未消込債権債務の登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/not_reconciled_incm_pay.html">8. 未消込入金支払仕訳の登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/demand.html">9. 請求残高データの取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/bill.html">10. 未決済手形の登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/ermc.html">11. 未決済電子記録債権の登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/cip.html">12. 未振替建設仮勘定仕訳の登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/project_cost.html">13. 未成プロジェクト残高仕訳の登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/progress_project.html">14. 進行基準および原価回収基準プロジェクトの移行用の仕訳の登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/annual.html">15. 年次繰越実行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/deferred_accounts.html">16. 経過勘定対象取引の再登録（当年度発生分）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/dtlshift/wf.html">17. Biz∫会計 ワークフローパラメータ修正</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduce/batch/index.html">ジョブ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduce/batch/batch_user.html">各ジョブ設定に設定する実行ユーザの権限を確認する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/batch/job_setting.html">intra-mart へのジョブ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/batch/job_run.html">intra-mart ジョブネットの実行方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/batch/job_command.html">コマンドラインからの起動方法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduce/reportLayout.html">帳票レイアウトを使い分けるための設定を行う</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduce/ef/index.html">着地見込管理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduce/ef/data_mart.html">データマートを追加する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/ef/ef_tmp.html">着地見込テンプレート登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/ef/dm_index.html">データマートのインデックス検討</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduce/gt/index.html">グループ会社間取引</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduce/gt/corporation.html">グループ会社を変更する（既存導入会社の追加・連結除外）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/gt/cooperate_gt_batch.html">グループ会社間取引連携ジョブを一括実行する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/gt/gt_recovery.html">連携誤り・漏れのリカバリ手順</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/gt/before_introduction.html">グループ会社間取引モジュールの導入前に計上した取引（債権）を連携する</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduce/gm/index.html">グループ連結オペレーション</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduce/gm/corporation.html">グループ会社を変更する（既存導入会社の追加・除外）</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduce/restApiIntegration/index.html">REST API を使用した外部連携</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduce/restApiIntegration/aiCooperationImportUploadFile.html">仕訳情報を Biz∫会計 にファイル連携する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduce/restApiIntegration/gaConsolidatedAccountInterfaceExportReport.html">Biz∫連結へ連携するファイルをダウンロードする</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../index.html">Biz∫会計</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">逆引き(Cookbook)</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>会計データ取込の性能を改善する &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="グループ会社間取引" href="../gt/index.html" />
+    <link rel="prev" title="会計連携" href="index.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../../general/setup/index.html" >運用環境セットアップガイド</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >性能改善</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">会計連携</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">会計データ取込の性能を改善する</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="index.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="../gt/index.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../general/setup/preface.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../general/setup/setup.html">セットアップ概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../general/setup/biz/index.html">Biz∫環境のセットアップ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">性能改善</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../001.html">JVM起動オプションを Biz∫会計 推奨設定値に変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../004.html">ワークテーブルの統計情報を削除する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../005.html">ワークテーブルの不要データを削除する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../trouble.html">性能トラブルを調査する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fc/index.html">会計コア</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pr/index.html">債権債務</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">会計連携</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">会計データ取込の性能を改善する</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-cookbook-spec-ai-performance-log">取込伝票ログの出力設定</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-cookbook-spec-ai-performance-parallel">会計データ取込処理の並列実行</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gt/index.html">グループ会社間取引</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gm/index.html">グループ連結オペレーション</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#fms-cookbook-spec-tool">ツール</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-cookbook-spec-ai-performance">
+<span id="id39"></span><h1>会計データ取込の性能を改善する<a class="headerlink" href="#fms-cookbook-spec-ai-performance" title="Link to this heading">¶</a></h1>
+<p>Biz∫会計連携モジュールの会計データ取込について、性能を改善するための観点を記載しています。ご検討ください。</p>
+<section id="fms-cookbook-spec-ai-performance-log">
+<span id="id40"></span><h2>取込伝票ログの出力設定<a class="headerlink" href="#fms-cookbook-spec-ai-performance-log" title="Link to this heading">¶</a></h2>
+<p>取込伝票ログは、会計データ取込にて補完処理後（共通機能によるチェックを行う前）の仕訳情報がxmlファイルで出力されます。出力されたファイルは、会計データ取込でエラーとなったデータについて、マスタの設定や連携データを見直すときに有用です。</p>
+<p>取込伝票ログは仕訳毎に作成されるため、仕訳数に比例して会計データ取込の処理時間が増加します。取込伝票ログが不要な場合には、以下項目について値を変更してください。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  会計コア
+    マスタメンテナンス
+      基本設定管理
+        会計連携取込設定管理
+</pre></div>
+</div>
+</li>
+<li><p>設定項目</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>「取込伝票ログ保持日数」を「0」に変更する（取込伝票ログを出力しないようにする）
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="fms-cookbook-spec-ai-performance-parallel">
+<span id="id41"></span><h2>会計データ取込処理の並列実行<a class="headerlink" href="#fms-cookbook-spec-ai-performance-parallel" title="Link to this heading">¶</a></h2>
+<p>会計連携では、並列処理用キーの値をジョブ毎に設定することで、並列にジョブを起動することが可能です。並列にジョブを実行することで、会計データ取込にかかる全体の実行時間を短縮することができます。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>並列処理用キーの設定は、<a class="reference internal" href="../../../introduce/module/ai/batch.html#fms-introduce-module-ai-batch-do-bapf"><span class="std std-ref">Biz∫APF へのジョブ登録</span></a>の「ジョブパラメータの登録」を参照してください。</p>
+</div>
+<ul>
+<li><p>intra-martジョブネット管理から起動する場合</p>
+<p>intra-martのジョブとBiz∫APFのジョブを並列処理用キーの設定数だけ登録してください。</p>
+</li>
+<li><p>コマンドラインから起動する場合</p>
+<p>コマンドは、<a class="reference internal" href="../../introduce/batch/ai/finance_data_import_batch.html#fms-cookbook-introduce-batch-ai-finance-data-import-batch"><span class="std std-ref">会計データ取込処理のジョブ実行</span></a>を参考にしてください。パラメータ：「parallelHandlingKey」に、実行するジョブ毎に異なる値を設定して実行してください。</p>
+</li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../../general/setup/index.html" >運用環境セットアップガイド</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >性能改善</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >会計連携</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">会計データ取込の性能を改善する</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

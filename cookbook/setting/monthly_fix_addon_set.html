@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>原価計算にアドオン処理を組み込む &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="intra-mart のストレージルートのパスを確認する" href="storage.html" />
+    <link rel="prev" title="仕訳取引明細検索／仕訳明細検索のソートキーの選択肢を絞り込む" href="list_value_cut_sort_key.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U">開発/動作環境</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">原価計算にアドオン処理を組み込む</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="list_value_cut_sort_key.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="storage.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">逆引き(Cookbook)</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">開発/動作環境</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="001.html">ログ出力設定を行う</a></li>
+<li class="toctree-l3"><a class="reference internal" href="002.html">外部ソフトウェア接続方式を利用したバッチ処理実行環境を構築する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="003.html">会計連携ファイル取込のファイルを配備するディレクトリを作成する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_import.html">ジョブ実行における取込ファイルを配備するディレクトリを作成する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="004.html">ファイル入出力の設定を変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="006.html">ページング機能を持つグリッドの1頁あたりの最大表示件数を変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rename/index.html">名称を変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rename/bui3/index.html">画面項目の名称を変更する（Biz∫UI3）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="incm_pymnt_set.html">入金支払手段および入金支払方法を変更する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="list_value_cut_sort_key.html">仕訳取引明細検索／仕訳明細検索のソートキーの選択肢を絞り込む</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">原価計算にアドオン処理を組み込む</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fms-cookbook-setting-monthly-fix-addon-set-execute-method">実行メソッドを実装する</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id41">実行メソッド</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-cookbook-setting-monthly-fix-addon-set-analyze-cd">分析コードを登録する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-cookbook-setting-monthly-fix-addon-set-cost-calculation-class">原価計算クラス定義を登録する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-cookbook-setting-monthly-fix-addon-set-bat-proc-seq">バッチ処理手順を登録する</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">intra-mart のストレージルートのパスを確認する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup-di.html">Biz∫APF データ連携 の設定をする</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../spec/index.html">性能改善</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">ワークフロー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sms/index.html">Biz∫販売連携</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../invoice/index.html">請求書レイアウトの変更</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduce/index.html">導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-cookbook-setting-monthly-fix-addon-set">
+<span id="id39"></span><h1>原価計算にアドオン処理を組み込む<a class="headerlink" href="#fms-cookbook-setting-monthly-fix-addon-set" title="Link to this heading">¶</a></h1>
+<p>プロジェクト原価管理の月次処理にBiz∫上でアドオン開発したプログラムを組み込むことができます。</p>
+<section id="fms-cookbook-setting-monthly-fix-addon-set-execute-method">
+<span id="id40"></span><h2>実行メソッドを実装する<a class="headerlink" href="#fms-cookbook-setting-monthly-fix-addon-set-execute-method" title="Link to this heading">¶</a></h2>
+<p>プロジェクト原価管理の月次処理から起動できるようにするため、以下のように実行メソッドを実装します。</p>
+<section id="id41">
+<h3>実行メソッド<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 9.1%" />
+<col style="width: 18.2%" />
+<col style="width: 9.1%" />
+<col style="width: 9.1%" />
+<col style="width: 54.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>メソッド</p></th>
+<th class="head"><p>引数</p></th>
+<th class="head"><p>戻り値</p></th>
+<th class="head"><p>戻り値の型</p></th>
+<th class="head"><p>戻り値の内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>execute</p></td>
+<td><p>実行パラメータモデル（ManyDealWithParameterDto）</p></td>
+<td><p>終了情報</p></td>
+<td><p>Integer</p></td>
+<td><div class="line-block">
+<div class="line">0：正常</div>
+<div class="line">1：エラー</div>
+<div class="line">2：ワーニング</div>
+<div class="line">3：仕訳作成<a class="footnote-reference brackets" href="#f1" id="id42" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id42">1</a><span class="fn-bracket">]</span></span>
+<p>正常終了時に会計インタフェーステーブルから仕訳を作成する場合に設定します。</p>
+</aside>
+</aside>
+<p>実行パラメータモデルにより、以下の項目が渡されます。</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 27.3%" />
+<col style="width: 27.3%" />
+<col style="width: 45.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>型</p></th>
+<th class="head"><p>内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>処理モード</p></td>
+<td><p>Integer</p></td>
+<td><div class="line-block">
+<div class="line">0：月次処理</div>
+<div class="line">1：月次処理事前チェック</div>
+<div class="line">3：上記以外（月次確定）</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>会社コード</p></td>
+<td><p>String</p></td>
+<td><p>会計コンテキストの会社コード</p></td>
+</tr>
+<tr class="row-even"><td><p>実行ID</p></td>
+<td><p>String</p></td>
+<td><p>実行時に生成された実行ID</p></td>
+</tr>
+<tr class="row-odd"><td><p>ユーザコード</p></td>
+<td><p>String</p></td>
+<td><p>会計コンテキストのユーザコード</p></td>
+</tr>
+<tr class="row-even"><td><p>組織コード</p></td>
+<td><p>String</p></td>
+<td><p>会計コンテキストの所属組織コード</p></td>
+</tr>
+<tr class="row-odd"><td><p>会計年度</p></td>
+<td><p>Integer</p></td>
+<td><p>月次処理実行年月の会計年度</p></td>
+</tr>
+<tr class="row-even"><td><p>会計月度</p></td>
+<td><p>Integer</p></td>
+<td><p>月次処理実行年月の会計月度</p></td>
+</tr>
+<tr class="row-odd"><td><p>会計月度終了日</p></td>
+<td><p>Date</p></td>
+<td><p>会計年度、会計月度により取得した月度終了日</p></td>
+</tr>
+<tr class="row-even"><td><p>拡張パラメータ</p></td>
+<td><p>Map&lt;String, String&gt;</p></td>
+<td><div class="line-block">
+<div class="line">key：原価計算クラス定義のパラメータキー1～3の値</div>
+<div class="line">value：バッチ処理手順テーブルの原価計算引数１～３の値</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>グローバル変数モデル</p></td>
+<td><p>GlobalValueContainer</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div></blockquote>
+</section>
+</section>
+<section id="fms-cookbook-setting-monthly-fix-addon-set-analyze-cd">
+<span id="id43"></span><h2>分析コードを登録する<a class="headerlink" href="#fms-cookbook-setting-monthly-fix-addon-set-analyze-cd" title="Link to this heading">¶</a></h2>
+<p>以下のメニューより、分析種別：COSEQ（原価計算処理区分）に対し、アドオン機能の分析コードを登録します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF アドミニストレーション
+  マスタ管理
+    分析コード
+      分析コード管理
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<ul>
+<li><p>後続のバッチ処理手順を登録する際、本手順で登録した分析コードを原価計算処理区分に設定します。</p></li>
+<li><div class="line-block">
+<div class="line">アドオン機能用の分析コード：51（アドオン機能１）～59（アドオン機能９）がプリセットされるため、分析コード名などを変更して利用してください。</div>
+<div class="line">追加も可能です。追加する場合は分析コードを2桁で登録してください。</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</section>
+<section id="fms-cookbook-setting-monthly-fix-addon-set-cost-calculation-class">
+<span id="id44"></span><h2>原価計算クラス定義を登録する<a class="headerlink" href="#fms-cookbook-setting-monthly-fix-addon-set-cost-calculation-class" title="Link to this heading">¶</a></h2>
+<p>原価計算クラス定義エンティティ（fms_jc_cost_calculation_class）に対してデータの登録を行います。</p>
+<p>以下の各項目に対する説明を参考に原価計算クラス定義エンティティを編集して下さい。</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 15.1%" />
+<col style="width: 56.6%" />
+<col style="width: 28.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>例</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>会社コード</p></td>
+<td><p>原価計算処理手順を組み込む会社コードを設定します。</p></td>
+<td><p>BZ1</p></td>
+</tr>
+<tr class="row-odd"><td><p>原価計算処理コード</p></td>
+<td><p>分析種別コード：COSEQ（原価計算処理区分）に登録したアドオン機能の分析コードを設定します。</p></td>
+<td><p>51</p></td>
+</tr>
+<tr class="row-even"><td><p>原価計算処理名</p></td>
+<td><p>アドオン処理名を設定します。</p></td>
+<td><p>アドオン機能１</p></td>
+</tr>
+<tr class="row-odd"><td><p>クラス名</p></td>
+<td><p>アドオン処理の実行メソッドを実装したクラス名を設定します。</p></td>
+<td><p>com.biz_integral.fms.jc.domain.logic.MonthlyFixAddon1Logic</p></td>
+</tr>
+<tr class="row-even"><td><p>パラメータキー1</p></td>
+<td><div class="line-block">
+<div class="line">拡張パラメータのキー値として、任意の文字列を設定します。</div>
+<div class="line">実装時、拡張パラメータから原価計算引数１の区分値を取得する際に利用します。<a class="footnote-reference brackets" href="#f2" id="id45" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></div>
+</div>
+</td>
+<td><p>scope <a class="footnote-reference brackets" href="#f3" id="id46" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>パラメータキー2</p></td>
+<td><div class="line-block">
+<div class="line">拡張パラメータのキー値として、任意の文字列を設定します。</div>
+<div class="line">実装時、拡張パラメータから原価計算引数２の区分値を取得する際に利用します。<a class="footnote-reference brackets" href="#f2" id="id47" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></div>
+</div>
+</td>
+<td><p>設定なし</p></td>
+</tr>
+<tr class="row-even"><td><p>パラメータキー3</p></td>
+<td><div class="line-block">
+<div class="line">拡張パラメータのキー値として、任意の文字列を設定します。</div>
+<div class="line">実装時、拡張パラメータから原価計算引数３の区分値を取得する際に利用します。<a class="footnote-reference brackets" href="#f2" id="id48" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></div>
+</div>
+</td>
+<td><p>設定なし</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id45">1</a>,<a role="doc-backlink" href="#id47">2</a>,<a role="doc-backlink" href="#id48">3</a>)</span>
+<p>原価計算引数1～3の区分値については、台帳の『07_区分値一覧.xlsx』を参照してください。</p>
+</aside>
+<aside class="footnote brackets" id="f3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id46">3</a><span class="fn-bracket">]</span></span>
+<p>後続のバッチ処理手順の登録にて原価計算引数１に「2」（四半期/２回目以降）を設定した場合、拡張パラメータにはkey：scope、value：2として設定されます。</p>
+</aside>
+</aside>
+</div></blockquote>
+</section>
+<section id="fms-cookbook-setting-monthly-fix-addon-set-bat-proc-seq">
+<span id="id49"></span><h2>バッチ処理手順を登録する<a class="headerlink" href="#fms-cookbook-setting-monthly-fix-addon-set-bat-proc-seq" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">バッチ処理手順テーブルにアドオン機能を登録します。</div>
+<div class="line">登録する手順については<a class="reference internal" href="../../introduce/module/jc/batch_process.html#fms-introduce-module-jc-batch-process"><span class="std std-ref">月次処理手順の変更</span></a>を参照してください。</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >逆引き(Cookbook)</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" >開発/動作環境</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">原価計算にアドオン処理を組み込む</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
