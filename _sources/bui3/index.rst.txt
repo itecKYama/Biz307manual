@@ -1,0 +1,20 @@
+.. include:: ../include/definition.txt
+
+.. _FMS_bui3:
+
+===================================================
+Biz∫UI3切替設定ガイド
+===================================================
+
+.. toctree::
+   :maxdepth: 2
+   
+   preface
+   display
+   workflow
+   
+.. only:: internal
+
+   preface      :はじめに
+   display        :Biz∫UI3で開発された画面を表示する
+   workflow    :ワークフローをBiz∫UI3に切り替える

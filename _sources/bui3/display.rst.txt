@@ -1,0 +1,24 @@
+.. include:: ../include/definition.txt
+
+.. _FMS_bui3_display:
+
+===================================
+Biz∫UI3で開発された画面を表示する
+===================================
+
+| 認可設定によりメニュー：Biz∫ 会計 (BUI3)は非表示となっています。
+| メニューを表示するには認可設定を変更します。
+
+.. _FMS_bui3_display-preparation:
+
+着手条件
+===================================
+
+| :ref:`FMS_setup_production_environment` の :ref:`FMS_setup_bizSetting` までを終えていること。
+
+.. _FMS_bui3_display-auth:
+
+Biz∫UI3の認可設定
+===================================
+
+| :ref:`FMS_introduce_baseset_im_master-authorization` の :ref:`FMS_introduce_baseset_im_master-authorization-do-screen` を参照し、リソースグループ名「Biz∫ 会計 (BUI3)」のポリシーを「許可」に変更してください。

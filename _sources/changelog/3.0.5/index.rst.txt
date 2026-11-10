@@ -1,0 +1,104 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_changelog_REL305:
+
+===================================================
+|FMS| 3.0.5
+===================================================
+
+|FMS| 3.0.4からの主な変更点
+===================================================
+
+.. _FMS_changelog_REL305-introduce:
+
+導入マニュアル
+--------------------------------
+
+* 海外送金ISO20022対応に伴い、以下を追加しました。
+
+  * :ref:`FMS_introduce_module_pr-ovrss_rmttnc_report_item_config`
+
+* 海外送金ISO20022対応に伴い、海外送金依頼実行ジョブのパラメータ「displayFileName（EBデータ連携ファイル表示名）」に注記しました。
+
+  * :ref:`FMS_introduce_module_pr-overseas_remittance_execute_job`
+
+* 決済仕訳作成、契約決算更新のジョブ化に伴い、以下を追加しました。
+
+  * :ref:`FMS_introduce_module_lc-settlement_journal_create_job`
+  * :ref:`FMS_introduce_module_lc-contract_closing_edit_job`
+
+* |GT| の導入マニュアルにワークロードマスタの設定を追加しました。
+
+  * :ref:`FMS_introduce_module_gt-work_load_ac`
+
+.. _FMS_changelog_REL305-introduce_bui3:
+
+Biz∫UI3切替設定ガイド
+--------------------------------
+
+* :ref:`FMS_bui3` を追加しました。
+
+.. _FMS_changelog_REL305-introduce_reference:
+
+参考資料
+--------------------------------
+
+以下を更新しました。
+
+* :download:`参考資料_メニュー一覧<../../introduce/reference/download/menu_reference.xlsx>` 
+
+    「Biz∫ 会計 マスタメンテナンス」を削除し、「海外送金出力項目定義」を追加しました。
+
+* :download:`参考資料_パラメータ一覧<../../introduce/reference/download/parameter_reference.xlsx>` 
+
+.. _FMS_changelog_REL305-import:
+
+一括取込マニュアル
+--------------------------------
+
+* 海外送金ISO20022対応に伴い、以下を追加・更新しました。
+
+  * 追加
+
+    * :ref:`FMS_import_mst-ovrss_rmttnc_report_item_config-ovrss_rmttnc_report_item_config`
+  * 更新
+
+    * :ref:`FMS_import_mst-department-cmp_account`
+    * :ref:`FMS_import_mst-corp_cstm-customer`
+    * :ref:`FMS_import_mst-ai-import_config`
+    * :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+    * :ref:`FMS_import_mst-jrnl_deal-deal_ap`
+    * :ref:`FMS_import_mst-jrnl_deal-deal_py`
+
+* 契約を一括解約できる機能の追加に伴い、以下を追加しました。
+
+  * :ref:`FMS_import_mst-contact-contact_entry`
+
+.. _FMS_changelog_REL305-archive:
+
+過年度アーカイブ
+--------------------------------
+
+* :ref:`FMS_archive-add_authorization-setting-bui3` の :download:`認可(ポリシーUI3)インポート<../../archive/download/authz-policy_bui3.xml>` に、|FMS| 3.0.5で追加された画面の認可を追加しました。
+* 海外送金ISO20022対応に伴い、以下を更新しました。
+
+  * :ref:`FMS_archive-profile`
+
+.. _FMS_changelog_REL305-cookbook:
+
+逆引き(Cookbook)
+--------------------------------
+
+* :ref:`FMS_cookbook_setting_rename_bui3` を追加しました。
+
+* 以下のドキュメントを追加しました。
+
+  * :ref:`FMS_cookbook_introduce_batch_lc-settlement_journal_create`
+  * :ref:`FMS_cookbook_introduce_batch_lc-contract_closing_edit`
+
+* :ref:`FMS_cookbook_spec_005` のワークデータ削除バッチツールについて、非推奨である注意事項を追加しました。
+
+* :ref:`FMS_cookbook_introduce_batch-user` に以下を追記しました。
+
+  * :ref:`FMS_cookbook_introduce_batch-user-lc-settlement_journal_create`
+  * :ref:`FMS_cookbook_introduce_batch-user-lc-contract_closing_edit`

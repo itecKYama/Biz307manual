@@ -1,0 +1,170 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_changelog_REL302:
+
+===================================================
+|FMS| 3.0.2
+===================================================
+
+|FMS| 3.0.1からの主な変更点
+===================================================
+
+
+.. _FMS_changelog_REL302-general:
+
+運用環境セットアップガイド
+--------------------------
+
+* 適格請求書の対応に伴い、以下の説明を修正しました。
+
+  * :ref:`FMS_setup_setup-report`
+
+.. _FMS_changelog_REL302-introduce:
+
+導入マニュアル
+----------------------
+
+* 適格請求書の対応に伴い、コンフィグレーション設定に適格請求書発行事業者登録番号の設定を追加しました。
+
+  * :ref:`FMS_introduce_baseset_biz-configuration`
+
+* メンテナンス画面の追加に伴い、以下の記載を修正しました。
+
+  * :ref:`FMS_introduce_core-finance_module`
+  * :ref:`FMS_introduce_module_pr-site_employee`
+  * :ref:`FMS_introduce_module_pr-tax_withholding_kind`
+  * :ref:`FMS_introduce_module_bn-set_bill_splt`
+  * :ref:`FMS_introduce_module_fa-jrnl_ptn_def`
+  * :ref:`FMS_introduce_module_cp-account`
+  * :ref:`FMS_introduce_module_cp-journal_set`
+  * :ref:`FMS_introduce_module_ai-validation`
+  * :ref:`FMS_introduce_module_gt-set_nontarget_app`
+
+* :ref:`FMS_introduce_core-field_relation` にフィールド種別として「ユーザ」「勘定科目」を追加しました。
+
+* :ref:`FMS_introduce_core_report-batch` に「ファイル出力項目テンプレートID」を追加しました。
+
+* 定期仕訳機能の追加に伴い、以下を追加しました。
+
+  * :ref:`FMS_introduce_module_gl-jrnlptn`
+  * :ref:`FMS_introduce_module_gl-regular_journals_master`
+  * :ref:`FMS_introduce_module_gl-create_regular_journals_job`
+  * :ref:`FMS_introduce_module_pr-jrnlptn` に :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_regular_deal` を追加
+  * :ref:`FMS_introduce_module_pr-regular_journals_master`
+  * :ref:`FMS_introduce_module_pr-create_regular_journals_job`
+  
+* 定期ジョブ機能の追加に伴い、以下を追加しました。
+
+  * :ref:`FMS_introduce_module_gl-deferred_accounts_transfer_job`
+  * :ref:`FMS_introduce_module_pr-invoice_request_package_job`
+  * :ref:`FMS_introduce_module_pr-automatic_reconcile_job`
+  * :ref:`FMS_introduce_module_pr-payment_request_package_job`
+  * :ref:`FMS_introduce_module_ma-allocate_result_job`
+  * :ref:`FMS_introduce_module_fa-depreciation_calculate_job`
+  * :ref:`FMS_introduce_module_jc-monthly_fix_job`
+
+* ワークテーブルのクリーンアップに対応したため、 :ref:`FMS_introduce_batch` の記載を修正しました。
+
+* 支払手段が海外送金である債務を一括支払申請の対象となるように対応したため、 :ref:`FMS_introduce_module_pr-tender_instrument_way` の記載を修正しました。
+
+* :ref:`FMS_introduce_module_ec-for_client` の「電子記録債権管理 for Client」を最新版に更新しました。
+
+* :ref:`FMS_introduce_module_jc-batch_process` を追加しました。
+
+.. _FMS_changelog_REL302-reference:
+
+参考資料
+----------------------
+
+* 参考資料_サイト社員の設定方法 をヘルプに移行しました。
+
+* 以下のファイルを更新しました。
+
+  * :download:`参考資料_メニュー一覧<../../introduce/reference/download/menu_reference.xlsx>`
+  * :download:`参考資料_パラメータ一覧<../../introduce/reference/download/parameter_reference.xlsx>`
+  * :download:`参考資料_プロセス権限設定一覧<../../introduce/reference/download/processAuth_reference.xlsx>`
+  * :download:`参考資料_権限一覧<../../introduce/reference/download/auth_reference.xlsx>`
+  * :download:`参考資料_承認_補足資料<../../introduce/reference/download/approval_reference.xlsx>`
+
+
+.. _FMS_changelog_REL302-import:
+
+一括取込マニュアル
+----------------------
+
+* 以下のファイルを追加しました。
+ 
+  * :ref:`FMS_import_mst-bill_splt`
+  * :ref:`FMS_import_mst-list_value_cut`
+  * :ref:`FMS_import_mst-regular_journals`
+
+* 適格請求書の対応に伴い、以下のファイルを更新しました。
+
+  * :ref:`FMS_import_mst-corp_cstm-customer`
+  * :ref:`FMS_import_mst-ai` / :ref:`FMS_import_mst-ai-import_config` （取込項目）
+  * :ref:`FMS_import_mst-jrnl_deal-deal_ar`
+  * :ref:`FMS_import_mst-jrnl_deal-deal_ap`
+  * :ref:`FMS_import_mst-jrnl_deal-deal_gtAp`
+
+* 海外送金の対応に伴い、以下のファイルを更新しました。 
+
+  * :ref:`FMS_import_mst-ai-import_config`
+  * :ref:`FMS_import_mst-jrnl_deal-deal_ap`
+  * :ref:`FMS_import_mst-jrnl_deal-deal_py`
+
+* 取引先マスタ、科目マスタの予備項目を入力可能としたため、以下のファイルを更新しました。
+
+  * :ref:`FMS_import_mst-account-account`
+  * :ref:`FMS_import_mst-corp_cstm-customer`
+
+* フィールド種別として「ユーザ」「勘定科目」を追加したため、 :ref:`FMS_import_mst-field` のファイルを更新しました。
+
+.. _FMS_changelog_REL302-archive:
+
+過年度アーカイブ
+-----------------------
+
+* :ref:`FMS_ac` に対して、以下の通り添付ファイルに関する記載を追加しました。
+
+  * 過年度アーカイブ方式に「添付ファイルの削除期限日更新」の説明を追記しました。
+
+  * 導入手順の :ref:`FMS_archive-set_parameter` に「添付ファイルの削除期限日更新」の設定を追記しました。
+
+  * 操作ガイドに :ref:`FMS_archive-operation-file_copy` の手順を追記しました。
+
+.. _FMS_changelog_REL302-cookbook:
+
+逆引き(Cookbook)
+----------------------
+
+* 以下のドキュメントを追加しました。
+
+  * :ref:`FMS_cookbook_setting-monthly_fix_addon_set`
+  * :ref:`FMS_cookbook_invoice_invoiceQualified`
+  * :ref:`FMS_cookbook_introduce_pattern_gl-jrnlptn_regular_journal`
+  * :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_regular_deal`
+  * :ref:`FMS_cookbook_introduce_batch_gl-regular_journal_create`
+  * :ref:`FMS_cookbook_introduce_batch_gl-deferred_accounts_transfer_entry`
+  * :ref:`FMS_cookbook_introduce_batch_pr-regular_deal_create`
+  * :ref:`FMS_cookbook_introduce_batch_pr-invoice_request_package`
+  * :ref:`FMS_cookbook_introduce_batch_pr-automatic_reconcile`
+  * :ref:`FMS_cookbook_introduce_batch_pr-payment_request_package`
+  * :ref:`FMS_cookbook_introduce_batch_ma-allocate_result`
+  * :ref:`FMS_cookbook_introduce_batch_fa-depreciation_calculate`
+  * :ref:`FMS_cookbook_introduce_batch_jc-monthly_fix`
+
+* :ref:`FMS_cookbook_introduce_batch-user` に以下を追記しました。
+
+  * :ref:`FMS_cookbook_introduce_batch-user-gl-regular_journal`
+  * :ref:`FMS_cookbook_introduce_batch-user-gl-deferred`
+  * :ref:`FMS_cookbook_introduce_batch-user-pr-regular_deal`
+  * :ref:`FMS_cookbook_introduce_batch-user-pr-invoice`
+  * :ref:`FMS_cookbook_introduce_batch-user-pr-automatic`
+  * :ref:`FMS_cookbook_introduce_batch-user-pr-payment`
+  * :ref:`FMS_cookbook_introduce_batch-user-ma-allocate`
+  * :ref:`FMS_cookbook_introduce_batch-user-fa-depreciation`
+  * :ref:`FMS_cookbook_introduce_batch-user-jc-monthly`
+
+* :ref:`FMS_cookbook_setting-incm_pymnt_set` に海外送金情報入力要否フラグを追記しました。
+
+* ワークテーブルのクリーンアップに対応したため、 :ref:`FMS_cookbook_spec_005` の記載を修正しました。

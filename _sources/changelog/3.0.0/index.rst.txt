@@ -1,0 +1,107 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_changelog_REL300:
+
+===================================================
+|FMS| 3.0.0
+===================================================
+
+|FMS| 2.2.2からの主な変更点
+===================================================
+
+.. _FMS_changelog_REL300-general:
+
+運用環境セットアップガイド
+--------------------------
+
+* セットアップ手順の変更に伴い、以下の手順を削除しました。
+
+  * Webアプリケーションサーバの構築
+  * Webサーバの構築
+  * intra-mart Accel Platform 環境のセットアップ
+
+* セットアップ手順の変更に伴い、 :ref:`FMS_setup` の以下の手順を削除しました。
+
+  * データベースをバックアップする
+  * テナントユーザにマテリアライズド・ビューを作成する権限を付与する
+  * アーカイブテナントユーザを作成する
+  * Biz∫会計 のfixtureを解凍する
+  * Resinを起動する
+  * Provisionerのjdbc.groovyを編集する
+  * Provisionerの設定ファイルを作成する
+  * 置換文字列を設定する
+  * テナントシェアードスキーマにデータベースオブジェクトの登録を行う
+  * テナントスキーマにデータベースオブジェクトの登録を行う
+  * テナントスキーマにメニューや認可の登録を行う
+  * テナントスキーマにPL/SQLの登録を行う
+  * テナントシェアードスキーマに初期データの登録を行う
+  * テナントシェアードスキーマに会社ごとの初期データの登録を行う
+  * テナントスキーマに初期データの登録を行う
+  * テナントスキーマに会社ごとの初期データの登録を行う
+  * アーカイブテナントスキーマにデータベースオブジェクトの登録を行う
+  * Resinを再起動する
+  * 帳票レイアウトファイルを配置する
+
+* セットアップ手順の変更に伴い、以下の記載を修正しました。
+
+  * :ref:`FMS_setup_setup-flow`
+  * :ref:`FMS_setup`
+
+.. _FMS_changelog_REL300-introduce:
+
+導入マニュアル
+----------------------
+
+* 以下の手順を追加しました。
+
+  * :ref:`FMS_introduce_core-finance_module`
+
+* セットアップ手順の変更に伴い、 :ref:`FMS_introduce_module_ef` の「見込設定」を削除しました。
+
+* Biz∫G元帳連携を削除したため、:ref:`FMS_introduce_module_ga` の以下の手順を削除しました。
+
+  * Biz∫G元帳 導入に伴う分析フィールドの設定
+  * Biz∫G元帳 連携ファイル出力先の設定
+  * Biz∫G元帳 連携ファイル出力のジョブ登録
+  * Biz∫G元帳 への期首残高移行
+
+* プロジェクト原価管理の月次処理機能の改善とBiz∫G元帳連携の削除に伴い、:download:`参考資料_メニュー一覧<../../introduce/reference/download/menu_reference.xlsx>` を修正しました。
+
+.. _FMS_changelog_REL300-cookbook:
+
+逆引き(Cookbook)
+----------------------
+
+* セットアップ手順の変更に伴い、:ref:`FMS_cookbook_setting` の以下の手順を削除しました。
+
+  * ファイルの文字コードを変換する
+  * 過年度アーカイブの設定と導入をする
+
+* セットアップ手順の変更に伴い、以下の記載を修正しました。
+
+  * :ref:`FMS_cookbook_setting_list_value_cut_sort_key`
+  * :ref:`FMS_cookbook_setting-rename-amountUnit`
+  * :ref:`FMS_cookbook_setting_setup-di`
+  * :ref:`FMS_cookbook_introduce_batch_ac-data_copy_batch`
+  * :ref:`FMS_cookbook_introduce_batch_ac-data_deletion_batch`
+
+* Biz∫G元帳連携を削除したため、:ref:`FMS_cookbook_introduce_batch` の「グループ会計」を削除しました。
+
+* Biz∫G元帳連携を削除したため、 :ref:`FMS_cookbook_introduce_batch` の以下の記載を修正しました。
+
+  * :ref:`FMS_cookbook_introduce_batch-user`
+  * :ref:`FMS_cookbook_introduce_batch-job-command`
+
+* |FMS| 3.0 は1テナントにつき1会社のみ登録可能であるため、 会社追加の手順を削除しました。
+
+* ファイル入出力に関するproperties設定値をマスタ化したため、 :ref:`FMS_cookbook_setting_004` の記載を修正しました。
+
+
+.. _FMS_changelog_REL300-reference:
+
+リファレンス
+----------------------
+
+* :ref:`FMS_import_mst-jc_intface-labor_jrnl` のサンプルファイルを修正しました。 :download:`給与仕訳連携設定<../../import/mst/download/personJournalEntryInterface_sample.xlsx>`
+
+* セットアップ手順の変更に伴い、 :ref:`FMS_deptchg_set-outline` の記載を修正しました。

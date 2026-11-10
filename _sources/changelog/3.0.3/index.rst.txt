@@ -1,0 +1,88 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_changelog_REL303:
+
+===================================================
+|FMS| 3.0.3
+===================================================
+
+|FMS| 3.0.2からの主な変更点
+===================================================
+
+.. _FMS_changelog_REL303-introduce:
+
+導入マニュアル
+----------------------
+
+* 電子記録債権管理 for Client を Biz∫パートナーサイトから取得するように :ref:`FMS_introduce_module_ec-for_client` を修正しました。
+
+.. _FMS_changelog_REL303-reference:
+
+* 着地見込管理の改良に伴い、以下を追加しました。
+
+  * :ref:`FMS_introduce_module_ef-accounting_type`
+
+* 着地見込管理の改良に伴い、以下を更新しました。
+
+  * :ref:`FMS_introduce_module_ef-ef`
+
+* 案件プロパティマッピングマスタ機能の追加に伴い、以下を追加しました。
+
+  * :ref:`FMS_introduce_workflow-fms_matter_property_mapping`
+
+* Biz∫販売(BES)の対応に伴い、以下の記載を修正しました。
+
+  * :ref:`FMS_introduce_module_ef-ef-etc`
+  * :ref:`FMS_introduce_module_ef-limitations`
+  * :ref:`FMS_introduce_module_ef-job`
+  
+* 定型業務自動化の範囲拡大の対応に伴い、:ref:`FMS_introduce_batch` に「振込依頼実行(バッチ)」「海外送金依頼実行(バッチ)」を追加しました。
+  
+* 定型業務自動化の範囲拡大の対応に伴い、以下を追加しました。
+
+  * :ref:`FMS_introduce_module_pr-transfer_execute_job`
+  * :ref:`FMS_introduce_module_pr-overseas_remittance_execute_job`
+
+ワークフロー設定ガイド
+----------------------
+
+* 案件プロパティマッピングマスタ機能の追加に伴い、以下の記載を修正しました。
+
+  * :ref:`FMS_imw_user_data-list`
+  
+参考資料
+----------------------
+
+* 以下のファイルを更新しました。
+
+  * :download:`参考資料_メニュー一覧<../../introduce/reference/download/menu_reference.xlsx>`
+
+.. _FMS_changelog_REL303-import:
+
+一括取込マニュアル
+----------------------
+
+* 以下のファイルを追加しました。
+ 
+  * :ref:`FMS_import_mst-matter_property_mapping`
+  * :ref:`FMS_import_mst-expected`
+
+.. _FMS_changelog_REL303-cookbook:
+
+逆引き(Cookbook)
+----------------------
+
+* ワークテーブルの統計情報と不要データの削除スクリプトをBiz∫パートナーサイトから取得するように :ref:`FMS_cookbook_spec` を修正しました。
+
+* 着地見込管理の改良に伴い、 :ref:`FMS_cookbook_introduce_ef-date_mart` の記載を修正しました。
+
+* Biz∫販売(BES)に対応したため、 :ref:`FMS_cookbook_introduce_batch_ef-es_crd_add_batch` の記載を修正しました。
+
+* 定型業務自動化の範囲拡大の対応に伴い、以下を追加しました。
+
+  * :ref:`FMS_cookbook_introduce_batch_pr-transfer_execute`
+  * :ref:`FMS_cookbook_introduce_batch_pr-overseas_remittance_execute`
+
+* :ref:`FMS_cookbook_setting_setup-di` に以下を追加しました。
+
+  * :ref:`FMS_cookbook_setting_setup-di-do-create-wkld`

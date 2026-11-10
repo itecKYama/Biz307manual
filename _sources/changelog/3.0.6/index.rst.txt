@@ -1,0 +1,80 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_changelog_REL306:
+
+===================================================
+|FMS| 3.0.6
+===================================================
+
+|FMS| 3.0.5からの主な変更点
+===================================================
+
+..  _FMS_changelog_REL306-import:
+
+一括取込マニュアル
+--------------------------------
+
+* ISO20022対応の機能強化およびバグ改修に伴い、以下を更新しました。
+
+  * 更新
+
+    * :ref:`FMS_import_mst-ovrss_rmttnc_report_item_config-ovrss_rmttnc_report_item_config`
+    * :ref:`FMS_import_mst-corp_cstm-customer`
+    * :ref:`FMS_import_mst-ai-import_config`
+    * :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn`
+    * :ref:`FMS_import_mst-jrnl_deal-deal_ap`
+    * :ref:`FMS_import_mst-jrnl_deal-deal_py`
+
+* 新リース会計基準対応に伴い、以下を更新しました。
+
+  * 更新
+
+    * :ref:`FMS_import_mst-contact-contact_entry`
+
+.. _FMS_changelog_REL306-archive:
+
+過年度アーカイブ
+--------------------------------
+
+* :ref:`FMS_archive-add_authorization-setting-bui3` の :download:`認可(ポリシーUI3)インポート<../../archive/download/authz-policy_bui3.xml>` に、|FMS| 3.0.6で追加された画面の認可を追加しました。
+
+.. _FMS_changelog_REL306-introduce:
+
+導入マニュアル
+--------------------------------
+
+* | :ref:`FMS_introduce_module_pr-automatic_reconcile_job` のジョブパラメータに「入金日月次締時計上日算出区分」を追加しました。
+  | また、ジョブパラメータについて、項目の並び替えや「必須」列の追加を行いました。
+
+* 新リース会計基準対応に伴い、以下を更新しました。
+
+  * :ref:`FMS_introduce_core-parameter-dummy` の会計ダミーコードを設定可能なパラメータに「付随費用仕訳作成時の補助科目」を追加しました。
+
+  * :ref:`FMS_introduce_module_lc-shift` に、契約がオンバランス取引である場合のリース資産情報登録に関する注記を追加しました。
+
+* | 請求書照合機能の追加に伴い、以下を追加・更新しました。
+
+  * | :ref:`FMS_introduce_module_pr-payment_request_package_job` のジョブパラメータに「照合済み債務を対象にするフラグ」を追加しました。
+    | また、ジョブパラメータについて、項目の並び替えや「必須」列の追加を行いました。
+
+  * | :ref:`FMS_introduce_module_pr-jrnlptn` に :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_adjust_tax_journal` を追加しました。
+
+.. _FMS_changelog_REL306-introduce_reference:
+
+参考資料
+--------------------------------
+
+以下を更新しました。
+
+* :download:`参考資料_メニュー一覧<../../introduce/reference/download/menu_reference.xlsx>`
+
+* :download:`参考資料_パラメータ一覧<../../introduce/reference/download/parameter_reference.xlsx>`
+
+* :download:`参考資料_承認_補足資料<../../introduce/reference/download/approval_reference.xlsx>`
+
+.. _FMS_changelog_REL306-cookbook:
+
+逆引き(Cookbook)
+--------------------------------
+
+* ワークデータ削除バッチツールを廃止したため、 :ref:`FMS_cookbook_spec_005` の記載を修正しました。

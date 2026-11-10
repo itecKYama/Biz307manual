@@ -1,0 +1,83 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_changelog_REL304:
+
+===================================================
+|FMS| 3.0.4
+===================================================
+
+|FMS| 3.0.3からの主な変更点
+===================================================
+
+.. _FMS_changelog_REL304-setup:
+
+運用環境セットアップガイド
+--------------------------------
+
+* :ref:`FMS_setup_setup-report` の記述を見直しました。
+
+.. _FMS_changelog_REL304-introduce:
+
+導入マニュアル
+--------------------------------
+
+* Peppol連携の対応に伴い、以下を追加しました。
+
+  * :ref:`FMS_introduce_module_pr-peppol-cooperation`
+  * :ref:`FMS_introduce_module_pr-invoice-agent`
+
+* Peppol連携の対応に伴い、 :ref:`FMS_introduce_module_pr-report-batch` に帳票IDを追記しました。
+
+* FBファイルのジョブ取込実装に伴い、以下を追加しました。
+
+  * :ref:`FMS_introduce_module_pr-transfer_income_import_job`
+  * :ref:`FMS_introduce_module_pr-bank_account_transfer_result_import_job`
+  * :ref:`FMS_introduce_module_pr-automatic_debit_import_job`
+
+* FBファイル取込時のエンコード設定について、コンフィグレーション設定に追記しました。
+
+  * | :ref:`FMS_introduce_baseset_biz-configuration`
+    | パラメータキー「fbEncoding」をご確認ください。
+
+.. _FMS_changelog_REL304-import:
+
+一括取込マニュアル
+--------------------------------
+
+* Peppol連携の対応に伴い、以下を対応しました。
+
+  * :ref:`FMS_import_mst-corp_cstm-customer` のファイルを更新しました。
+  * :ref:`FMS_import_mst-corp_cstm-invoice_data_interface_department` を追加しました。
+
+* 会計連携関連
+
+  * :ref:`FMS_import_mst-ai-import_config`  項目説明ファイルの「補足資料_日付形式の説明」の記述誤りを修正しました。
+
+* 資産履歴一括取込
+
+  * :ref:`FMS_import_mst-asset_history-acquisition` 項目説明ファイルの「資産履歴一括取込（登録）_補足事項」シートの記載誤りを修正しました。
+
+.. _FMS_changelog_REL304-archive:
+
+過年度アーカイブ
+--------------------------------
+
+* :ref:`FMS_archive-add_authorization-endConditions` の対象としてロールを追加しました。
+
+* :ref:`FMS_archive-add_authorization-setting` ファイル「認可(ポリシー)インポート」から不要な記述を削除しました。
+
+* :ref:`FMS_archive-add_authorization-setting-bui3` を追加しました。
+
+* PostgreSQLを利用している場合に必要な作業として、操作ガイドに :ref:`FMS_archive-operation-fms_account_view` を追加しました。
+
+.. _FMS_changelog_REL304-cookbook:
+
+逆引き(Cookbook)
+--------------------------------
+
+* :ref:`FMS_cookbook_setting_rename` にBiz∫UI3用の名称変更方法を追加しました。
+
+* :ref:`FMS_cookbook_introduce` に以下を追加しました。
+
+  * :ref:`FMS_cookbook_introduce_restApiIntegration_aiCooperationImportUploadFile`
+  * :ref:`FMS_cookbook_introduce_restApiIntegration_gaConsolidatedAccountInterfaceExportReport`
