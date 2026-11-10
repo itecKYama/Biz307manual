@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>21. フロント連携定義登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="22. 月次処理ジョブ登録" href="monthly_fix_job.html" />
+    <link rel="prev" title="20. 給与仕訳連携登録" href="labor_jrnl_set.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">プロジェクト原価管理の導入・移行</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">21. </span>フロント連携定義登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="labor_jrnl_set.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="monthly_fix_job.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">モジュール別の導入</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../gl/index.html">一般会計の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pr/index.html">債権債務の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bn/index.html">手形管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ec/index.html">電子記録債権管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cm/index.html">資金管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ma/index.html">管理会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ef/index.html">着地見込管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fe/index.html">外貨管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fa/index.html">資産管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cp/index.html">建設仮勘定の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lc/index.html">契約管理・リース管理の導入・移行</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">プロジェクト原価管理の導入・移行</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="accounting_type.html">1. 会計種別の登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="batch_month.html">2. 月次処理年月登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyze_class_cd_project.html">3. 分析種別登録(プロジェクトコード)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyze_cd.html">4. 分析コード登録(プロジェクト原価管理)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyze_fld_config.html">5. 分析フィールド登録(プロジェクト原価管理)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fa_analyze_fld_config.html">6. 資産管理用分析フィールド登録(プロジェクト原価管理)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fld_rel.html">7. フィールド関連登録(プロジェクト原価管理)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="convert_table.html">8. 変換表登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cost_account_cls.html">9. 原価計算種別登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contract_class.html">10. 契約形態登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html">11. プロジェクト登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cost_element_sum.html">12. 要約原価要素登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cost_element.html">13. 原価集計コード登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="overhead_deptgrp.html">14. 間接費組織グループ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rank_segment.html">15. ランク区分登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rank_information.html">16. ランク情報登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plan_amount.html">17. 単金登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dtlshift.html">18. 未成プロジェクトの残高移行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="progress_prj_sft.html">19. 進行基準プロジェクトの進捗率と原価回収基準の契約資産残高の移行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="labor_jrnl_set.html">20. 給与仕訳連携登録</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">21. フロント連携定義登録</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-jc-front-interface-startconditions">21.1. 着手条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-jc-front-interface-do">21.2. 実行手順</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-jc-front-interface-endconditions">21.3. 完了条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-jc-front-interface-tips">21.4. フロント連携出力について</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-jc-front-interface-tips-summary">21.4.1. 概要</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-jc-front-interface-tips-sql-define">21.4.2. SQL定義</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-jc-front-interface-tips-sample">21.4.3. サンプル</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="monthly_fix_job.html">22. 月次処理ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="actual_batch.html">23. 稼働実績取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="labor_jrnl_batch.html">24. 給与仕訳取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prj_import_batch.html">25. プロジェクト一括取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="front_out_batch.html">26. フロント連携出力ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="batch_process.html">27. 月次処理手順の変更</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ga/index.html">グループ会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ai/index.html">会計連携の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bc/index.html">業務共通の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gt/index.html">グループ会社間取引の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gm/index.html">グループ連結オペレーション の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ac/index.html">過年度アーカイブ の導入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-module-jc-front-interface">
+<span id="id39"></span><h1><span class="section-number">21. </span>フロント連携定義登録<a class="headerlink" href="#fms-introduce-module-jc-front-interface" title="Link to this heading">¶</a></h1>
+<p>フロント連携出力でファイルを作成する際に使用する連携SQL定義を登録します。</p>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>本機能は任意のSQLを登録することができる機能であるため、実行者の権限の及ばないデータにアクセスするSQLを登録される危険性があります。その結果、本来権限を保有するユーザの権限が害される可能性があります。</p>
+<p>上記の点を考慮し、本機能のメニューは内部統制上の職務規定に適合するユーザ以外には開放しないでください。</p>
+</div>
+<section id="fms-introduce-module-jc-front-interface-startconditions">
+<span id="id40"></span><h2><span class="section-number">21.1. </span>着手条件<a class="headerlink" href="#fms-introduce-module-jc-front-interface-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../../baseset/im/index.html#fms-introduce-baseset-im-master"><span class="std std-ref">IM-共通マスタ の設定</span></a>までの作業を終えていること。</p>
+</section>
+<section id="fms-introduce-module-jc-front-interface-do">
+<span id="id41"></span><h2><span class="section-number">21.2. </span>実行手順<a class="headerlink" href="#fms-introduce-module-jc-front-interface-do" title="Link to this heading">¶</a></h2>
+<p>Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューを起動します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  プロジェクト原価管理
+    業務連動
+      マスタメンテナンス
+        フロント連携出力管理
+</pre></div>
+</div>
+</li>
+<li><p>「F5:新規」により、データ種別として出力するファイル名を登録します。</p></li>
+<li><p>「SF5:一括取込」により、データ種別単位にSQL定義情報を取り込みます。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>一括登録を行う場合、一括取込マニュアルの<a class="reference internal" href="../../../import/mst/jc_intface.html#fms-import-mst-jc-intface-front-intface"><span class="std std-ref">フロント連携定義</span></a>を参考に取込ファイルを準備し、同メニューの「SF5:一括取込」ボタンより登録します。</p>
+</div>
+</li>
+</ul>
+</section>
+<section id="fms-introduce-module-jc-front-interface-endconditions">
+<span id="id42"></span><h2><span class="section-number">21.3. </span>完了条件<a class="headerlink" href="#fms-introduce-module-jc-front-interface-endconditions" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>以下のメニューより、ファイルが正しく出力されることを確認します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  プロジェクト原価管理
+    業務連動
+      更新処理
+        フロント連携ファイル出力
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="fms-introduce-module-jc-front-interface-tips">
+<span id="id43"></span><h2><span class="section-number">21.4. </span>フロント連携出力について<a class="headerlink" href="#fms-introduce-module-jc-front-interface-tips" title="Link to this heading">¶</a></h2>
+<section id="fms-introduce-module-jc-front-interface-tips-summary">
+<span id="id44"></span><h3><span class="section-number">21.4.1. </span>概要<a class="headerlink" href="#fms-introduce-module-jc-front-interface-tips-summary" title="Link to this heading">¶</a></h3>
+<p>他システムとマスタの同期を取る場合に、フロント連携出力を利用することにより、会計に設定されている各種マスタを他システムに配信することができます。</p>
+<p>フロント連携出力では、SQL定義をマスタ登録しておき、その情報をもとにCSVまたはTSVを作成します。そのため、会計内に登録されている情報であれば、他システムに連携可能となります。</p>
+<p>SQL定義により、作成するファイルのヘッダの有無を変えることができます。</p>
+</section>
+<section id="fms-introduce-module-jc-front-interface-tips-sql-define">
+<span id="id45"></span><h3><span class="section-number">21.4.2. </span>SQL定義<a class="headerlink" href="#fms-introduce-module-jc-front-interface-tips-sql-define" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>SQL定義の一括取込の内容は以下の通りです。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 40.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>設定内容</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>データ種別</p></td>
+<td><p>出力ファイルのファイル名を指定します。</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>行番号</p></td>
+<td><p>行番号を指定します。</p></td>
+<td><p>出力時に行番号順に検索してSQL文を作成します。</p></td>
+</tr>
+<tr class="row-even"><td><p>区分</p></td>
+<td><p>各行の識別区分を指定します。（1:ヘッダ、2:SQL文、3:追加条件）</p></td>
+<td><p>「フロント連携ファイル出力」画面で全件を指定した場合、「3:追加条件」の行は無視されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>SQL文</p></td>
+<td><p>SQL文を指定します。</p></td>
+<td><p>ヘッダの場合、項目をカンマで区切ります。</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>SQL文には以下の置換文字列を記述することができます。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>変数</p></th>
+<th class="head"><p>置換内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$1</p></td>
+<td><p>会社コードに置き換わります。</p></td>
+</tr>
+<tr class="row-odd"><td><p>$2</p></td>
+<td><p>更新日（または、計上日[自]）に置き換わります。</p></td>
+</tr>
+<tr class="row-even"><td><p>$3</p></td>
+<td><p>計上日[至]に置き換わります。</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</section>
+<section id="fms-introduce-module-jc-front-interface-tips-sample">
+<span id="id46"></span><h3><span class="section-number">21.4.3. </span>サンプル<a class="headerlink" href="#fms-introduce-module-jc-front-interface-tips-sample" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p><a class="reference download internal" download="" href="../../../_downloads/0923b221d7607946e138fa374dda6819/account.tab"><code class="xref download docutils literal notranslate"><span class="pre">科目_共通の全件を連携</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../../_downloads/a3cd165e69b2aee8e14a50517a80cbaa/project.tab"><code class="xref download docutils literal notranslate"><span class="pre">プロジェクト情報の差分を連携（ヘッダあり）</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../../_downloads/e02adb561d45a06eb4fe6e6e38a88099/journal.tab"><code class="xref download docutils literal notranslate"><span class="pre">当月発生の仕訳番号の取得</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../../_downloads/40d2cd8cfd34a2f6eb75c2fc4fcb13c6/hcmProject.tab"><code class="xref download docutils literal notranslate"><span class="pre">就業管理向けのプロジェクト連携</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../../_downloads/cf16877ceea6b3df2bf2dd37ead71454/hcmConvertLst.tab"><code class="xref download docutils literal notranslate"><span class="pre">就業管理向けの組織変換表連携</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../../_downloads/a439ecb9e73176558404016432fd5455/hcmDeptGrp.tab"><code class="xref download docutils literal notranslate"><span class="pre">就業管理向けの組織グループ所属連携</span></code></a></p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >プロジェクト原価管理の導入・移行</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">21. </span>フロント連携定義登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,757 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>20. 給与仕訳連携登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="21. フロント連携定義登録" href="front_interface.html" />
+    <link rel="prev" title="19. 進行基準プロジェクトの進捗率と原価回収基準の契約資産残高の移行" href="progress_prj_sft.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">プロジェクト原価管理の導入・移行</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">20. </span>給与仕訳連携登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="progress_prj_sft.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="front_interface.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">モジュール別の導入</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../gl/index.html">一般会計の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pr/index.html">債権債務の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bn/index.html">手形管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ec/index.html">電子記録債権管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cm/index.html">資金管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ma/index.html">管理会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ef/index.html">着地見込管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fe/index.html">外貨管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fa/index.html">資産管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cp/index.html">建設仮勘定の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lc/index.html">契約管理・リース管理の導入・移行</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">プロジェクト原価管理の導入・移行</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="accounting_type.html">1. 会計種別の登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="batch_month.html">2. 月次処理年月登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyze_class_cd_project.html">3. 分析種別登録(プロジェクトコード)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyze_cd.html">4. 分析コード登録(プロジェクト原価管理)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyze_fld_config.html">5. 分析フィールド登録(プロジェクト原価管理)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fa_analyze_fld_config.html">6. 資産管理用分析フィールド登録(プロジェクト原価管理)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fld_rel.html">7. フィールド関連登録(プロジェクト原価管理)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="convert_table.html">8. 変換表登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cost_account_cls.html">9. 原価計算種別登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contract_class.html">10. 契約形態登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html">11. プロジェクト登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cost_element_sum.html">12. 要約原価要素登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cost_element.html">13. 原価集計コード登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="overhead_deptgrp.html">14. 間接費組織グループ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rank_segment.html">15. ランク区分登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rank_information.html">16. ランク情報登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plan_amount.html">17. 単金登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dtlshift.html">18. 未成プロジェクトの残高移行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="progress_prj_sft.html">19. 進行基準プロジェクトの進捗率と原価回収基準の契約資産残高の移行</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">20. 給与仕訳連携登録</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-jc-labor-jrnl-set-startconditions">20.1. 着手条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-jc-labor-jrnl-set-do">20.2. 実行手順</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-jc-labor-jrnl-set-endconditions">20.3. 完了条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#csv">20.4. 給与仕訳取込CSVについて</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-jc-labor-jrnl-set-tips-summary">20.4.1. 概要</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-jc-labor-jrnl-set-tips-csv-column">20.4.2. CSVの項目について</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-jc-labor-jrnl-set-tips-master">20.4.3. マスタの設定例</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-jc-labor-jrnl-set-tips-jrnl">20.4.4. 作成される仕訳</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="front_interface.html">21. フロント連携定義登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="monthly_fix_job.html">22. 月次処理ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="actual_batch.html">23. 稼働実績取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="labor_jrnl_batch.html">24. 給与仕訳取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prj_import_batch.html">25. プロジェクト一括取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="front_out_batch.html">26. フロント連携出力ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="batch_process.html">27. 月次処理手順の変更</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ga/index.html">グループ会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ai/index.html">会計連携の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bc/index.html">業務共通の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gt/index.html">グループ会社間取引の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gm/index.html">グループ連結オペレーション の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ac/index.html">過年度アーカイブ の導入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-module-jc-labor-jrnl-set">
+<span id="id39"></span><h1><span class="section-number">20. </span>給与仕訳連携登録<a class="headerlink" href="#fms-introduce-module-jc-labor-jrnl-set" title="Link to this heading">¶</a></h1>
+<p>外部の給与システムからプロジェクト原価管理モジュールに給与仕訳を取り込む際の仕訳設定情報を登録します。</p>
+<section id="fms-introduce-module-jc-labor-jrnl-set-startconditions">
+<span id="id40"></span><h2><span class="section-number">20.1. </span>着手条件<a class="headerlink" href="#fms-introduce-module-jc-labor-jrnl-set-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="project.html#fms-introduce-module-jc-project"><span class="std std-ref">プロジェクト登録</span></a>までの作業を終えていること。</p>
+</section>
+<section id="fms-introduce-module-jc-labor-jrnl-set-do">
+<span id="id41"></span><h2><span class="section-number">20.2. </span>実行手順<a class="headerlink" href="#fms-introduce-module-jc-labor-jrnl-set-do" title="Link to this heading">¶</a></h2>
+<p>Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューより「F5:新規」を押下し、給与仕訳連携設定を登録します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  プロジェクト原価管理
+    業務連動
+      マスタメンテナンス
+        給与仕訳連携設定管理
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>一括登録を行う場合、一括取込マニュアルの<a class="reference internal" href="../../../import/mst/jc_intface.html#fms-import-mst-jc-intface-labor-jrnl"><span class="std std-ref">給与仕訳連携設定</span></a>を参考に取込ファイルを準備し、同メニューの「SF5:一括取込」ボタンより登録します。</p>
+</div>
+</li>
+</ul>
+</section>
+<section id="fms-introduce-module-jc-labor-jrnl-set-endconditions">
+<span id="id42"></span><h2><span class="section-number">20.3. </span>完了条件<a class="headerlink" href="#fms-introduce-module-jc-labor-jrnl-set-endconditions" title="Link to this heading">¶</a></h2>
+<p>登録した給与仕訳連携設定が、同画面から検索できることを確認します。プルーフリストを取得し、登録内容を確認することも可能です。</p>
+</section>
+<section id="csv">
+<span id="fms-introduce-module-jc-labor-jrnl-set-tips"></span><h2><span class="section-number">20.4. </span>給与仕訳取込CSVについて<a class="headerlink" href="#csv" title="Link to this heading">¶</a></h2>
+<section id="fms-introduce-module-jc-labor-jrnl-set-tips-summary">
+<span id="id43"></span><h3><span class="section-number">20.4.1. </span>概要<a class="headerlink" href="#fms-introduce-module-jc-labor-jrnl-set-tips-summary" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>給与システムからは個人別の給与明細のCSVを取り込むことを想定しています。</p></li>
+</ul>
+</section>
+<section id="fms-introduce-module-jc-labor-jrnl-set-tips-csv-column">
+<span id="id44"></span><h3><span class="section-number">20.4.2. </span>CSVの項目について<a class="headerlink" href="#fms-introduce-module-jc-labor-jrnl-set-tips-csv-column" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>CSV内には以下の情報が必要となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>内容</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>氏名コード</p></td>
+<td><p>社員を特定するコードを設定します。</p></td>
+<td><p>氏名コードの桁位置はパラメータで設定します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>社員区分</p></td>
+<td><p>役員/一般社員/嘱託を区別するコードを設定します。コード値は<a class="reference internal" href="analyze_cd.html#fms-introduce-module-jc-analyze-cd"><span class="std std-ref">分析コード登録(プロジェクト原価管理)</span></a>で設定します。</p></td>
+<td><p>役員、一般社員、嘱託毎に勘定科目を変えることができます。一般社員は労務費原価差額計算の対象となります。社員区分の桁位置はパラメータで設定します。</p></td>
+</tr>
+<tr class="row-even"><td><p>組織コード</p></td>
+<td><p>社員の所属組織を設定します。</p></td>
+<td><p>給与仕訳の計上組織となります。人事組織と会計組織が異なる場合、変換表を用意することで変換可能です。</p></td>
+</tr>
+<tr class="row-odd"><td><p>給与支給日</p></td>
+<td><p>給与支給日を設定します。</p></td>
+<td><p>給与支給日をもとに計上日を算出します。</p></td>
+</tr>
+<tr class="row-even"><td><p>ランク決定項目</p></td>
+<td><p>ランクを決定するための情報を設定します。</p></td>
+<td><p><a class="reference internal" href="rank_segment.html#fms-introduce-module-jc-rank-segment"><span class="std std-ref">ランク区分登録</span></a>で登録します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>支給項目</p></td>
+<td><p>支給項目毎の金額を設定します。</p></td>
+<td><p>支給項目毎に勘定科目を割り当てます。給与と賞与を同じレイアウトで取り込むため、勘定科目を変える場合は支給項目（CSVの桁位置）を変える必要があります。</p></td>
+</tr>
+<tr class="row-even"><td><p>控除項目</p></td>
+<td><p>控除項目毎の金額を設定します。</p></td>
+<td><p>控除項目毎に勘定科目を割り当てます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>支給額</p></td>
+<td><p>支給額を設定します。</p></td>
+<td><p>支給額に対して勘定科目を割り当てます。</p></td>
+</tr>
+<tr class="row-even"><td><p>会社負担の社会保険料の項目</p></td>
+<td><p>項目毎の金額を設定します。</p></td>
+<td><p>項目毎に借方の勘定科目を割り当てます。</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>組織取得方法、社員取得方法、プロジェクト取得方法のいずれかに「3:変換」を設定する場合、変換元の項目には必ず値を設定してください。</p>
+<p>未設定の場合には、変換することができず、変換表に存在しない旨のエラーが出力されます。</p>
+</div>
+</section>
+<section id="fms-introduce-module-jc-labor-jrnl-set-tips-master">
+<span id="id45"></span><h3><span class="section-number">20.4.3. </span>マスタの設定例<a class="headerlink" href="#fms-introduce-module-jc-labor-jrnl-set-tips-master" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>以下の給与CSVを取り込む場合について、マスタ設定方法を説明します。</p></li>
+<li><p>給与取込CSV</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">氏名コード</span><span class="p">,</span><span class="n">部門</span><span class="p">,</span><span class="n">役職</span><span class="p">,</span><span class="n">社員区分</span><span class="p">,</span><span class="n">給与支給日</span><span class="p">,</span> <span class="n">基本給</span><span class="p">,</span> <span class="n">時間外</span><span class="p">,</span> <span class="n">通勤費</span><span class="p">,</span><span class="n">所得税</span><span class="p">,</span> <span class="n">社会保険料</span><span class="p">,</span><span class="n">支給額</span><span class="p">,</span> <span class="n">会社負担</span>
+<span class="mi">0000001</span><span class="p">,</span> <span class="mi">11200</span><span class="p">,</span>  <span class="mi">01</span><span class="p">,</span>   <span class="mi">1</span><span class="p">,</span>  <span class="mi">20210620</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">,</span>      <span class="mi">0</span><span class="p">,</span>     <span class="mi">0</span><span class="p">,</span> <span class="mi">150000</span><span class="p">,</span>  <span class="mi">250000</span><span class="p">,</span>  <span class="mi">600000</span><span class="p">,</span>  <span class="mi">250001</span>
+<span class="mi">0000002</span><span class="p">,</span> <span class="mi">11200</span><span class="p">,</span>  <span class="mi">02</span><span class="p">,</span>   <span class="mi">2</span><span class="p">,</span>  <span class="mi">20210620</span><span class="p">,</span>  <span class="mi">800000</span><span class="p">,</span>      <span class="mi">0</span><span class="p">,</span>  <span class="mi">5000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span>  <span class="mi">200000</span><span class="p">,</span>  <span class="mi">505000</span><span class="p">,</span>  <span class="mi">200000</span>
+<span class="mi">0000003</span><span class="p">,</span> <span class="mi">11200</span><span class="p">,</span>  <span class="mi">04</span><span class="p">,</span>   <span class="mi">3</span><span class="p">,</span>  <span class="mi">20210620</span><span class="p">,</span>  <span class="mi">800000</span><span class="p">,</span>   <span class="mi">1000</span><span class="p">,</span>  <span class="mi">5000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span>  <span class="mi">200000</span><span class="p">,</span>  <span class="mi">506000</span><span class="p">,</span>  <span class="mi">200000</span>
+</pre></div>
+</div>
+</li>
+<li><p>パラメータの設定内容</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 60.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>給与仕訳・氏名コード桁位置</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>給与仕訳・社員区分桁位置</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>給与仕訳・金額情報開始桁位置</p></td>
+<td><p>6</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>分析コード「社員区分（役員）/社員区分（一般）/社員区分（嘱託）」</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>分析種別</p></th>
+<th class="head"><p>分析コード</p></th>
+<th class="head"><p>名称</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>JCEMP1</p></td>
+<td><p>1</p></td>
+<td><p>役員</p></td>
+</tr>
+<tr class="row-odd"><td><p>JCEMP2</p></td>
+<td><p>2</p></td>
+<td><p>管理者</p></td>
+</tr>
+<tr class="row-even"><td><p>JCEMP2</p></td>
+<td><p>3</p></td>
+<td><p>一般社員</p></td>
+</tr>
+<tr class="row-odd"><td><p>JCEMP3</p></td>
+<td><p>4</p></td>
+<td><p>嘱託</p></td>
+</tr>
+</tbody>
+</table>
+<p>この場合、給与取込CSVの1行目が役員、2～3行目が一般となります。</p>
+</li>
+<li><p>給与仕訳連携設定（ヘッダ情報）</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>日付形式</p></td>
+<td><p>YYYYMMDD</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>未払相手科目</p></td>
+<td><p>未払労務費の科目コード</p></td>
+<td><p>給与と会社負担で別の科目を設定可能</p></td>
+</tr>
+<tr class="row-even"><td><p>組織情報（順序）</p></td>
+<td><p>2</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>給与仕訳連携設定（明細情報）</p>
+<p>【給与（役員）】</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 30.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>桁位置</p></th>
+<th class="head"><p>科目</p></th>
+<th class="head"><p>貸借区分</p></th>
+<th class="head"><p>間接税</p></th>
+<th class="head"><p>未払区分</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>役員報酬</p></td>
+<td><p>借方</p></td>
+<td><p>対象外</p></td>
+<td><p>対象外</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>役員報酬</p></td>
+<td><p>借方</p></td>
+<td><p>対象外</p></td>
+<td><p>対象外</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>旅費交通費</p></td>
+<td><p>借方</p></td>
+<td><p>課税仕入</p></td>
+<td><p>対象外</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>預り金</p></td>
+<td><p>貸方</p></td>
+<td><p>対象外</p></td>
+<td><p>対象外</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>預り金</p></td>
+<td><p>貸方</p></td>
+<td><p>対象外</p></td>
+<td><p>対象外</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>現預金</p></td>
+<td><p>貸方</p></td>
+<td><p>対象外</p></td>
+<td><p>対象外</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>【給与（一般）】</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 30.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>桁位置</p></th>
+<th class="head"><p>科目</p></th>
+<th class="head"><p>貸借区分</p></th>
+<th class="head"><p>間接税</p></th>
+<th class="head"><p>未払区分</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>従業員給与（労務勘定）</p></td>
+<td><p>借方</p></td>
+<td><p>対象外</p></td>
+<td><p>対象外</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>従業員給与（労務勘定）</p></td>
+<td><p>借方</p></td>
+<td><p>対象外</p></td>
+<td><p>対象</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>通勤費（労務勘定）</p></td>
+<td><p>借方</p></td>
+<td><p>課税仕入</p></td>
+<td><p>対象外</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>預り金</p></td>
+<td><p>貸方</p></td>
+<td><p>対象外</p></td>
+<td><p>対象外</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>預り金</p></td>
+<td><p>貸方</p></td>
+<td><p>対象外</p></td>
+<td><p>対象外</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>現預金</p></td>
+<td><p>貸方</p></td>
+<td><p>対象外</p></td>
+<td><p>対象外</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>【会社負担社会保険料（役員）】</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 30.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>桁位置</p></th>
+<th class="head"><p>科目</p></th>
+<th class="head"><p>貸借区分</p></th>
+<th class="head"><p>間接税</p></th>
+<th class="head"><p>未払区分</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>法定福利費（管理費）</p></td>
+<td><p>借方</p></td>
+<td><p>対象外</p></td>
+<td><p>対象外</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>【会社負担社会保険料（一般）】</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 30.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>桁位置</p></th>
+<th class="head"><p>科目</p></th>
+<th class="head"><p>貸借区分</p></th>
+<th class="head"><p>間接税</p></th>
+<th class="head"><p>未払区分</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>法定福利費（労務勘定）</p></td>
+<td><p>借方</p></td>
+<td><p>対象外</p></td>
+<td><p>対象外</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="fms-introduce-module-jc-labor-jrnl-set-tips-jrnl">
+<span id="id46"></span><h3><span class="section-number">20.4.4. </span>作成される仕訳<a class="headerlink" href="#fms-introduce-module-jc-labor-jrnl-set-tips-jrnl" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>例月給与</p>
+<p>【給与（役員）】</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 16.7%" />
+<col style="width: 33.3%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>借方科目</p></th>
+<th class="head"><p>金額</p></th>
+<th class="head"><p>貸方科目</p></th>
+<th class="head"><p>金額</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>役員報酬</p></td>
+<td><p>1,000,000</p></td>
+<td><p>預り金</p></td>
+<td><p>400,000</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p>現預金</p></td>
+<td><p>600,000</p></td>
+</tr>
+</tbody>
+</table>
+<p>設定されている勘定科目が同じ場合、金額は集計されます。（役員報酬と預り金）</p>
+</div></blockquote>
+<p>【給与（社員）】</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 16.7%" />
+<col style="width: 33.3%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>借方科目</p></th>
+<th class="head"><p>金額</p></th>
+<th class="head"><p>貸方科目</p></th>
+<th class="head"><p>金額</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>従業員給与（労務勘定）</p></td>
+<td><p>1,601,000</p></td>
+<td><p>預り金</p></td>
+<td><p>600,000</p></td>
+</tr>
+<tr class="row-odd"><td><p>通勤費（労務勘定）</p></td>
+<td><p>10,000</p></td>
+<td><p>現預金</p></td>
+<td><p>1,011,000</p></td>
+</tr>
+</tbody>
+</table>
+<p>設定されている勘定科目が同じ場合、金額は集計されます。（氏名コードは集計キーにはなりません）</p>
+<p>労務勘定の場合、CSVの情報をもとにランクが設定されます。</p>
+<p>通勤費は間接税の税率により、内税計算されます。</p>
+</div></blockquote>
+<p>【会社負担社会保険料（役員）】</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 16.7%" />
+<col style="width: 33.3%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>借方科目</p></th>
+<th class="head"><p>金額</p></th>
+<th class="head"><p>貸方科目</p></th>
+<th class="head"><p>金額</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>法定福利費（管理費）</p></td>
+<td><p>250,001</p></td>
+<td><p>未払金</p></td>
+<td><p>250,001</p></td>
+</tr>
+</tbody>
+</table>
+<p>貸方科目は給与仕訳連携設定（ヘッダ）で設定します。</p>
+</div></blockquote>
+<p>【会社負担社会保険料（一般）】</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 16.7%" />
+<col style="width: 33.3%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>借方科目</p></th>
+<th class="head"><p>金額</p></th>
+<th class="head"><p>貸方科目</p></th>
+<th class="head"><p>金額</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>法定福利費（労務勘定）</p></td>
+<td><p>400,000</p></td>
+<td><p>未払金</p></td>
+<td><p>400,000</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p>未払労務費計上仕訳（時間外）</p>
+<p>給与仕訳連携設定の明細情報で未払区分を「対象」として設定した項目は、月末の未払労務費計上を行い、翌月初に逆仕訳を計上します。</p>
+<p>【給与（社員）】</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 16.7%" />
+<col style="width: 33.3%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>借方科目</p></th>
+<th class="head"><p>金額</p></th>
+<th class="head"><p>貸方科目</p></th>
+<th class="head"><p>金額</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>従業員給与（労務勘定）</p></td>
+<td><p>10,000</p></td>
+<td><p>未払労務費</p></td>
+<td><p>10,000</p></td>
+</tr>
+</tbody>
+</table>
+<p>貸方科目は給与仕訳連携設定（ヘッダ）で設定します。</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >プロジェクト原価管理の導入・移行</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">20. </span>給与仕訳連携登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

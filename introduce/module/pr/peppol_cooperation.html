@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>31. Peppol連携の各種設定 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="32. invoiceAgentを利用したPeppol連携の設定" href="invoice_agent.html" />
+    <link rel="prev" title="30. 帳票出力ジョブ登録" href="report_batch.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">債権債務の導入・移行</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">31. </span>Peppol連携の各種設定</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="report_batch.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="invoice_agent.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">モジュール別の導入</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../gl/index.html">一般会計の導入・移行</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">債権債務の導入・移行</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="accounting_type.html">1. 会計種別の登録（取引区分：振替）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bank.html">2. 銀行登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transferfee.html">3. 振込手数料登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="company_bank_account.html">4. 社内口座情報登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="employee_bank_account.html">5. 従業員口座情報登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="site_employee.html">6. サイト社員登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tender_instrument_way.html">7. 入金支払手段／方法設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="income_payment_relation.html">8. 入金支払関連項目登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corporation.html">9. 法人情報登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="customer.html">10. 取引先登録（債権・債務用）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="customer_wf.html">11. 取引先マスタ登録ワークフローの有効化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="income_payment_instrument_control.html">12. 取引先入金支払手段制御登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transfer_client_person.html">13. 振込依頼人マスタの登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contractor_no.html">14. 契約者番号マスタの登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contractor_no_wf.html">15. 契約者番号マスタ登録ワークフローの有効化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tax_withholding_kind.html">16. 源泉種類の追加</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jrnlptn.html">17. 仕訳パターンの登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regular_journals_master.html">18. 定期仕訳マスタの登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ovrss_rmttnc_report_item_config.html">19. 海外送金出力項目定義の登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="invoiceLayout.html">20. 請求書レイアウトの変更</a></li>
+<li class="toctree-l4"><a class="reference internal" href="create_regular_journals_job.html">21. 定期債権／債務作成ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="invoice_request_package_job.html">22. 締日一括請求申請ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="automatic_reconcile_job.html">23. 仮受金自動消込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="payment_request_package_job.html">24. 一括支払申請ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transfer_execute_job.html">25. 振込依頼実行ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="overseas_remittance_execute_job.html">26. 海外送金依頼実行ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transfer_income_import_job.html">27. 振込入金一括取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bank_account_transfer_result_import_job.html">28. 口座振替結果ファイル取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="automatic_debit_import_job.html">29. 自動引落取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="report_batch.html">30. 帳票出力ジョブ登録</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">31. Peppol連携の各種設定</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-pr-peppol-cooperation-startconditions">31.1. 着手条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-pr-peppol-cooperation-do">31.2. 実行手順</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-pr-peppol-cooperation-do-parameters">31.2.1. パラメータを設定する</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-pr-peppol-cooperation-do-customer">31.2.2. 請求先の取引先情報を設定する</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-pr-peppol-cooperation-do-department">31.2.3. 請求データ連携用組織情報を登録する</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-pr-peppol-cooperation-do-directory">31.2.4. Peppol連携用ディレクトリを作成する</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-pr-peppol-cooperation-endconditions">31.3. 完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="invoice_agent.html">32. invoiceAgentを利用したPeppol連携の設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="balanceshift.html">33. 残高移行（債権債務）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dtlshift.html">34. 明細移行</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../bn/index.html">手形管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ec/index.html">電子記録債権管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cm/index.html">資金管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ma/index.html">管理会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ef/index.html">着地見込管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fe/index.html">外貨管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fa/index.html">資産管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cp/index.html">建設仮勘定の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lc/index.html">契約管理・リース管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jc/index.html">プロジェクト原価管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ga/index.html">グループ会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ai/index.html">会計連携の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bc/index.html">業務共通の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gt/index.html">グループ会社間取引の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gm/index.html">グループ連結オペレーション の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ac/index.html">過年度アーカイブ の導入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="peppol">
+<span id="fms-introduce-module-pr-peppol-cooperation"></span><h1><span class="section-number">31. </span>Peppol連携の各種設定<a class="headerlink" href="#peppol" title="Link to this heading">¶</a></h1>
+<p>Peppol連携する請求データの生成に関する各種設定を行います。</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>請求データをPeppol連携しない場合、本作業は不要です。</p>
+</div>
+</div></blockquote>
+<section id="fms-introduce-module-pr-peppol-cooperation-startconditions">
+<span id="id39"></span><h2><span class="section-number">31.1. </span>着手条件<a class="headerlink" href="#fms-introduce-module-pr-peppol-cooperation-startconditions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../baseset/im/department.html#fms-introduce-baseset-im-master-department"><span class="std std-ref">組織登録</span></a>が完了していること。</p></li>
+<li><p><a class="reference internal" href="customer.html#fms-introduce-module-pr-customer"><span class="std std-ref">取引先登録（債権・債務用）</span></a>が完了していること。</p></li>
+</ul>
+</section>
+<section id="fms-introduce-module-pr-peppol-cooperation-do">
+<span id="id40"></span><h2><span class="section-number">31.2. </span>実行手順<a class="headerlink" href="#fms-introduce-module-pr-peppol-cooperation-do" title="Link to this heading">¶</a></h2>
+<section id="fms-introduce-module-pr-peppol-cooperation-do-parameters">
+<span id="id41"></span><h3><span class="section-number">31.2.1. </span>パラメータを設定する<a class="headerlink" href="#fms-introduce-module-pr-peppol-cooperation-do-parameters" title="Link to this heading">¶</a></h3>
+<p>Biz∫会計管理者でポータル画面にログインし、以下のメニューよりPeppol連携データ出力のパラメータを設定します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  会計コア
+    マスタメンテナンス
+      基本設定管理
+        パラメータ管理
+</pre></div>
+</div>
+</li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>自社法人番号（Peppol連携）</p></td>
+<td><p>請求データに出力される自社の法人番号を設定します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Peppol連携データ出力方法</p></td>
+<td><div class="line-block">
+<div class="line">Peppol連携データ作成画面で実行した際の請求データの出力方法を設定します。</div>
+<div class="line-block">
+<div class="line">0:画面、1:所定のフォルダ</div>
+</div>
+<div class="line">Peppol連携データ出力ジョブで実行する場合には、1:所定のフォルダを設定します。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Peppol連携データ出力先</p></td>
+<td><div class="line-block">
+<div class="line">「Peppol連携データ出力方法」が1:所定のフォルダの場合に設定します。</div>
+<div class="line">Peppol連携用ディレクトリとしてパブリックストレージ<a class="footnote-reference brackets" href="#public-storage" id="id42" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>からの相対パスを設定します。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="public-storage" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id42">1</a><span class="fn-bracket">]</span></span>
+<p>パブリックストレージのパスについては、Biz∫APFの逆引き(Cookbook)<a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/cookbook/environment/other/005.html">ストレージパスを確認する</a>を参照してください。</p>
+</aside>
+</aside>
+</section>
+<section id="fms-introduce-module-pr-peppol-cooperation-do-customer">
+<span id="id43"></span><h3><span class="section-number">31.2.2. </span>請求先の取引先情報を設定する<a class="headerlink" href="#fms-introduce-module-pr-peppol-cooperation-do-customer" title="Link to this heading">¶</a></h3>
+<p>Biz∫会計管理者でポータル画面にログインし、以下のメニューより「取引先法人番号」と「請求手段」を登録します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  会計コア
+    マスタメンテナンス
+      業務マスタ
+        取引先マスタ管理
+</pre></div>
+</div>
+</li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 71.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>画面タブ</p></th>
+<th class="head"><p>利用目的</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>取引先法人番号</p></td>
+<td><p>会計情報</p></td>
+<td><p>請求データに出力する取引先の法人番号を設定します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>請求手段</p></td>
+<td><p>請求先</p></td>
+<td><p>Peppol連携を行う場合、1:電子データを設定します。締日一括請求申請で利用します。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fms-introduce-module-pr-peppol-cooperation-do-department">
+<span id="id44"></span><h3><span class="section-number">31.2.3. </span>請求データ連携用組織情報を登録する<a class="headerlink" href="#fms-introduce-module-pr-peppol-cooperation-do-department" title="Link to this heading">¶</a></h3>
+<p>Biz∫会計管理者でポータル画面にログインし、以下のメニューより<a class="reference internal" href="#fms-introduce-module-pr-peppol-cooperation-do-customer"><span class="std std-ref">請求先の取引先情報を設定する</span></a>に紐づく取引先管理組織の住所情報を登録します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  会計コア
+    マスタメンテナンス
+      業務マスタ
+        請求データ連携用組織情報登録
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>一括取込マニュアルの「<a class="reference internal" href="../../../import/mst/corp_cstm.html#fms-import-mst-corp-cstm-invoice-data-interface-department"><span class="std std-ref">請求データ連携用組織情報</span></a>」を参考に取込ファイルを準備し、同メニューの「SF5:一括登録」より登録します。</p>
+</div>
+</section>
+<section id="fms-introduce-module-pr-peppol-cooperation-do-directory">
+<span id="id45"></span><h3><span class="section-number">31.2.4. </span>Peppol連携用ディレクトリを作成する<a class="headerlink" href="#fms-introduce-module-pr-peppol-cooperation-do-directory" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p><a class="reference internal" href="#fms-introduce-module-pr-peppol-cooperation-do-parameters"><span class="std std-ref">パラメータを設定する</span></a>でPeppol連携データ出力先を指定した場合に実施します。</p>
+</div>
+<p>パブリックストレージにPeppol連携用ディレクトリを作成します。</p>
+<ul>
+<li><p>ディレクトリ作成:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">パブリックストレージ</span><span class="p">}</span><span class="o">/</span><span class="p">{</span><span class="n">Peppol連携データ出力先</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>作成例</p>
+<p>下記条件下の環境では、作成例の箇所にPeppol連携用ディレクトリを作成します。</p>
+<ul>
+<li><p>作成条件</p>
+<ul class="simple">
+<li><p>ストレージルートとして「${resin.home}/storage-files」を設定</p></li>
+<li><p>テナントIDに「default」を使用</p></li>
+<li><p><a class="reference internal" href="#fms-introduce-module-pr-peppol-cooperation-do-parameters"><span class="std std-ref">パラメータを設定する</span></a>のPeppol連携データ出力先に「peppol_cooperation/csv」を設定</p></li>
+</ul>
+</li>
+<li><p>作成ディレクトリ:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${RESIN_HOME}/storage-files/public/storage/default/peppol_cooperation/csv
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="fms-introduce-module-pr-peppol-cooperation-endconditions">
+<span id="id46"></span><h2><span class="section-number">31.3. </span>完了条件<a class="headerlink" href="#fms-introduce-module-pr-peppol-cooperation-endconditions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>パラメータ管理画面より設定結果を確認します。</p></li>
+<li><p>取引先マスタ管理画面よりプルーフリストの出力または画面検索を行い、「請求手段」「取引先法人番号」が登録できていることを確認します。</p></li>
+<li><p>請求データ連携用組織情報登録画面よりプルーフリストの出力を行い、登録できていることを確認します。</p></li>
+<li><p>Peppol連携用ディレクトリが作成されていることを確認します。</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >債権債務の導入・移行</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">31. </span>Peppol連携の各種設定</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

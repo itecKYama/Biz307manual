@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>27. 月次処理手順の変更 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="グループ会計の導入" href="../ga/index.html" />
+    <link rel="prev" title="26. フロント連携出力ジョブ登録" href="front_out_batch.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">プロジェクト原価管理の導入・移行</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">27. </span>月次処理手順の変更</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="front_out_batch.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="../ga/index.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">モジュール別の導入</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../gl/index.html">一般会計の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pr/index.html">債権債務の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bn/index.html">手形管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ec/index.html">電子記録債権管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cm/index.html">資金管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ma/index.html">管理会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ef/index.html">着地見込管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fe/index.html">外貨管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fa/index.html">資産管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cp/index.html">建設仮勘定の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lc/index.html">契約管理・リース管理の導入・移行</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">プロジェクト原価管理の導入・移行</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="accounting_type.html">1. 会計種別の登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="batch_month.html">2. 月次処理年月登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyze_class_cd_project.html">3. 分析種別登録(プロジェクトコード)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyze_cd.html">4. 分析コード登録(プロジェクト原価管理)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyze_fld_config.html">5. 分析フィールド登録(プロジェクト原価管理)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fa_analyze_fld_config.html">6. 資産管理用分析フィールド登録(プロジェクト原価管理)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fld_rel.html">7. フィールド関連登録(プロジェクト原価管理)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="convert_table.html">8. 変換表登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cost_account_cls.html">9. 原価計算種別登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contract_class.html">10. 契約形態登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html">11. プロジェクト登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cost_element_sum.html">12. 要約原価要素登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cost_element.html">13. 原価集計コード登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="overhead_deptgrp.html">14. 間接費組織グループ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rank_segment.html">15. ランク区分登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rank_information.html">16. ランク情報登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plan_amount.html">17. 単金登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dtlshift.html">18. 未成プロジェクトの残高移行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="progress_prj_sft.html">19. 進行基準プロジェクトの進捗率と原価回収基準の契約資産残高の移行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="labor_jrnl_set.html">20. 給与仕訳連携登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="front_interface.html">21. フロント連携定義登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="monthly_fix_job.html">22. 月次処理ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="actual_batch.html">23. 稼働実績取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="labor_jrnl_batch.html">24. 給与仕訳取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prj_import_batch.html">25. プロジェクト一括取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="front_out_batch.html">26. フロント連携出力ジョブ登録</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">27. 月次処理手順の変更</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-jc-batch-process-startconditions">27.1. 着手条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-jc-batch-process-sample">27.2. 設定例</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-jc-batch-process-do">27.3. 実行手順</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-jc-batch-process-endconditions">27.4. 完了条件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ga/index.html">グループ会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ai/index.html">会計連携の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bc/index.html">業務共通の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gt/index.html">グループ会社間取引の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gm/index.html">グループ連結オペレーション の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ac/index.html">過年度アーカイブ の導入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-module-jc-batch-process">
+<span id="id39"></span><h1><span class="section-number">27. </span>月次処理手順の変更<a class="headerlink" href="#fms-introduce-module-jc-batch-process" title="Link to this heading">¶</a></h1>
+<p>原価計算の月次処理手順を変更します。月次処理手順はインストール時にプリセットされます。</p>
+<p>業務要件によりプリセットデータとして設定されている内容から変更する場合、月次処理手順を変更します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>プリセットデータの内容は、Biz∫会計ヘルプ『Appendix＞プロジェクト原価管理＞月次処理（原価計算）の処理手順について』の「原価計算の処理手順（プリセットデータ）」を参照下さい。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>原価振替を利用する場合は「原価振替仕訳作成」を設定してください。</p>
+</div>
+<section id="fms-introduce-module-jc-batch-process-startconditions">
+<span id="id40"></span><h2><span class="section-number">27.1. </span>着手条件<a class="headerlink" href="#fms-introduce-module-jc-batch-process-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../../baseset/im/index.html#fms-introduce-baseset-im-master"><span class="std std-ref">IM-共通マスタ の設定</span></a>までの作業を終えていること。</p>
+</section>
+<section id="fms-introduce-module-jc-batch-process-sample">
+<span id="id41"></span><h2><span class="section-number">27.2. </span>設定例<a class="headerlink" href="#fms-introduce-module-jc-batch-process-sample" title="Link to this heading">¶</a></h2>
+<p>月次処理手順の変更は、バッチ処理手順テーブル管理画面にて行います。</p>
+<p>以下に運用例ごとの設定変更方法を記述します。</p>
+<p>（例１）原価差額配賦を毎月実行するケース</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>原価計算の手順</p></th>
+<th class="head"><p>設定内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>原価差額配賦を毎月実行します。</p></td>
+<td><p>全ての会計月度の決算テンプレートの設定について、プリセットデータの第3会計月度と同じ設定とします。</p></td>
+</tr>
+<tr class="row-odd"><td><p>原価差額配賦戻しを毎月実行します。</p></td>
+<td><p>第1会計月度を除く月度のテンプレートの設定について、プリセットデータの第4会計月度と同じ設定とします。</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>（例２）内製固定資産の管理を行わないケース</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>原価計算の手順</p></th>
+<th class="head"><p>設定内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>固定資産取得処理を行いません。</p></td>
+<td><p>全ての月度のテンプレートと決算テンプレートから「取得価額計算」と「固定資産台帳反映」の手順を削除します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>固定資産取得に伴う償却費の反映を行いません。</p></td>
+<td><p>全ての月度のテンプレートと決算テンプレートについて、１回目の固定資産台帳反映よりも後の「原価振替」「分割」「完成振替」の手順を削除します。</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>（例３）進行基準のプロジェクトが発生しないケース</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>原価計算の手順</p></th>
+<th class="head"><p>設定内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>進捗率計算や進行基準収益計上を行いません。</p></td>
+<td><p>全ての月度のテンプレートと決算テンプレートから「進捗率算出」「売上(進行基準)計上」「物品費実績振替」「物品費(進行基準計上」の手順を削除します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>進捗率による物品費計上に伴う原価の反映を行いません。</p></td>
+<td><p>全ての月度のテンプレートと決算テンプレートについて、１回目の「物品費(進行基準計上」よりも後の「原価振替」「完成振替」の手順を削除します。</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>（例４）原価回収基準のプロジェクトが発生しないケース</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>原価計算の手順</p></th>
+<th class="head"><p>設定内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>原価回収基準収益計上を行いません。</p></td>
+<td><p>全ての月度のテンプレートと決算テンプレートから「売上(原価回収基準)計上」の手順を削除します。</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>（例５）製造間接費の実績を毎月稼働時間の比率で配賦するケース</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>原価計算の手順</p></th>
+<th class="head"><p>設定内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>製造間接費実績配賦の手順を実行します。</p></td>
+<td><p>全ての月度のテンプレート、及び、補正月次において、「原価振替」の直前に「製造間接費実績配賦」の手順を追加します。</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>（例６）プロジェクト原価振替により原価振替仕訳を作成するケース</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>原価計算の手順</p></th>
+<th class="head"><p>設定内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>原価振替仕訳作成の手順を実行します。</p></td>
+<td><p>全ての月度のテンプレート、及び、補正月次において、「原価振替」の直前に「原価振替仕訳作成」の手順を追加します。</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="fms-introduce-module-jc-batch-process-do">
+<span id="id42"></span><h2><span class="section-number">27.3. </span>実行手順<a class="headerlink" href="#fms-introduce-module-jc-batch-process-do" title="Link to this heading">¶</a></h2>
+<p>「原価振替仕訳作成」の追加を例に記載します。</p>
+<ol class="arabic simple">
+<li><p>Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューより月次処理手順を変更します。</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  プロジェクト原価管理
+    マスタメンテナンス
+      バッチ処理手順テーブル管理
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p>月次処理手順の変更</p>
+<p>新規ボタンを押下し、下表の項目を設定し、月次処理手順を登録してください。</p>
+</li>
+</ol>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>原価計算処理手順区分</p></td>
+<td><p>テンプレート</p></td>
+</tr>
+<tr class="row-odd"><td><p>月度</p></td>
+<td><p>1～12</p></td>
+</tr>
+<tr class="row-even"><td><p>シーケンス</p></td>
+<td><p><a class="footnote-reference brackets" href="#f1" id="id43" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>原価計算処理区分</p></td>
+<td><p>18（原価振替仕訳作成）</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id43">1</a><span class="fn-bracket">]</span></span>
+<p>原価計算処理手順区分がテンプレートで、各月度の原価計算処理区分が原価振替のうち、一番早いシーケンスの番号をそれぞれ指定します。</p>
+</aside>
+</aside>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>原価計算処理手順区分</p></td>
+<td><p>補正入力</p></td>
+</tr>
+<tr class="row-odd"><td><p>月度</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>シーケンス</p></td>
+<td><p><a class="footnote-reference brackets" href="#f2" id="id44" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>原価計算処理区分</p></td>
+<td><p>18（原価振替仕訳作成）</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id44">2</a><span class="fn-bracket">]</span></span>
+<p>原価計算処理手順区分が補正入力で、0月度の原価計算処理区分が原価振替のうち、一番早いシーケンスの番号を指定します。</p>
+</aside>
+</aside>
+</div></blockquote>
+</section>
+<section id="fms-introduce-module-jc-batch-process-endconditions">
+<span id="id45"></span><h2><span class="section-number">27.4. </span>完了条件<a class="headerlink" href="#fms-introduce-module-jc-batch-process-endconditions" title="Link to this heading">¶</a></h2>
+<p>登録した月次処理手順が、同画面から検索できることを確認します。</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >プロジェクト原価管理の導入・移行</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">27. </span>月次処理手順の変更</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

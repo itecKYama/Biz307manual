@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>28. 口座振替結果ファイル取込ジョブ登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="29. 自動引落取込ジョブ登録" href="automatic_debit_import_job.html" />
+    <link rel="prev" title="27. 振込入金一括取込ジョブ登録" href="transfer_income_import_job.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">債権債務の導入・移行</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">28. </span>口座振替結果ファイル取込ジョブ登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="transfer_income_import_job.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="automatic_debit_import_job.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">モジュール別の導入</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../gl/index.html">一般会計の導入・移行</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">債権債務の導入・移行</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="accounting_type.html">1. 会計種別の登録（取引区分：振替）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bank.html">2. 銀行登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transferfee.html">3. 振込手数料登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="company_bank_account.html">4. 社内口座情報登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="employee_bank_account.html">5. 従業員口座情報登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="site_employee.html">6. サイト社員登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tender_instrument_way.html">7. 入金支払手段／方法設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="income_payment_relation.html">8. 入金支払関連項目登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corporation.html">9. 法人情報登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="customer.html">10. 取引先登録（債権・債務用）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="customer_wf.html">11. 取引先マスタ登録ワークフローの有効化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="income_payment_instrument_control.html">12. 取引先入金支払手段制御登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transfer_client_person.html">13. 振込依頼人マスタの登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contractor_no.html">14. 契約者番号マスタの登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contractor_no_wf.html">15. 契約者番号マスタ登録ワークフローの有効化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tax_withholding_kind.html">16. 源泉種類の追加</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jrnlptn.html">17. 仕訳パターンの登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regular_journals_master.html">18. 定期仕訳マスタの登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ovrss_rmttnc_report_item_config.html">19. 海外送金出力項目定義の登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="invoiceLayout.html">20. 請求書レイアウトの変更</a></li>
+<li class="toctree-l4"><a class="reference internal" href="create_regular_journals_job.html">21. 定期債権／債務作成ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="invoice_request_package_job.html">22. 締日一括請求申請ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="automatic_reconcile_job.html">23. 仮受金自動消込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="payment_request_package_job.html">24. 一括支払申請ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transfer_execute_job.html">25. 振込依頼実行ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="overseas_remittance_execute_job.html">26. 海外送金依頼実行ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transfer_income_import_job.html">27. 振込入金一括取込ジョブ登録</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">28. 口座振替結果ファイル取込ジョブ登録</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-pr-bank-account-transfer-result-import-job-startconditions">28.1. 着手条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-pr-bank-account-transfer-result-import-job-preparation">28.2. 事前準備</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-pr-bank-account-transfer-result-import-job-setting">28.3. 設定手順</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id43">28.3.1. intra-mart ジョブネット管理から起動する場合</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#id44">28.3.1.1. intra-mart のジョブ設定</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#id45">28.3.1.2. ジョブ起動設定</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#id46">28.3.2. コマンドラインから起動する場合</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-pr-bank-account-transfer-result-import-job-endconditions">28.4. 完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="automatic_debit_import_job.html">29. 自動引落取込ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="report_batch.html">30. 帳票出力ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="peppol_cooperation.html">31. Peppol連携の各種設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="invoice_agent.html">32. invoiceAgentを利用したPeppol連携の設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="balanceshift.html">33. 残高移行（債権債務）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dtlshift.html">34. 明細移行</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../bn/index.html">手形管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ec/index.html">電子記録債権管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cm/index.html">資金管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ma/index.html">管理会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ef/index.html">着地見込管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fe/index.html">外貨管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fa/index.html">資産管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cp/index.html">建設仮勘定の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lc/index.html">契約管理・リース管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jc/index.html">プロジェクト原価管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ga/index.html">グループ会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ai/index.html">会計連携の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bc/index.html">業務共通の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gt/index.html">グループ会社間取引の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gm/index.html">グループ連結オペレーション の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ac/index.html">過年度アーカイブ の導入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-module-pr-bank-account-transfer-result-import-job">
+<span id="id39"></span><h1><span class="section-number">28. </span>口座振替結果ファイル取込ジョブ登録<a class="headerlink" href="#fms-introduce-module-pr-bank-account-transfer-result-import-job" title="Link to this heading">¶</a></h1>
+<div class="line-block">
+<div class="line">口座振替結果ファイル取込ジョブを登録します。</div>
+<div class="line">本項のジョブはセットアップで初期登録されます。運用要件に応じて、ジョブおよびジョブネットの修正を行います。</div>
+<div class="line">ジョブの実行については、以下の方法があり、それぞれの設定方法についてまとめています。</div>
+</div>
+<ul class="simple">
+<li><p>intra-martジョブネット管理から実行する</p></li>
+<li><p>コマンドラインから実行する</p></li>
+</ul>
+<p>各システムの運用を考慮して、どの方式で処理を行うか検討します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>パラメータ毎にジョブ、ジョブネットを用意する場合、プリセットデータおよび本手順を参考に追加登録してください。</p>
+</div>
+<section id="fms-introduce-module-pr-bank-account-transfer-result-import-job-startconditions">
+<span id="id40"></span><h2><span class="section-number">28.1. </span>着手条件<a class="headerlink" href="#fms-introduce-module-pr-bank-account-transfer-result-import-job-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../../core/parameter.html#fms-introduce-core-parameter"><span class="std std-ref">パラメータ登録</span></a>までの作業を終えていること。</p>
+</section>
+<section id="fms-introduce-module-pr-bank-account-transfer-result-import-job-preparation">
+<span id="id41"></span><h2><span class="section-number">28.2. </span>事前準備<a class="headerlink" href="#fms-introduce-module-pr-bank-account-transfer-result-import-job-preparation" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">ジョブから取り込むためのフォルダを作成します。</div>
+<div class="line">作成するフォルダは<a class="reference internal" href="../../../cookbook/setting/file_import.html#fms-cookbook-setting-file-import"><span class="std std-ref">ジョブ実行における取込ファイルを配備するディレクトリを作成する</span></a>をご確認ください。</div>
+</div>
+</section>
+<section id="fms-introduce-module-pr-bank-account-transfer-result-import-job-setting">
+<span id="id42"></span><h2><span class="section-number">28.3. </span>設定手順<a class="headerlink" href="#fms-introduce-module-pr-bank-account-transfer-result-import-job-setting" title="Link to this heading">¶</a></h2>
+<section id="id43">
+<h3><span class="section-number">28.3.1. </span>intra-martジョブネット管理から起動する場合<a class="headerlink" href="#id43" title="Link to this heading">¶</a></h3>
+<section id="id44">
+<h4><span class="section-number">28.3.1.1. </span>intra-martのジョブ設定<a class="headerlink" href="#id44" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p>テナント管理者権限でテナント管理画面にログインし、以下のメニューを開きます。</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">テナント管理</span>
+  <span class="n">ジョブ管理</span>
+    <span class="n">ジョブ設定</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p>プリセットされた以下のジョブの実行パラメータを設定します。</p>
+<p>　Biz∫会計&gt;債権債務&gt;口座振替結果ファイル取込(バッチ)</p>
+</li>
+</ol>
+<blockquote>
+<div><p>パラメータは以下のとおりです。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 7.5%" />
+<col style="width: 17.5%" />
+<col style="width: 25.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>必須</p></th>
+<th class="head"><p>パラメータキー</p></th>
+<th class="head"><p>パラメータキー名</p></th>
+<th class="head"><p>パラメータ値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>○</p></td>
+<td><p>resultFileType</p></td>
+<td><p>処理結果情報作成ファイル形式区分</p></td>
+<td><div class="line-block">
+<div class="line">取込結果を出力するファイル形式を決定します。</div>
+<div class="line">　1.TSV</div>
+<div class="line">　2.CSV</div>
+<div class="line">　3.EXCEL</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>getFileErrorFlag</p></td>
+<td><p>ファイル取得エラー出力フラグ</p></td>
+<td><div class="line-block">
+<div class="line">取込ファイルが存在しない場合の挙動を決定します。</div>
+<div class="line">　0.正常終了</div>
+<div class="line">　1.エラー終了</div>
+<div class="line">指定しない場合は「0.正常終了」の挙動となります。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>expiredDays</p></td>
+<td><p>保存期間日数</p></td>
+<td><div class="line-block">
+<div class="line">取り込んだファイルを保持する日数を決定します。</div>
+<div class="line">指定した日数を経過すると、ファイル管理クリーンアップ処理の削除対象となります。</div>
+<div class="line">指定しない場合、<a class="reference internal" href="../../../cookbook/setting/004.html#fms-cookbook-setting-004-storagefileconfig"><span class="std std-ref">ストレージファイルに関する設定</span></a>が利用されます。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="id45">
+<h4><span class="section-number">28.3.1.2. </span>ジョブ起動設定<a class="headerlink" href="#id45" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p>テナント管理者権限でテナント管理画面にログインし、以下のメニューを開きます。</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">テナント管理</span>
+  <span class="n">ジョブ管理</span>
+    <span class="n">ジョブネット設定</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p>プリセットされた以下のジョブネットのトリガを設定します。</p>
+<p>　Biz∫会計&gt;債権債務&gt;口座振替結果ファイル取込(バッチ)</p>
+</li>
+</ol>
+</section>
+</section>
+<section id="id46">
+<h3><span class="section-number">28.3.2. </span>コマンドラインから起動する場合<a class="headerlink" href="#id46" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p><a class="reference internal" href="../../../cookbook/introduce/batch/pr/bank_account_transfer_result_import.html#fms-cookbook-introduce-batch-pr-bank-account-transfer-result-import"><span class="std std-ref">口座振替結果ファイル取込ジョブ実行</span></a>を参照してください。</p>
+</div></blockquote>
+</section>
+</section>
+<section id="fms-introduce-module-pr-bank-account-transfer-result-import-job-endconditions">
+<span id="id47"></span><h2><span class="section-number">28.4. </span>完了条件<a class="headerlink" href="#fms-introduce-module-pr-bank-account-transfer-result-import-job-endconditions" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">設定したジョブが起動できることを確認します。</div>
+<div class="line">ジョブ起動後に、<a class="reference internal" href="../../../cookbook/introduce/batch/job_run.html#fms-cookbook-introduce-batch-job-run-check"><span class="std std-ref">ジョブ実行結果の確認</span></a>を行います。</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >債権債務の導入・移行</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">28. </span>口座振替結果ファイル取込ジョブ登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
