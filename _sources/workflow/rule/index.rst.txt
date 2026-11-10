@@ -1,0 +1,27 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_imw_rule:
+
+===================================
+ルール定義
+===================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   outline
+   amount
+   dept
+   closing_class
+   head_branch
+   supplier
+
+.. only:: internal
+
+   outline           : ルール定義の概要
+   amount            : 金額による分岐
+   dept              : 起票組織による分岐
+   closing_class     : 決算種別による分岐
+   head_branch       : 本支店仕訳の場合の分岐
+   supplier          : 仕入先登録の場合の分岐
+

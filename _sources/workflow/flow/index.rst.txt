@@ -1,0 +1,24 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_imw_flow:
+
+===================================
+フロー定義
+===================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   outline
+   rule
+   arrive
+   reference
+
+.. only:: internal
+
+   outline      : フロー定義の概要
+   rule         : ルール定義を用いた分岐設定
+   arrive       : 到達処理（自動承認）の設定
+   reference    : 参照者設定
+
+

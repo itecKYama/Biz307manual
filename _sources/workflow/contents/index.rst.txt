@@ -1,0 +1,25 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_imw_contents:
+
+===================================
+コンテンツ定義
+===================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   outline
+   action
+   arrive
+   mail
+   rule
+
+.. only:: internal
+
+   outline  : コンテンツ定義の概要
+   action   : アクション処理の追加手順
+   arrive   : 到達処理（自動承認）の追加手順
+   mail     : メール定義の初期使用を有効とする手順
+   rule     : ルール定義を追加する手順
+

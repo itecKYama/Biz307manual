@@ -1,0 +1,21 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_imw_route:
+
+===================================
+ルート定義
+===================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   outline
+   head_branch
+   constraint
+
+.. only:: internal
+  
+   outline       : ルート定義の概要
+   head_branch   : 本支店取引を行う場合のルート定義
+   constraint    : ルート定義の制約事項
+

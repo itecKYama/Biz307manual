@@ -1,0 +1,20 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_imw_user_data:
+
+===================================
+案件プロパティ定義
+===================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   outline
+   list
+
+.. only:: internal
+
+   outline         : 案件プロパティ定義の概要
+   list            : Biz∫会計の案件プロパティ一覧
+
+

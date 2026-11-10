@@ -1,0 +1,23 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_imw_user_data-list:
+
+===================================
+|FMS| の案件プロパティ一覧
+===================================
+
+|FMS| で設定を行っている案件プロパティの一覧と設定値の概要は、以下の表となります。
+申請ごとに、設定する案件プロパティ項目が異なります。具体的な設定値については、『 :download:`参考資料_承認_補足資料<../../introduce/reference/download/approval_reference.xlsx>` 』を参照してください。
+
+下記以外の案件プロパティを追加したい場合、|FMS| で案件プロパティマッピングマスタへの一括登録が必要です。詳細は :ref:`FMS_introduce_workflow-fms_matter_property_mapping` を参照してください。
+
+.. figure:: ./images/user_data_001.png
+  :width: 900px
+
+.. note::
+
+  No.11～18の案件プロパティは、ルール判定専用となっています。一覧画面やメール定義上で名称を表示する場合には、各項目に対応する名称が設定されているNo.19～26を利用するようにしてください。
+
+.. note::
+
+  各一覧画面（未処理画面等）において、金額項目のカンマ区切り表示を変更する手順については、 :ref:`FMS_cookbook_workflow_comma_separate` を参照してください。

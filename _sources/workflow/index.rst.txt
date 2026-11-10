@@ -1,0 +1,30 @@
+.. include:: ../include/definition.txt
+
+.. _FMS_imw:
+
+===================================================
+ワークフロー設定ガイド
+===================================================
+
+.. toctree::
+   :maxdepth: 2
+   
+   preface
+   menu/menu
+   user_data/index
+   rule/index
+   contents/index
+   route/index
+   flow/index
+   list_pattern/index
+   
+.. only:: internal
+
+   preface      :はじめに
+   menu         :IM-Workflow メニュー
+   user_data    :案件プロパティ
+   rule         :ルール定義
+   contents     :コンテンツ定義
+   route        :ルート定義
+   flow         :フロー定義
+   list_pattern :一覧表示パターン

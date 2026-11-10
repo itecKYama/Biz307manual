@@ -1,0 +1,18 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_imw_list_pattern:
+
+===================================
+一覧表示パターン定義
+===================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   outline
+   update
+
+.. only:: internal
+
+   outline        : 一覧表示パターン定義の概要
+   update         : 一覧表示パターン定義の変更手順
