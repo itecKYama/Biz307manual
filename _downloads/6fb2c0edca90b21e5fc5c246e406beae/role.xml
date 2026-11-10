@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns="http://intra-mart.co.jp/system/admin/role/role-data">
+  <role-data id="fms-ac" name="FMS-AC">
+    <category>biz_integral</category>
+    <display-names>
+      <display-name locale="ja">Biz∫会計_過年度アーカイブ</display-name>
+    </display-names>
+  </role-data>
+</root>

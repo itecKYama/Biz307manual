@@ -1,0 +1,592 @@
+global:
+  columnHints:
+    start_date: {format: date}
+    end_date: {format: date}
+    create_user_cd: {}
+    create_date: {format: dateTime}
+    record_date: {format: dateTime}
+schemas:
+  tenantshared: {}
+  tenant:
+    tables:
+    - name: biz_application
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_module
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_module_dependency
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_usecase
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_process
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_auth_process_execute
+      columnHints:
+        id: {generator: biz_auth_process_execute_seq}
+      configurations:
+        stereoType: master
+        naturalKeys: [authority_group_cd, company_cd, application_id, module_id, usecase_id,
+          process_id]
+        companyDependent: true
+    - name: biz_auth_depart_grp_access
+      columnHints:
+        id: {generator: biz_auth_depart_grp_access_seq}
+      configurations:
+        stereoType: master
+        naturalKeys: [authority_id, authority_group_cd, company_cd, term_cd, department_set_cd,
+          department_group_cd]
+        companyDependent: true
+    - name: biz_auth_privilege
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_auth_priv_grp
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_authz_priv_grp_sid
+      configurations:
+        stereoType: master
+        naturalKeys: [company_cd, authority_group_cd]
+        companyDependent: false
+    - name: biz_auth_priv_priv_grp_ath
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_auth_priv_grp_ath
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_report_app_config
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_report_config
+      columnHints:
+        id: {generator: biz_report_config_seq}
+      configurations:
+        stereoType: master
+        naturalKeys: [company_cd, application_id, module_id, locale_id, report_cd,
+          production_type]
+        companyDependent: true
+    - name: biz_report_group
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_report_group_name
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_report_config_attr
+      columnHints:
+        id: {generator: biz_report_config_attr_seq}
+      configurations:
+        stereoType: master
+        naturalKeys: [report_config_id, config_key]
+        companyDependent: false
+    - name: biz_config_container
+      columnHints:
+        id: {generator: biz_config_container_seq}
+        namespace: {embeddedContextValue: true, format: company-cd}
+        fqdn: {embeddedContextValue: true, format: company-cd}
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_app_support_locale
+      columnHints:
+        id: {generator: biz_app_support_locale_seq}
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_application_module
+      columnHints:
+        id: {generator: biz_application_module_seq}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_boot_type
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_layout
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_layout_widget
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_layout_widget_mode
+      columnHints:
+        id: {generator: biz_layout_widget_mode_seq}
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_layout_mode
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_beans
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_beans_property
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_beans_property_mode
+      columnHints:
+        id: {generator: biz_beans_property_mode_seq}
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_beans_mode
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_named_item
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_printer_config
+      columnHints:
+        id: {generator: biz_printer_config_seq}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_job_config
+      columnHints:
+        execute_user_cd: {value: '${batchExecutionUser}', format: emptyString}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_job_config_name
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_job_config_parameter
+      columnHints:
+        parameter_value: {embeddedContextValue: true, format: company-cd}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_job_monitor_query
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_mk_app_config
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_mk_module_customizer
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_mk_module_resource
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_department_group
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_department_group_ath
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_unit
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_country
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_zip
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_tdfk
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_skcs
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_currency
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_currency_precision
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_currency_precision_type
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_currency_rate
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_currency_conversion
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_calendar
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_calendar_date
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_bank_jp
+      columnHints:
+        telephone_number: {format: mask, confidentialInformation: true}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_customer_bank_account
+      columnHints:
+        customer_bank_account_id: {generator: biz_customer_bank_account_seq}
+        bank_account_no: {format: mask, confidentialInformation: true}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_company_bank_account
+      columnHints:
+        bank_account_no: {format: mask, confidentialInformation: true}
+        transfer_client_person_name: {format: mask, personalInformation: true}
+        entrust_personnel_name: {format: mask, personalInformation: true}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_employee_bank_account
+      columnHints:
+        employee_bank_account_id: {generator: biz_employee_bank_account_seq}
+        bank_account_no: {format: mask, confidentialInformation: true}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_transfer_fee
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_transfer_fee_oth_bnk
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_transfer_fee_oth_bnk_b
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_analyze_class
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_analyze
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_analyze_hierarchy
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_analyze_sys
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_account
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_subsidiary_account
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_indirect_tax
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_transition_layout_config
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_transition_type
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_project
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_project_def
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_cstmr_ctrl_dept
+      columnHints:
+        charge_person_name: {format: mask, personalInformation: true}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_cstmr_rep_layout_dcsn
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_report_query
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_storage_file_config
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_file_format_config
+      configurations: {stereoType: master, companyDependent: false}
+    - name: fms_fc_sql_task_mng
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_report_group_rel
+      configurations: {stereoType: master, companyDependent: true}
+    - name: biz_config_entry
+      columnHints:
+        id: {generator: biz_config_entry_seq}
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_config_tree
+      columnHints:
+        id: {generator: biz_config_tree_seq}
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_printer_config_attr
+      columnHints:
+        id: {generator: biz_printer_config_attr_seq}
+      configurations: {stereoType: master, companyDependent: false}
+    - name: biz_storage_file_manage
+      columnHints:
+        id: {generator: biz_storage_file_manage_seq}
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_fc_cash_flow
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_sql_task_mssg_arg
+      configurations: {stereoType: master, companyDependent: false}
+    - name: fms_fc_cash_flow_sum_way
+      columnHints:
+        id: {generator: fms_fc_cash_flow_sum_way_sq}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_site_employee
+      columnHints:
+        site_id: {generator: fms_fc_site_employee_sq}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_data_source_name
+      configurations: {stereoType: master, companyDependent: false}
+    - name: fms_fc_template_data
+      configurations: {stereoType: master, companyDependent: false}
+    - name: fms_fc_parameter
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_tp_file_itm
+      columnHints:
+        id: {generator: fms_fc_tp_file_itm_sq}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_tp_file_itm_base
+      columnHints:
+        id: {generator: fms_fc_tp_file_itm_base_sq}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_parameter_dtl
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_fld_rel
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_module_exec_config
+      configurations: {stereoType: master, companyDependent: false}
+    - name: fms_fc_tp_file_itm_dtl
+      configurations: {stereoType: master, companyDependent: false}
+    - name: fms_fc_tp_file_itm_dtl_base
+      configurations: {stereoType: master, companyDependent: false}
+    - name: fms_fc_listvalue_cut
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_wf_parameter
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_accnt_cnst
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_accnt_cnst_expn
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_accnt_cnst_cmpnt
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_accnt_sum_item_expn
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_accnt_cnst_ctg_item
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_finance_module
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_finance_term
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_finance_class
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_f_crncy_valuate_rate
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_finance_term_dtl
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_extrnl_alctn_base
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_finance_class_dtl
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_account
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_dfr_acr_acnt
+      columnHints:
+        id: {generator: fms_fc_dfr_acr_acnt_sq}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_extrnl_alctn_base_v
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_withholding_rel
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_wtax_calc
+      columnHints:
+        id: {generator: fms_fc_wtax_calc_sq}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_numbering_adm
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_blnc_carryover
+      columnHints:
+        id: {generator: fms_fc_blnc_carryover_sq}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_blnc_carryover_dtl
+      columnHints:
+        id: {generator: fms_fc_blnc_carryover_dtl_sq}
+      configurations: {stereoType: master, companyDependent: false}
+    - name: fms_fc_pymnt_record_cndtn
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_main_fld_input_limit
+      columnHints:
+        id: {generator: fms_fc_main_fld_input_limit_sq}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_cstmr_delivery_dtl
+      configurations: {stereoType: master, companyDependent: false}
+    - name: fms_fc_rel_fld_input_limit
+      configurations: {stereoType: master, companyDependent: false}
+    - name: fms_fc_wtax_calc_dtl
+      configurations: {stereoType: master, companyDependent: false}
+    - name: fms_fc_cstmr_incm_dtl
+      configurations: {stereoType: master, companyDependent: false}
+    - name: fms_fc_tp_rep
+      columnHints:
+        id: {generator: fms_fc_tp_rep_sq}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_rep_batch_output
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_alctn_cd
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_alctn_source_destin
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_alctn_branch_no
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_alctn_phase_ptn
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_alctn_phase_ptn_dtl
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_anlyz_config
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_subsidiary_account
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_way_accnt_rel
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_crprtn_grp_access
+      columnHints:
+        id: {generator: fms_fc_crprtn_grp_access_sq}
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_hed_brnch_dept
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_hed_brnch_user
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_accnt_rvlt_trgt_cntrl
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_fc_alctn_decision
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_fc_alctn_exec_rec
+      columnHints:
+        id: {generator: fms_fc_alctn_exec_rec_sq}
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_fc_annual_status
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_fc_attached_file_rel
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_fc_budget_name
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_fc_dfr_acr_acnt_tmp
+      columnHints:
+        id: {generator: fms_fc_dfr_acr_acnt_tmp_sq}
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_fc_input_limit
+      columnHints:
+        department_cd: {embeddedContextValue: true, format: company-cd}
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_fc_monthly_status
+      columnHints:
+        id: {generator: fms_fc_monthly_status_sq}
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_fc_wf_matter
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_gl_jrnl_create_tmp
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_gl_jrnl_create_tmp_dtl
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_ovrss_rmttnc_report_item_config
+      configurations: {stereoType: master, companyDependent: true}
+    - name: fms_pr_contractor_no
+      columnHints:
+        id: {generator: fms_pr_contractor_no_sq}
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_contractor_no_a
+      columnHints:
+        id: {generator: fms_pr_contractor_no_a_sq}
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_deal_cre_tmp_bill
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_deal_cre_tmp_dnmntns
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_deal_cre_tmp_dtl
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_deal_cre_tmp_or_pln
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_deal_cre_tmp_pln
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_deal_cre_tmp_slip
+      columnHints:
+        address2: {format: mask, personalInformation: true}
+        address3: {format: mask, personalInformation: true}
+        telephone_number: {format: mask, personalInformation: true}
+        fax_number: {format: mask, personalInformation: true}
+        zip_code: {format: mask, personalInformation: true}
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_deal_cre_tmp_trnsfr
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_incm_config_rec
+      columnHints:
+        id: {generator: fms_pr_incm_config_rec_sq}
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_interface_demand
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_jrnl_create_tmp
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_jrnl_create_tmp_dtl
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_not_trgt_transfer
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_pr_pr_tp_req_appli_rep
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_pr_transfer_client
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_atmtc_rcncl_rslt_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_balance_dtl_ctrl_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_bill_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_budget_dtl_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_budget_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_budget_status_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_cash_flw_jrnl_splt_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_demand_req_dtl_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_demand_req_tax_rate_amt_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_peppol_interface_dtl_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_invoice_data_interface_department
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_demand_req_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_dfr_acr_acnt_hstry_a_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_dfr_acr_acnt_hstry_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_dfr_acr_acnt_jrnl_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_dfr_acr_acnt_rslt_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_dmnd_rq_rcncl_dtl_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_dtl_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_exec_no_lst_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_incm_pymnt_dnmntns_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_ip_expctd_rec_c_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_ip_expctd_rec_t_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_jrnl_dtl_prprtnl_dv_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_jrnl_dtl_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_jrnl_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_ledger_balance_anlyz_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_ledger_balance_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_ovrsea_rmtnc_plan_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_ovrsea_rmtnc_req_dtl_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_ovrsea_rmtnc_req_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_plan_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_reconcile_req_d_rec_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_reconcile_req_dtl_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_reconcile_req_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_slip_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_transfer_incm_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_transfer_req_dtl_itm_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_transfer_req_dtl_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_transfer_req_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_transfer_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_nrb_upd_history_stage
+      configurations: {stereoType: transaction, companyDependent: true}
+    - name: fms_ac_nrb_upd_history_dtl_stage
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_ac_w_jrnl_id
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_wf_matter_dtl
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_cstmr_bank_acc_cmn_a
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_cstmr_bank_acc_cmn_r
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_cstmr_ctrl_dept_a
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_cstmr_ctrl_dept_rec
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_cstmr_delivery_dtl_a
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_cstmr_demand_dtl
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_cstmr_demand_dtl_a
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_cstmr_demand_dtl_rec
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_cstmr_dlvry_dtl_rec
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_cstmr_incm_dtl_rec
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_cstmr_pymnt_dtl_a
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_cstmr_pymnt_dtl_rec
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_customer
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_customer_a
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_customer_cmn_a
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_customer_cmn_rec
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_customer_rec
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_incm_pymnt_inst_ctl
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_incm_pymnt_instrmnt
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_incm_pymnt_way
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_instrmnt_way_rel
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_ovrsea_rmtnc
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_ovrsea_rmtnc_a
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_ovrsea_rmtnc_rec
+      configurations: {stereoType: transaction, companyDependent: false}
+    - name: fms_fc_matter_property_mapping
+      configurations: {stereoType: transaction, companyDependent: false}
+    ddl:
+    - name: 01_sequence.sql
+      phase: post-execute
+    - name: 02_reindex.sql
+      phase: post-execute
