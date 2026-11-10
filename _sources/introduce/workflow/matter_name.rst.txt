@@ -1,0 +1,61 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_introduce_workflow-matter_name:
+
+===================================================
+|IM_WF| 案件名表示桁数編集
+===================================================
+
+|IM_WF| の案件一覧に表示される案件名の桁数を必要に応じて修正します。
+
+.. note::
+  
+  :ref:`FMS_introduce_baseset_biz-configuration` で「workflowMatterNameMaxByteLength」の値を変更した場合に実行します。
+
+
+.. _FMS_introduce_workflow-matter_name-startConditions:
+
+着手条件
+===================================================
+
+:ref:`FMS_introduce_workflow-import` が完了していること。
+
+.. _FMS_introduce_workflow-matter_name-do:
+
+実行手順
+===================================================
+
+|FMS| 管理者アカウントでポータル画面にログインし、 案件名の入力可能文字数を編集します。
+
+* メニュー ::
+
+    ワークフロー
+      ワークフロー管理者
+        ワークフローパラメータ
+
+「param_group_{テナント名}.xml」タブに表示されたパラメータ定義のうち、以下param-valueの値を更新し、「編集」ボタンを押下します。
+
+  .. code-block:: xml
+
+    <!-- 入力項目の設定 -->
+    <!--
+        案件名の入力可能文字数
+        単位は半角文字数です。全角文字数は1/4になります。
+    -->
+    <param>
+        <param-name>matter-name-size</param-name>
+        <param-value>400</param-value>
+    </param>
+
+  .. note::
+
+    <param-value>にセットする上限値は、 :ref:`FMS_introduce_baseset_biz-configuration` で設定した「workflowMatterNameMaxByteLength」の値と同値としてください。
+
+
+.. _FMS_introduce_workflow-matter_name-endConditions:
+
+完了条件
+===================================================
+
+編集結果を画面で確認します。
+

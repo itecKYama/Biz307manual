@@ -1,0 +1,28 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_introduce_preparation:
+
+===================================================
+導入前準備
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   master
+   jrnl
+   fa
+   cp
+   lc
+   jc
+
+.. only:: internal
+
+  master :マスタ設定準備
+  jrnl   :仕訳移行準備
+  fa     :資産移行準備
+  cp     :建設仮勘定移行準備
+  lc     :契約移行準備
+  jc     :プロジェクト原価管理移行準備
+

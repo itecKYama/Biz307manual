@@ -1,0 +1,28 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_introduce_workflow:
+
+===================================================
+|IM_WF| 設定
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   import
+   route
+   fms_wf_parameter
+   fms_matter_property_mapping
+   flow_group
+   matter_name
+
+
+.. only:: internal
+
+   import           : IM-Workflow マスタ登録
+   route            : ルート修正
+   fms_wf_parameter : Biz∫会計 ワークフローパラメータ修正
+   fms_matter_property_mapping : 案件プロパティマッピングマスタ設定
+   flow_group       : フローグループ修正
+   matter_name      : IM-Workflow 案件名表示桁数編集

@@ -1,0 +1,398 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_introduce_preparation-master:
+
+===================================================
+マスタ設定準備
+===================================================
+
+マスタの設定準備を行い、以降の導入作業でスムーズにマスタの設定を行えるようにします。
+
+.. note::
+
+  一括取込機能を利用する場合、一括取込用のファイルを準備します。
+  
+  各マスタの設定項目については、 :ref:`FMS_import` 、もしくは各登録画面およびヘルプを参照してください。
+
+.. _FMS_introduce_preparation-master-im:
+
+|IM_MST| ・ |BIZ| 共通マスタ
+===================================================
+
+|IM_MST| ・ |BIZ| 共通マスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,5
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - 会社コード（計上組織セットコード）
+     - :ref:`FMS_introduce_baseset_im_master-company`
+   * - 組織（計上組織）
+     - :ref:`FMS_introduce_baseset_im_master-department`
+   * - ロール
+     - :ref:`FMS_introduce_baseset_im_master-role`
+   * - ユーザ
+     - :ref:`FMS_introduce_baseset_im_master-user`
+   * - 認可
+     - :ref:`FMS_introduce_baseset_im_master-authorization`
+   * - 組織グループ
+     - :ref:`FMS_introduce_baseset_auth-dept_group`
+   * - アクセス権限制御に関する設定
+     - :ref:`FMS_introduce_baseset_auth`
+   * - コンフィグレーションの設定
+     - :ref:`FMS_introduce_baseset_biz-configuration`
+   * - 通貨に関する設定
+     - :ref:`FMS_introduce_baseset_biz-currency`
+   * - カレンダ
+     - :ref:`FMS_introduce_baseset_biz-calendar`
+   * - 間接税
+     - :ref:`FMS_introduce_baseset_biz-indirect_tax`
+   * - 分析コード
+     - :ref:`FMS_introduce_baseset_biz-analysis_class`
+
+.. _FMS_introduce_preparation-master-fc:
+
+会計コアのマスタ
+===================================================
+
+会計コアのマスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,5
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - パラメータ
+     - :ref:`FMS_introduce_core-parameter`
+   * - 会計期間
+     - :ref:`FMS_introduce_core-accounting_period`
+   * - 科目
+     - :ref:`FMS_introduce_core-account`
+   * - 科目構成
+     - :ref:`FMS_introduce_core-account_structure`
+   * - 本支店仕訳情報
+     - :ref:`FMS_introduce_core-branch_accounting`
+   * - キャシュフロー
+     - :ref:`FMS_introduce_core-cash_flow`
+   * - 会計モジュール
+     - :ref:`FMS_introduce_core-finance_module`
+   * - 分析フィールド
+     - :ref:`FMS_introduce_core-analysis_field`
+   * - フィールド関連
+     - :ref:`FMS_introduce_core-field_relation`
+   * - 会計種別
+     - :ref:`FMS_introduce_core-accounting_type`
+   * - 経過勘定振替マスタ
+     - :ref:`FMS_introduce_core-deferred_accounts_transfer`
+
+.. _FMS_introduce_preparation-master-wf:
+
+ワークフローのマスタ
+===================================================
+
+ワークフローのマスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,5
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - ルート
+     - :ref:`FMS_introduce_workflow-route`
+   * - |FMS| ワークフローパラメータ
+     - :ref:`FMS_introduce_workflow-fms_wf_parameter`
+   * - フローグループ
+     - :ref:`FMS_introduce_workflow-flow_group`
+
+.. note::
+
+  ワークフローを導入する場合のみ
+
+.. _FMS_introduce_preparation-master-pr:
+
+債権債務のマスタ
+===================================================
+
+債権債務のマスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,5
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - 銀行
+     - :ref:`FMS_introduce_module_pr-bank`
+   * - 振込手数料
+     - :ref:`FMS_introduce_module_pr-transferfee`
+   * - 社内口座情報
+     - :ref:`FMS_introduce_module_pr-company_bank_account`
+   * - 従業員口座情報
+     - :ref:`FMS_introduce_module_pr-employee_bank_account`
+   * - サイト社員
+     - :ref:`FMS_introduce_module_pr-site_employee`
+   * - 入金支払関連項目
+     - :ref:`FMS_introduce_module_pr-income_payment_relation`
+   * - 法人情報
+     - :ref:`FMS_introduce_module_pr-corporation`
+   * - 取引先（債権・債務用）
+     - :ref:`FMS_introduce_module_pr-customer`
+   * - 取引先入金支払手段制御
+     - :ref:`FMS_introduce_module_pr-income_payment_instrument_control`
+   * - 振込依頼人
+     - :ref:`FMS_introduce_module_pr-transfer_client_person` 
+   * - 契約者番号
+     - :ref:`FMS_introduce_module_pr-contractor_no`
+
+.. note::
+
+  債権債務管理を導入する場合のみ
+
+.. _FMS_introduce_preparation-master-cm:
+
+管理会計のマスタ
+===================================================
+
+管理会計のマスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,5
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - 予算
+     - :ref:`FMS_introduce_module_ma-budget_import`
+   * - 配賦元・先マスタ
+     - :ref:`FMS_introduce_core-allocate`
+   * - 外部配賦基準
+     - :ref:`FMS_introduce_core-external_allocation_base_import`
+   * - 配賦段階マスタ
+     - :ref:`FMS_introduce_module_ma-allocate_phase`
+
+.. note::
+
+  管理会計を導入する場合のみ
+
+.. _FMS_introduce_preparation-master-fa:
+
+資産管理のマスタ
+===================================================
+資産管理のマスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,5
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - 種類/構造/細目
+     - :ref:`FMS_introduce_module_fa-kind_structure_detail`
+   * - 償却資産申告先
+     - :ref:`FMS_introduce_module_fa-declare_tax_office`
+   * - 資産管理仕訳設定
+     - :ref:`FMS_introduce_module_fa-fixed_asset_journal_set`
+   * - 償却計算方法設定
+     - :ref:`FMS_introduce_module_fa-depreciation_calculate_define`
+   * - 特別償却
+     - :ref:`FMS_introduce_module_fa-special_depreciation`
+   * - 資産管理仕訳パターン定義
+     - :ref:`FMS_introduce_module_fa-jrnl_ptn_def`
+
+.. note::
+
+  資産管理を導入する場合のみ
+
+.. _FMS_introduce_preparation-master-cp:
+
+建設仮勘定のマスタ
+===================================================
+建設仮勘定のマスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,5
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - 建設仮勘定科目
+     - :ref:`FMS_introduce_module_cp-account`
+   * - 建設仮勘定仕訳設定
+     - :ref:`FMS_introduce_module_cp-journal_set`
+
+.. note::
+
+  建設仮勘定を導入する場合のみ
+
+.. _FMS_introduce_preparation-master-lc:
+
+契約管理・リース管理のマスタ
+===================================================
+契約管理・リース管理のマスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,5
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - 契約種別マスタ
+     - :ref:`FMS_introduce_module_lc-accounting_type`
+   * - 契約決済方法マスタ
+     - :ref:`FMS_introduce_module_lc-contract_settlement_way`
+   * - 契約種別仕訳マスタ
+     - :ref:`FMS_introduce_module_lc-contract_class_jrnl`
+
+.. note::
+
+  契約管理・リース管理を導入する場合のみ
+
+.. _FMS_introduce_preparation-master-jc:
+
+プロジェクト原価管理のマスタ
+===================================================
+プロジェクト原価管理のマスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,5
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - 主科目
+     - :ref:`FMS_introduce_module_jc-analyze_cd`
+   * - 労務費ランク
+     - :ref:`FMS_introduce_module_jc-analyze_cd`
+   * - 主科目と勘定科目の関連
+     - :ref:`FMS_introduce_module_jc-convert_table`
+   * - 労務費科目
+     - :ref:`FMS_introduce_module_jc-convert_table`
+   * - 原価計算種別
+     - :ref:`FMS_introduce_module_jc-cost_account_cls`
+   * - 契約形態
+     - :ref:`FMS_introduce_module_jc-contract_class`
+   * - プロジェクト
+     - :ref:`FMS_introduce_module_jc-project`
+   * - 要約原価要素
+     - :ref:`FMS_introduce_module_jc-cost_element_sum`
+   * - 原価集計コード
+     - :ref:`FMS_introduce_module_jc-cost_element`
+   * - 間接費組織グループ
+     - :ref:`FMS_introduce_module_jc-overhead_deptgrp`
+   * - 労務費ランクを決定する項目
+     - :ref:`FMS_introduce_module_jc-rank_segment`
+   * - 労務費ランクの決定方法
+     - :ref:`FMS_introduce_module_jc-rank_information`
+   * - 単金
+     - :ref:`FMS_introduce_module_jc-plan_amount`
+   * - 給与仕訳設定
+     - :ref:`FMS_introduce_module_jc-labor_jrnl_set`
+   * - 月次処理手順
+     - :ref:`FMS_introduce_module_jc-batch_process`
+
+.. note::
+
+  プロジェクト原価管理管理を導入する場合のみ
+
+.. _FMS_introduce_preparation-master-ga:
+
+グループ会計のマスタ
+===================================================
+
+グループ会計のマスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,5
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - 連結子会社識別用の取引先情報
+     - :ref:`FMS_introduce_module_ga-corporation`
+   * - 連結子会社識別用の法人情報
+     - :ref:`FMS_introduce_module_ga-customer`
+   * - Biz∫連結連携ファイル名
+     - :ref:`FMS_introduce_module_ga-setfilename`
+
+.. note::
+
+  グループ会計を導入する場合のみ
+
+.. _FMS_introduce_preparation-master-ai:
+
+会計連携のマスタ
+===================================================
+会計連携のマスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,5
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - 連携準備
+     - :ref:`FMS_introduce_module_ai-preparation_ai`
+   * - 文字列変換パターン設定
+     - :ref:`FMS_introduce_module_ai-text_cnv_pattern`
+   * - 取込設定
+     - :ref:`FMS_introduce_module_ai-import_config`
+   * - 伝票区分設定
+     - :ref:`FMS_introduce_module_ai-slip_type`
+   * - 変換パターン設定
+     - :ref:`FMS_introduce_module_ai-cnv_pattern`
+   * - 伝票項目設定
+     - :ref:`FMS_introduce_module_ai-slip_itm`
+
+.. note::
+
+  会計連携連携を導入する場合のみ
+
+
+.. _FMS_introduce_preparation-master-gt:
+
+グループ会社間取引のマスタ
+===================================================
+グループ会社間取引のマスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,5
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - グループ会社間取引仕訳設定マスタ
+     - :ref:`FMS_import_mst-gt_gtJrnl-gt_gtJrnl`
+
+.. note::
+
+  グループ会社間取引を導入する場合のみ
+
+
+.. _FMS_introduce_preparation-master-gm:
+
+|GM| のマスタ
+===================================================
+|GM| のマスタ上で事前に決定する必要のある内容は以下となります。
+
+.. list-table::
+   :widths: 5,10
+   :header-rows: 1
+   
+   * - 事前に決定する内容
+     - 設定手順
+   * - 連結科目マスタ
+     - :ref:`FMS_introduce_module_gm-consolidated_account`
+   * - 照合用連結科目グループマスタ
+     - :ref:`FMS_introduce_module_gm-match_consolidated_account_grp`
+   * - 法人データアクセス制御
+     - :ref:`FMS_introduce_module_gm-corp_grp_access`
+
+.. note::
+
+  |GM| を導入する場合のみ
+
+

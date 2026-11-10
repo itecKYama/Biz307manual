@@ -1,0 +1,26 @@
+.. include:: ../include/definition.txt
+
+.. _FMS_introduce:
+
+===================================================
+導入マニュアル
+===================================================
+
+.. toctree::
+   :maxdepth: 2
+   
+   preface/index
+   preparation/index
+   baseset/index
+   core/index
+   workflow/index
+   module/index
+   
+.. only:: internal
+
+   preface/index      :はじめに
+   preparation/index  :導入前準備
+   baseset/index      :BIZ∫基盤の設定
+   core/index         :会計コアマスタの設定
+   workflow/index     :IMワークフロー設定
+   module/index       :モジュール別の導入

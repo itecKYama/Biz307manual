@@ -1,0 +1,15 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_introduce_reference:
+
+===================================================
+参考資料
+===================================================
+
+導入マニュアルに関連する参考資料を一覧化します。必要に応じてダウンロードしてください。
+
+* :download:`参考資料_パラメータ一覧<./download/parameter_reference.xlsx>`
+* :download:`参考資料_プロセス権限設定一覧<./download/processAuth_reference.xlsx>`
+* :download:`参考資料_メニュー一覧<./download/menu_reference.xlsx>`
+* :download:`参考資料_権限一覧<./download/auth_reference.xlsx>`
+* :download:`参考資料_承認_補足資料<./download/approval_reference.xlsx>`
