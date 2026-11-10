@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>4. 会計連携取込設定管理 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="5. 会計連携伝票区分管理" href="slip_type.html" />
+    <link rel="prev" title="3. 会計連携文字列変換パターン管理" href="text_cnv_pattern.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">会計連携の導入</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">4. </span>会計連携取込設定管理</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="text_cnv_pattern.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="slip_type.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">モジュール別の導入</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../gl/index.html">一般会計の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pr/index.html">債権債務の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bn/index.html">手形管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ec/index.html">電子記録債権管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cm/index.html">資金管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ma/index.html">管理会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ef/index.html">着地見込管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fe/index.html">外貨管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fa/index.html">資産管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cp/index.html">建設仮勘定の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lc/index.html">契約管理・リース管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jc/index.html">プロジェクト原価管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ga/index.html">グループ会計の導入</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">会計連携の導入</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="preparation_ai.html">1. 連携準備</a></li>
+<li class="toctree-l4"><a class="reference internal" href="batch.html">2. ジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="text_cnv_pattern.html">3. 会計連携文字列変換パターン管理</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4. 会計連携取込設定管理</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-ai-import-config-startconditions">4.1. 着手条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-ai-import-config-do">4.2. 実行手順</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-ai-import-config-do-wf">4.2.1. 会計連携のワークフロー承認要否について</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-ai-import-config-do-rsrv-itm">4.2.2. 取込項目の予備項目について</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-ai-import-config-endconditions">4.3. 完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="slip_type.html">5. 会計連携伝票区分管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cnv_pattern.html">6. 会計連携変換パターン管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="slip_itm.html">7. 会計連携伝票項目管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="parameter.html">8. パラメータ設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="validation.html">9. 会計連携事前チェック</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../bc/index.html">業務共通の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gt/index.html">グループ会社間取引の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gm/index.html">グループ連結オペレーション の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ac/index.html">過年度アーカイブ の導入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-module-ai-import-config">
+<span id="id39"></span><h1><span class="section-number">4. </span>会計連携取込設定管理<a class="headerlink" href="#fms-introduce-module-ai-import-config" title="Link to this heading">¶</a></h1>
+<p>連携するデータの形式や取込方法を設定します。</p>
+<p>また、連携するデータがファイルの場合、会計連携テーブルとのマッピングも設定します。</p>
+<section id="fms-introduce-module-ai-import-config-startconditions">
+<span id="id40"></span><h2><span class="section-number">4.1. </span>着手条件<a class="headerlink" href="#fms-introduce-module-ai-import-config-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="batch.html#fms-introduce-module-ai-batch"><span class="std std-ref">ジョブ登録</span></a>を終えていること。</p>
+<p><a class="reference internal" href="text_cnv_pattern.html#fms-introduce-module-ai-text-cnv-pattern"><span class="std std-ref">会計連携文字列変換パターン管理</span></a>を終えていること。</p>
+</section>
+<section id="fms-introduce-module-ai-import-config-do">
+<span id="id41"></span><h2><span class="section-number">4.2. </span>実行手順<a class="headerlink" href="#fms-introduce-module-ai-import-config-do" title="Link to this heading">¶</a></h2>
+<p>Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューより「F5:新規」を押下し、作成アプリケーション、作成アプリケーション分類ごとに、取込設定を登録します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  会計コア
+    マスタメンテナンス
+      基本設定管理
+        会計連携取込設定管理
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>連携するデータがファイルの場合</strong></p>
+<ul>
+<li><p>連携ファイル形式種類からファイルの種類を選択し、「連携ファイル取込の設定」のその他の項目を入力してください。</p></li>
+<li><p>同メニューから検索を行い、登録した取込設定の「詳細」を押下し、各フィールドの取込項目を設定します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>一括登録を行う場合、一括取込マニュアルの<a class="reference internal" href="../../../import/mst/ai.html#fms-import-mst-ai-import-config"><span class="std std-ref">取込設定</span></a>を参考に取込ファイルを準備し、同メニューの「SF5:一括登録」より登録します。</p>
+</div>
+</li>
+</ul>
+<p><strong>連携するデータがDBの場合</strong></p>
+<ul class="simple">
+<li><p>連携ファイル形式種類から“DBファイル”を選択してください。</p></li>
+<li><p>取込項目の設定は不要です。</p></li>
+</ul>
+<section id="fms-introduce-module-ai-import-config-do-wf">
+<span id="id42"></span><h3><span class="section-number">4.2.1. </span>会計連携のワークフロー承認要否について<a class="headerlink" href="#fms-introduce-module-ai-import-config-do-wf" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p>取込設定の項目：ワークフロー承認要否区分では、取込設定単位でワークフローの承認要否の設定が可能です。</p>
+<p>なお、会計連携のワークフロー承認要否は2段階で判別しており、ワークフローパラメータ管理側の設定が優先されます。</p>
+<ul class="simple">
+<li><p>1段階目：取込設定毎にワークフロー承認要否を決定します。</p></li>
+<li><p>2段階目：ワークフローパラメータ管理でフロー有効フラグを決定します。</p></li>
+</ul>
+<p>そのため、ワークフロー承認の要否については、ワークフローパラメータ管理でフロー有効フラグを無効とした場合、取込設定側のワークフロー承認要否区分の設定値にかかわらず承認済で連携されます。取込設定でワークフロー承認の要否を決定する際は、ワークフローパラメータ管理の設定を事前に行ってください。</p>
+</div></blockquote>
+</section>
+<section id="fms-introduce-module-ai-import-config-do-rsrv-itm">
+<span id="id43"></span><h3><span class="section-number">4.2.2. </span>取込項目の予備項目について<a class="headerlink" href="#fms-introduce-module-ai-import-config-do-rsrv-itm" title="Link to this heading">¶</a></h3>
+<p>取込項目の各フィールドに対して補完条件を指定する場合での利用を想定しています。（例：金額項目が複数あり値の設定されている方のフィールド値を補完する、など）</p>
+<p>名称を変更する場合、取込項目初期データ（fms_ai_import_itm_def）テーブルの予備項目を直接変更してください。</p>
+<ul>
+<li><p>変更対象フィールド</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">field_name</span>
+</pre></div>
+</div>
+</li>
+<li><p>変更条件</p>
+<p>変更対象のレコードは以下の条件で特定します。</p>
+<ul>
+<li><p>field_id</p>
+<p>reserve_item1～reserve_item10</p>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="fms-introduce-module-ai-import-config-endconditions">
+<span id="id44"></span><h2><span class="section-number">4.3. </span>完了条件<a class="headerlink" href="#fms-introduce-module-ai-import-config-endconditions" title="Link to this heading">¶</a></h2>
+<p>登録した取込設定、取込項目を画面から確認します。</p>
+<p>同メニューの検索結果からプルーフリストを取得し、登録内容を確認することも可能です。</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >会計連携の導入</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">4. </span>会計連携取込設定管理</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
