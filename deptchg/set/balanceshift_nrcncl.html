@@ -1,0 +1,474 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>4.6. 残高の移行（未消込残高の移行） &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="4.7. 残高の移行" href="balanceshift.html" />
+    <link rel="prev" title="4.5. 既に計上された仕訳の対応" href="journal.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >組織変更ガイド</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U"><span class="section-number">4. </span>組織変更設定手順</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">4.6. </span>残高の移行（未消込残高の移行）</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="journal.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="balanceshift.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">組織変更ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../preface/index.html">1. はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../base/index.html">2. 組織の基本説明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/index.html">3. 組織変更事前準備</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">4. 組織変更設定手順</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="outline.html">4.1. 組織変更手順の概要</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add.html">4.2. 組織の追加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mst.html">4.3. 組織に関わるマスタの変更</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hstry.html">4.4. 台帳系の組織の変更</a></li>
+<li class="toctree-l3"><a class="reference internal" href="journal.html">4.5. 既に計上された仕訳の対応</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4.6. 残高の移行（未消込残高の移行）</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fms-deptchg-set-balanceshift-nrcncl-startconditions">4.6.1. 着手条件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-deptchg-set-balanceshift-nrcncl-do">4.6.2. 実行手順</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-deptchg-set-balanceshift-nrcncl-do-auto">4.6.2.1. 組織変更機能を使用して行う場合</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#fms-deptchg-set-balanceshift-nrcncl-do-auto-sup">4.6.2.1.1. 組織変更実行機能を使用する場合の説明</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-deptchg-set-balanceshift-nrcncl-do-auto-do">4.6.2.1.2. 組織変更実行機能を使用する場合の実行手順</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-deptchg-set-balanceshift-nrcncl-do-manual">4.6.2.2. 各画面から登録する場合</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-deptchg-set-balanceshift-nrcncl-endconditions">4.6.3. 完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="balanceshift.html">4.7. 残高の移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="term_division.html">4.8. 組織の有効期間分割</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deptgrouopchg/index.html">5. 組織グループ変更手順</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-deptchg-set-balanceshift-nrcncl">
+<span id="id39"></span><h1><span class="section-number">4.6. </span>残高の移行（未消込残高の移行）<a class="headerlink" href="#fms-deptchg-set-balanceshift-nrcncl" title="Link to this heading">¶</a></h1>
+<p>組織変更日までに消込されない旧組織で計上されている仕訳明細について、新組織で処理を可能とするために、付替えを行います。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>未消込残高の振替は、入金支払予定日を考慮したタイミングで行ってください。例えば、組織変更日直後に新組織において振込で支払を行う必要がある場合、組織変更日前に振替を行う必要があります。</p>
+</div>
+<section id="fms-deptchg-set-balanceshift-nrcncl-startconditions">
+<span id="id40"></span><h2><span class="section-number">4.6.1. </span>着手条件<a class="headerlink" href="#fms-deptchg-set-balanceshift-nrcncl-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../preparation/shiftlist.html#fms-deptchg-preparation-shiftlist"><span class="std std-ref">新旧移行表の作成</span></a>の作業が完了していること。</p>
+<p>新しい組織を追加する場合、<a class="reference internal" href="add.html#fms-deptchg-set-add"><span class="std std-ref">組織の追加</span></a>の作業が完了していること。</p>
+</section>
+<section id="fms-deptchg-set-balanceshift-nrcncl-do">
+<span id="id41"></span><h2><span class="section-number">4.6.2. </span>実行手順<a class="headerlink" href="#fms-deptchg-set-balanceshift-nrcncl-do" title="Link to this heading">¶</a></h2>
+<p>債権一覧表、債務一覧表、仮受金未消込一覧表、仮払金未消込一覧表、残高明細顛末照会から、旧組織で計上されている未消込の債権、債務、入金、支払依頼、振替の各仕訳明細を検索します。</p>
+<p>以下の手順で旧組織の明細を消し込んで、新組織に付け替えます。</p>
+<section id="fms-deptchg-set-balanceshift-nrcncl-do-auto">
+<span id="id42"></span><h3><span class="section-number">4.6.2.1. </span>組織変更機能を使用して行う場合<a class="headerlink" href="#fms-deptchg-set-balanceshift-nrcncl-do-auto" title="Link to this heading">¶</a></h3>
+<p>組織変更実行機能を使用することにより仕訳種別単位に未消込残高を振り替えた仕訳を作成することができます。</p>
+<section id="fms-deptchg-set-balanceshift-nrcncl-do-auto-sup">
+<span id="id43"></span><h4><span class="section-number">4.6.2.1.1. </span>組織変更実行機能を使用する場合の説明<a class="headerlink" href="#fms-deptchg-set-balanceshift-nrcncl-do-auto-sup" title="Link to this heading">¶</a></h4>
+<p>組織変更実行機能を使用して未消込残高振替仕訳を作成する場合、振替対象や前提条件は以下の通りとなります。</p>
+<ol class="arabic simple">
+<li><p>振替対象</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>元仕訳の計上日＜組織変更日のもの</p></li>
+<li><p>仕訳種別が債権/債務の場合、入金支払予定日≧組織変更日のもの</p></li>
+<li><p>組織コード変更情報に変更前組織として登録されている組織に計上されかつ消込残のある仕訳明細(一部消込済も対象になります)</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>前提条件</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>未消込の明細に対する承認中の消込仕訳が存在しないこと。</p></li>
+<li><p>元仕訳に対する承認中の赤仕訳が存在しないこと。</p></li>
+<li><p>債権の場合、消込依頼が登録されていないこと。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>上記のような仕訳明細が存在した場合は、組織変更処理結果リストにエラーとして出力します。</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>その他</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>入金支払予定日が組織変更日より前の債権/債務については、振替対象になりません。</p>
+<p>組織変更日より前に入金支払予定日が到来していると、この入金支払予定日を変更せずに債権債務を振り替える仕訳を組織変更日に計上することはできないため、振替後の入金支払予定日を判断し、入金支払予定日を設定しなおして振り替える仕訳を画面から登録してください。</p>
+</li>
+<li><p>未消込残高振替仕訳は仕訳種別が債権/債務で締日&lt;組織変更日の場合、締日には組織変更日が設定されます。</p>
+<p>(例)　組織変更日4/1の場合</p>
+<blockquote>
+<div><p>締日3/31の仕訳・・・・・4/1を設定</p>
+<p>締日4/5　の仕訳・・・・・4/5を設定</p>
+</div></blockquote>
+</li>
+<li><p>未消込残高振替仕訳は、元仕訳の仕訳種別のまま承認済で作成されます</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>例：債権の仕訳明細が未消込だった場合、仕訳種別:債権、承認済で作成されます。</p>
+</div>
+</li>
+<li><p>設定誤りなどにより未消込残高振替仕訳を修正する必要がある場合、以下の手順で修正してください。</p>
+<ol class="arabic simple">
+<li><p>以下のメニューより、作成された未消込残高振替仕訳を検索して修正します。</p></li>
+</ol>
+<blockquote>
+<div><p>「債権計上」をチェックした場合</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  債権管理
+    債権管理
+      債権検索
+</pre></div>
+</div>
+<p>「入金」をチェックした場合</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  債権管理
+    入金管理
+      入金仕訳検索
+</pre></div>
+</div>
+<p>「債務計上」をチェックした場合</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  債務管理
+    債務管理
+      債務検索
+</pre></div>
+</div>
+<p>「支払」をチェックした場合</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  債務管理
+    支払管理
+      支払依頼検索
+</pre></div>
+</div>
+<p>「振替」をチェックした場合</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  一般会計
+    仕訳入力
+      仕訳検索
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="fms-deptchg-set-balanceshift-nrcncl-do-auto-do">
+<span id="id44"></span><h4><span class="section-number">4.6.2.1.2. </span>組織変更実行機能を使用する場合の実行手順<a class="headerlink" href="#fms-deptchg-set-balanceshift-nrcncl-do-auto-do" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="../../import/mst/departmnet.html#fms-import-mst-department-dept-upd"><span class="std std-ref">組織コード変更情報</span></a>を参考にcsvファイルを準備し、以下のメニューの「SF5:一括登録」より登録します。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>既に登録済の場合は2.に進んでください。</p>
+</div>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  業務共通
+    組織変更
+      組織変更情報登録
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>以下のメニューにて未消込残高振替仕訳作成を選択し、「F5:実行」で未消込残高振替仕訳を自動作成します。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>未消込残高振替仕訳作成の対象となった仕訳明細のうち、エラーが発生しなかったものは、仕訳が作成されます。組織変更処理結果リストを参照してエラー内容を確認し、画面から振替を行ってください。また、エラー原因がマスタの不備だった場合は、マスタを修正後、再実行することも可能です。</p>
+</div>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  業務共通
+    組織変更
+      組織変更実行
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="fms-deptchg-set-balanceshift-nrcncl-do-manual">
+<span id="id45"></span><h3><span class="section-number">4.6.2.2. </span>各画面から登録する場合<a class="headerlink" href="#fms-deptchg-set-balanceshift-nrcncl-do-manual" title="Link to this heading">¶</a></h3>
+<p>仕訳登録、債権登録、債務登録、入金仕訳登録、支払依頼登録の各画面から、旧組織の未消込の明細を消し込んで、新組織に付け替える仕訳を登録してください。</p>
+<p><strong>付替仕訳例</strong></p>
+<blockquote>
+<div><p>(元仕訳)</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>科目</p></th>
+<th class="head"><p>組織</p></th>
+<th class="head"><p>金額</p></th>
+<th class="head"><p>科目</p></th>
+<th class="head"><p>組織</p></th>
+<th class="head"><p>金額</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>仕入</p></td>
+<td><p>組織A</p></td>
+<td><p>50,000</p></td>
+<td><p>買掛金</p></td>
+<td><p>組織A</p></td>
+<td><p>50,000</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>(付替仕訳)</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>科目</p></th>
+<th class="head"><p>組織</p></th>
+<th class="head"><p>金額</p></th>
+<th class="head"><p>科目</p></th>
+<th class="head"><p>組織</p></th>
+<th class="head"><p>金額</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>消込選択</p></td>
+<td><p>組織A</p></td>
+<td><p>50,000</p></td>
+<td><p>他勘定</p></td>
+<td><p>組織B</p></td>
+<td><p>50,000</p></td>
+</tr>
+<tr class="row-odd"><td><p>他勘定</p></td>
+<td><p>組織B</p></td>
+<td><p>50,000</p></td>
+<td><p>買掛金</p></td>
+<td><p>組織B</p></td>
+<td><p>50,000</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>元仕訳に設定されている債権債務明細(未消込のもの)、入金支払予定情報、分析フィールド、分析テキスト、源泉情報を必要に応じて引き継いでください。</p>
+</div>
+<p>キャッシュフロー計算書を使用しない場合は、以下の仕訳でも可能です。</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>科目</p></th>
+<th class="head"><p>組織</p></th>
+<th class="head"><p>金額</p></th>
+<th class="head"><p>科目</p></th>
+<th class="head"><p>組織</p></th>
+<th class="head"><p>金額</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>消込選択</p></td>
+<td><p>組織A</p></td>
+<td><p>50,000</p></td>
+<td><p>買掛金</p></td>
+<td><p>組織B</p></td>
+<td><p>50,000</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div></blockquote>
+</section>
+</section>
+<section id="fms-deptchg-set-balanceshift-nrcncl-endconditions">
+<span id="id46"></span><h2><span class="section-number">4.6.3. </span>完了条件<a class="headerlink" href="#fms-deptchg-set-balanceshift-nrcncl-endconditions" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>組織変更機能を使用して行う場合</p>
+<blockquote>
+<div><p>以下のメニューにて対象のタスクを検索し、結果に添付されている組織変更処理結果リストで実行結果を確認してください。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">システム管理</span><span class="p">(</span><span class="n">会社共通</span><span class="p">)</span>
+  <span class="n">非同期タスク</span>
+    <span class="n">非同期タスクモニタ</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>債権一覧表、債務一覧表、仮受金未消込一覧表、仮払金未消込一覧表、残高明細顛末照会から、旧組織において未消込の残高が残っていないことを確認してください。</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >組織変更ガイド</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" ><span class="section-number">4. </span>組織変更設定手順</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">4.6. </span>残高の移行（未消込残高の移行）</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

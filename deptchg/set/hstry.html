@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>4.4. 台帳系の組織の変更 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="4.5. 既に計上された仕訳の対応" href="journal.html" />
+    <link rel="prev" title="4.3. 組織に関わるマスタの変更" href="mst.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >組織変更ガイド</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U"><span class="section-number">4. </span>組織変更設定手順</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">4.4. </span>台帳系の組織の変更</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="mst.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="journal.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">組織変更ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../preface/index.html">1. はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../base/index.html">2. 組織の基本説明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/index.html">3. 組織変更事前準備</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">4. 組織変更設定手順</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="outline.html">4.1. 組織変更手順の概要</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add.html">4.2. 組織の追加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mst.html">4.3. 組織に関わるマスタの変更</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4.4. 台帳系の組織の変更</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fms-deptchg-set-hstry-startconditions">4.4.1. 着手条件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-deptchg-set-hstry-do">4.4.2. 実行手順</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-deptchg-set-hstry-do-auto">4.4.2.1. 組織変更機能を使用して行う場合</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-deptchg-set-hstry-do-manual">4.4.2.2. 画面または一括登録で行う場合</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-deptchg-set-hstry-endconditions">4.4.3. 完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="journal.html">4.5. 既に計上された仕訳の対応</a></li>
+<li class="toctree-l3"><a class="reference internal" href="balanceshift_nrcncl.html">4.6. 残高の移行（未消込残高の移行）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="balanceshift.html">4.7. 残高の移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="term_division.html">4.8. 組織の有効期間分割</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deptgrouopchg/index.html">5. 組織グループ変更手順</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-deptchg-set-hstry">
+<span id="id39"></span><h1><span class="section-number">4.4. </span>台帳系の組織の変更<a class="headerlink" href="#fms-deptchg-set-hstry" title="Link to this heading">¶</a></h1>
+<p>組織コードを項目として保持している台帳について、その項目に新しい組織を設定します。</p>
+<section id="fms-deptchg-set-hstry-startconditions">
+<span id="id40"></span><h2><span class="section-number">4.4.1. </span>着手条件<a class="headerlink" href="#fms-deptchg-set-hstry-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../preparation/shiftlist.html#fms-deptchg-preparation-shiftlist"><span class="std std-ref">新旧移行表の作成</span></a>の作業が完了していること。</p>
+<p>新しい組織を追加する場合、<a class="reference internal" href="add.html#fms-deptchg-set-add"><span class="std std-ref">組織の追加</span></a>の作業が完了していること。</p>
+<p>組織変更日以前の処理（例：経過勘定台帳における経過勘定振替処理）が実行されていること。</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>フィールド関連マスタの非活動について</p>
+<p>仕訳を作成する処理においてフィールド関連のエラーを発生させないため、計上組織を主フィールドまたは関連フィールドにもつフィールド関連（例：計上組織－プロジェクト）を非活動にしてください。プロジェクト原価管理にてフィールド関連を自動作成している場合、変更後の情報をもとにフィールド関連が自動作成されます。そのため、組織残高の振替仕訳の作成時に、変更前の組織でプロジェクトの計上ができなくなる可能性があります。上記を防止するために、計上組織を主フィールドまたは関連フィールドにもつフィールド関連（例：計上組織－プロジェクト）を非活動にしてください。</p>
+<p><a class="reference internal" href="balanceshift.html#fms-deptchg-set-balanceshift"><span class="std std-ref">残高の移行</span></a>後、フィールド関連を活動中に戻してください。</p>
+</div>
+</div></blockquote>
+</section>
+<section id="fms-deptchg-set-hstry-do">
+<span id="id41"></span><h2><span class="section-number">4.4.2. </span>実行手順<a class="headerlink" href="#fms-deptchg-set-hstry-do" title="Link to this heading">¶</a></h2>
+<p>組織コードを項目として持つ台帳については、台帳の修正機能を使用して組織コードの修正を行います。画面から変更するほかに、組織変更モジュールの組織変更実行機能で変換することも可能です。</p>
+<section id="fms-deptchg-set-hstry-do-auto">
+<span id="id42"></span><h3><span class="section-number">4.4.2.1. </span>組織変更機能を使用して行う場合<a class="headerlink" href="#fms-deptchg-set-hstry-do-auto" title="Link to this heading">¶</a></h3>
+<p>組織変更実行機能を使用することにより以下の台帳に設定された組織を一括変換することができます。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13.8%" />
+<col style="width: 8.6%" />
+<col style="width: 43.1%" />
+<col style="width: 34.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>対象台帳</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>前提条件</p></th>
+<th class="head"><p>更新対象</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>経過勘定台帳</p></td>
+<td><p>計上組織</p></td>
+<td><ul class="simple">
+<li><p>組織変更日が属する月の前月の経過勘定振替処理が行われていること。</p></li>
+<li><p>経過勘定振替計上にて仮実行中でないこと。</p></li>
+<li><p>経過勘定振替計上で作成された仕訳で未承認状態のものがないこと。また作成された仕訳に対して、未承認状態の赤仕訳がないこと。</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>組織コード変更情報に登録されている変更前組織と計上組織が一致するもの</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>手形台帳</p></td>
+<td><p>計上組織</p>
+<p>管理組織</p>
+</td>
+<td><ul class="simple">
+<li><p>手形台帳が承認中でないこと</p></li>
+<li><p>組織変更日より後の日付で手形履歴が存在しないこと。</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>組織コード変更情報に登録されている変更前組織と計上組織が一致するもの</p></li>
+<li><p>手形状態区分が売却、破棄、決済以外の手形台帳</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>電子記録債権台帳</p></td>
+<td><p>計上組織</p>
+<p>管理組織</p>
+</td>
+<td><ul class="simple">
+<li><p>電子記録債権台帳が承認中でないこと</p></li>
+<li><p>組織変更日より後の日付で電子記録債権履歴が存在しないこと。</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>組織コード変更情報に登録されている変更前組織と計上組織が一致するもの</p></li>
+<li><p>電子記録債権状態区分が売却、破棄、決済以外の電子記録債権台帳</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>固定資産台帳</p></td>
+<td><p>管理組織</p>
+<p>費用負担組織</p>
+</td>
+<td><ul class="simple">
+<li><p>組織変更日を含む月の前月の償却計算確定後に行うこと</p></li>
+<li><p>固定資産に対する取引が再申請待でない、または、承認中でないこと</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>組織コード変更情報に登録されている変更前組織と管理組織、または、費用負担組織が一致するもの</p></li>
+<li><p>組織変更日の翌日以降に資産取引を行っていないもの</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>建設仮勘定明細</p></td>
+<td><p>計上組織</p></td>
+<td><ul class="simple">
+<li><p>組織変更日を含む月の前月の建設仮勘定振替登録処理がすべて完了後に行うこと</p></li>
+<li><p>建設仮勘定明細に対する取引が再申請待でない、または、承認中でないこと</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>組織コード変更情報に登録されている変更前組織と計上組織が一致するもの</p></li>
+<li><p>未振替であるもの</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>契約台帳</p></td>
+<td><p>契約組織</p>
+<p>決済組織</p>
+<p>損益組織</p>
+</td>
+<td><ul class="simple">
+<li><p>組織変更日を含む月の前月の契約決算更新が必要な場合、契約決算更新終了後に行うこと</p></li>
+<li><p>契約に対する取引が再申請待でない、または、承認中でないこと</p></li>
+</ul>
+</td>
+<td><ul>
+<li><p>組織コード変更情報に登録されている変更前組織と以下のいずれかの組織が一致するもの</p>
+<p>契約組織、決済組織、損益組織</p>
+</li>
+<li><p>契約中であるもの</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>プロジェクト</p></td>
+<td><p>管理組織</p></td>
+<td><ul class="simple">
+<li><p>組織変更日を含む月の前月の月次処理が終了していること</p></li>
+<li><p>プロジェクト申請がが再申請待でない、または、承認中でないこと</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>組織コード変更情報に登録されている変更前組織と管理組織が一致するもの</p></li>
+<li><p>組織変更日に有効なもの</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>工事台帳</p></td>
+<td><p>管理組織</p></td>
+<td><ul class="simple">
+<li><p>組織変更日を含む月の前月の月次処理が終了していること</p></li>
+<li><p>プロジェクト申請が再申請待でないこと、または、承認中でないこと</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>組織コード変更情報に登録されている変更前組織と管理組織が一致するもの</p></li>
+<li><p>組織変更日時点で未完成のもの。</p></li>
+<li><p>組織変更年度の場合、ステータスが&quot;原価差額&quot;でないこと</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>稼働実績</p></td>
+<td><p>計上組織</p></td>
+<td><ul class="simple">
+<li><p>組織変更日を含む月の前月の月次処理が終了していること</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>組織コード変更情報に登録されている変更前組織と計上組織が一致するもの</p></li>
+<li><p>組織変更日の前月以前に計上されているもの</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>注意事項を以下に示します。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15.1%" />
+<col style="width: 84.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>対象台帳</p></th>
+<th class="head"><p>注意事項</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>手形台帳</p></td>
+<td><p>組織変更日より後の日付で手形履歴が存在した場合、受取手形登録/支払手形登録画面から、処理日を最後の手形履歴の処理日以降の日付とし、計上組織/管理組織の変更を行ってください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>電子記録債権台帳</p></td>
+<td><p>組織変更日より後の日付で電子記録債権履歴が存在した場合、電子債権登録/電子債務登録登録画面から、処理日を最後の電子記録債権履歴の処理日以降の日付とし、計上組織/管理組織の変更を行ってください。</p></td>
+</tr>
+<tr class="row-even"><td><p>固定資産台帳</p></td>
+<td><p>組織変更日より後の日付で資産履歴が存在した場合、資産組織変更画面あるいは資産移動画面から、処理日を最後の資産履歴の処理日以降の日付とし、管理組織/費用負担組織の変更を行ってください。</p>
+<p>組織変更に係る移動の仕訳が作成されます。（資産管理パラメータ.移動の会計連携:1(有)の場合）</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>建設仮勘定</p></td>
+<td><p>建設仮勘定の組織振替の仕訳が作成されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>契約台帳</p></td>
+<td><p>組織変更日より後の日付で契約履歴が存在した場合、契約変更画面から、処理日を最後の契約履歴の処理日以降の日付とし、契約組織/決済組織/損益組織の変更を行ってください。</p>
+<p>組織変更に係るリース債務残高振替の仕訳が作成されます。（リース契約管理パラメータ.契約変更仕訳インタフェース:1(仕訳IFを行う)の場合）</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>プロジェクト</p></td>
+<td><p>組織変更日の前月の月次処理で原価差額配賦が実行されている場合、管理組織が変更されると、原価差額配賦戻しの仕訳が作成されます。</p>
+<p>そのため、前月の月次処理で原価差額配賦仕訳が計上されているプロジェクトは、組織変更日時点で有効となるように有効期間の変更が必要になります。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>工事台帳</p></td>
+<td><p>変更前組織から変更後組織への残高振替の仕訳が作成されます。組織別経理簿等で「分割等」に集計されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>稼働実績</p></td>
+<td><p>稼働実績が変更前組織から変更後組織に付け替えられます。そのため、組織変更日以降の月次処理において、原価差額が変更後組織に対して配賦されます。</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="../../import/mst/departmnet.html#fms-import-mst-department-dept-upd"><span class="std std-ref">組織コード変更情報</span></a>を参考にcsvファイルを準備し、以下のメニューの「SF5:一括登録」より登録します。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>既に登録済の場合は2.に進んでください。</p>
+</div>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  業務共通
+    組織変更
+      組織変更情報登録
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p>以下のメニューにて対象処理を選択し、「F5:実行」で対象の組織を自動変換します。</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 17.4%" />
+<col style="width: 39.1%" />
+<col style="width: 43.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>対象台帳</p></th>
+<th class="head"><p>処理名</p></th>
+<th class="head"><p>導入モジュール</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>経過勘定台帳</p></td>
+<td><p>経過勘定計上組織変換</p></td>
+<td><p>一般会計</p></td>
+</tr>
+<tr class="row-odd"><td><p>手形台帳</p></td>
+<td><p>手形台帳計上組織変換</p></td>
+<td><p>手形</p></td>
+</tr>
+<tr class="row-even"><td><p>電子記録債権台帳</p></td>
+<td><p>電子記録債権台帳計上組織変換</p></td>
+<td><p>電子記録債権</p></td>
+</tr>
+<tr class="row-odd"><td><p>固定資産台帳</p></td>
+<td><p>資産組織変更</p></td>
+<td><p>固定資産</p></td>
+</tr>
+<tr class="row-even"><td><p>建設仮勘定明細</p></td>
+<td><p>建設仮勘定組織振替仕訳作成</p></td>
+<td><p>建設仮勘定</p></td>
+</tr>
+<tr class="row-odd"><td><p>契約台帳</p></td>
+<td><p>契約管理組織変更</p></td>
+<td><p>契約管理・リース管理</p></td>
+</tr>
+<tr class="row-even"><td><p>プロジェクト</p></td>
+<td><p>プロジェクト管理組織変更</p></td>
+<td><p>プロジェクト原価管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>工事台帳</p></td>
+<td><p>プロジェクト管理組織変更</p></td>
+<td><p>プロジェクト原価管理</p></td>
+</tr>
+<tr class="row-even"><td><p>稼働実績</p></td>
+<td><p>プロジェクト管理組織変更</p></td>
+<td><p>プロジェクト原価管理</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>プロジェクト管理組織変更処理には、以下の制約があります。</p>
+<p>・組織変更の前月の月次処理が完了し仕掛残高の確定後にプロジェクト管理組織変更を実施してください。</p>
+<p>・プロジェクト管理組織変更処理を実施後、組織変更の前月に原価計上漏れ・労務費の計上漏れが発生した場合は、組織変更の月に調整することを検討してください。プロジェクト管理組織変更を実施後、前月のプロジェクト原価管理の月次処理を再実行した場合、変更後の管理組織で原価が計上されます。この場合には、必要に応じて原価の振替を実施してください。</p>
+<p>・<a class="reference internal" href="../../import/mst/departmnet.html#fms-import-mst-department-grp-dept-upd"><span class="std std-ref">組織グループコード変更情報</span></a>が登録されている場合、プロジェクトマスタの伝票入力可能組織グループも同時に変更します。</p>
+</div>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  業務共通
+    組織変更
+      組織変更実行
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="fms-deptchg-set-hstry-do-manual">
+<span id="id43"></span><h3><span class="section-number">4.4.2.2. </span>画面または一括登録で行う場合<a class="headerlink" href="#fms-deptchg-set-hstry-do-manual" title="Link to this heading">¶</a></h3>
+<p>組織変更実行機能で実施済みの場合、画面または一括登録での対応は不要です。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14.6%" />
+<col style="width: 14.6%" />
+<col style="width: 14.6%" />
+<col style="width: 14.6%" />
+<col style="width: 41.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>対象台帳</p></th>
+<th class="head"><p>項目名</p></th>
+<th class="head"><p>使用機能</p></th>
+<th class="head"><p>確認帳票</p></th>
+<th class="head"><p>備考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>経過勘定台帳</p></td>
+<td><p>計上組織</p></td>
+<td><p>経過勘定情報更新</p></td>
+<td><p>経過勘定台帳</p></td>
+<td><p>計上組織を組織変更後の組織に変更します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>手形台帳</p></td>
+<td><p>計上組織</p>
+<p>管理組織</p>
+</td>
+<td><p>受取手形登録</p>
+<p>支払手形登録</p>
+</td>
+<td><p>受取手形一覧表</p>
+<p>支払手形一覧表</p>
+</td>
+<td><p>計上組織、管理組織を組織変更後の組織に変更します。</p>
+<p>なお、組織変更日を処理日として手形台帳の更新を行いますので、組織変更日以前で手形の状態変更・情報更新を行う予定がある場合は、それらの処理が終わってから実施してください。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>電子記録債権台帳</p></td>
+<td><p>計上組織</p>
+<p>管理組織</p>
+</td>
+<td><p>電子債権登録</p>
+<p>電子債務登録</p>
+</td>
+<td><p>電子債権一覧表</p>
+<p>電子債務一覧表</p>
+</td>
+<td><p>計上組織、管理組織を組織変更後の組織に変更します。</p>
+<p>なお、組織変更日を処理日として電子記録債権台帳の更新を行いますので、組織変更日以前で電子記録債権の状態変更・情報更新を行う予定がある場合は、それらの処理が終わってから実施してください。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>固定資産台帳</p></td>
+<td><p>管理組織</p>
+<p>費用負担組織</p>
+</td>
+<td><p>資産移動登録</p>
+<p>資産一括取込（移動）</p>
+</td>
+<td><p>固定資産台帳</p></td>
+<td><p>管理組織、費用負担組織を組織変更後の組織に変更します。</p>
+<p>資産移動登録、資産一括取込（移動）による組織の変更では、組織変更に係る移動の仕訳が作成されます。（資産管理パラメータ.移動の会計連携:1(有)の場合）</p>
+<p>資産移動登録では以下の入力を行います。</p>
+<ul class="simple">
+<li><p>取引処理日・・・組織変更日を入力します。</p></li>
+<li><p>取引計上日・・・組織変更日を入力します。</p></li>
+<li><p>償却調整方法・・・「移動月の償却を移動先で計上」とします。</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>建設仮勘定明細</p></td>
+<td><p>計上組織</p></td>
+<td><p>建設仮勘定振替</p></td>
+<td><p>仕訳帳</p></td>
+<td><p>建設仮勘定振替にて、以下の入力を行います。</p>
+<ul class="simple">
+<li><p>計上日を組織変更日とします。</p></li>
+<li><p>建設仮勘定明細選択にて、組織変更前の組織で計上されている建設仮勘定仕訳明細を選択します。</p></li>
+<li><p>科目入力画面にて、勘定科目に「建設仮勘定」、計上組織に「組織変更後の組織」を入力して登録します。</p></li>
+</ul>
+<p>建設仮勘定の組織振替の仕訳が作成されます。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>契約台帳</p></td>
+<td><p>契約組織</p>
+<p>決済組織</p>
+<p>損益組織</p>
+</td>
+<td><p>契約変更</p></td>
+<td><p>契約台帳</p></td>
+<td><p>契約組織、決済組織、損益組織を組織変更後の組織に変更します。</p>
+<p>オンバランス契約の変更では、組織変更に係るリース債務残高振替の仕訳が作成されます。（リース契約管理パラメータ.契約変更仕訳インタフェース:1(仕訳IFを行う)の場合）</p>
+<p>なお、組織変更を行う際は変更する前月のオペレーションが全て終わってから実施してください。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>プロジェクト</p></td>
+<td><p>管理組織</p></td>
+<td></td>
+<td></td>
+<td><p>画面/一括登録ではできません。プロジェクトの管理組織を変更する場合、「プロジェクト分割」を行って下さい。</p></td>
+</tr>
+<tr class="row-odd"><td><p>工事台帳</p></td>
+<td><p>管理組織</p></td>
+<td></td>
+<td></td>
+<td><p>画面/一括登録ではできません。</p></td>
+</tr>
+<tr class="row-even"><td><p>稼働実績</p></td>
+<td><p>計上組織</p></td>
+<td></td>
+<td></td>
+<td><p>画面/一括登録ではできません。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="fms-deptchg-set-hstry-endconditions">
+<span id="id44"></span><h2><span class="section-number">4.4.3. </span>完了条件<a class="headerlink" href="#fms-deptchg-set-hstry-endconditions" title="Link to this heading">¶</a></h2>
+<p><strong>組織変更機能を使用して行う場合</strong></p>
+<blockquote>
+<div><p>以下のメニューにて対象のタスクを検索し、結果に添付されている組織変更処理結果リストで実行結果を確認してください。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">システム管理</span><span class="p">(</span><span class="n">会社共通</span><span class="p">)</span>
+  <span class="n">非同期タスク</span>
+    <span class="n">非同期タスクモニタ</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>画面または一括登録で行う場合</strong></p>
+<blockquote>
+<div><p>上表の確認帳票を出力し、台帳の組織が変更されていることを確認してください。</p>
+</div></blockquote>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >組織変更ガイド</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" ><span class="section-number">4. </span>組織変更設定手順</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">4.4. </span>台帳系の組織の変更</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

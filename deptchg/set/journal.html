@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>4.5. 既に計上された仕訳の対応 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="4.6. 残高の移行（未消込残高の移行）" href="balanceshift_nrcncl.html" />
+    <link rel="prev" title="4.4. 台帳系の組織の変更" href="hstry.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >組織変更ガイド</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U"><span class="section-number">4. </span>組織変更設定手順</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">4.5. </span>既に計上された仕訳の対応</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="hstry.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="balanceshift_nrcncl.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">組織変更ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../preface/index.html">1. はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../base/index.html">2. 組織の基本説明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/index.html">3. 組織変更事前準備</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">4. 組織変更設定手順</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="outline.html">4.1. 組織変更手順の概要</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add.html">4.2. 組織の追加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mst.html">4.3. 組織に関わるマスタの変更</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hstry.html">4.4. 台帳系の組織の変更</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4.5. 既に計上された仕訳の対応</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fms-deptchg-set-journal-startconditions">4.5.1. 着手条件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-deptchg-set-journal-do">4.5.2. 実行手順</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-deptchg-set-journal-endconditions">4.5.3. 完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="balanceshift_nrcncl.html">4.6. 残高の移行（未消込残高の移行）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="balanceshift.html">4.7. 残高の移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="term_division.html">4.8. 組織の有効期間分割</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deptgrouopchg/index.html">5. 組織グループ変更手順</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-deptchg-set-journal">
+<span id="id39"></span><h1><span class="section-number">4.5. </span>既に計上された仕訳の対応<a class="headerlink" href="#fms-deptchg-set-journal" title="Link to this heading">¶</a></h1>
+<p>組織変更日から組織が無効となる場合、組織変更日以降にその組織に計上している仕訳が存在する場合、そのままでは残高移行ができません。</p>
+<p>そのような仕訳があるかを移行前に確認します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>一般会計モジュールを未導入の場合、仕訳明細検索は使用できないため、各仕訳の申請書等で変換が必要な対象を特定してください。</p>
+</div>
+<section id="fms-deptchg-set-journal-startconditions">
+<span id="id40"></span><h2><span class="section-number">4.5.1. </span>着手条件<a class="headerlink" href="#fms-deptchg-set-journal-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../preparation/shiftlist.html#fms-deptchg-preparation-shiftlist"><span class="std std-ref">新旧移行表の作成</span></a>の作業が完了していること。</p>
+<p>新しい組織を追加する場合、<a class="reference internal" href="add.html#fms-deptchg-set-add"><span class="std std-ref">組織の追加</span></a>の作業が完了していること。</p>
+</section>
+<section id="fms-deptchg-set-journal-do">
+<span id="id41"></span><h2><span class="section-number">4.5.2. </span>実行手順<a class="headerlink" href="#fms-deptchg-set-journal-do" title="Link to this heading">¶</a></h2>
+<p><strong>無効となる組織が、計上組織の場合</strong></p>
+<ol class="arabic simple">
+<li><p>対象の検索</p></li>
+</ol>
+<blockquote>
+<div><p>仕訳明細検索画面より、該当の組織が計上組織として登録されている仕訳を検索する。</p>
+<p>条件として、計上日に組織が無効となる期間を指定し、計上組織コードに該当の組織を設定して検索する。また、仕訳種類、仕訳種別のチェックボックスは全てチェックする。</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>対象の更新</p></li>
+</ol>
+<blockquote>
+<div><p>検索した仕訳明細の仕訳番号をキーに、各仕訳登録画面から更新対象の仕訳の計上組織を更新する。すべての対象仕訳の計上組織を更新することにより、無効期間で該当の組織に元帳残高が残らないようにしてください。</p>
+</div></blockquote>
+<p><strong>無効となる組織が、起票組織の場合</strong></p>
+<blockquote>
+<div><p>仕訳データには、仕訳の登録日を保持しています。計上日時点で起票組織が無効となる仕訳でも、登録日時点で起票組織が有効であるならば、移行に問題はありません。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>無効になる起票組織で起票された仕訳に対し、組織変更日以降も参照・更新を行う必要があるユーザには、権限設定で、組織変更日より後の期間で有効な組織グループに廃止組織を所属させてください。（組織変更日以降は、組織は無効で組織グループ所属は有効とする）</p>
+</div>
+</div></blockquote>
+</section>
+<section id="fms-deptchg-set-journal-endconditions">
+<span id="id42"></span><h2><span class="section-number">4.5.3. </span>完了条件<a class="headerlink" href="#fms-deptchg-set-journal-endconditions" title="Link to this heading">¶</a></h2>
+<p>仕訳明細検索画面より、実行手順と同じ条件で検索し、該当の組織の仕訳が検索されないことを確認してください。</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >組織変更ガイド</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" ><span class="section-number">4. </span>組織変更設定手順</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">4.5. </span>既に計上された仕訳の対応</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
