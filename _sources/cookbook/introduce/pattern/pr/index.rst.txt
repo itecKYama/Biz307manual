@@ -1,0 +1,47 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_pattern_pr:
+
+===================================================
+債権債務
+===================================================
+債権債務モジュールの業務に必要な仕訳パターンを登録します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   jrnlptn_rae
+   jrnlptn_transferfee
+   jrnlptn_fxgol_dtl
+   jrnlptn_withholdingtax_dealdtl
+   jrnlptn_paymentjrnldtl
+   jrnlptn_aptransfer_dtl
+   jrnlptn_taxreceived
+   jrnlptn_taxpaid
+   jrnlptn_domtbt_denominationdtl
+   jrnlptn_auto_Rcncl_fee_dtl
+   jrnlptn_firstmonth
+   jrnlptn_bank_account_transfer
+   jrnlptn_regular_deal
+   jrnlptn_adjust_tax_journal
+   jrnlptn_taxincluded_taxreceived
+   jrnlptn_taxincluded_taxpaid
+
+.. only:: internal
+
+  jrnlptn_rae                     :自動引落費用計上仕訳パターンの登録
+  jrnlptn_transferfee             :振込手数料立替仕訳パターンの登録
+  jrnlptn_fxgol_dtl               :仕訳パターン_為替差損益仕訳明細
+  jrnlptn_withholdingtax_dealdtl  :仕訳パターン_源泉税取引仕訳明細の登録
+  jrnlptn_paymentjrnldtl          :仕訳パターン_支払仕訳明細の登録
+  jrnlptn_aptransfer_dtl          :仕訳パターン_債務振替仕訳明細の登録
+  jrnlptn_taxreceived             :仕訳パターン_締時一括消費税仕訳（仮受消費税用）の登録
+  jrnlptn_taxpaid                 :仕訳パターン_締時一括消費税仕訳（仮払消費税用）の登録
+  jrnlptn_domtbt_denominationdtl  :仕訳パターン_振込入金明細の登録
+  jrnlptn_auto_Rcncl_fee_dtl      :仕訳パターン_自動消込手数料仕訳明細の登録
+  jrnlptn_firstmonth              :仕訳パターン_月初日引落仕訳の登録
+  jrnlptn_bank_account_transfer   :仕訳パターン_口座振替仕訳明細の登録
+  jrnlptn_ar_regular_deal         :仕訳パターン_定期／債務の登録
+  jrnlptn_adjust_tax_journal      :仕訳パターン_調整消費税仕訳作成の登録
+  jrnlptn_taxincluded_taxreceived :仕訳パターン_締時一括消費税仕訳（税込仮受消費税用）の登録
+  jrnlptn_taxincluded_taxpaid     :仕訳パターン_締時一括消費税仕訳（税込仮払消費税用）の登録

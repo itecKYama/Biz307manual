@@ -1,0 +1,18 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_restApiIntegration:
+
+===================================================
+REST API を使用した外部連携
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   aiCooperationImportUploadFile
+   gaConsolidatedAccountInterfaceExportReport
+
+.. only:: internal
+
+   aiCooperationImportUploadFile              :連携ファイルを会計連携テーブルに登録する
+   gaConsolidatedAccountInterfaceExportReport :連結連携情報出力ファイルをダウンロードする

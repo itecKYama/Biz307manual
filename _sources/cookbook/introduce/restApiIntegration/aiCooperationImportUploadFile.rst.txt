@@ -1,0 +1,81 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_restApiIntegration_aiCooperationImportUploadFile:
+
+===================================================
+仕訳情報を |FMS| にファイル連携する
+===================================================
+
+連携元システムから連携対象のデータを出力したファイルの内容を |REST| を使用して会計連携テーブルに登録する方法を説明します。
+
+.. _FMS_cookbook_introduce_restApiIntegration_aiCooperationImportUploadFile_prepare:
+
+前提条件
+===================================================
+
+* :ref:`FMS_introduce_module_ai-import_config` が完了していること。
+
+  * 「連携するデータがファイルの場合」を実施していること。
+
+.. _FMS_cookbook_introduce_restApiIntegration_aiCooperationImportUploadFile_do:
+
+実行手順
+===================================================
+
+連携方法は以下のとおりです。
+
+  .. list-table::
+     :widths: 1, 4, 4, 2, 2, 4
+     :header-rows: 1
+
+     * - 実行順
+       - 概要
+       - |REST|
+       - | HTTP
+         | メソッド
+       - パス
+       - パラメータ
+     * - 1
+       - 連携ファイルアップロード
+       - 共有ストレージサービス |REST| > アップロード
+       - POST
+       - /api/v1/biz/cc/sharedStorages/upload
+       - file [#file]_
+     * - 2
+       - 連携ファイル取込
+       - 会計連携テーブル |REST| > アップロードファイル取込
+       - POST
+       - /api/v1/fms/ai/cooperation/importUploadFile
+       - | fileUploadContextId [#fileUploadContextId]_
+         | createApplicationType [#createApplicationType]_
+         | createApplicationCategory [#createApplicationCategory]_
+
+  .. [#file] 連携元システムから出力したファイルを指定します。
+
+    .. note::
+
+      | アップロードできる最大ファイルサイズの初期値は 10MB です。
+      | 上限値は ${RESIN_HOME}/webapps/imart/WEB-INF/conf/request-control-config.xml のリクエストクエリの長さ制限から変更できます。
+
+  .. [#fileUploadContextId] 実行順1の戻り値であるファイルアップロードコンテキストIDを指定します。
+  .. [#createApplicationType] :ref:`FMS_introduce_module_ai-import_config` で登録した作成アプリケーションを指定します。
+  .. [#createApplicationCategory] :ref:`FMS_introduce_module_ai-import_config` で登録した作成アプリケーション分類を指定します。
+
+
+.. _FMS_cookbook_introduce_restApiIntegration_aiCooperationImportUploadFile_example:
+
+cURLコマンドを利用した |REST| 実行例
+---------------------------------------------------
+
+  1. 連携ファイルアップロード
+
+    コマンド例 ::
+
+      curl -X POST -F file=@./sample.csv -u B12200:PASSWORD http://localhost:8080/imart/basic/api/v1/biz/cc/sharedStorages/upload
+
+
+  2. 連携ファイル取込
+
+    コマンド例 ::
+
+      curl -X POST -H "Content-Type: application/json" -u B12200:PASSWORD http://localhost:8080/imart/basic/api/v1/fms/ai/cooperation/importUploadFile -d "{\"fileUploadContextId\": \"f3f3222ac6ad4221ad926f148398315c\", \"createApplicationType\": \"smp\", \"createApplicationCategory\": \"up\"}"

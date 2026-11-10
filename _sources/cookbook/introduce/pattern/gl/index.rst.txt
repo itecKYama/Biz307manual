@@ -1,0 +1,17 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_pattern_gl:
+
+===================================================
+一般会計
+===================================================
+一般会計モジュールの業務に必要な仕訳パターンを登録します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   jrnlptn_regular_journal
+
+.. only:: internal
+
+  jrnlptn_regular_journal   :仕訳パターン_定期仕訳の登録

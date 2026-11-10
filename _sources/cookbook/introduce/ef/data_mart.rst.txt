@@ -1,0 +1,190 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_ef-date_mart:
+
+===================================================
+データマートを追加する
+===================================================
+|FMS| 着地見込管理モジュールでは、出力する着地見込情報単位で以下の :ref:`FMS_introduce_module_ef-ef-data_mart` をプリセットしています。
+
+* 科目別着地見込データマート
+* 科目別組織別着地見込データマート
+* 分析フィールド別科目別着地見込データマート
+* 組織別分析フィールド別科目別着地見込データマート
+* 取引先別科目別着地見込データマート
+* 組織別取引先別科目別着地見込データマート
+
+.. note::
+
+  「分析フィールド別」は分析軸として分析フィールド1、2を採用しています。
+
+| データマートは用途・目的別などに追加が可能であり、以下のような要件を満たすことができます。
+| 本項では、要件を満たすために必要となるデータマートや着地見込テンプレートを追加する手順を説明します。
+
+* プリセットしている軸以外での分析
+
+  * 分析フィールド1、2以外の分析フィールドで分析したい。
+  * 分析フィールドの分析軸を3軸以上に増やしたい。
+  * 取引先と分析フィールドを合わせて分析したい。
+
+* プリセットしているデータマートに対して特定条件での絞り込み
+
+  * PL科目のみで分析したい。（財務諸表区分の条件を追加）
+
+.. _FMS_cookbook_introduce_ef-date_mart-do:
+
+実行手順
+===================================================
+1. データマートを作成します。
+
+  | 標準機能で提供しているデータマートのビュー定義書やDDLを参考に、分析したい軸を持ったデータマートをマテリアライズド・ビューで作成してください。
+  | 性能やEXCELの行数制限を考慮して、標準機能と同様に、出力する項目で集計してください。
+
+  .. note::
+
+    | データマートを構成している実績・見込のファクトは、借方残高をプラス、貸方残高をマイナスとして集計されます。
+    | データマート上で貸方科目をプラスとして表示したい場合、貸方科目であれば金額に -1 を掛けてください。
+
+  .. note::
+
+    | 画面の検索条件となるデータマートの項目物理名を以下としてください。
+    | 物理名が異なる場合、絞り込み条件が効かない、あるいは着地見込出力でエラーとなる場合があります。
+
+      .. list-table::
+         :widths: 10, 10, 5
+         :header-rows: 1
+
+         * - 項目名
+           - 項目物理名
+           - 必須 [#ri]_
+         * - 会社コード
+           - company_cd
+           - ○
+         * - 時間特性
+           - year_month
+           - ○
+         * - 会計年度
+           - finance_year
+           - ○
+         * - 会計月度
+           - finance_month
+           - ○
+         * - 情報区分
+           - info_type
+           - ○
+         * - 仕訳種類
+           - journal_kind
+           - ○
+         * - 決算種別
+           - closing_class
+           - 
+         * - 元帳区分
+           - ledger_type
+           - 
+         * - 予算番号
+           - budget_no
+           - 
+         * - 財務諸表区分
+           - fs_type
+           - ○
+         * - 勘定科目コード
+           - account_cd
+           - ○
+         * - 計上組織コード
+           - post_department_cd
+           - 
+         * - 法人グループコード
+           - corporation_group_cd
+           - 
+         * - 法人コード
+           - corporation_cd
+           - 
+         * - 取引先コード
+           - customer_cd
+           - 
+         * - 配賦段階パターンコード
+           - allocation_phase_pattern_cd
+           - 
+         * - 配賦段階
+           - allocation_phase
+           - 
+         * - 分析フィールド1
+             ※分析フィールド2～10,21～30も同様
+           - analyze_field1
+           - 
+
+    .. [#ri] データマートに必ず必要な項目
+
+2. データマート管理テーブルにデータを追加します。
+
+  | 上記で作成したデータマートをデータマート管理テーブル（fms_ef_data_mart）に追加します。
+  | データマートに設定した項目に応じて使用フラグを設定してください。
+
+  .. note::
+
+    | 使用フラグは着地見込出力の抽出条件として使用するかどうかを識別します。
+    | データマートに保持していない項目の使用フラグは「0:使用しない」を設定してください。
+
+  | 次のSQLは、データマート管理テーブルにPL科目に絞った科目別着地見込データマートのデータを追加する例文です。
+  | 各項目については、エンティティ定義書を参照してください。
+
+  .. code-block:: none
+
+    INSERT INTO fms_ef_data_mart (
+       company_cd, data_mart_id, data_mart_name, is_use_bgt
+      ,is_use_blc, is_use_est, is_use_budget_no, is_use_ledger_type
+      ,is_use_jrnl_kind, is_use_cls_kind, is_use_allocation
+      ,is_use_dept, is_use_cstmr, is_use_anlyz1, is_use_anlyz2
+      ,is_use_anlyz3, is_use_anlyz4, is_use_anlyz5, is_use_anlyz6
+      ,is_use_anlyz7, is_use_anlyz8, is_use_anlyz9, is_use_anlyz10
+      ,is_use_anlyz21, is_use_anlyz22, is_use_anlyz23, is_use_anlyz24, is_use_anlyz25
+      ,is_use_anlyz26, is_use_anlyz27, is_use_anlyz28, is_use_anlyz29, is_use_anlyz30
+      ,delete_flag, version_no, create_user_cd, create_date
+      ,record_user_cd, record_date
+    ) VALUES (
+       'BZ1', 'fms_ef_v_pl_acc_ef', 'PL科目別着地見込データマート', '1'
+      ,'1', '1', '1', '1'
+      ,'1', '1', '1'
+      ,'0', '0', '0', '0'
+      ,'0', '0', '0', '0'
+      ,'0', '0', '0', '0'
+      ,'0', '0', '0', '0', '0'
+      ,'0', '0', '0', '0', '0'
+      ,'0', '1', 'fms', systimestamp
+      ,'fms', systimestamp
+    );
+
+3. マテリアライズドビュー管理テーブルにデータを追加します。
+
+  | 上記で作成したデータマートをマテリアライズドビュー管理テーブル（fms_ef_mview）に追加します。
+  | ビュー種類を「3:データマート」にすることで、 :ref:`FMS_introduce_module_ef-job` の「マテリアライズドビュー更新」ジョブにてデータマート単位の更新が可能となります。
+
+  | 次のSQLは、マテリアライズドビュー管理テーブルにPL科目に絞った科目別着地見込データマートのデータを追加する例文です。
+  | 各項目については、エンティティ定義書を参照してください。
+
+  .. code-block:: none
+
+    INSERT INTO fms_ef_mview (
+       view_name, reflect_record_time, view_kind, delete_flag
+      ,version_no, create_user_cd, create_date, record_user_cd, record_date
+    ) VALUES (
+       'fms_ef_v_pl_acc_ef', systimestamp, '3', '0'
+      ,'1', 'fms', systimestamp, 'fms', systimestamp
+    );
+
+4. データマートに応じた着地見込テンプレートを作成します。
+
+  | プリセットしている着地見込テンプレートのEXCELファイルを参考に、データマートの項目に応じたEXCELファイルを作成します。
+  | 最も右にあるシート（標準は「データシート」）にデータマートの全項目を「A1セル」から設定してください。
+  | データシートの位置や項目に不備がある場合、着地見込出力にてエラー、または正しく出力されません。
+
+5. 着地見込テンプレートを登録します。
+
+  | 上記で作成したデータマートを着地見込出力で利用するために、着地見込テンプレートを登録します。
+  | 登録手順は :ref:`FMS_cookbook_introduce_ef-ef_tmp` を参照してください。
+
+.. _FMS_cookbook_introduce_ef-date_mart-endConditions:
+
+完了条件
+===================================================
+作成したデータマート、着地見込テンプレートを利用した着地見込出力が正常に動作することを確認してください。

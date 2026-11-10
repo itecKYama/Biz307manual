@@ -1,0 +1,33 @@
+.. include:: ../../include/definition.txt
+
+.. _FMS_cookbook_introduce:
+
+===================================================
+導入
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   pattern/index
+   balanceshift/index
+   dtlshift/index
+   batch/index
+   reportLayout
+   ef/index
+   gt/index
+   gm/index
+   restApiIntegration/index
+
+.. only:: internal
+
+  pattern            :仕訳の自動作成に使用する仕訳パターンを登録する
+  balanceshift       :残高移行
+  dtlshift           :明細移行
+  batch              :ジョブ
+  reportLayout       :帳票レイアウトを使い分けるための設定を行う
+  ef                 :着地見込管理
+  gt                 :グループ会社間取引
+  gm                 :グループ連結オペレーション
+  restApiIntegration :REST API を用いた外部連携
+

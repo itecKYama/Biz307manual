@@ -1,0 +1,20 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_ef:
+
+===================================================
+着地見込管理
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   data_mart
+   ef_tmp
+   dm_index
+
+.. only:: internal
+
+   data_mart : データマートを追加する
+   ef_tmp    : 着地見込テンプレート登録
+   dm_index  : データマートのインデックス検討

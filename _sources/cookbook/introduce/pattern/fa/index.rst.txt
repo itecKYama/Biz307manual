@@ -1,0 +1,17 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_pattern_fa:
+
+===================================================
+資産管理
+===================================================
+資産管理モジュールの業務に必要な仕訳パターンを登録します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   jrnlptn_fa
+
+.. only:: internal
+
+  jrnlptn_fa :資産管理仕訳パターンの登録

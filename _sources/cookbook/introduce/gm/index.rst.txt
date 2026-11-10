@@ -1,0 +1,17 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_gm:
+
+===================================================
+グループ連結オペレーション
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   corporation
+
+.. only:: internal
+
+   corporation         :グループ会社を変更する（既存導入会社の追加・除外）
+

@@ -1,0 +1,22 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_gt:
+
+===================================================
+グループ会社間取引
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   corporation
+   cooperate_gt_batch
+   gt_recovery
+   before_introduction
+
+.. only:: internal
+
+   corporation         :グループ会社を変更する（既存導入会社の追加・連結除外）
+   cooperate_gt_batch  :グループ会社間取引連携ジョブを一括実行する
+   gt_recovery         :連携誤り・漏れのリカバリ手順
+   before_introduction :グループ会社間取引モジュールの導入前に計上した取引（債権）を連携する

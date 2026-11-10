@@ -1,0 +1,21 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_pattern_om:
+
+===================================================
+組織変更
+===================================================
+
+組織変更
+
+.. toctree::
+   :maxdepth: 1
+   
+   jrnlptn_dept_bal_xfer_dtl
+   jrnlptn_unErasing_bal_xfer_dtl
+
+.. only:: internal
+
+  jrnlptn_dept_bal_xfer_dtl      :仕訳パターン_組織残高振替仕訳明細の登録
+  jrnlptn_unErasing_bal_xfer_dtl :仕訳パターン_未消込残高振替仕訳明細の登録
+

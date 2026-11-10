@@ -1,0 +1,36 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_pattern:
+
+===================================================
+仕訳の自動作成に使用する仕訳パターンを登録する
+===================================================
+各モジュールについて仕訳の自動作成を行うために以下の仕訳パターンを登録します。
+
+一括取込マニュアルの :ref:`FMS_import_mst-jrnl_ptn-jrnl_ptn` を参考に一括取込する事も可能です。
+
+.. toctree::
+   :maxdepth: 2
+   
+   fc/index
+   gl/index
+   pr/index
+   bn/index
+   ec/index
+   cm/index
+   fe/index
+   fa/index
+   om/index
+
+.. only:: internal
+
+   fc/index : 会計コア
+   gl/index : 一般会計
+   pr/index : 債権債務
+   bn/index : 手形管理
+   ec/index : 電子記録債権管理
+   cm/index : 資金管理
+   fe/index : 外貨管理
+   fa/index : 資産管理
+   om/index : 組織変更
+

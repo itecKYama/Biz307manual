@@ -1,0 +1,17 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_pattern_cm:
+
+===================================================
+資金管理
+===================================================
+資金管理モジュールの業務に必要な仕訳パターンを登録します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   jrnlptn_mof_dtl
+
+.. only:: internal
+
+  jrnlptn_mof_dtl :仕訳パターン_資金移動仕訳明細の登録

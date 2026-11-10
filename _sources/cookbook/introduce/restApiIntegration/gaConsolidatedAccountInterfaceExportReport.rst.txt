@@ -1,0 +1,87 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_restApiIntegration_gaConsolidatedAccountInterfaceExportReport:
+
+===================================================
+Biz∫連結へ連携するファイルをダウンロードする
+===================================================
+
+連結連携情報出力ファイルを |REST| を使用してダウンロードする方法を説明します。
+
+.. _FMS_cookbook_introduce_restApiIntegration_gaConsolidatedAccountInterfaceExportReport_do:
+
+実行手順
+===================================================
+
+ダウンロード方法は以下のとおりです。
+
+  .. list-table::
+     :widths: 1, 4, 4, 2, 2, 4
+     :header-rows: 1
+
+     * - 実行順
+       - 概要
+       - |REST|
+       - | HTTP
+         | メソッド
+       - パス
+       - パラメータ
+     * - 1
+       - Biz∫連結連携情報出力
+       - Biz∫連結連携 |REST| > ファイル出力
+       - POST
+       - /api/v1/fms/ga/consolidatedAccountInterface/exportReport
+       - | outputFileKind [#outputFileKind]_
+         | edgerType [#edgerType]_
+         | targetYearMonthFrom [#targetYearMonthFrom]_
+         | targetYearMonthTo [#targetYearMonthTo]_
+         | accountConstructCd [#accountConstructCd]_
+         | corporationGroupCd [#corporationGroupCd]_
+     * - 2
+       - ダウンロードトークン取得
+       - 非同期タスクサービス |REST| > ダウンロード用共有ストレージトークンの取得
+       - GET
+       - /api/v1/biz/cc/asyncTasks/tokens/<非同期タスクID> [#asyncTaskId]_
+       - ー
+     * - 3
+       - ファイルダウンロード
+       - 共有ストレージサービス |REST| > ダウンロード
+       - GET
+       - /api/v1/biz/cc/sharedStorages/<ダウンロードトークン> [#downloadToken]_
+       - ー
+
+  .. rubric:: 注釈
+
+  .. [#outputFileKind] | 出力ファイル種類を指定します。
+                       | 0:個別財務諸表、1:相手先別明細
+  .. [#edgerType] | 元帳区分を指定します。
+                  | 0:共通、1:日本、2:IFRS
+  .. [#targetYearMonthFrom] 対象年月（自）を指定します。
+  .. [#targetYearMonthTo] 対象年月（至）を指定します。
+  .. [#accountConstructCd] 科目構成コードを指定します。
+  .. [#corporationGroupCd] 出力ファイル種類が 1:相手先別明細 の場合、必須です。法人グループコードを指定します。
+  .. [#asyncTaskId] 実行順1の戻り値である非同期タスクIDを指定します。
+  .. [#downloadToken] 実行順2の戻り値であるダウンロードトークンを指定します。
+
+.. _FMS_cookbook_introduce_restApiIntegration_gaConsolidatedAccountInterfaceExportReport_example:
+
+cURLコマンドを利用した |REST| 実行例
+---------------------------------------------------
+
+1. Biz∫連結連携情報出力
+
+  コマンド例 ::
+
+    curl -X POST -H "Content-Type: application/json" -u B12200:PASSWORD http://localhost:8080/imart/basic/api/v1/fms/ga/consolidatedAccountInterface/exportReport -d "{\"outputFileKind\": \"0\", \"ledgerType\": \"1\", \"targetYearMonthFrom\": \"202304\", \"targetYearMonthTo\": \"202403\", \"accountConstructCd\": \"0000000001\", \"corporationGroupCd\": \"\"}\"
+
+2. ダウンロードトークン取得
+
+  コマンド例 ::
+
+    curl GET -u B12200:PASSWORD http://localhost:8080/imart/basic/api/v1/biz/cc/asyncTasks/tokens/8h4n6mdpgy3x152
+
+3. ファイルダウンロード
+
+  コマンド例 ::
+
+    curl GET -u B12200:PASSWORD --output downloadFile.csv http://localhost:8080/imart/basic/api/v1/biz/cc/sharedStorages/788c45a6e2e7532af5d2b848e012f354

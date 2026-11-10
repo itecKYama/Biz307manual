@@ -1,0 +1,17 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_pattern_fe:
+
+===================================================
+外貨管理
+===================================================
+外貨管理モジュールの業務に必要な仕訳パターンを登録します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   jrnlptn_fxrevaluation_dtl
+
+.. only:: internal
+
+  jrnlptn_fxrevaluation_dtl :仕訳パターン_外貨評価替仕訳明細の登録

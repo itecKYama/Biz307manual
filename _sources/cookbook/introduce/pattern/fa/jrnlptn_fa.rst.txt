@@ -1,0 +1,75 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_pattern_fa-jrnlptn_fa:
+
+===================================================
+資産管理仕訳パターンの登録
+===================================================
+一般会計、債権管理へ連携する仕訳の仕訳パターンを登録します。
+
+資産管理モジュールのみ導入された場合などで仕訳の連携が不要な場合には、登録する必要はありません。
+
+.. _FMS_cookbook_introduce_pattern_fa-jrnlptn_fa-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_core-parameter` の作業を終えていること
+
+.. _FMS_cookbook_introduce_pattern_fa-jrnlptn_fa-do:
+
+実行手順
+===================================================
+Biz∫会計管理者アカウントでポータル画面にログインし、「SF5:一括登録」を押下し登録します。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            仕訳パターンマスタ登録
+
+.. note::
+
+  一括登録を行う場合、一括取込マニュアルの :ref:`FMS_import_mst-jrnl_ptn` を参考に取込ファイルを準備し登録します。
+
+* 仕訳の明細項目について
+
+  * 貸借片仕訳で、1行のみ入力して下さい。
+
+  * 仕訳パターンの値が適用される明細項目は下表のとおりです。
+
+  .. list-table::
+     :widths: 2, 8
+     :header-rows: 1
+
+     * - 項目
+       - 設定値
+     * - 勘定科目
+       - :ref:`FMS_introduce_module_fa-fixed_asset_journal_set` の資産科目区分に該当する勘定科目コード
+     * - 補助科目
+       - :ref:`FMS_introduce_module_fa-fixed_asset_journal_set` の資産科目区分に該当する補助科目コード
+     * - 計上組織
+       - 入力不要
+     * - 消費税
+       - 入力不要
+     * - 入力金額
+       - 入力不要
+     * - 入力税額
+       - 入力不要
+     * - 分析フィールド1～10、21～30
+       - :ref:`FMS_introduce_module_fa-fixed_asset_journal_set` の科目以外の設定区分が「仕訳パターン」の場合、仕訳登録する分析コード
+     * - 分析テキスト11～20、31～40
+       - :ref:`FMS_introduce_module_fa-fixed_asset_journal_set` の科目以外の設定区分が「仕訳パターン」の場合、仕訳登録する分析コード
+
+.. _FMS_cookbook_introduce_pattern_fa-jrnlptn_fa-endConditions:
+
+完了条件
+===================================================
+一括登録は非同期タスクとして実行されます。以下のメニューより「仕訳パターンマスタ登録」がエラーなく終了していることを確認します。
+
+* メニュー ::
+
+    システム管理（会社共通）
+      非同期タスク
+        非同期タスクモニタ
