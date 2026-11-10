@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>トランザクション一括取込 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="仕訳／取引一括取込" href="jrnl_deal.html" />
+    <link rel="prev" title="案件プロパティマッピングマスタ" href="../mst/matter_property_mapping.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" accesskey="U">一括取込マニュアル</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">トランザクション一括取込</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="../mst/matter_property_mapping.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="jrnl_deal.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">一括取込マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../explanation.html">共通説明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../supplementary_item.html">共通の補足事項</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mst/index.html">マスタ一括取込</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">トランザクション一括取込</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="jrnl_deal.html">仕訳／取引一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reconcile_request.html">消込依頼一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bank_deal.html">銀行ファイル取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fund_xfer.html">資金移動一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bill.html">手形一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ermc.html">電子記録債権一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="budget.html">予算一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="expected.html">見込一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="asset.html">資産一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="asset_history.html">資産履歴一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plan.html">設備投資資産一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="impairment.html">減損一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix16_history.html">別表十六履歴一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contact.html">契約一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dissolutioncontact.html">中途解約一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project_budget.html">プロジェクト計画一括取込</a></li>
+<li class="toctree-l3"><a class="reference internal" href="actual_operation.html">稼働実績</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-import-tran">
+<span id="id39"></span><h1>トランザクション一括取込<a class="headerlink" href="#fms-import-tran" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="jrnl_deal.html">仕訳／取引一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jrnl_deal.html#fms-import-mst-jrnl-deal-jrnl">仕訳一括取込</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jrnl_deal.html#fms-import-mst-jrnl-deal-deal-ar">債権一括取込</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jrnl_deal.html#fms-import-mst-jrnl-deal-deal-ap">債務一括取込</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jrnl_deal.html#fms-import-mst-jrnl-deal-deal-ic">入金一括取込</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jrnl_deal.html#fms-import-mst-jrnl-deal-deal-py">支払一括取込</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jrnl_deal.html#fms-import-mst-jrnl-deal-deal-gtap">グループ会社間取引債務一括取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reconcile_request.html">消込依頼一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reconcile_request.html#fms-import-mst-reconcile-request-reconcile-request">消込依頼一括取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bank_deal.html">銀行ファイル取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bank_deal.html#fms-import-mst-bank-deal-transfer-income">振込入金取込</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bank_deal.html#fms-import-mst-bank-deal-automatic-debit">自動引落取込</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bank_deal.html#fms-import-mst-bank-deal-bank-account-transfer-result-import">口座振替結果ファイル取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fund_xfer.html">資金移動一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fund_xfer.html#fms-import-mst-fund-xfer-fund-xfer">資金移動一括取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bill.html">手形一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bill.html#fms-import-mst-bill-receivable">受取手形一括取込</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bill.html#fms-import-mst-bill-payable">支払手形一括取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ermc.html">電子記録債権一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ermc.html#fms-import-mst-ermc-receivable">電子債権一括取込</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ermc.html#fms-import-mst-ermc-payable">電子債務一括取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="budget.html">予算一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="budget.html#fms-import-mst-budget-budget">予算一括取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="expected.html">見込一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="expected.html#fms-import-mst-expected-expected">見込一括取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="asset.html">資産一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="asset.html#fms-import-mst-asset-acquisition">資産一括取込（登録）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset.html#fms-import-mst-asset-modify">資産一括取込（変更）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset.html#fms-import-mst-asset-shift">資産一括取込（移動）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset.html#fms-import-mst-asset-retirement">資産一括取込（除却）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset.html#fms-import-mst-asset-sale">資産一括取込（売却）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="asset_history.html">資産履歴一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="asset_history.html#fms-import-mst-asset-history-acquisition">資産履歴一括取込（登録）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset_history.html#fms-import-mst-asset-history-shift">資産履歴一括取込（移動）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset_history.html#fms-import-mst-asset-history-retirement">資産履歴一括取込（除却）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset_history.html#fms-import-mst-asset-history-sale">資産履歴一括取込（売却）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset_history.html#fms-import-mst-asset-history-retirement-obligations">資産履歴一括取込（除去債務）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plan.html">設備投資資産一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plan.html#fms-import-mst-plan-acquisition">設備投資資産一括取込（取得予定）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan.html#fms-import-mst-plan-shift">設備投資資産一括取込（移動予定）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan.html#fms-import-mst-plan-retirement-sale">設備投資資産一括取込（除売却予定）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="impairment.html">減損一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="impairment.html#fms-import-mst-impairment-detail">減損明細一括取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix16_history.html">別表十六履歴一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendix16_history.html#fms-import-mst-appendix16-history-appendix168">別表十六（八）履歴一括取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">契約一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#fms-import-mst-contact-contact-entry">契約一括取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dissolutioncontact.html">中途解約一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dissolutioncontact.html#fms-import-mst-contact-dissolutioncontact-entry">中途解約一括取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="project_budget.html">プロジェクト計画一括取込</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="project_budget.html#fms-import-mst-project-budget-project-budget">プロジェクト計画一括取込</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="actual_operation.html">稼働実績</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="actual_operation.html#fms-import-mst-actual-operation-actual-operation">稼働実績取込</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >一括取込マニュアル</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">トランザクション一括取込</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
