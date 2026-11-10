@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>1. 着地見込管理の構成 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="2. 制限事項" href="limitations.html" />
+    <link rel="prev" title="着地見込管理の導入" href="index.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">着地見込管理の導入</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">1. </span>着地見込管理の構成</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="index.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="limitations.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">モジュール別の導入</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../gl/index.html">一般会計の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pr/index.html">債権債務の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bn/index.html">手形管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ec/index.html">電子記録債権管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cm/index.html">資金管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ma/index.html">管理会計の導入</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">着地見込管理の導入</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1. 着地見込管理の構成</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-ef-ef-data-mart">1.1. データマート</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-ef-ef-dimention">1.2. ディメンション</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-ef-ef-fact">1.3. ファクト</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-ef-ef-etc">1.4. その他</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="limitations.html">2. 制限事項</a></li>
+<li class="toctree-l4"><a class="reference internal" href="parameter.html">3. パラメータ設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounting_type.html">4. 会計種別の登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="template.html">5. 着地見込テンプレート登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="job.html">6. ジョブ登録</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../fe/index.html">外貨管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fa/index.html">資産管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cp/index.html">建設仮勘定の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lc/index.html">契約管理・リース管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jc/index.html">プロジェクト原価管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ga/index.html">グループ会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ai/index.html">会計連携の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bc/index.html">業務共通の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gt/index.html">グループ会社間取引の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gm/index.html">グループ連結オペレーション の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ac/index.html">過年度アーカイブ の導入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-module-ef-ef">
+<span id="id39"></span><h1><span class="section-number">1. </span>着地見込管理の構成<a class="headerlink" href="#fms-introduce-module-ef-ef" title="Link to this heading">¶</a></h1>
+<p>着地見込管理は、マスタやトランザクションのデータを利用し、多分析軸から着地見込を把握するためのモジュールとなります。</p>
+<p><a class="reference download internal" download="" href="../../../_downloads/325c8604c205456f6039ff9ce9221a46/overall_flow.pptx"><code class="xref download docutils literal notranslate"><span class="pre">着地見込管理の構成</span></code></a>より、着地見込管理のデータフローや各マスタの階層設定方法を確認してください。</p>
+<p>分析する際のマスタやトランザクションをマテリアライズド・ビューとして管理しています。</p>
+<p>着地見込管理として用意しているビューの種類について説明します。</p>
+<section id="fms-introduce-module-ef-ef-data-mart">
+<span id="id40"></span><h2><span class="section-number">1.1. </span>データマート<a class="headerlink" href="#fms-introduce-module-ef-ef-data-mart" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p>多分析軸の元となるデータになります。</p>
+<p>科目別や組織別など、分析する単位で用途・目的別にデータマートを作成することも可能です。</p>
+<p><a class="reference download internal" download="" href="../../../_downloads/40b44741a096c81f34786c8118be5485/er_diagram.vsdx"><code class="xref download docutils literal notranslate"><span class="pre">ER概念図</span></code></a>により構成が確認できます。</p>
+<p>Biz∫会計の標準機能で提供するデータマートは以下のとおりです。</p>
+<ul class="simple">
+<li><p>科目別着地見込データマート</p></li>
+<li><p>科目別組織別着地見込データマート</p></li>
+<li><p>分析フィールド別科目別着地見込データマート</p></li>
+<li><p>組織別分析フィールド別科目別着地見込データマート</p></li>
+<li><p>取引先別科目別着地見込データマート</p></li>
+<li><p>組織別取引先別科目別着地見込データマート</p></li>
+</ul>
+<p>上記の分析軸で不足がある場合は<a class="reference internal" href="../../../cookbook/introduce/ef/data_mart.html#fms-cookbook-introduce-ef-date-mart"><span class="std std-ref">データマートを追加する</span></a>の手順に沿ってデータマートを追加してください。</p>
+<p>また、必要に応じて<a class="reference internal" href="../../../cookbook/introduce/ef/dm_index.html#fms-cookbook-introduce-ef-dm-index"><span class="std std-ref">データマートのインデックス検討</span></a>をしてください。</p>
+</div></blockquote>
+</section>
+<section id="fms-introduce-module-ef-ef-dimention">
+<span id="id41"></span><h2><span class="section-number">1.2. </span>ディメンション<a class="headerlink" href="#fms-introduce-module-ef-ef-dimention" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p>データマートを構成するデータの一つで、主にマスタの情報を保持しています。</p>
+<p>Biz∫会計の標準機能で提供するディメンションは以下のとおりです。</p>
+<ul class="simple">
+<li><p>時間特性ディメンション</p></li>
+<li><p>予算番号ディメンション</p></li>
+<li><p>仕訳種類ディメンション</p></li>
+<li><p>元帳ディメンション</p></li>
+<li><p>決算種別ディメンション</p></li>
+<li><p>配賦ディメンション</p></li>
+<li><p>科目ディメンション</p></li>
+<li><p>組織ディメンション</p></li>
+<li><p>取引先ディメンション</p></li>
+<li><p>分析フィールド1ディメンション</p></li>
+<li><p>分析フィールド2ディメンション</p></li>
+<li><p>分析フィールド3ディメンション</p></li>
+<li><p>分析フィールド4ディメンション</p></li>
+<li><p>分析フィールド5ディメンション</p></li>
+<li><p>分析フィールド6ディメンション</p></li>
+<li><p>分析フィールド7ディメンション</p></li>
+<li><p>分析フィールド8ディメンション</p></li>
+<li><p>分析フィールド9ディメンション</p></li>
+<li><p>分析フィールド10ディメンション</p></li>
+<li><p>分析フィールド21ディメンション</p></li>
+<li><p>分析フィールド22ディメンション</p></li>
+<li><p>分析フィールド23ディメンション</p></li>
+<li><p>分析フィールド24ディメンション</p></li>
+<li><p>分析フィールド25ディメンション</p></li>
+<li><p>分析フィールド26ディメンション</p></li>
+<li><p>分析フィールド27ディメンション</p></li>
+<li><p>分析フィールド28ディメンション</p></li>
+<li><p>分析フィールド29ディメンション</p></li>
+<li><p>分析フィールド30ディメンション</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="fms-introduce-module-ef-ef-fact">
+<span id="id42"></span><h2><span class="section-number">1.3. </span>ファクト<a class="headerlink" href="#fms-introduce-module-ef-ef-fact" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p>データマートを構成するデータの一つで、主にトランザクション（予算・実績・見込）の情報を保持しています。</p>
+<p>Biz∫会計の標準機能で提供するファクトは以下のとおりです。</p>
+<ul class="simple">
+<li><p>月次予算ファクト</p></li>
+<li><p>月次実績ファクト</p></li>
+<li><p>月次見込ファクト</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>実績・見込は集計元に貸借区分を持っているため、借方の残高がプラス、貸方の残高はマイナスとして保持しています。</p>
+<p>そのため、データマートに表示する際、貸方科目であれば-1を掛けて貸方の残高をプラスにしています。</p>
+</div>
+</div></blockquote>
+</section>
+<section id="fms-introduce-module-ef-ef-etc">
+<span id="id43"></span><h2><span class="section-number">1.4. </span>その他<a class="headerlink" href="#fms-introduce-module-ef-ef-etc" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p>Biz∫販売またはBiz∫販売(BES)より見込情報を連携するため、以下のマテリアライズド・ビューを提供しています。</p>
+<ul>
+<li><p>受発注残伝票ビュー</p>
+<p>Biz∫販売で登録する伝票のうち、Biz∫会計に実績として計上する予定だが、まだ連携していない伝票を見込情報とするマテリアライズド・ビューになります。</p>
+</li>
+<li><p>受発注残伝票ビュー（BES）</p>
+<p>Biz∫販売(BES)で登録する伝票のうち、Biz∫会計に実績として計上する予定だが、まだ連携していない伝票を見込情報とするマテリアライズド・ビューになります。</p>
+</li>
+<li><p>伝票項目（関連フィールド初期値）ビュー</p>
+<p>Biz∫会計に見込情報を連携する際、分析フィールドに対して関連フィールドの初期値情報を補完するためのマテリアライズド・ビューになります。</p>
+<p><a class="reference internal" href="../ai/slip_itm.html#fms-introduce-module-ai-slip-itm"><span class="std std-ref">会計連携伝票項目管理</span></a>に設定したフィールド関連の情報を参照します。</p>
+</li>
+<li><p>伝票項目（固定補完用）ビュー</p>
+<p>Biz∫会計に見込情報を連携する際、分析フィールドに対して固定値を補完するためのマテリアライズド・ビューになります。</p>
+<p><a class="reference internal" href="../ai/slip_itm.html#fms-introduce-module-ai-slip-itm"><span class="std std-ref">会計連携伝票項目管理</span></a>に設定した固定値を参照します。</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>分析フィールドに対する設定は以下の順番で優先されます。</p>
+<ol class="arabic simple">
+<li><p>連携データの値</p></li>
+<li><p>伝票項目（固定補完用）ビューで取得した値</p></li>
+<li><p>伝票項目（関連フィールド初期値）ビューで取得した値</p></li>
+</ol>
+</div>
+</div></blockquote>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >着地見込管理の導入</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">1. </span>着地見込管理の構成</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

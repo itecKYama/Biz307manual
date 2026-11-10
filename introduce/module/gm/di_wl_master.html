@@ -1,0 +1,748 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>6. Biz∫APF データ連携 のワークロードマスタ登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="7. Biz∫APF データ連携 のジョブ登録" href="di_job.html" />
+    <link rel="prev" title="5. 権限グループ・権限・法人グループの関連づけ（法人データアクセス制御）" href="corp_grp_access.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">グループ連結オペレーション の導入</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">6. </span>Biz∫APF データ連携 のワークロードマスタ登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="corp_grp_access.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="di_job.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">モジュール別の導入</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../gl/index.html">一般会計の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pr/index.html">債権債務の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bn/index.html">手形管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ec/index.html">電子記録債権管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cm/index.html">資金管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ma/index.html">管理会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ef/index.html">着地見込管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fe/index.html">外貨管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fa/index.html">資産管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cp/index.html">建設仮勘定の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lc/index.html">契約管理・リース管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jc/index.html">プロジェクト原価管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ga/index.html">グループ会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ai/index.html">会計連携の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bc/index.html">業務共通の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gt/index.html">グループ会社間取引の導入</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">グループ連結オペレーション の導入</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="parameter.html">1. パラメータ設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="consolidated_account.html">2. 連結科目の登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="match_consolidated_account_grp.html">3. 照合用連結科目グループの登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corporation_group.html">4. グループ連結オペレーション 法人グループの登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corp_grp_access.html">5. 権限グループ・権限・法人グループの関連づけ（法人データアクセス制御）</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">6. Biz∫APF データ連携 のワークロードマスタ登録</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-gm-di-wl-master-startconditions">6.1. 着手条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-gm-di-wl-master-do">6.2. 実行手順</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-gm-di-wl-master-do-wkld">6.2.1. ワークロードマスタの登録</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-gm-di-wl-master-do-param">6.2.2. パラメータ登録</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-gm-di-wl-master-sample">6.3. サンプル</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id44">6.4. 完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="di_job.html">7. Biz∫APF データ連携 のジョブ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="di_execution.html">8. データ連携の実行</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ac/index.html">過年度アーカイブ の導入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="di">
+<span id="fms-introduce-module-gm-di-wl-master"></span><h1><span class="section-number">6. </span>Biz∫APFデータ連携のワークロードマスタ登録<a class="headerlink" href="#di" title="Link to this heading">¶</a></h1>
+<p id="fms-introduce-module-gm-di-wl-master-supplement">グループ連結オペレーションで参照するグループ各社のデータをテナントシェアードスキーマに集約する処理（ワークロード）を登録します。</p>
+<section id="fms-introduce-module-gm-di-wl-master-startconditions">
+<span id="id39"></span><h2><span class="section-number">6.1. </span>着手条件<a class="headerlink" href="#fms-introduce-module-gm-di-wl-master-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../../../general/setup/biz/fms-setup.html#fms-setup-setup-di"><span class="std std-ref">Biz∫APF データ連携 の設定をする</span></a>の作業を終えていること。</p>
+</section>
+<section id="fms-introduce-module-gm-di-wl-master-do">
+<span id="id40"></span><h2><span class="section-number">6.2. </span>実行手順<a class="headerlink" href="#fms-introduce-module-gm-di-wl-master-do" title="Link to this heading">¶</a></h2>
+<section id="fms-introduce-module-gm-di-wl-master-do-wkld">
+<span id="id41"></span><h3><span class="section-number">6.2.1. </span>ワークロードマスタの登録<a class="headerlink" href="#fms-introduce-module-gm-di-wl-master-do-wkld" title="Link to this heading">¶</a></h3>
+<p>Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューの「一括登録」よりワークロードマスタを登録します。</p>
+<p>取込ファイルは<a class="reference internal" href="#fms-introduce-module-gm-di-wl-master-sample"><span class="std std-ref">サンプル</span></a>を参考に準備してください。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF データ連携
+  マスタ管理
+    ワークロード管理
+</pre></div>
+</div>
+</li>
+<li><p>設定内容</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>ワークロード（ステップ）に設定するタスクコードについては<a class="reference download internal" download="" href="../../../_downloads/7e168f1bcff648bf6ae15a7e0886eb76/di_task.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">データ連携タスク一覧</span></code></a>をご確認ください。</p>
+</div>
+<ul class="simple">
+<li><p>「会社間取引照合キー」を連携するワークロード</p></li>
+</ul>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>グループ会社間取引を導入している場合に登録してください。</p>
+<p>本ワークロードは全社共通処理として1件のみ登録し、基準となる会社1社で実行してください。</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 28.6%" />
+<col style="width: 42.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>取込ファイル</p></th>
+<th class="head"><p>項目</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>補足</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ワークロード</p></td>
+<td><p>ワークロードコード</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ワークロード</p></td>
+<td><p>ワークロード名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ワークロード</p></td>
+<td><p>ワークロード略称</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ワークロード</p></td>
+<td><p>ワークロード検索名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ステップ</p></td>
+<td><p>ステップ名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ステップ</p></td>
+<td><p>コード</p></td>
+<td><p>「会社間取引照合キー」のDMLタスクコード</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ステップ</p></td>
+<td><p>実行順</p></td>
+<td><p>1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>アクセスコントロール属性</p></td>
+<td><p>テナントID</p></td>
+<td><p>基準会社が属しているテナントのテナントID</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>アクセスコントロール属性</p></td>
+<td><p>会社コード</p></td>
+<td><p>基準会社の会社コード</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>アクセスコントロール属性</p></td>
+<td><p>ACLアクションコード</p></td>
+<td><p>WORKLOAD_EXECUTION</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<ul class="simple">
+<li><p>月次確定/確定取消/仮実行を実施した際に「月次状況」を連携するワークロード</p></li>
+</ul>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>本ワークロードは各社が月次確定/確定取消/仮実行を実施した際に非同期で実行されますので、導入している全ての会社分のワークロードを登録してください。</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 28.6%" />
+<col style="width: 42.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>取込ファイル</p></th>
+<th class="head"><p>項目</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>補足</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ワークロード</p></td>
+<td><p>ワークロードコード</p></td>
+<td><p>任意の値</p></td>
+<td><p>ワークロードコードに「会社コード」などを含め、会社間でワークロードコードが重複しないようにしてください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>ワークロード</p></td>
+<td><p>ワークロード名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ワークロード</p></td>
+<td><p>ワークロード略称</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ワークロード</p></td>
+<td><p>ワークロード検索名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ステップ</p></td>
+<td><p>ステップ名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ステップ</p></td>
+<td><p>コード</p></td>
+<td><p>「月次状況（差分更新）」のチェンジデータキャプチャタスクコードまたはOracleJdbcLoaderサブスクライブタスクコード</p></td>
+<td><p>連携対象とする会社のタスクコードを設定してください。</p></td>
+</tr>
+<tr class="row-even"><td><p>ステップ</p></td>
+<td><p>実行順</p></td>
+<td><p>1または2</p></td>
+<td><p>「チェンジデータキャプチャタスク」、「OracleJdbcLoaderサブスクライブタスク」の順に実行するように設定してください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>アクセスコントロール属性</p></td>
+<td><p>テナントID</p></td>
+<td><p>連携対象とする会社が属しているテナントのテナントID</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>アクセスコントロール属性</p></td>
+<td><p>会社コード</p></td>
+<td><p>連携対象とする会社の会社コード</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>アクセスコントロール属性</p></td>
+<td><p>ACLアクションコード</p></td>
+<td><p>WORKLOAD_EXECUTION</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<ul class="simple">
+<li><p>マスタおよびトランザクションをまとめて連携するワークロード</p></li>
+</ul>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>データ連携タスク一覧のうち、「会社間取引照合キー」と「月次状況（差分更新）」を除いた全てのマスタおよびトランザクションを連携します。</p>
+<p>ただし、「請求申請」については、Biz∫会計債権管理を導入している場合に連携してください。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>以下のタスクは連携の実行順を考慮の上、設定してください。先行タスクで連携されたデータを参照するため、先行タスクを事前に実行させる必要があります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>タスク</p></th>
+<th class="head"><p>先行タスク</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>法人所属_共通連携データロードタスク</p></td>
+<td><ul class="simple">
+<li><p>パラメータ</p></li>
+<li><p>パラメータ詳細</p></li>
+<li><p>法人グループ所属_共通</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>分析フィールド別元帳残高削除データロードタスク</p></td>
+<td><ul class="simple">
+<li><p>パラメータ</p></li>
+<li><p>パラメータ詳細</p></li>
+<li><p>法人所属_共通</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>分析フィールド別元帳残高連携データロードタスク</p></td>
+<td><ul class="simple">
+<li><p>パラメータ</p></li>
+<li><p>パラメータ詳細</p></li>
+<li><p>法人所属_共通</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>マスタおよびトランザクションをまとめて連携するワークロードには、以下のようなパターンを想定しております。運用に合わせて適切なパターンを選択してください。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 7.1%" />
+<col style="width: 21.4%" />
+<col style="width: 71.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>実行会社</p></th>
+<th class="head"><p>パターン</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>各社</p></td>
+<td><p>1社分のマスタおよびトランザクションをまとめて連携するワークロード</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>各社</p></td>
+<td><p>1社分のマスタおよびトランザクションをテーブル単位で連携するワークロード</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>基準会社（親会社など）</p></td>
+<td><p>全社分のマスタおよびトランザクションをまとめて連携するワークロード</p></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>【No.1】1社分のマスタおよびトランザクションをまとめて連携するワークロード</p>
+<p>導入している全ての会社分のワークロードを登録してください。</p>
+</li>
+</ul>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 28.6%" />
+<col style="width: 42.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>取込ファイル</p></th>
+<th class="head"><p>項目</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>補足</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ワークロード</p></td>
+<td><p>ワークロードコード</p></td>
+<td><p>任意の値</p></td>
+<td><p>ワークロードコードに「会社コード」などを含め、会社間でワークロードコードが重複しないようにしてください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>ワークロード</p></td>
+<td><p>ワークロード名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ワークロード</p></td>
+<td><p>ワークロード略称</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ワークロード</p></td>
+<td><p>ワークロード検索名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ステップ</p></td>
+<td><p>ステップ名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ステップ</p></td>
+<td><p>コード</p></td>
+<td><p>全連携対象のチェンジデータキャプチャタスクコードまたはOracleJdbcLoaderサブスクライブタスクコード（<strong>1社分</strong>）</p></td>
+<td><p>連携対象とする会社のタスクコードを設定してください。</p>
+<p>「会社間取引照合キー」と「月次状況（差分更新）」のタスクコードは除いてください。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>ステップ</p></td>
+<td><p>実行順</p></td>
+<td><p>データ連携タスク一覧の上から順に実行するように設定してください。</p></td>
+<td><p>同一連携対象のタスクについては、</p>
+<p>「チェンジデータキャプチャタスク」、「OracleJdbcLoaderサブスクライブタスク」の順に実行するように設定してください。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>アクセスコントロール属性</p></td>
+<td><p>テナントID</p></td>
+<td><p>連携対象とする会社が属しているテナントのテナントID</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>アクセスコントロール属性</p></td>
+<td><p>会社コード</p></td>
+<td><p>連携対象とする会社の会社コード</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>アクセスコントロール属性</p></td>
+<td><p>ACLアクションコード</p></td>
+<td><p>WORKLOAD_EXECUTION</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<ul class="simple">
+<li><p>【No.2】1社分のマスタおよびトランザクションをテーブル単位で連携するワークロード</p></li>
+</ul>
+<blockquote>
+<div><p>連携対象ごとにワークロードを登録してください。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 28.6%" />
+<col style="width: 42.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>取込ファイル</p></th>
+<th class="head"><p>項目</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>補足</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ワークロード</p></td>
+<td><p>ワークロードコード</p></td>
+<td><p>任意の値</p></td>
+<td><p>連携対象ごとにワークロードを登録してください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>ワークロード</p></td>
+<td><p>ワークロード名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ワークロード</p></td>
+<td><p>ワークロード略称</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ワークロード</p></td>
+<td><p>ワークロード検索名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ステップ</p></td>
+<td><p>ステップ名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ステップ</p></td>
+<td><p>コード</p></td>
+<td><p><strong>連携対象</strong>のチェンジデータキャプチャタスクコードまたはOracleJdbcLoaderサブスクライブタスクコード</p></td>
+<td><p>ワークロードと連携対象を1対1で登録してください。</p></td>
+</tr>
+<tr class="row-even"><td><p>ステップ</p></td>
+<td><p>実行順</p></td>
+<td><p>1または2</p></td>
+<td><p>「チェンジデータキャプチャタスク」、「OracleJdbcLoaderサブスクライブタスク」の順に実行するように設定してください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>アクセスコントロール属性</p></td>
+<td><p>テナントID</p></td>
+<td><p>連携対象とする会社が属しているテナントのテナントID</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>アクセスコントロール属性</p></td>
+<td><p>会社コード</p></td>
+<td><p>連携対象とする会社の会社コード</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>アクセスコントロール属性</p></td>
+<td><p>ACLアクションコード</p></td>
+<td><p>WORKLOAD_EXECUTION</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<ul>
+<li><p>【No.3】基準会社で全社分のマスタおよびトランザクションをまとめて連携するワークロード</p>
+<p>1つのワークロードで全社分のタスクを実行するように登録してください。</p>
+</li>
+</ul>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>1ワークロードに設定できるタスクは「1000件未満」となります。</p>
+<p>実行するタスクの件数が「1000件以上」となる場合、ワークロードを複数に分けて連携することを検討してください。</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 28.6%" />
+<col style="width: 42.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>取込ファイル</p></th>
+<th class="head"><p>項目</p></th>
+<th class="head"><p>設定値</p></th>
+<th class="head"><p>補足</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ワークロード</p></td>
+<td><p>ワークロードコード</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ワークロード</p></td>
+<td><p>ワークロード名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ワークロード</p></td>
+<td><p>ワークロード略称</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ワークロード</p></td>
+<td><p>ワークロード検索名</p></td>
+<td><p>任意の値</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ステップ</p></td>
+<td><p>ステップ名</p></td>
+<td><p>任意の値</p></td>
+<td><p>ワークロード内で一意になるように設定してください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>ステップ</p></td>
+<td><p>コード</p></td>
+<td><p>全連携対象のチェンジデータキャプチャタスクコードまたはOracleJdbcLoaderサブスクライブタスクコード（<strong>全社分</strong>）</p></td>
+<td><p>「会社間取引照合キー」と「月次状況（差分更新）」のタスクコードは除いてください。</p></td>
+</tr>
+<tr class="row-even"><td><p>ステップ</p></td>
+<td><p>実行順</p></td>
+<td><p>データ連携タスク一覧の上から順に実行するように設定してください。</p></td>
+<td><p>同一連携対象のタスクについては、</p>
+<p>「チェンジデータキャプチャタスク」、「OracleJdbcLoaderサブスクライブタスク」の順に実行するように設定してください。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>アクセスコントロール属性</p></td>
+<td><p>テナントID</p></td>
+<td><p>基準会社が属しているテナントのテナントID</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>アクセスコントロール属性</p></td>
+<td><p>会社コード</p></td>
+<td><p>基準会社の会社コード</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>アクセスコントロール属性</p></td>
+<td><p>ACLアクションコード</p></td>
+<td><p>WORKLOAD_EXECUTION</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="fms-introduce-module-gm-di-wl-master-do-param">
+<span id="id42"></span><h3><span class="section-number">6.2.2. </span>パラメータ登録<a class="headerlink" href="#fms-introduce-module-gm-di-wl-master-do-param" title="Link to this heading">¶</a></h3>
+<p>ここで登録した「月次確定/確定取消/仮実行を実施した際に「月次状況」を連携するワークロード」をパラメータ「月次状況連携ワークロードコード」に設定します。手順については、<a class="reference internal" href="parameter.html#fms-introduce-module-gm-parameter"><span class="std std-ref">パラメータ設定</span></a>を参照してください。</p>
+</section>
+</section>
+<section id="fms-introduce-module-gm-di-wl-master-sample">
+<span id="id43"></span><h2><span class="section-number">6.3. </span>サンプル<a class="headerlink" href="#fms-introduce-module-gm-di-wl-master-sample" title="Link to this heading">¶</a></h2>
+<p>ワークロードマスタの登録には以下の3ファイルが必要となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 28.6%" />
+<col style="width: 17.9%" />
+<col style="width: 53.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>取込ファイル</p></th>
+<th class="head"><p>サンプル</p></th>
+<th class="head"><p>一括登録時のファイル名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ワークロード</p></td>
+<td><p><a class="reference download internal" download="" href="../../../_downloads/7e9a0839de8869935adff05f774e827d/wkld_m_wkld.csv"><code class="xref download docutils literal notranslate"><span class="pre">wkld_m_wkld.csv</span></code></a></p></td>
+<td><p>ワークロードマスタ_ワークロード.csv</p></td>
+</tr>
+<tr class="row-odd"><td><p>ステップ</p></td>
+<td><p><a class="reference download internal" download="" href="../../../_downloads/87e32c462ac19585b1506432f6c0cd6b/wkld_m_step.csv"><code class="xref download docutils literal notranslate"><span class="pre">wkld_m_step.csv</span></code></a></p></td>
+<td><p>ワークロードマスタ_ステップ.csv</p></td>
+</tr>
+<tr class="row-even"><td><p>アクセスコントロール属性</p></td>
+<td><p><a class="reference download internal" download="" href="../../../_downloads/84acdaebbd8cc501904d560f4cc93a0e/wkld_m_acl.csv"><code class="xref download docutils literal notranslate"><span class="pre">wkld_m_acl.csv</span></code></a></p></td>
+<td><p>ワークロードマスタ_アクセスコントロール属性.csv</p></td>
+</tr>
+</tbody>
+</table>
+<p id="fms-introduce-module-gm-di-wl-master-endconditions">本サンプルでは以下のワークロードを登録します。</p>
+<ul class="simple">
+<li><p>「会社間取引照合キー」を連携するワークロード（ワークロードコード：GT_MATCHING_KEY_WKLD）</p></li>
+<li><p>月次確定/確定取消/仮実行を実施した際に「月次状況」を連携するワークロード（ワークロードコード：MONTHLY_STATUS_WKLD_BZ1）</p></li>
+<li><p>1社分のマスタおよびトランザクションをまとめて連携するワークロード（ワークロードコード：DEFAULT_WKLD_BZ1）</p></li>
+<li><p>テナントID：default、会社コード：BZ1</p></li>
+</ul>
+</section>
+<section id="id44">
+<h2><span class="section-number">6.4. </span>完了条件<a class="headerlink" href="#id44" title="Link to this heading">¶</a></h2>
+<p>同メニューの「プルーフリスト出力」からプルーフリストを取得し、登録結果を確認します。</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >グループ連結オペレーション の導入</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">6. </span>Biz∫APF データ連携 のワークロードマスタ登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

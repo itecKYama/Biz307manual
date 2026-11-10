@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>7. Biz∫APF データ連携 のジョブ登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="8. データ連携の実行" href="di_execution.html" />
+    <link rel="prev" title="6. Biz∫APF データ連携 のワークロードマスタ登録" href="di_wl_master.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">グループ連結オペレーション の導入</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">7. </span>Biz∫APF データ連携 のジョブ登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="di_wl_master.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="di_execution.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">モジュール別の導入</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../gl/index.html">一般会計の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pr/index.html">債権債務の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bn/index.html">手形管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ec/index.html">電子記録債権管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cm/index.html">資金管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ma/index.html">管理会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ef/index.html">着地見込管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fe/index.html">外貨管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fa/index.html">資産管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cp/index.html">建設仮勘定の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lc/index.html">契約管理・リース管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jc/index.html">プロジェクト原価管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ga/index.html">グループ会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ai/index.html">会計連携の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bc/index.html">業務共通の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gt/index.html">グループ会社間取引の導入</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">グループ連結オペレーション の導入</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="parameter.html">1. パラメータ設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="consolidated_account.html">2. 連結科目の登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="match_consolidated_account_grp.html">3. 照合用連結科目グループの登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corporation_group.html">4. グループ連結オペレーション 法人グループの登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corp_grp_access.html">5. 権限グループ・権限・法人グループの関連づけ（法人データアクセス制御）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="di_wl_master.html">6. Biz∫APF データ連携 のワークロードマスタ登録</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">7. Biz∫APF データ連携 のジョブ登録</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-gm-di-job-startconditions">7.1. 着手条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-gm-di-job-do">7.2. 実行手順</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#bapf">7.2.1. Biz∫APF へのジョブ登録</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-gm-di-job-do-im">7.2.2. intra-mart へのジョブ登録</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-gm-di-job-endconditions">7.3. 完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="di_execution.html">8. データ連携の実行</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ac/index.html">過年度アーカイブ の導入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="di">
+<span id="fms-introduce-module-gm-di-job"></span><h1><span class="section-number">7. </span>Biz∫APFデータ連携のジョブ登録<a class="headerlink" href="#di" title="Link to this heading">¶</a></h1>
+<p id="fms-introduce-module-gm-di-job-supplement">グループ連結オペレーションで参照するグループ各社のデータをテナントシェアードスキーマに集約するジョブを登録します。</p>
+<p>ジョブの実行については、以下の方法があり、それぞれの設定方法についてまとめています。</p>
+<ul class="simple">
+<li><p>コマンドラインから実行する</p></li>
+<li><p>intra-martジョブネット管理から実行する</p></li>
+</ul>
+<p>各システムの運用を考慮して、どの方式で処理を行うか検討します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>本項で登録するジョブの実行については、日次・夜間でスケジューリングすることを推奨します。</p>
+</div>
+<section id="fms-introduce-module-gm-di-job-startconditions">
+<span id="id39"></span><h2><span class="section-number">7.1. </span>着手条件<a class="headerlink" href="#fms-introduce-module-gm-di-job-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="di_wl_master.html#fms-introduce-module-gm-di-wl-master"><span class="std std-ref">Biz∫APF データ連携 のワークロードマスタ登録</span></a>までの作業を終えていること。</p>
+</section>
+<section id="fms-introduce-module-gm-di-job-do">
+<span id="id40"></span><h2><span class="section-number">7.2. </span>実行手順<a class="headerlink" href="#fms-introduce-module-gm-di-job-do" title="Link to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>以下の<a class="reference internal" href="#fms-introduce-module-gm-di-job-do-bapf"><span class="std std-ref">Biz∫APF へのジョブ登録</span></a>、<a class="reference internal" href="#fms-introduce-module-gm-di-job-do-im"><span class="std std-ref">intra-mart へのジョブ登録</span></a>の設定及び、<a class="reference internal" href="#fms-introduce-module-gm-di-job-endconditions"><span class="std std-ref">完了条件</span></a>の確認は本ジョブを設定した会社ごとに実施してください。</p>
+</div>
+<section id="bapf">
+<span id="fms-introduce-module-gm-di-job-do-bapf"></span><h3><span class="section-number">7.2.1. </span>Biz∫APFへのジョブ登録<a class="headerlink" href="#bapf" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Biz∫会計管理者アカウントでポータル画面にログインし、「ジョブ管理」画面を起動します。</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF アドミニストレーション
+  システム管理（会社共通）
+    ジョブ
+      ジョブ管理
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p>ジョブの登録</p>
+<p>新規ボタンを押下し、ジョブ設定登録の基本情報タブにおいて下表の項目を設定し、新規のジョブを登録してください。</p>
+</li>
+</ol>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ジョブコード</p></td>
+<td><p>任意</p></td>
+</tr>
+<tr class="row-odd"><td><p>ロケールID</p></td>
+<td><p>ジョブ名表示用のロケールID</p></td>
+</tr>
+<tr class="row-even"><td><p>名称</p></td>
+<td><p>任意</p></td>
+</tr>
+<tr class="row-odd"><td><p>実行ユーザコード</p></td>
+<td><p>ジョブ実行時に利用するユーザのID <a class="footnote-reference brackets" href="#user" id="id41" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>コンポーネントクラス名</p></td>
+<td><p>ジョブ実行のコンポーネントクラス名。</p>
+<p>com.biz_integral.biz.di.application.web.batch.WorkloadExecutionBatch</p>
+<p>（1行で記述します）</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="user" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id41">1</a><span class="fn-bracket">]</span></span>
+<p>実行ユーザコードに指定するユーザに必要な権限については、<a class="reference internal" href="../../../cookbook/introduce/batch/batch_user.html#fms-cookbook-introduce-batch-user-gm-di"><span class="std std-ref">ジョブ実行ユーザの権限</span></a>を参照してください。</p>
+</aside>
+</aside>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>ジョブパラメータの登録</p></li>
+</ol>
+<blockquote>
+<div><p>ジョブ設定登録のジョブパラメータタブにて、ジョブパラメータを登録します。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 87.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータキー</p></th>
+<th class="head"><p>パラメータ値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>workloadCd</p></td>
+<td><p><a class="reference internal" href="di_wl_master.html#fms-introduce-module-gm-di-wl-master"><span class="std std-ref">Biz∫APF データ連携 のワークロードマスタ登録</span></a>で登録したワークロードコード<a class="footnote-reference brackets" href="#workloadcd" id="id42" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="workloadcd" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id42">2</a><span class="fn-bracket">]</span></span>
+<p>月次確定/確定取消/仮実行を実施した際に「月次状況」を連携するワークロードは月次処理（月次確定/確定取消/仮実行）実施時に実行されますので、ジョブの登録は不要です。</p>
+</aside>
+</aside>
+</div></blockquote>
+</section>
+<section id="fms-introduce-module-gm-di-job-do-im">
+<span id="id43"></span><h3><span class="section-number">7.2.2. </span>intra-martへのジョブ登録<a class="headerlink" href="#fms-introduce-module-gm-di-job-do-im" title="Link to this heading">¶</a></h3>
+<p><a class="reference internal" href="../../../cookbook/introduce/batch/job_setting.html#fms-cookbook-introduce-batch-job"><span class="std std-ref">intra-mart へのジョブ登録</span></a>を参照してください。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>分析フィールド別元帳残高の連携は集計済のレコードのみが対象になるため、事前に元帳残高集計のジョブを実行してください。</p>
+<p>上記のジョブは同一ジョブネットで実行することを推奨します。</p>
+</div>
+</section>
+</section>
+<section id="fms-introduce-module-gm-di-job-endconditions">
+<span id="id44"></span><h2><span class="section-number">7.3. </span>完了条件<a class="headerlink" href="#fms-introduce-module-gm-di-job-endconditions" title="Link to this heading">¶</a></h2>
+<p>以下の確認は、<a class="reference internal" href="#fms-introduce-module-gm-di-job-do"><span class="std std-ref">実行手順</span></a>で作成した全バッチに対して実施してください。</p>
+<ul>
+<li><p><a class="reference internal" href="#fms-introduce-module-gm-di-job-do-bapf"><span class="std std-ref">Biz∫APF へのジョブ登録</span></a>で起動した「ジョブ設定登録/照会」画面から登録したジョブが検索結果に表示されることを確認します。</p></li>
+<li><p><a class="reference internal" href="#fms-introduce-module-gm-di-job-do-im"><span class="std std-ref">intra-mart へのジョブ登録</span></a>で起動したジョブ管理画面で登録したジョブが表示されることを確認します。</p></li>
+<li><p>登録したジョブが実行できることを確認します。</p>
+<p><strong>intra-martジョブネット管理から起動する場合</strong></p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../cookbook/introduce/batch/job_run.html#fms-cookbook-introduce-batch-job-run"><span class="std std-ref">intra-mart ジョブネットの実行方法</span></a>を参照してください。</p>
+</div></blockquote>
+<p><strong>コマンドラインから起動する場合</strong></p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../cookbook/introduce/batch/gm/di_job.html#fms-cookbook-introduce-batch-gt-di-job"><span class="std std-ref">Biz∫APF データ連携ジョブ実行</span></a>を参照してください。</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >グループ連結オペレーション の導入</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">7. </span>Biz∫APF データ連携 のジョブ登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

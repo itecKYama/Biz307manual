@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>6. ジョブ登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="外貨管理の導入" href="../fe/index.html" />
+    <link rel="prev" title="5. 着地見込テンプレート登録" href="template.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U">着地見込管理の導入</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">6. </span>ジョブ登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="template.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="../fe/index.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">モジュール別の導入</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../gl/index.html">一般会計の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pr/index.html">債権債務の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bn/index.html">手形管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ec/index.html">電子記録債権管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cm/index.html">資金管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ma/index.html">管理会計の導入</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">着地見込管理の導入</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="ef.html">1. 着地見込管理の構成</a></li>
+<li class="toctree-l4"><a class="reference internal" href="limitations.html">2. 制限事項</a></li>
+<li class="toctree-l4"><a class="reference internal" href="parameter.html">3. パラメータ設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounting_type.html">4. 会計種別の登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="template.html">5. 着地見込テンプレート登録</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">6. ジョブ登録</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-ef-job-startconditions">6.1. 着手条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-ef-job-do">6.2. 実行手順</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#bapf">6.2.1. Biz∫APF へのジョブ登録</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-module-ef-job-do-im">6.2.2. intra-mart へのジョブ登録</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-module-ef-job-endconditions">6.3. 完了条件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../fe/index.html">外貨管理の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fa/index.html">資産管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cp/index.html">建設仮勘定の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lc/index.html">契約管理・リース管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jc/index.html">プロジェクト原価管理の導入・移行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ga/index.html">グループ会計の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ai/index.html">会計連携の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bc/index.html">業務共通の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gt/index.html">グループ会社間取引の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gm/index.html">グループ連結オペレーション の導入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ac/index.html">過年度アーカイブ の導入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-module-ef-job">
+<span id="id39"></span><h1><span class="section-number">6. </span>ジョブ登録<a class="headerlink" href="#fms-introduce-module-ef-job" title="Link to this heading">¶</a></h1>
+<p>着地見込管理を利用にするにあたり4つのジョブがあります。</p>
+<ul>
+<li><p>マテリアライズドビュー更新</p>
+<blockquote>
+<div><p>着地見込管理で利用するマテリアライズド・ビューをリフレッシュし、データの最新化をする処理です。</p>
+<p><a class="reference internal" href="ef.html#fms-introduce-module-ef-ef"><span class="std std-ref">着地見込管理の構成</span></a>のマテリアライズド・ビューを全て更新するように登録する必要があります。</p>
+</div></blockquote>
+</li>
+<li><p>管理会計連携用見込明細登録<a class="footnote-reference brackets" href="#sms" id="id40" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<blockquote>
+<div><p>Biz∫会計以外からのシステムより見込データを管理会計連携用見込明細テーブルに連携するための処理です。</p>
+</div></blockquote>
+</li>
+<li><p>見込明細取込<a class="footnote-reference brackets" href="#sms" id="id41" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<blockquote>
+<div><p>Biz∫会計の見込情報として確管理会計連携用見込明細テーブルのデータを見込明細テーブルに取り込む処理です。</p>
+</div></blockquote>
+</li>
+<li><p>管理会計連携用見込明細削除<a class="footnote-reference brackets" href="#sms" id="id42" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<blockquote>
+<div><p>見込明細テーブルに連携された管理会計連携用見込明細テーブルのデータを削除する処理です。</p>
+</div></blockquote>
+</li>
+</ul>
+<p>ジョブの実行については、以下の方法があり、それぞれの設定方法についてまとめています。</p>
+<ul class="simple">
+<li><p>コマンドラインから実行する</p></li>
+<li><p>intra-martジョブネット管理から実行する</p></li>
+</ul>
+<p>各システムの運用を考慮して、どの方式で処理を行うか検討してください。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>本項で登録するジョブについて、<a class="reference internal" href="limitations.html#fms-introduce-module-ef-limitations-job"><span class="std std-ref">ジョブの実行順について</span></a>を参照してジョブの実行をスケジューリングしてください。</p>
+<p>マテリアライズドビュー更新では、性能を考慮してtruncateしてから再作成する方式をとっているため、日中に<a class="reference internal" href="ef.html#fms-introduce-module-ef-ef-data-mart"><span class="std std-ref">データマート</span></a>の更新ジョブを実行すると、ジョブが完了するまで参照できなくなりますので、原則夜間で実行するようにしてください。</p>
+</div>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="sms" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id40">1</a>,<a role="doc-backlink" href="#id41">2</a>,<a role="doc-backlink" href="#id42">3</a>)</span>
+<p>Biz∫販売またはBiz∫販売(BES)を導入しない場合、登録不要です。</p>
+</aside>
+</aside>
+<section id="fms-introduce-module-ef-job-startconditions">
+<span id="id43"></span><h2><span class="section-number">6.1. </span>着手条件<a class="headerlink" href="#fms-introduce-module-ef-job-startconditions" title="Link to this heading">¶</a></h2>
+<p>見込に関するジョブを登録する場合、以下の作業が完了していること。</p>
+<ul class="simple">
+<li><p>「作成アプリケーション」の定義および会計種別の登録</p></li>
+</ul>
+</section>
+<section id="fms-introduce-module-ef-job-do">
+<span id="id44"></span><h2><span class="section-number">6.2. </span>実行手順<a class="headerlink" href="#fms-introduce-module-ef-job-do" title="Link to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p><a class="reference internal" href="#fms-introduce-module-ef-job-do-bapf"><span class="std std-ref">Biz∫APF へのジョブ登録</span></a>、<a class="reference internal" href="#fms-introduce-module-ef-job-do-im"><span class="std std-ref">intra-mart へのジョブ登録</span></a>の設定及び、<a class="reference internal" href="#fms-introduce-module-ef-job-endconditions"><span class="std std-ref">完了条件</span></a>の確認は会社ごとに実施してください。</p>
+</div>
+<section id="bapf">
+<span id="fms-introduce-module-ef-job-do-bapf"></span><h3><span class="section-number">6.2.1. </span>Biz∫APFへのジョブ登録<a class="headerlink" href="#bapf" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Biz∫会計管理者アカウントでポータル画面にログインし、「ジョブ管理」画面を起動します。</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF アドミニストレーション
+  システム管理（会社共通）
+    ジョブ
+      ジョブ管理
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p>ジョブの登録</p>
+<p>新規ボタンを押下し、ジョブ設定登録の基本情報タブにおいて下表の項目を設定し、新規のジョブを登録してください。</p>
+</li>
+</ol>
+<blockquote>
+<div><p>会社、作成アプリケーション毎に登録が必要です。</p>
+<ul class="simple">
+<li><p>見込明細取込</p></li>
+<li><p>管理会計連携用見込明細登録</p></li>
+</ul>
+<p>会社で１つ登録が必要です。</p>
+<ul class="simple">
+<li><p>管理会計連携用見込明細削除</p></li>
+</ul>
+<p>テナントで１つ登録が必要です。</p>
+<ul class="simple">
+<li><p>マテリアライズドビュー更新</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ジョブコード</p></td>
+<td><p>任意</p></td>
+</tr>
+<tr class="row-odd"><td><p>ロケールID</p></td>
+<td><p>ジョブ名表示用のロケールID</p></td>
+</tr>
+<tr class="row-even"><td><p>名称</p></td>
+<td><p>任意</p></td>
+</tr>
+<tr class="row-odd"><td><p>実行ユーザコード</p></td>
+<td><p>ジョブ実行時に利用するユーザのID</p>
+<p>複数会社に所属するユーザは、主所属の会社でのみバッチ実行ユーザに登録できます。<a class="footnote-reference brackets" href="#user" id="id45" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p>コンポーネントクラス名</p></td>
+<td><p>ジョブ実行のコンポーネントクラス名。</p>
+<p>「マテリアライズドビュー更新」の場合</p>
+<blockquote>
+<div><p>com.biz_integral.fms.ef.application.web.materializedViewUpdate.MaterializedViewUpdateBatch</p>
+</div></blockquote>
+<p>「管理会計連携用見込明細登録」の場合</p>
+<blockquote>
+<div><p>com.biz_integral.fms.fc.application.web.sqlTaskManagement.SqlTaskManagementBatch</p>
+</div></blockquote>
+<p>「見込明細取込」の場合</p>
+<blockquote>
+<div><p>com.biz_integral.fms.ef.application.web.expectedDetailImport.ExpectedDetailImportBatch</p>
+</div></blockquote>
+<p>「管理会計連携用見込明細削除」の場合</p>
+<blockquote>
+<div><p>com.biz_integral.fms.ef.application.web.efExpectedDetailDelete.EfExpectedDetailDeleteBatch</p>
+</div></blockquote>
+<p>（いずれも1行で記述します）</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="user" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id45">2</a><span class="fn-bracket">]</span></span>
+<p>実行ユーザコードに指定するユーザに必要な権限については、<a class="reference internal" href="../../../cookbook/introduce/batch/batch_user.html#fms-cookbook-introduce-batch-user-ef"><span class="std std-ref">ジョブ実行ユーザの権限</span></a>を参照してください。実行ユーザにアクセス制限（プロセス）の権限が付与されていない場合、アプリケーションログに詳細なエラーメッセージが出力されません。その場合は「biz-batch.log」に出力されています。そちらも合わせてご確認ください。</p>
+</aside>
+</aside>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>ジョブパラメータの登録</p></li>
+</ol>
+<blockquote>
+<div><p>ジョブ設定登録のジョブパラメータタブにて、ジョブパラメータを登録します。</p>
+<p>ジョブパラメータは以下のジョブを登録する場合に設定が必要となります。</p>
+<ul class="simple">
+<li><p>マテリアライズドビュー更新</p></li>
+<li><p>管理会計連携用見込明細登録</p></li>
+<li><p>見込明細取込</p></li>
+</ul>
+<p>■マテリアライズドビュー更新のジョブパラメータは以下となります。</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 28.6%" />
+<col style="width: 28.6%" />
+<col style="width: 42.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータキー</p></th>
+<th class="head"><p>パラメータキー名</p></th>
+<th class="head"><p>パラメータ値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>viewKind</p></td>
+<td><p>ビュー種類</p></td>
+<td><p>ビューの種類単位でマテリアライズド・ビューを更新する場合に設定します。</p>
+<p>ビュー種類は以下となります。</p>
+<p>　1.ファクト</p>
+<p>　2.ディメンション</p>
+<p>　3.データマート</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>viewName</p></td>
+<td><p>ビュー名</p></td>
+<td><p>マテリアライズド・ビューのオブジェクト名を指定して更新する場合に設定します。</p>
+<p>オブジェクト名はビュー一覧で確認してください。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>baseDate</p></td>
+<td><p>基準日</p></td>
+<td><p><a class="reference internal" href="ef.html#fms-introduce-module-ef-ef-dimention"><span class="std std-ref">ディメンション</span></a>の更新時に名称を取得するための基準日を設定します。</p>
+<p>ビュー種類に「2.ディメンション」を指定した場合のみ有効となります。</p>
+<p>基準日を設定しない場合、ジョブを実行した日が基準日となるため、特定日の名称に更新する必要が無い場合、設定不要です。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>補足</strong></p>
+<ul>
+<li><p>ビュー種類、ビュー名はいずれかの設定が必要となります。</p>
+<p>上記いずれかの項目が設定されていれば、その他のパラメータは必要に応じて設定してください。</p>
+</li>
+<li><p>以下のマテリアライズド・ビューについてはビュー種類での更新ができないため、ビュー名を指定したジョブを登録してください。</p>
+<blockquote>
+<div><p>fms_ef_v_rst_acp_odr：受発注残伝票ビュー</p>
+<p>bes_ef_v_rst_acp_odr：受発注残伝票ビュー（BES）</p>
+<p>fms_ef_v_a_fld：伝票項目（関連フィールド初期値）ビュー</p>
+<p>fms_ef_v_clm：伝票項目（固定補完用）ビュー</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>見込情報を連携しない場合は設定不要です。</p>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<p>■管理会計連携用見込明細登録のジョブパラメータは以下となります。</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 28.6%" />
+<col style="width: 28.6%" />
+<col style="width: 42.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータキー</p></th>
+<th class="head"><p>パラメータキー名</p></th>
+<th class="head"><p>パラメータ値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sqlTaskCd</p></td>
+<td><p>SQLタスクコード</p></td>
+<td><p>Biz∫販売の場合は「fmsEfRstEntry」、Biz∫販売(BES)の場合は「fmsEfRstBesEntry」を設定します。</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>補足</strong></p>
+<ul class="simple">
+<li><p>本ジョブでは見込情報として、Biz∫販売では受発注残伝票ビュー、Biz∫販売(BES)では受発注残伝票ビュー（BES）のデータが連携されます。</p></li>
+</ul>
+</div></blockquote>
+<p>■見込明細取込のジョブパラメータは以下となります。</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 28.6%" />
+<col style="width: 28.6%" />
+<col style="width: 42.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータキー</p></th>
+<th class="head"><p>パラメータキー名</p></th>
+<th class="head"><p>パラメータ値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>createApplicationType</p></td>
+<td><p>作成アプリケーション</p></td>
+<td><p><a class="reference internal" href="../../core/accounting_type.html#fms-introduce-core-accounting-type"><span class="std std-ref">会計種別設定</span></a>で登録したアプリケーション区分のうち、見込として取り込む作成アプリケーションを設定してください。</p></td>
+</tr>
+<tr class="row-odd"><td><p>expectedDtlImpType</p></td>
+<td><p>見込明細取込区分</p></td>
+<td><p>見込明細テーブルの内容を管理会計連携用見込明細テーブルの内容に置き換える、または追加するか設定します。</p>
+<p>見込明細取込区分は以下となります。</p>
+<p>　1.削除後に追加</p>
+<p>　2.削除せず追加</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>補足</strong></p>
+<ul>
+<li><p>見込明細として取り込む場合、将来的にBiz∫会計の実績として取り込まれることを想定していますので、会計連携モジュールの伝票区分・伝票項目を設定する必要があります。</p>
+<p>設定方法は<a class="reference internal" href="../ai/slip_type.html#fms-introduce-module-ai-slip-type"><span class="std std-ref">会計連携伝票区分管理</span></a><a class="reference internal" href="../ai/slip_itm.html#fms-introduce-module-ai-slip-itm"><span class="std std-ref">会計連携伝票項目管理</span></a>を参考に登録してください。</p>
+</li>
+<li><p>見込明細は管理会計連携用見込明細テーブルの最新の見込情報に置き変わる想定のため、基本的に見込明細取込区分は「1.削除後に追加」を設定してください。</p>
+<p>例外として、マスタ不備などにより見込明細取込ジョブがエラーとなった場合に、エラーとなった分のデータのみ追加したい際は見込明細取込区分を「2.削除せず追加」としたジョブを登録し、差分を追加してください。</p>
+<p>見込明細取込ジョブがエラーとなった場合であっても、管理会計連携用見込明細登録ジョブから再度実施する場合は見込明細取込区分を「2.削除せず追加」としたジョブを登録する必要はありません。</p>
+</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="fms-introduce-module-ef-job-do-im">
+<span id="id46"></span><h3><span class="section-number">6.2.2. </span>intra-martへのジョブ登録<a class="headerlink" href="#fms-introduce-module-ef-job-do-im" title="Link to this heading">¶</a></h3>
+<p><a class="reference internal" href="../../../cookbook/introduce/batch/job_setting.html#fms-cookbook-introduce-batch-job"><span class="std std-ref">intra-mart へのジョブ登録</span></a>を参照してください。</p>
+</section>
+</section>
+<section id="fms-introduce-module-ef-job-endconditions">
+<span id="id47"></span><h2><span class="section-number">6.3. </span>完了条件<a class="headerlink" href="#fms-introduce-module-ef-job-endconditions" title="Link to this heading">¶</a></h2>
+<p>以下の確認は、<a class="reference internal" href="#fms-introduce-module-ef-job-do"><span class="std std-ref">実行手順</span></a>で作成した全バッチに対して実施してください。</p>
+<ul>
+<li><p><a class="reference internal" href="#fms-introduce-module-ef-job-do-bapf"><span class="std std-ref">Biz∫APF へのジョブ登録</span></a>で起動した「ジョブ設定登録/照会」画面から登録したジョブが検索結果に表示されることを確認します。</p></li>
+<li><p><a class="reference internal" href="#fms-introduce-module-ef-job-do-im"><span class="std std-ref">intra-mart へのジョブ登録</span></a>で起動したジョブ管理画面で登録したジョブが表示されることを確認します。</p></li>
+<li><p>登録したジョブが実行できることを確認します。</p>
+<p><strong>intra-martジョブネット管理から起動する場合</strong></p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../cookbook/introduce/batch/job_run.html#fms-cookbook-introduce-batch-job-run"><span class="std std-ref">intra-mart ジョブネットの実行方法</span></a>を参照してください。</p>
+<p>ジョブモニタで実行したジョブのジョブ状態が出力されていること、実行結果がabortでないことを確認します。</p>
+</div></blockquote>
+<p><strong>コマンドラインから起動する場合</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../../../cookbook/introduce/batch/ef/mview_batch.html#fms-cookbook-introduce-batch-ef-mview-batch"><span class="std std-ref">マテリアライズドビュー更新のジョブ実行</span></a></p></li>
+<li><p><a class="reference internal" href="../../../cookbook/introduce/batch/ef/es_crd_add_batch.html#fms-cookbook-introduce-batch-ef-es-crd-add-batch"><span class="std std-ref">管理会計連携用見込明細登録のジョブ実行</span></a></p></li>
+<li><p><a class="reference internal" href="../../../cookbook/introduce/batch/ef/es_ins_batch.html#fms-cookbook-introduce-batch-ef-es-ins-batch"><span class="std std-ref">見込明細取込のジョブ実行</span></a></p></li>
+<li><p><a class="reference internal" href="../../../cookbook/introduce/batch/ef/es_crd_del_batch.html#fms-cookbook-introduce-batch-ef-es-crd-del-batch"><span class="std std-ref">管理会計連携用見込明細削除のジョブ実行</span></a></p></li>
+</ul>
+<p>を参照してください。</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >モジュール別の導入</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" >着地見込管理の導入</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">6. </span>ジョブ登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
