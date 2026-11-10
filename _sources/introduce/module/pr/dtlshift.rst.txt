@@ -1,0 +1,10 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_pr-dtlshift:
+
+===================================================
+明細移行
+===================================================
+以下のページを参考に債権債務の明細移行を行います。
+
+* :ref:`FMS_cookbook_introduce_dtlshift`

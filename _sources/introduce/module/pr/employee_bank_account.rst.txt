@@ -1,0 +1,37 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_pr-employee_bank_account:
+
+===================================================
+従業員口座情報登録
+===================================================
+従業員支払に用いる振込先口座情報を登録します。
+
+.. _FMS_introduce_module_pr-employee_bank_account-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_module_pr-bank` を終えていること。
+
+.. _FMS_introduce_module_pr-employee_bank_account-do:
+
+実行手順
+===================================================
+Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューより「F5:新規」を押下し、従業員（ユーザ）の利用する口座単位に、種別コード、代表口座区分、口座情報などを登録します。
+
+* メニュー ::
+
+    Biz∫ APF アドミニストレーション 
+      マスタ管理
+        口座
+          従業員口座管理
+
+.. note::
+
+  一括登録を行う場合、一括取込マニュアルの :ref:`FMS_import_mst-user-emp_account` を参考に取込ファイルを準備し、同メニューの「SF5:一括登録」より登録します。
+
+.. _FMS_introduce_module_pr-employee_bank_account-endConditions:
+
+完了条件
+===================================================
+登録した従業員口座情報が、同画面から検索できることを確認します。

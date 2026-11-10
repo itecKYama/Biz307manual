@@ -1,0 +1,34 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_ma-allocate_phase:
+
+===================================================
+配賦段階マスタ登録
+===================================================
+:ref:`FMS_introduce_core-allocate` にて登録した配賦基準の適用順序パターンを定義します。複数の配賦基準を用いた段階的な配賦処理の設定が可能です。
+
+.. _FMS_introduce_module_ma-allocate_phase-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_core-account` 、 :ref:`FMS_introduce_baseset_im_master-department` 、 :ref:`FMS_introduce_core-allocate` 、 :ref:`FMS_introduce_core-external_allocation_base_import` を終えていること。
+
+.. _FMS_introduce_module_ma-allocate_phase-do:
+
+実行手順
+===================================================
+Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューより「F5:新規」を押下し、「基本情報」タブで配賦段階パターンのコードと名称を、「配賦段階」タブで配賦コードの適用順序を設定します。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            配賦段階マスタ管理
+
+.. _FMS_introduce_module_ma-allocate_phase-endConditions:
+
+完了条件
+===================================================
+同画面より、検索によって登録した内容が表示されることを確認します。

@@ -1,0 +1,22 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_pr-jrnlptn:
+
+===================================================
+仕訳パターンの登録
+===================================================
+以下のページを参考に仕訳パターンを登録して下さい。
+
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_transferfee`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_fxgol_dtl`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_withholdingtax_dealdtl`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_paymentjrnldtl`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_aptransfer_dtl`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_taxreceived`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_taxpaid`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_domtbt_denominationdtl`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_auto_Rcncl_fee_dtl`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_firstmonth`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_bank_account_transfer`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_regular_deal`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_adjust_tax_journal`

@@ -1,0 +1,37 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_lc:
+
+===================================================
+契約管理・リース管理の導入・移行
+===================================================
+契約管理・リース管理の導入・移行手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   analysis_cd
+   analysis_field_lc
+   accounting_type
+   contract_class
+   contract_settlement_way
+   contract_class_jrnl
+   settlement_journal_create_job
+   contract_closing_edit_job
+   shift
+   wf
+
+
+.. only:: internal
+
+  analysis_cd                   :分析コード登録
+  analysis_field_lc             :契約管理・リース管理用分析フィールド管理
+  accounting_type               :会計種別設定
+  contract_class                :契約種別マスタ登録
+  contract_settlement_way       :契約決済方法マスタ登録
+  contract_class_jrnl           :契約種別仕訳
+  settlement_journal_create_job :決済仕訳作成ジョブ登録
+  contract_closing_edit_job     :契約決算更新ジョブ登録
+  shift                         :契約移行
+  wf                            :Biz∫会計ワークフローパラメータ修正

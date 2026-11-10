@@ -1,0 +1,44 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_pr-income_payment_instrument_control:
+
+===================================================
+取引先入金支払手段制御登録
+===================================================
+取引先情報の登録後、入金支払手段制御を登録します。
+
+債権計上時の入金手段に対して、初期値および指定可能な入金手段を登録します。
+
+債務計上時の支払手段に対して、初期値および指定可能な支払手段を登録します。
+
+.. note::
+
+  債権計上、債務計上時に、入金手段、支払手段の絞り込みを行わない場合は、当作業は不要です。
+
+.. _FMS_introduce_module_pr-income_payment_instrument_control-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_module_pr-customer` を終えていること。
+
+.. _FMS_introduce_module_pr-income_payment_instrument_control-do:
+
+実行手順
+===================================================
+Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューより、一括取込マニュアルの :ref:`FMS_import_mst-corp_cstm-income_payment_ctrl` を参考に取込ファイルを準備し、同メニューの「SF5:一括登録」より登録します。
+
+明細の「更新」より取引先個別での更新も行えます。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            入金支払手段制御
+
+.. _FMS_introduce_module_pr-income_payment_instrument_control-endConditions:
+
+完了条件
+===================================================
+同画面より、プルーフリストの出力、もしくは検索によって登録した内容が表示されることを確認します。

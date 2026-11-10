@@ -1,0 +1,24 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_ma:
+
+===================================================
+管理会計の導入
+===================================================
+管理会計の導入手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   budget_import
+   budget_fix
+   allocate_phase
+   allocate_result_job
+
+.. only:: internal
+
+  budget_import                   :予算取込
+  budget_fix                      :予算確定
+  allocate_phase                  :配賦段階マスタ登録
+  allocate_result_job             :配賦ジョブ登録

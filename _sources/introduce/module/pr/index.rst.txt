@@ -1,0 +1,84 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_pr:
+
+===================================================
+債権債務の導入・移行
+===================================================
+債権債務の導入・移行手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   accounting_type
+   bank
+   transferfee
+   company_bank_account
+   employee_bank_account
+   site_employee
+   tender_instrument_way
+   income_payment_relation
+   corporation
+   customer
+   customer_wf
+   income_payment_instrument_control
+   transfer_client_person
+   contractor_no
+   contractor_no_wf
+   tax_withholding_kind
+   jrnlptn
+   regular_journals_master
+   ovrss_rmttnc_report_item_config
+   invoiceLayout
+   create_regular_journals_job
+   invoice_request_package_job
+   automatic_reconcile_job
+   payment_request_package_job
+   transfer_execute_job
+   overseas_remittance_execute_job
+   transfer_income_import_job
+   bank_account_transfer_result_import_job
+   automatic_debit_import_job
+   report_batch
+   peppol_cooperation
+   invoice_agent
+   balanceshift
+   dtlshift
+
+.. only:: internal
+
+  accounting_type                   :会計種別の登録（取引区分：振替）
+  bank                              :銀行登録
+  transferfee                       :振込手数料登録
+  company_bank_account              :社内口座情報登録
+  employee_bank_account             :従業員口座情報登録
+  site_employee                     :サイト社員登録
+  tender_instrument_way             :入金支払手段／方法設定
+  income_payment_relation           :入金支払関連項目登録
+  corporation                       :法人情報登録
+  customer                          :取引先登録（債権・債務用）
+  customer_wf                       :取引先マスタ登録ワークフローの有効化
+  income_payment_instrument_control :取引先入金支払手段制御登録
+  transfer_client_person            :振込依頼人マスタの登録
+  contractor_no                     :自動引落費用計上仕訳の仕訳パターンと契約者番号マスタ管理の登録
+  contractor_no_wf                  :契約者番号マスタ登録ワークフローの有効化
+  tax_withholding_kind              :源泉種類の追加
+  jrnlptn                           :仕訳パターンの登録
+  regular_journals_master           :定期仕訳マスタの登録
+  ovrss_rmttnc_report_item_config   :海外送金出力項目定義の登録
+  invoiceLayout                     :請求書レイアウトの変更
+  create_regular_journals_job       :定期債権／債務作成ジョブ登録
+  invoice_request_package_job       :締日一括請求申請ジョブ登録
+  automatic_reconcile_job           :仮受金自動消込ジョブ登録
+  payment_request_package_job       :一括支払申請ジョブ登録
+  transfer_execute_job              :振込依頼実行ジョブ登録
+  overseas_remittance_execute_job   :海外送金依頼実行ジョブ登録
+  transfer_income_import_job        :振込入金一括取込ジョブ登録
+  bank_account_transfer_result_import_job :口座振替結果ファイル取込ジョブ登録
+  automatic_debit_import_job        :自動引落取込
+  report_batch                      :帳票出力ジョブ登録
+  peppol_cooperation                :Peppol連携するための各種設定
+  invoice_agent                     :invoiceAgentを利用したPeppol連携の設定
+  balanceshift                      :残高移行（債権債務）
+  dtlshift                          :明細移行

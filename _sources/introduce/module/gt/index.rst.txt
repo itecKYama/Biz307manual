@@ -1,0 +1,30 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_gt:
+
+===================================================
+グループ会社間取引の導入
+===================================================
+グループ会社間取引の導入手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   parameter
+   corporation
+   set_nontarget_app
+   jrnlptn
+   set_gtJrnl
+   deleteApBaseInfo_batch
+   work_load_ac
+
+.. only:: internal
+
+   parameter                :パラメータ設定
+   corporation              :法人グループ、法人・取引先マスタの登録
+   set_nontarget_app        :連携対象外APマスタの登録
+   jrnlptn                  :仕訳パターン
+   set_gtJrnl               :グループ会社間取引仕訳設定マスタの設定
+   deleteApBaseInfo_batch   :債務基礎情報削除ジョブ登録
+   work_load_ac             :データ連携のワークロードマスタ設定

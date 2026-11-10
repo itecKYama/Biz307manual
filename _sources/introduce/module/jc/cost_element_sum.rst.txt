@@ -1,0 +1,42 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_jc-cost_element_sum:
+
+===================================================
+要約原価要素登録
+===================================================
+プロジェクト原価管理モジュールで用いる要約原価要素を登録します。
+
+.. _FMS_introduce_module_jc-cost_element_sum-startConditions:
+
+着手条件
+===================================================
+
+:ref:`FMS_introduce_core` までの作業を終えていること。
+
+.. _FMS_introduce_module_jc-cost_element_sum-do:
+
+実行手順
+===================================================
+|FMS_ADM| アカウントでポータル画面にログインし、以下のメニューより「F5:新規」を押下し、要約原価要素を登録します。
+
+* メニュー ::
+
+    Biz∫ 会計
+      プロジェクト原価管理
+        マスタメンテナンス
+          要約原価要素管理
+
+.. _FMS_introduce_module_jc-cost_element_sum-sample:
+
+サンプル
+===================================================
+
+  :download:`要約原価要素<./sample/costElementSummary_sample.xlsx>`
+
+.. _FMS_introduce_module_jc-cost_element_sum-endConditions:
+
+完了条件
+===================================================
+登録した要約原価要素が、同画面から検索できることを確認します。プルーフリストを取得し、登録内容を確認することも可能です。
+

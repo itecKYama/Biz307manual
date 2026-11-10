@@ -1,0 +1,11 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_pr-invoiceLayout:
+
+===================================================
+請求書レイアウトの変更
+===================================================
+
+Biz∫販売用の請求書に変更する場合、 :ref:`FMS_cookbook_invoice_invoiceSms` を参照してください。
+
+適格請求書で出力する場合、本手順は不要です。

@@ -1,0 +1,36 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_pr-regular_journals_master:
+
+===================================================
+定期仕訳マスタの登録
+===================================================
+定期的に債権／債務を自動計上する設定を登録します。
+
+.. _FMS_introduce_module_pr-regular_journals_master-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_module_pr-jrnlptn` までの作業を終えていること。
+
+.. _FMS_introduce_module_pr-regular_journals_master-do:
+
+実行手順
+===================================================
+Biz∫会計アカウントでポータル画面にログインし、以下のメニューより、定期仕訳マスタを登録してください。
+
+* メニュー ::
+
+    Biz∫ 会計
+      会計コア
+        マスタメンテナンス
+          業務マスタ
+            定期仕訳マスタ登録
+
+#. 一括取込マニュアルの :ref:`FMS_import_mst-regular_journals-regular_journals` を参考に取込ファイルを準備し、登録します。
+
+.. _FMS_introduce_module_pr-regular_journals_master-endConditions:
+
+完了条件
+===================================================
+定期仕訳マスタのプルーフリストを出力し、登録内容が表示されることを確認します。

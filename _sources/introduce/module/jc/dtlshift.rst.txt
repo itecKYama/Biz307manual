@@ -1,0 +1,14 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_jc-dtlshift:
+
+===================================================
+未成プロジェクトの残高移行
+===================================================
+以下のページを参考に未成プロジェクトの残高移行を行います。
+
+.. note::
+
+  一般会計または債権債務を導入している場合は :ref:`FMS_cookbook_introduce_dtlshift` より合わせて実施します。
+
+* :ref:`FMS_cookbook_introduce_dtlshift-project_cost`

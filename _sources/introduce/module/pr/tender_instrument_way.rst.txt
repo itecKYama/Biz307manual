@@ -1,0 +1,66 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_pr-tender_instrument_way:
+
+===================================================
+入金支払手段／方法設定
+===================================================
+
+入金支払手段を一括支払申請の対象/対象外とする設定や、社内口座の選択に際して現金口座または預金口座に限定する/限定しない設定を行います。
+
+.. _FMS_introduce_module_pr-tender_instrument_way-do:
+
+実行手順
+===================================================
+**本作業には直接のDB操作を必要とします。**
+
+* 一括支払申請の対象/対象外とする設定
+
+  * 入金支払手段（FMS_FC_INCM_PYMNT_INSTRMNT）
+
+      締日一括支払対象フラグ（IS_PAYMENT_REQUEST_PACKAGE）に '0'（一括支払申請対象外）、'1'（一括支払申請対象）のいずれかを設定します。
+
+      次のsqlは、支払手段を一括支払申請の対象に変更する例文です。 ::
+
+        UPDATE fms_fc_incm_pymnt_instrmnt
+        SET    is_payment_request_package = '1'
+        WHERE  income_payment_type = '2'
+
+  .. note::
+
+    |FMS| 3.0.2 より海外送金を一括支払申請の対象とすることが可能です。運用に合わせて締日一括支払対象フラグを変更してください。
+
+* 社内口座を現金口座または預金口座に限定する/限定しない設定
+
+  * 入金支払手段（FMS_FC_INCM_PYMNT_INSTRMNT）
+
+      社内口座現預金区分（COMPANY_BANK_CASH_DEPOSIT_TYPE）に '0'（預金口座）、'1'（現金口座）、'2'（現金・預金とも可）のいずれかを設定します。
+
+      次のsqlは、入金の振込手段を現金・預金とも可に変更する例文です。 ::
+
+        UPDATE fms_fc_incm_pymnt_instrmnt
+        SET    company_bank_cash_deposit_type = '2'
+        WHERE  income_payment_type = '1'
+        AND    income_payment_instrument_cd = '1'
+
+  * 入金支払方法（FMS_FC_INCM_PYMNT_WAY）
+
+      社内口座現預金区分（COMPANY_BANK_CASH_DEPOSIT_TYPE）に '0'（預金口座）、'1'（現金口座）、'2'（現金・預金とも可）のいずれかを設定します。
+
+      次のsqlは、支払の振込方法を現金・預金とも可に変更する例文です。 ::
+
+        UPDATE fms_fc_incm_pymnt_way
+        SET    company_bank_cash_deposit_type = '2'
+        WHERE  income_payment_type = '2'
+        AND    income_payment_way_cd = '1'
+
+.. note::
+
+  | 社内口座現預金区分の詳細につきましては、  |FMS| ヘルプ『Appendix＞債権債務＞手段・方法から選択できる社内口座について』を参照してください。
+  | 入金支払手段や入金支払方法の追加・変更については、 :ref:`FMS_cookbook_setting-incm_pymnt_set` を参照してください。
+
+.. _FMS_introduce_module_pr-tender_instrument_way-endConditions:
+
+完了条件
+===================================================
+データベースの値が変更されていることを確認します。

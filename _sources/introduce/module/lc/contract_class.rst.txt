@@ -1,0 +1,40 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_lc-contract_class:
+
+===================================================
+契約種別マスタ登録
+===================================================
+契約の種類をグルーピングするための契約種別マスタを登録します。
+
+.. _FMS_introduce_module_lc-contract_class-startConditions:
+
+着手条件
+===================================================
+
+* :ref:`FMS_introduce` の :ref:`FMS_introduce_core` までの作業が終えていること。
+
+* :ref:`FMS_introduce_module_lc-analysis_cd` 、 :ref:`FMS_introduce_module_lc-analysis_field_lc` 、 :ref:`FMS_introduce_module_lc-accounting_type` の作業が終えていること。
+
+.. _FMS_introduce_module_lc-contract_class-do:
+
+実行手順
+===================================================
+|FMS_ADM| アカウントでポータル画面にログインし、以下のメニューより「F5:新規」を押下し、契約種別コードと有効期間を登録します。
+
+* メニュー ::
+
+    Biz∫ 会計
+      契約管理・リース管理
+        マスタメンテナンス
+          契約種別マスタ管理
+
+.. note::
+
+  本マスタは、区分値的な要素が強いマスタのため、システム開始日からシステム終了日まで登録したコードが活動中の状態である必要があります。そのため、登録時は、開始日：1900/1/1　終了日：2999/12/31で登録してください。
+
+.. _FMS_introduce_module_lc-contract_class-endConditions:
+
+完了条件
+===================================================
+同メニューの「SF7:プルーフリスト出力」でプルーフリストを取得し、内容を確認します。

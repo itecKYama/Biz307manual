@@ -1,0 +1,57 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_pr-invoice-agent:
+
+===================================================
+invoiceAgentを利用したPeppol連携の設定
+===================================================
+
+| |FMS| では invoiceAgentクラウド版 Bridgeサービス を利用したPeppol連携に対応しています。
+| 本項では、 |FMS| で生成した請求データを Peppol連携する設定について説明します。
+
+ .. note::
+
+    invoiceAgentを利用しない場合は本作業は不要です。
+
+.. _FMS_introduce_module_pr-invoice-agent-startConditions:
+
+着手条件
+===================================================
+
+* :ref:`FMS_introduce_module_pr-peppol-cooperation` が完了していること。
+* `invoiceAgentクラウド版マニュアルポータル`_ の文書管理タブ・電子取引タブの各種ドキュメントを参照していること。
+
+.. _FMS_introduce_module_pr-invoice-agent-do:
+
+実行手順
+===================================================
+
+以下のドキュメントに従い設定を行います。
+
+* `invoiceAgentクラウド版マニュアルポータル`_ の電子取引タブ
+
+ * 配信設定ガイド
+ * 私書箱画面での受配信ガイド
+
+.. note::
+
+  BridgeサービスのLoader設定では、請求データを請求先単位で連携する設定を行います。
+
+    * Loader設定 
+
+      .. list-table::
+         :widths: 5, 10
+         :header-rows: 1
+  
+         * - 項目
+           - 設定
+         * - 監視対象フォルダー
+           - :ref:`FMS_introduce_module_pr-peppol-cooperation-do-directory` の
+             「Peppol連携データ出力先」に設定したディレクトリをフルパスで設定します。
+         * - 監視対象ファイル名パターン
+           - | 請求データのファイル名を設定します。 [#file_name]_
+             | （例）<請求先コード>_*.csv
+         * - 処理を開始するファイル名パターン
+           - 「監視対象ファイル名パターン」と同じ値を設定します。
+
+      .. [#file_name] |FMS| で出力する請求データのファイル名は「<請求先コード>_<請求日>_<請求書番号>.csv」です。

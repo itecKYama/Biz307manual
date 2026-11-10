@@ -1,0 +1,40 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_pr-ovrss_rmttnc_report_item_config:
+
+===================================================
+海外送金出力項目定義の登録
+===================================================
+ISO20022に準拠した仕向送金依頼データの各XMLタグに対して、金融機関ごとに出力値の定義情報を登録します。
+
+.. _FMS_introduce_module_pr-ovrss_rmttnc_report_item_config-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_module_pr-bank` を終えていること。
+
+.. _FMS_introduce_module_pr-ovrss_rmttnc_report_item_config-do:
+
+実行手順
+===================================================
+Biz∫会計管理者アカウントでポータル画面にログインし、「海外送金出力項目定義」画面から登録します。
+
+* メニュー ::
+
+    Biz∫ 会計
+      債務管理
+        支払管理
+          海外送金出力項目定義
+
+.. note::
+
+  * 一括登録を行う場合、一括取込マニュアルの :ref:`FMS_import_mst-ovrss_rmttnc_report_item_config` を参考に取込ファイルを準備し、同メニューの「SF5:一括登録」より登録します。
+  
+  * 本マスタの詳細については、同マニュアルの「項目説明」ファイルに記載の「海外送金出力項目定義_仕様説明資料」シートをご一読ください。
+  
+
+.. _FMS_introduce_module_pr-ovrss_rmttnc_report_item_config-endConditions:
+
+完了条件
+===================================================
+海外送金出力項目のプルーフリストを出力し、タグキーに対する各項目の設定値が正しく登録されていることを確認します。

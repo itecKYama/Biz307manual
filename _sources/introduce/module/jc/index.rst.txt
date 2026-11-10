@@ -1,0 +1,70 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_jc:
+
+===================================================
+プロジェクト原価管理の導入・移行
+===================================================
+プロジェクト原価管理の導入・移行手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   accounting_type
+   batch_month
+   analyze_class_cd_project
+   analyze_cd
+   analyze_fld_config
+   fa_analyze_fld_config
+   fld_rel
+   convert_table
+   cost_account_cls
+   contract_class
+   project
+   cost_element_sum
+   cost_element
+   overhead_deptgrp
+   rank_segment
+   rank_information
+   plan_amount
+   dtlshift
+   progress_prj_sft
+   labor_jrnl_set
+   front_interface
+   monthly_fix_job
+   actual_batch
+   labor_jrnl_batch
+   prj_import_batch
+   front_out_batch
+   batch_process
+
+.. only:: internal
+
+  accounting_type      :会計種別
+  batch_month          :月次処理年月登録
+  analyze_class_cd_project :分析種別登録(プロジェクトコード)
+  analyze_cd           :分析コード登録(プロジェクト原価管理)
+  analyze_fld_config   :分析フィールド登録(プロジェクト原価管理)
+  fa_analyze_fld_config:資産管理用分析フィールド登録(プロジェクト原価管理)
+  fld_rel              :フィールド関連登録(プロジェクト原価管理)
+  convert_table        :変換表登録
+  cost_account_cls     :原価計算種別登録
+  contract_class       :契約形態登録
+  project              :プロジェクト登録
+  cost_element_sum     :要約原価要素登録
+  cost_element         :原価集計コード登録
+  overhead_deptgrp     :間接費組織グループ登録
+  rank_segment         :ランク区分登録
+  rank_information     :ランク情報登録
+  plan_amount          :単金登録
+  dtlshift             :未成プロジェクトの残高移行
+  progress_prj_sft     :進行基準プロジェクトの進捗率と原価回収基準の契約資産残高の移行
+  labor_jrnl_set       :給与仕訳連携設定登録
+  front_interface      :フロント連携定義登録
+  monthly_fix_job      :月次処理ジョブ登録
+  actual_batch         :稼働実績取込ジョブ登録
+  labor_jrnl_batch     :給与仕訳取込ジョブ登録
+  prj_import_batch     :プロジェクト一括取込ジョブ登録
+  front_out_batch      :フロント連携出力ジョブ登録
+  batch_process        :月次処理手順の変更

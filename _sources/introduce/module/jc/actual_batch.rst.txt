@@ -1,0 +1,134 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_jc-actual_batch:
+
+===================================================
+稼働実績取込ジョブ登録
+===================================================
+他システムで作成した稼働実績のCSVファイルを定期的に取り込むジョブを登録します。
+
+ジョブの実行については、以下の方法があり、それぞれの設定方法についてまとめています。
+
+* コマンドラインから実行する
+
+* |IM| ジョブネット管理から実行する
+
+各システムの運用を考慮して、どの方式で処理を行うか検討します。
+
+.. _FMS_introduce_module_jc-actual_batch-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_baseset_im_master` までの作業を終えていること。
+
+実行ディレクトリの作成が完了していること。 [#f1]_
+
+取込処理を行う稼働実績のCSVファイルを配備するディレクトリの作成が完了していること。
+
+.. note::
+
+  実行ディレクトリの作成については |BAPF| のフレームワーク `バッチブートストラップ`_ を参照して下さい。
+
+.. rubric:: 脚注
+
+.. [#f1] コマンドラインから実行する場合のみ設定が必要です。
+
+
+.. _FMS_introduce_module_jc-actual_batch-do:
+
+実行手順
+===================================================
+.. note::
+
+  本ジョブは、会社単位での設定が必要となります。
+
+  以下の :ref:`FMS_introduce_module_jc-actual_batch-do-bapf` 、 :ref:`FMS_introduce_module_jc-actual_batch-do-im` の設定及び、 :ref:`FMS_introduce_module_jc-actual_batch-endConditions` の確認は会社ごとに実施してください。
+
+.. _FMS_introduce_module_jc-actual_batch-do-bapf:
+
+|BAPF| へのジョブ登録
+---------------------------------------------------
+1. Biz∫会計管理者アカウントでポータル画面にログインし、「ジョブ管理」画面を起動します。
+
+  * メニュー ::
+
+      Biz∫ APF アドミニストレーション 
+        システム管理（会社共通）
+          ジョブ
+            ジョブ管理
+
+2. ジョブの登録
+
+   新規ボタンを押下し、ジョブ設定登録の基本情報タブにおいて下表の項目を設定し、新規のジョブを登録してください。
+
+  .. list-table::
+     :widths: 10, 20
+     :header-rows: 1
+
+     * - 項目名
+       - 設定値
+     * - ジョブコード
+       - 任意
+     * - ロケールID
+       - ジョブ名表示用のロケールID
+     * - 名称
+       - 任意
+     * - 実行ユーザコード
+       - ジョブ実行時に利用するユーザのID
+     * - コンポーネントクラス名
+       - ジョブ実行のコンポーネントクラス名。
+
+         com.biz_integral.fms.jc.application.web.spExeEntry.SpExeEntryBatch
+
+         （1行で記述します）
+
+  .. rubric:: 脚注
+
+  .. [#user] 実行ユーザコードに指定するユーザに必要な権限については、 :ref:`ジョブ実行ユーザの権限<FMS_cookbook_introduce_batch-user-jc-job_time>` を参照してください。
+
+3. ジョブパラメータの登録
+
+  ジョブ設定登録のジョブパラメータタブにて、ジョブパラメータを登録します。
+
+  ジョブパラメータはジョブコードにつき、3件登録する必要があります。
+
+  .. list-table::
+     :widths: 10, 20
+     :header-rows: 1
+
+     * - パラメータキー
+       - パラメータ値
+     * - processId
+       - プログラム識別子（固定文字列"ZFOKADOJT2"）
+     * - uploadPath
+       - 取込ファイル名（フルパス）
+     * - pkbn
+       - 取込方法（0:洗い替え、1:追加）
+
+.. _FMS_introduce_module_jc-actual_batch-do-im:
+
+|IM| へのジョブ登録
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-job` を参照してください。
+
+.. _FMS_introduce_module_jc-actual_batch-endConditions:
+
+完了条件
+===================================================
+以下の確認は、 :ref:`FMS_introduce_module_jc-actual_batch-do` で作成した全バッチに対して実施してください。
+
+* :ref:`FMS_introduce_module_jc-actual_batch-do-bapf` で起動した「ジョブ設定登録/照会」画面から登録したジョブが検索結果に表示されることを確認します。
+
+* :ref:`FMS_introduce_module_jc-actual_batch-do-im` で起動したジョブ管理画面で登録したジョブが表示されることを確認します。
+
+* 登録したジョブが実行できることを確認します。
+
+  **intra-martジョブネット管理から起動する場合**
+
+    :ref:`FMS_cookbook_introduce_batch-job-run` を参照してください。
+
+  **コマンドラインから起動する場合**
+
+    :ref:`FMS_cookbook_introduce_batch_jc-actual_batch` を参照してください。
+

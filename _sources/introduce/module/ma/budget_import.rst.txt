@@ -1,0 +1,50 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_ma-budget_import:
+
+===================================================
+予算取込
+===================================================
+予実管理を実現するために、予算を取り込みます。各勘定の費目ごとの予算を管理する目的で予算コードを付与することができます。仕訳を登録する際、明細に予算コードを付与することで、予算の執行状況を把握することができます。
+
+.. _FMS_introduce_module_ma-budget_import-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_core-account` 、 :ref:`FMS_introduce_baseset_im_master-department` 、 :ref:`取引先登録 <FMS_introduce_module_gl-customer_gl>` 、 :ref:`ユーザ登録 <FMS_introduce_baseset_im_master-user>` 、 :ref:`FMS_introduce_baseset_biz-analysis_class` を終えていること。
+
+.. _FMS_introduce_module_ma-budget_import-do:
+
+実行手順
+===================================================
+Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューより、一括取込マニュアルの :ref:`FMS_import_mst-budget-budget` を参考に取込ファイルを準備し、同メニューの「SF5:一括登録」より登録します。
+
+* メニュー ::
+
+    Biz∫ 会計
+      管理会計
+        予算管理
+          予算取込
+
+.. _FMS_introduce_module_ma-budget_import-endConditions:
+
+完了条件
+===================================================
+* 一括登録は非同期タスクとして実行されます。以下のメニューより「予算取込」がエラーなく終了していることを確認します。 ::
+
+    Biz∫ APF アドミニストレーション 
+      システム管理（会社共通）
+        非同期タスク
+          非同期タスクモニタ
+
+* 予算策定基礎資料を以下の条件で出力し、正常に予算が取り込まれていることを確認します。
+
+  検索条件
+
+    策定年度：取り込んだ予算の会計年度
+
+    策定予算：取り込んだ予算
+
+    策定基礎情報1の対象期間：年度
+
+    策定基礎情報1：取り込んだ予算

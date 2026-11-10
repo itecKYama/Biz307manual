@@ -1,0 +1,23 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_jc-analyze_fld_config:
+
+===================================================
+分析フィールド登録(プロジェクト原価管理)
+===================================================
+仕訳登録や取引登録などの画面の分析フィールドと :ref:`FMS_introduce_module_jc-analyze_class_cd_project` で登録したプロジェクトコードの分析種別、及び、ランクの分析種別を関連づけます。
+
+.. _FMS_introduce_module_jc-analyze_fld_config-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_module_jc-analyze_cd` を終えていること。
+
+.. _FMS_introduce_module_jc-analyze_fld_config-do:
+
+実行手順
+===================================================
+* :ref:`FMS_introduce_core-analysis_field` で案内している内容を参考に分析フィールドを登録して下さい。
+
+* 分析フィールドはパラメータの「プロジェクトの分析フィールド」と「ランクの分析フィールド」で設定した分析フィールドへの関連づけを行ってください。
+
