@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns="http://www.intra-mart.jp/authz/imex/resource">
+    <authz-resource id="d443b417e996de8074557148e77cc2bff3a41ac46af5cbe608a1a928169529ae" uri="im-menu-group://menugroups/8fcgv47o9r5ti">
+        <display-name>
+            <name locale="ja">Biz∫ APF</name>
+        </display-name>
+        <parent-group id="im-menu-group-cat-im_global_nav_pc">
+        </parent-group>
+    </authz-resource>
+    <authz-resource id="792c3c0599f0a4f62d70590fbf1df47143370546521537f911b00d3a1f2f6f89" uri="im-menu-group://menugroups/biz_core_1000">
+        <display-name>
+            <name locale="ja">Biz∫ APF</name>
+        </display-name>
+        <parent-group id="im-menu-group-cat-im_sitemap_pc">
+        </parent-group>
+    </authz-resource>
+</root>

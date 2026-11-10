@@ -1,0 +1,3 @@
+データ種別	行	データ区分	SQL文
+account.tab 	1	2	select * from fms_fc_account_cmn
+account.tab 	2	2	 where company_cd = $1

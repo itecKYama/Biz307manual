@@ -1,0 +1,5 @@
+データ種別	行	データ区分	SQL文
+project.tab 	1	1	プロジェクトコード,プロジェクト名
+project.tab 	2	2	select project_cd,project_name from fms_jc_project
+project.tab 	3	2	 where company_cd = $1
+project.tab 	4	3	 and record_date >= to_date($2,'yyyy-mm-dd hh24:mi:ss')

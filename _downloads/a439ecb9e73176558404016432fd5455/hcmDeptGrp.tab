@@ -1,0 +1,11 @@
+データ種別	行	データ区分	SQL文
+hcmDeptGrp	1	1	tkcmp,tkcls,tkno,tkupkbn,tkupcd,tkdwkbn,tkdwcd,tkstdte,tkeddte,tkancd01,tkancd02,tkancd03,
+hcmDeptGrp	2	1	tkancd04,tkancd05,tkancd06,tkancd07,tkancd08,tkancd09,tkancd10
+hcmDeptGrp	3	2	select company_cd, 'SKS', '0000000001', 'ORG', department_group_cd, 'ORG', department_cd,
+hcmDeptGrp	4	2	to_char(start_date,'yyyy-mm-dd hh24:mi:ss'), to_char(end_date,'yyyy-mm-dd hh24:mi:ss'),
+hcmDeptGrp	5	2	'CC', 'UT', null, null, null,
+hcmDeptGrp	6	2	'0', '0', null, null, null
+hcmDeptGrp	7	2	 from fms_fc_dept_grp_ath_cmn
+hcmDeptGrp	8	2	 where company_cd = $1 and delete_flag = '0'
+hcmDeptGrp	9	2	 and department_set_cd = $1
+hcmDeptGrp	10	3	 and record_date >= to_date($2,'yyyy-mm-dd hh24:mi:ss')
