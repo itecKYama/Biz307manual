@@ -1,0 +1,4 @@
+"ワークロードコード","テナントID","会社コード","ACLアクションコード"
+"DEFAULT_WKLD_BZ1","default","BZ1","WORKLOAD_EXECUTION"
+"MONTHLY_STATUS_WKLD_BZ1","default","BZ1","WORKLOAD_EXECUTION"
+"GT_MATCHING_KEY_WKLD","default","BZ1","WORKLOAD_EXECUTION"

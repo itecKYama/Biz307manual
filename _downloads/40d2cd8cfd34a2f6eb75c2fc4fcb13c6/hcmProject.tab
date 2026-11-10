@@ -1,0 +1,32 @@
+データ種別	行	データ区分	SQL文
+hcmProject	1	1	pgcmp,pgprjmscd,pgprjsbcd,pgstdte,pgeddte,pgkkbn,pgkkbnn,pgheisakbn,pgheisakbnn,
+hcmProject	2	1	pgname,pgsnm,pgidxnm,pgknrbmncd,pgknrbmncdn,pgdnkbmncd,pgdnkbmncdn,pgsyuekiflg,pgsyuekiflgn,
+hcmProject	3	1	pgsosetuflg,pgsosetuflgn,pgtutisyflg,pgtutisyflgn,pghrdsftkbn,pghrdsftkbnn,pgsksprjmscd,
+hcmProject	4	1	pgsksprjsbcd,pgsksprjn,pgeigyoskbn,pgeigyoskbnn,pgkengyokbn,pgkengyokbnn,pgkaisetdte,
+hcmProject	5	1	pgheisadte,pgfrikaeym,pgtutisysuu,pgkanseidte,pgkoujidaka,pgwbscd,pgbikou,pgancd01,pgancd02,
+hcmProject	6	1	pgancd03,pgancd04,pgancd05,pgancd06,pgancd07,pgancd08,pgancd09,pgancd10,pgancd11,pgancd12,
+hcmProject	7	1	pgancd13,pgancd14,pgancd15,pgancd16,pgancd17,pgancd18,pgancd19,pgancd20,pgancd21,pgancd22,
+hcmProject	8	1	pgancd23,pgancd24,pgancd25,pgancd26,pgancd27,pgancd28,pgancd29,pgancd30,pgcusr,pgcusrn,
+hcmProject	9	1	pgcdte,pguusr,pguusrn,pgudte
+hcmProject	10	2	select company_cd, project_master_cd, project_sub_cd,
+hcmProject	11	2	to_char(start_date,'yyyy-mm-dd hh24:mi:ss'), to_char(end_date,'yyyy-mm-dd hh24:mi:ss'),
+hcmProject	12	2	decode(delete_flag,'0','1','0'), null, heisa_type, null,
+hcmProject	13	2	project_name, substr(project_short_name,1,20), substr(project_search_name,1,20), control_department_cd, null,
+hcmProject	14	2	decode(entry_dept_type,'1',company_cd,decode(entry_dept_type,'2',entry_department_grp_cd,control_department_cd)),
+hcmProject	15	2	null, syueki_flag, null, sosetu_flag, null, syutoku_flag, null, hard_soft_type, null,
+hcmProject	16	2	saki_project_master_cd, saki_project_sub_cd, null, eigy_type, null, kngy_sibt_type, null,
+hcmProject	17	2	to_char(kaisetu_date,'yyyy-mm-dd hh24:mi:ss'), to_char(heisa_date,'yyyy-mm-dd hh24:mi:ss'),
+hcmProject	18	2	to_char(substrb(furikae_ym,3,4)), to_char(tuti_kensu), to_char(kansei_yotei_date,'yyyy-mm-dd hh24:mi:ss'),
+hcmProject	19	2	to_char(kansei_amount), wbs_cd, notes,
+hcmProject	20	2	analyze_cd_01, analyze_cd_02, analyze_cd_03, analyze_cd_04, analyze_cd_05,
+hcmProject	21	2	analyze_cd_06, analyze_cd_07, analyze_cd_08, analyze_cd_09, analyze_cd_10,
+hcmProject	22	2	analyze_cd_11, analyze_cd_12, analyze_cd_13, analyze_cd_14, analyze_cd_15,
+hcmProject	23	2	analyze_cd_16, analyze_cd_17, analyze_cd_18, analyze_cd_19, analyze_cd_20,
+hcmProject	24	2	analyze_cd_21, analyze_cd_22, analyze_cd_23, analyze_cd_24, analyze_cd_25,
+hcmProject	25	2	analyze_cd_26, analyze_cd_27, analyze_cd_28, analyze_cd_29, analyze_cd_30,
+hcmProject	26	2	create_user_cd, null, to_char(create_date,'yyyy-mm-dd hh24:mi:ss'),
+hcmProject	27	2	record_user_cd, null, to_char(record_date,'yyyy-mm-dd hh24:mi:ss')
+hcmProject	28	2	 from fms_jc_project
+hcmProject	29	2	 where company_cd = $1
+hcmProject	30	2	 and (substrb(project_sub_cd,2,1) != '0'
+hcmProject	31	2	 or (substrb(project_sub_cd,2,1) = '0' and (syueki_flag = '1' or sosetu_flag = '1')))
