@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>1.6. 認可設定 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="2. アクセス権設定" href="../auth/index.html" />
+    <link rel="prev" title="1.5. ユーザ・従業員登録" href="user.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >Biz∫ 基盤の設定</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U"><span class="section-number">1. </span>IM-共通マスタ の設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">1.6. </span>認可設定</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="user.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="../auth/index.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Biz∫ 基盤の設定</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">1. IM-共通マスタ の設定</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="company.html">1.1. 計上組織セットコード登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="department.html">1.2. 組織登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corporation.html">1.3. 法人グループ・法人登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="role.html">1.4. ロール登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.html">1.5. ユーザ・従業員登録</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1.6. 認可設定</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-baseset-im-master-authorization-startconditions">1.6.1. 着手条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-baseset-im-master-authorization-do">1.6.2. 実行手順</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-baseset-im-master-authorization-do-menu">1.6.2.1. メニュー設定</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-baseset-im-master-authorization-do-screen">1.6.2.2. 画面・処理</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fms-introduce-baseset-im-master-authorization-do-process">1.6.2.3. プロセス実行権限</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#rest-api">1.6.2.4. 「REST API」の認可について</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-baseset-im-master-authorization-endconditions">1.6.3. 完了条件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../auth/index.html">2. アクセス権設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../biz/index.html">3. Biz∫ 共通マスタ設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jobnet.html">4. ジョブネット設定</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../module/index.html">モジュール別の導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-baseset-im-master-authorization">
+<span id="id39"></span><h1><span class="section-number">1.6. </span>認可設定<a class="headerlink" href="#fms-introduce-baseset-im-master-authorization" title="Link to this heading">¶</a></h1>
+<p>登録されたロールに対して、メニュー表示やプロセス実行権限を割り当てます。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>認可についての詳細な説明や操作方法については、intra-mart Accel Platformテナント管理者操作ガイドの<a class="reference external" href="http://www.intra-mart.jp/document/library/iap/public/operation/tenant_administrator_guide/texts/basic_guide/basic_guide_1.html">基本設定 / 認可を設定する</a>をご確認ください。</p>
+</div>
+<section id="fms-introduce-baseset-im-master-authorization-startconditions">
+<span id="id40"></span><h2><span class="section-number">1.6.1. </span>着手条件<a class="headerlink" href="#fms-introduce-baseset-im-master-authorization-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="role.html#fms-introduce-baseset-im-master-role"><span class="std std-ref">ロール登録</span></a>を終えていること。</p>
+</section>
+<section id="fms-introduce-baseset-im-master-authorization-do">
+<span id="id41"></span><h2><span class="section-number">1.6.2. </span>実行手順<a class="headerlink" href="#fms-introduce-baseset-im-master-authorization-do" title="Link to this heading">¶</a></h2>
+<p>テナント管理者権限でテナント管理画面にログインし、認可を設定します。以下は、画面からの設定方法です。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">テナント管理</span>
+  <span class="n">認可</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>ジョブ/ジョブネットを利用して認可を一括取込する場合は、「<a class="reference external" href="http://www.intra-mart.jp/document/library/iap/public/im_import_export/im_authz_import_export_specification/index.html">IM-Authz（認可）インポート・エクスポート仕様書</a>」を参照してください。</p>
+</div>
+<section id="fms-introduce-baseset-im-master-authorization-do-menu">
+<span id="id42"></span><h3><span class="section-number">1.6.2.1. </span>メニュー設定<a class="headerlink" href="#fms-introduce-baseset-im-master-authorization-do-menu" title="Link to this heading">¶</a></h3>
+<p>リソース種類に「メニュー設定」を選択し、メニューグループの認可設定を行います。</p>
+<p>「グローバルナビ（PC用）」と「サイトマップ（PC用）」配下のリソースグループ名「Biz∫会計」に認可設定を行ってください。</p>
+</section>
+<section id="fms-introduce-baseset-im-master-authorization-do-screen">
+<span id="id43"></span><h3><span class="section-number">1.6.2.2. </span>画面・処理<a class="headerlink" href="#fms-introduce-baseset-im-master-authorization-do-screen" title="Link to this heading">¶</a></h3>
+<p>リソース種類に「画面・処理」を選択し、各画面の認可設定を行います。</p>
+<p>特定のユーザに特定のメニューを表示しない設定を行う場合には、画面ごとの認可を外す設定を行います。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>会計のメニューの一覧は「<a class="reference download internal" download="" href="../../../_downloads/75ece92269346869fd4a0f84de439c29/menu_reference.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">参考資料_メニュー一覧</span></code></a>」を参照してください。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>以下のメニューは外部システムとのインターフェイス用の機能となります。</p>
+<p>フロント連携出力管理は任意のSQLを登録する機能であり、フロント連携ファイル出力はそのSQLを実行する機能であるため、実行者の権限の及ばないデータにアクセスされる危険性があります。その結果、本来権限を保有するユーザの権限が害される可能性があります。</p>
+<p>上記の点を考慮し、本機能のメニューは内部統制上の職務規定に適合するユーザ以外には開放しないでください。</p>
+<ul class="simple">
+<li><p>メニュー</p>
+<ul>
+<li><p>「Biz∫会計」－「プロジェクト原価管理」－「業務連動」－「マスタメンテナンス」－「フロント連携出力管理」</p></li>
+<li><p>「Biz∫会計」－「プロジェクト原価管理」－「業務連動」－「更新処理」－「フロント連携ファイル出力」</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="fms-introduce-baseset-im-master-authorization-do-process">
+<span id="id44"></span><h3><span class="section-number">1.6.2.3. </span>プロセス実行権限<a class="headerlink" href="#fms-introduce-baseset-im-master-authorization-do-process" title="Link to this heading">¶</a></h3>
+<p>リソース種類に「プロセス実行権限」を選択し、プロセス実行権限の制御に関する設定を行います。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>会計のプロセス権限の概要は「<a class="reference download internal" download="" href="../../../_downloads/db1c0db56834bbea131916e5e8b93d77/processAuth_reference.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">参考資料_プロセス権限設定一覧</span></code></a>」を参照してください。</p>
+</div>
+</section>
+<section id="rest-api">
+<span id="fms-introduce-baseset-im-master-authorization-do-rest"></span><h3><span class="section-number">1.6.2.4. </span>「REST API」の認可について<a class="headerlink" href="#rest-api" title="Link to this heading">¶</a></h3>
+<p>「REST API」の認可については、Biz∫APF / REST APIプログラミングガイドの<a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/bui3/rest-api/how-to-build-rest-api.html#bapf-biz-rest-api-how-to-build-rest-api-authentication">認可</a>をご参照ください。</p>
+</section>
+</section>
+<section id="fms-introduce-baseset-im-master-authorization-endconditions">
+<span id="id46"></span><h2><span class="section-number">1.6.3. </span>完了条件<a class="headerlink" href="#fms-introduce-baseset-im-master-authorization-endconditions" title="Link to this heading">¶</a></h2>
+<p>同メニューから設定した認可が表示できることを確認します。</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >Biz∫ 基盤の設定</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" ><span class="section-number">1. </span>IM-共通マスタ の設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">1.6. </span>認可設定</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>3.5. 分析コード登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="4. ジョブネット設定" href="../jobnet.html" />
+    <link rel="prev" title="3.4. 間接税登録" href="indirect_tax.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >Biz∫ 基盤の設定</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U"><span class="section-number">3. </span>Biz∫ 共通マスタ設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">3.5. </span>分析コード登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="indirect_tax.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="../jobnet.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Biz∫ 基盤の設定</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../im/index.html">1. IM-共通マスタ の設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../auth/index.html">2. アクセス権設定</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">3. Biz∫ 共通マスタ設定</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="configuration.html">3.1. コンフィグレーション設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="currency.html">3.2. 通貨登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="calendar.html">3.3. カレンダ登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="indirect_tax.html">3.4. 間接税登録</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">3.5. 分析コード登録</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-baseset-biz-analysis-class-startconditions">3.5.1. 着手条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-baseset-biz-analysis-class-design">3.5.2. 分析コード設計</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-baseset-biz-analysis-class-do">3.5.3. 実行手順</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-baseset-biz-analysis-class-endconditions">3.5.4. 完了条件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../jobnet.html">4. ジョブネット設定</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../module/index.html">モジュール別の導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-baseset-biz-analysis-class">
+<span id="id39"></span><h1><span class="section-number">3.5. </span>分析コード登録<a class="headerlink" href="#fms-introduce-baseset-biz-analysis-class" title="Link to this heading">¶</a></h1>
+<p>任意の分割・任意のレベルでのセグメント管理を行うために、仕訳伝票に登録する分析コード、ならびにその体系を登録します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>分析コードの利用は任意です。セグメント管理を行う要求がある場合に実施してください。</p>
+</div>
+<section id="fms-introduce-baseset-biz-analysis-class-startconditions">
+<span id="id40"></span><h2><span class="section-number">3.5.1. </span>着手条件<a class="headerlink" href="#fms-introduce-baseset-biz-analysis-class-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../auth/index.html#fms-introduce-baseset-auth"><span class="std std-ref">アクセス権設定</span></a>までの作業を終えていること。</p>
+</section>
+<section id="fms-introduce-baseset-biz-analysis-class-design">
+<span id="id41"></span><h2><span class="section-number">3.5.2. </span>分析コード設計<a class="headerlink" href="#fms-introduce-baseset-biz-analysis-class-design" title="Link to this heading">¶</a></h2>
+<p>分析コードは以下の体系・特性を持っています。</p>
+<ul>
+<li><p>分析軸とする「分析種別」が最上位の概念です。</p></li>
+<li><p>各分析種別には分析軸の値となる分析コードを登録します。</p>
+<p>分析コードは階層構造をもたせることもできます。階層数に制限はありません。</p>
+</li>
+<li><p>分析コードを階層化した単位を、「分析体系」として登録します。</p>
+<p>分析体系別の帳票出力、分析コードの集計単位別の帳票出力が可能となります</p>
+</li>
+<li><p>Biz∫会計の仕訳入力項目には、「分析フィールド」と呼ばれるフィールドがあります。</p>
+<p>各分析種別は分析フィールドに関連づけることができます。</p>
+</li>
+<li><p>分析フィールドには20個までの分析種別を関連づけることが可能です。</p>
+<p><a class="reference internal" href="../../core/analysis_field.html#fms-introduce-core-analysis-field"><span class="std std-ref">分析フィールド登録</span></a>を参照してください</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>分析フィールドの登録は<a class="reference internal" href="../../core/analysis_field.html#fms-introduce-core-analysis-field"><span class="std std-ref">分析フィールド登録</span></a>で実施するため、現時点では未定義でもかまいません。</p>
+</div>
+</li>
+<li><p>Biz∫会計には、分析フィールドのほか、分析テキストという入力項目があり、任意の文字列を設定することができます。</p>
+<p>例えばBiz∫会計以外の（外部APLの）付与する管理コードなどを伝票に記録し、検索キーとするケースに利用することができます。</p>
+</li>
+</ul>
+<p><strong>分析フィールド・分析種別・分析コードの関係：</strong></p>
+<blockquote>
+<div><figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/analysis_class_001.png"><img alt="../../../_images/analysis_class_001.png" src="../../../_images/analysis_class_001.png" style="width: 500px;" /></a>
+</figure>
+</div></blockquote>
+<p><strong>分析種別・分析体系・分析コード階層の関係：</strong></p>
+<blockquote>
+<div><figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/analysis_class_002.png"><img alt="../../../_images/analysis_class_002.png" src="../../../_images/analysis_class_002.png" style="width: 500px;" /></a>
+</figure>
+</div></blockquote>
+<p>これらを踏まえ、目的別の分析コード体系を設計します。例えば「地域」を分析軸としたい場合、次図のようなコード体系設計となります。</p>
+<p><strong>分析コード体系設計の例：</strong></p>
+<blockquote>
+<div><figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/analysis_class_003.png"><img alt="../../../_images/analysis_class_003.png" src="../../../_images/analysis_class_003.png" style="width: 500px;" /></a>
+</figure>
+</div></blockquote>
+<p><strong>分析コード投入用シートの例：</strong></p>
+<blockquote>
+<div><figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/analysis_class_004.png"><img alt="../../../_images/analysis_class_004.png" src="../../../_images/analysis_class_004.png" style="width: 300px;" /></a>
+</figure>
+</div></blockquote>
+</section>
+<section id="fms-introduce-baseset-biz-analysis-class-do">
+<span id="id42"></span><h2><span class="section-number">3.5.3. </span>実行手順<a class="headerlink" href="#fms-introduce-baseset-biz-analysis-class-do" title="Link to this heading">¶</a></h2>
+<p>Biz∫会計管理者アカウントでポータル画面にログインし、分析種別単位に、属する分析コード、分析体系を登録します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF アドミニストレーション
+  マスタ管理
+    分析コード
+      分析コード管理
+</pre></div>
+</div>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>各分析体系について、分析コードの階層入力を行う際は、対象とする分析体系を選択し、「階層」ボタンを押下します。</p></li>
+<li><p>ルートノード、もしくは中間ノードを選択・右クリックし、中間ノード・末端ノードの追加を行います。</p></li>
+</ol>
+<blockquote>
+<div><figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/analysis_class_005.png"><img alt="../../../_images/analysis_class_005.png" src="../../../_images/analysis_class_005.png" style="width: 300px;" /></a>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>一括登録を行う場合は、シート「マスタ設定シート_分析種別.csv」、「マスタ設定シート_分析コード体系.csv」、「マスタ設定シート_分析コード.csv」、「マスタ設定シート_分析コード階層.csv」の所定のフォーマットに従って項目を埋めたcsvファイルを準備し、それぞれ対応するメニューの「SF5:一括登録」よりファイルをアップロード後、ダイアログの「F5:実行」を押下し、ロードします。</p>
+</div>
+</div></blockquote>
+</section>
+<section id="fms-introduce-baseset-biz-analysis-class-endconditions">
+<span id="id43"></span><h2><span class="section-number">3.5.4. </span>完了条件<a class="headerlink" href="#fms-introduce-baseset-biz-analysis-class-endconditions" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>画面より検索を行い、分析種別、分析コードの入力結果を確認します。</p></li>
+<li><p>分析体系別に、分析コードの階層構造が設計通りであることを確認します。</p></li>
+<li><p>Biz∫会計の分析フィールド管理画面にて、登録した分析種別が選択肢として表示されることを確認します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  会計コア
+    マスタメンテナンス
+      基本設定管理
+        分析フィールド管理
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >Biz∫ 基盤の設定</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" ><span class="section-number">3. </span>Biz∫ 共通マスタ設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">3.5. </span>分析コード登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

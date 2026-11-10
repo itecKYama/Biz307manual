@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>1.3. 法人グループ・法人登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/biz_highlight.css" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="1.4. ロール登録" href="role.html" />
+    <link rel="prev" title="1.2. 組織登録" href="department.html" />
+    <script type="text/javascript" src="../../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >Biz∫ 基盤の設定</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" accesskey="U"><span class="section-number">1. </span>IM-共通マスタ の設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">1.3. </span>法人グループ・法人登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="department.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="role.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Biz∫ 基盤の設定</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">1. IM-共通マスタ の設定</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="company.html">1.1. 計上組織セットコード登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="department.html">1.2. 組織登録</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1.3. 法人グループ・法人登録</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-baseset-im-master-corporation-startconditions">1.3.1. 着手条件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-baseset-im-master-corporation-do">1.3.2. 実行手順</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id42">1.3.2.1. 画面から登録する場合</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#id43">1.3.2.1.1. 法人の登録</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#id44">1.3.2.1.2. 法人グループの登録</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#id45">1.3.2.2. 一括登録する場合</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#id46">1.3.2.2.1. 法人の一括登録</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#id47">1.3.2.2.2. 法人グループの一括登録</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-baseset-im-master-corporation-endconditions">1.3.3. 完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="role.html">1.4. ロール登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.html">1.5. ユーザ・従業員登録</a></li>
+<li class="toctree-l4"><a class="reference internal" href="authorization.html">1.6. 認可設定</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../auth/index.html">2. アクセス権設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../biz/index.html">3. Biz∫ 共通マスタ設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jobnet.html">4. ジョブネット設定</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../module/index.html">モジュール別の導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-baseset-im-master-corporation">
+<span id="id39"></span><h1><span class="section-number">1.3. </span>法人グループ・法人登録<a class="headerlink" href="#fms-introduce-baseset-im-master-corporation" title="Link to this heading">¶</a></h1>
+<p>Biz∫会計の法人グループ、および法人を登録します。</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>グループ会社間取引を導入する場合、<a class="reference internal" href="../../module/gt/corporation.html#fms-introduce-module-gt-corporation"><span class="std std-ref">法人グループ、法人・取引先マスタの登録</span></a>を参照し、グループ会社間取引に該当する法人グループ、法人の登録を行ってください。</p>
+</div>
+</div></blockquote>
+<section id="fms-introduce-baseset-im-master-corporation-startconditions">
+<span id="id40"></span><h2><span class="section-number">1.3.1. </span>着手条件<a class="headerlink" href="#fms-introduce-baseset-im-master-corporation-startconditions" title="Link to this heading">¶</a></h2>
+<p>会社の登録を終えていること。</p>
+</section>
+<section id="fms-introduce-baseset-im-master-corporation-do">
+<span id="id41"></span><h2><span class="section-number">1.3.2. </span>実行手順<a class="headerlink" href="#fms-introduce-baseset-im-master-corporation-do" title="Link to this heading">¶</a></h2>
+<p>法人と取引先は「法人グループ-法人-取引先」の階層構造となっています。法人グループは複数の階層を設定することができます。これらの階層構造を束ねる単位として法人グループセットコードを設定します。</p>
+<section id="id42">
+<h3><span class="section-number">1.3.2.1. </span>画面から登録する場合<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h3>
+<section id="id43">
+<h4><span class="section-number">1.3.2.1.1. </span>法人の登録<a class="headerlink" href="#id43" title="Link to this heading">¶</a></h4>
+<p>テナント管理者権限でテナント管理画面にログインし、法人について設定の必要な項目を登録します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>テナント管理
+  共通マスタ
+    法人・取引先
+</pre></div>
+</div>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>「法人の新規登録」を押下し、法人コードと名称を登録します。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>取引先や法人と取引先の関連づけは<a class="reference internal" href="../../module/gl/customer_gl.html#fms-introduce-module-gl-customer-gl"><span class="std std-ref">取引先登録（一般会計用）</span></a>または<a class="reference internal" href="../../module/pr/customer.html#fms-introduce-module-pr-customer"><span class="std std-ref">取引先登録（債権・債務用）</span></a>で登録します。</p>
+</div>
+</div></blockquote>
+</section>
+<section id="id44">
+<h4><span class="section-number">1.3.2.1.2. </span>法人グループの登録<a class="headerlink" href="#id44" title="Link to this heading">¶</a></h4>
+<p>テナント管理者権限でテナント管理画面にログインし、法人グループについて設定の必要な項目を登録します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">テナント管理</span>
+  <span class="n">共通マスタ</span>
+    <span class="n">法人グループ</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>「法人グループセットの新規登録」を押下し、法人グループセットコードと名称を登録します。</p></li>
+<li><p>登録した法人グループセットにカーソルを合わせ、右クリックで「配下に新規法人グループを登録」を選択し、法人グループコードと名称を登録します。</p></li>
+<li><p>登録した法人グループにカーソルを合わせ、右クリックで「所属法人を追加」を選択し、法人を追加します。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>法人グループセットコードには会計コアのパラメータ「法人グループセットコード」で設定したコードを登録してください。</p>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="id45">
+<h3><span class="section-number">1.3.2.2. </span>一括登録する場合<a class="headerlink" href="#id45" title="Link to this heading">¶</a></h3>
+<section id="id46">
+<h4><span class="section-number">1.3.2.2.1. </span>法人の一括登録<a class="headerlink" href="#id46" title="Link to this heading">¶</a></h4>
+<ul>
+<li><p>取込みファイルの準備</p>
+<p>シート「マスタ設定シート_法人.csv」の所定のフォーマットに従って項目を埋めたcsvファイルを準備します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>有効期間は、取込設定ファイルで&lt;start-date&gt;、&lt;end-date&gt;を指定することで設定可能です。その場合、一度の取込で一つの期間しか指定できません。また、xmlファイルでの取り込みをすれば、個々の法人グループに対して期間を指定することができます。xmlファイルでの取込については、「<a class="reference external" href="http://www.intra-mart.jp/document/library/iap/public/im_master/im_master_import_export_specification/index.html">IM-共通マスタ インポート・エクスポート仕様書</a>」を参照してください。</p>
+</div>
+<ul>
+<li><p>取込設定ファイルのユーザインポート設定例</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;corporation-import&gt;</span>
+<span class="w">  </span><span class="nt">&lt;format&gt;</span>csv<span class="nt">&lt;/format&gt;</span>・・・・・・・・・・取込ファイルのフォーマット
+<span class="w">  </span><span class="nt">&lt;encoding&gt;</span>SJIS<span class="nt">&lt;/encoding&gt;</span>・・・・・・文字コード
+<span class="w">  </span><span class="nt">&lt;extension-param</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;with-header&quot;</span><span class="nt">&gt;</span>true<span class="nt">&lt;/extension-param &gt;</span>・・・・・・・ヘッダー有無
+<span class="w">  </span><span class="nt">&lt;start-date&gt;</span>2021-04-01<span class="nt">&lt;/start-date&gt;</span>・・・・・・・・・・インポート開始日
+<span class="w">  </span><span class="nt">&lt;end-date&gt;</span>3000-01-01<span class="nt">&lt;/end-date&gt;</span>・・・・・・・・・・・インポート終了日
+<span class="w">  </span><span class="nt">&lt;name&gt;</span>name<span class="nt">&lt;/name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;file</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;corporation&quot;</span><span class="nt">&gt;</span>im_master/data/corporation-group.csv<span class="nt">&lt;/file&gt;</span>・・インポートターゲットファイル(法人)
+<span class="nt">&lt;/corporation-import&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>CSVファイルの配備</p>
+<p>以下の設定ファイルに定めたパスとファイル名にしたがって各csvファイルを配置します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">パブリックストレージ</span><span class="o">&gt;/</span><span class="n">im_master</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">import_config</span><span class="o">.</span><span class="n">xml</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>パブリックストレージのパスについては、Biz∫APFの逆引き(Cookbook)<a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/cookbook/environment/other/005.html">ストレージパスを確認する</a>を参照してください。</p>
+</div>
+</li>
+<li><p>インポートバッチの実行</p>
+<p>テナント管理者権限でテナント管理画面にログインし、ジョブネット設定画面からユーザインポートを行います。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">テナント管理</span>
+  <span class="n">ジョブ管理</span>
+    <span class="n">ジョブネット設定</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>ジョブネット一覧より「法人」を選択し、実行します。</p></li>
+</ol>
+<ul>
+<li><p>ジョブネット一覧</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IM共通マスタ</span>
+  <span class="n">インポート</span>
+    <span class="n">法人</span>
+</pre></div>
+</div>
+<p>ジョブにてcsvファイルをインポートします。</p>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id47">
+<h4><span class="section-number">1.3.2.2.2. </span>法人グループの一括登録<a class="headerlink" href="#id47" title="Link to this heading">¶</a></h4>
+<ul>
+<li><p>取込みファイルの準備</p>
+<p>法人グループセットコードは画面から入力します。</p>
+<p>シート「マスタ設定シート_法人グループ.csv」「マスタ設定シート_法人グループ内包.csv」「マスタ設定シート_法人グループ所属.csv」の所定のフォーマットに従って項目を埋めたcsvファイルを準備します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>有効期間は、取込設定ファイルで&lt;start-date&gt;、&lt;end-date&gt;を指定することで設定可能です。その場合、一度の取込で一つの期間しか指定できません。また、xmlファイルでの取り込みをすれば、個々の法人グループに対して期間を指定することができます。xmlファイルでの取込については、「<a class="reference external" href="http://www.intra-mart.jp/document/library/iap/public/im_master/im_master_import_export_specification/index.html">IM-共通マスタ インポート・エクスポート仕様書</a>」を参照してください。</p>
+</div>
+<ul>
+<li><p>取込設定ファイルの法人グループインポート設定例</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;corporation-group-import&gt;</span>
+<span class="w">  </span><span class="nt">&lt;format&gt;</span>csv<span class="nt">&lt;/format&gt;</span>・・・・・・・・・・取込ファイルのフォーマット
+<span class="w">  </span><span class="nt">&lt;encoding&gt;</span>SJIS<span class="nt">&lt;/encoding&gt;</span>・・・・・・文字コード
+<span class="w">  </span><span class="nt">&lt;extension-param</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;with-header&quot;</span><span class="nt">&gt;</span>true<span class="nt">&lt;/extension-param &gt;</span>・・・・・・・ヘッダー有無
+<span class="w">  </span><span class="nt">&lt;start-date&gt;</span>2021-04-01<span class="nt">&lt;/start-date&gt;</span>・・・・・・・・・・インポート開始日
+<span class="w">  </span><span class="nt">&lt;end-date&gt;</span>3000-01-01<span class="nt">&lt;/end-date&gt;</span>・・・・・・・・・・・インポート終了日
+<span class="w">  </span><span class="nt">&lt;name&gt;</span>name<span class="nt">&lt;/name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;file</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;corporation-group&quot;</span><span class="nt">&gt;</span>im_master/data/corporation-group.csv<span class="nt">&lt;/file&gt;</span>・・インポートターゲットファイル(法人グループ)
+<span class="w">  </span><span class="nt">&lt;file</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;inclusion&quot;</span><span class="nt">&gt;</span>im_master/data/inclusion.csv<span class="nt">&lt;/file&gt;</span>・・・・・・・・・・インポートターゲットファイル(法人グループ内包)
+<span class="w">  </span><span class="nt">&lt;file</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;attach-corporation&quot;</span><span class="nt">&gt;</span>im_master/data/attach-corporation.csv<span class="nt">&lt;/file&gt;</span>・インポートターゲットファイル(法人グループ所属)
+<span class="nt">&lt;/corporation-group-import&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>CSVファイルの配備</p>
+<p>以下の設定ファイルに定めたパスとファイル名にしたがって各csvファイルを配置します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">パブリックストレージ</span><span class="o">&gt;/</span><span class="n">im_master</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">import_config</span><span class="o">.</span><span class="n">xml</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>パブリックストレージのパスについては、Biz∫APFの逆引き(Cookbook)<a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/cookbook/environment/other/005.html">ストレージパスを確認する</a>を参照してください。</p>
+</div>
+</li>
+<li><p>インポートバッチの実行</p>
+<p>テナント管理者権限でテナント管理画面にログインし、ジョブネット設定画面からユーザインポートを行います。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">テナント管理</span>
+  <span class="n">ジョブ管理</span>
+    <span class="n">ジョブネット設定</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>ジョブネット一覧より「法人グループ」を選択し、実行します。</p></li>
+</ol>
+<ul>
+<li><p>ジョブネット一覧</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IM共通マスタ</span>
+  <span class="n">インポート</span>
+    <span class="n">法人グループ</span>
+</pre></div>
+</div>
+<p>ジョブにてcsvファイルをインポートします。</p>
+</li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>インポート結果をユーザ画面で確認し、画面から有効期間を設定してください。</p></li>
+</ol>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="fms-introduce-baseset-im-master-corporation-endconditions">
+<span id="id48"></span><h2><span class="section-number">1.3.3. </span>完了条件<a class="headerlink" href="#fms-introduce-baseset-im-master-corporation-endconditions" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>登録した法人を以下の画面から確認します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">テナント管理</span>
+  <span class="n">共通マスタ</span>
+    <span class="n">法人グループ</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="../index.html" >Biz∫ 基盤の設定</a></li>
+        <li class="nav-item nav-item-3 breadcrumbs-item"><a href="index.html" ><span class="section-number">1. </span>IM-共通マスタ の設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">1.3. </span>法人グループ・法人登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
