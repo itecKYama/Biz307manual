@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>導入手順 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../_static/biz_highlight.css" />
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="操作ガイド" href="operation.html" />
+    <link rel="prev" title="過年度アーカイブ方式" href="architecture.html" />
+    <script type="text/javascript" src="../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../_static/amy.js"></script>
+    <script type="text/javascript" src="../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="index.html" accesskey="U">過年度アーカイブ</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">導入手順</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="architecture.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="operation.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduce/index.html">導入マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduce/reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">過年度アーカイブ</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html">過年度アーカイブ方式</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">導入手順</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fms-archive-create-archive-tenant-do">アーカイブテナントを追加する。</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fms-archive-add-authorization-endconditions">IM共通マスタを移行する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fms-archive-add-authorization-setting">認可を設定する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bizui3">認可を設定する（Biz∫UI3）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id43">ユーザ情報を更新する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fms-archive-set-parameter">パラメータを設定する</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id45">過年度保持年数を設定する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id46">添付ファイルの削除期限日更新を設定する</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="operation.html">操作ガイド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile.html">過年度アーカイブ向けテナント移送管理プロファイル</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html">リファレンス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restriction.html">制限事項</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="id39">
+<h1>導入手順<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="fms-archive-create-archive-tenant-do">
+<span id="id40"></span><h2>アーカイブテナントを追加する。<a class="headerlink" href="#fms-archive-create-archive-tenant-do" title="Link to this heading">¶</a></h2>
+<p>アーカイブテナントを追加します。</p>
+<ol class="arabic">
+<li><p>Biz∫APFの運用環境セットアップガイドの以下の手順を実行します</p>
+<ul>
+<li><p><a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/setup/production-environment/tasks/db-server/oracle/oracle-setup.html#bapf-setup-production-environment-tasks-db-server-oracle-oracle-setup-tenant-db">テナントデータベースの作成（Oracle Database）</a>   または<a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/setup/production-environment/tasks/db-server/postgres/postgre-setup.html#bapf-setup-production-environment-tasks-db-server-postgre-postgre-setup-tenant-db">テナントデータベースの作成（PostgreSQL）</a></p></li>
+<li><p><a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/setup/production-environment/tasks/build-war/juggling-project-config.html">運用環境に合わせたIM Juggling 設定ファイルの変更</a></p></li>
+<li><p><a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/setup/production-environment/tasks/iap/index.html">intra-mart Accel Platform 環境のセットアップ</a></p>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>アーカイブ元と同じ会社コードを設定してください。</p>
+</div>
+</li>
+<li><p><a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/setup/production-environment/tasks/biz/report-service-setup.html">帳票サービスのセットアップ</a></p></li>
+<li><p><a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/setup/production-environment/tasks/biz/report-service-setup.html#id40">アプリケーション帳票設定</a></p></li>
+<li><p><a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/setup/production-environment/tasks/biz/help-url-config.html">オンラインヘルプベースURLの設定</a></p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="fms-archive-add-authorization-endconditions">
+<span id="id41"></span><h2>IM共通マスタを移行する<a class="headerlink" href="#fms-archive-add-authorization-endconditions" title="Link to this heading">¶</a></h2>
+<p>アーカイブテナントにマスタをインポートします。</p>
+<ol class="arabic simple">
+<li><p>アーカイブ元テナントにテナント管理者権限でテナント管理画面にログインします。</p></li>
+<li><p>「サイトマップ」→「テナント管理」→「ジョブネット管理」をクリックします。</p></li>
+<li><p>以下のIM共通マスタをエクスポートします。</p>
+<ul class="simple">
+<li><p>ユーザ</p></li>
+<li><p>会社・組織</p></li>
+<li><p>会社グループ</p></li>
+<li><p>取引先</p></li>
+<li><p>法人</p></li>
+<li><p>法人グループ</p></li>
+</ul>
+</li>
+<li><p>以下のテナントマスタをエクスポートします。</p>
+<ul class="simple">
+<li><p>ロール</p></li>
+<li><p>アカウント</p></li>
+</ul>
+</li>
+<li><p>インポート用の設定ファイルに定めたパスとファイル名にしたがって3.4.でエクスポートしたファイルを配置します。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>設定ファイルにについては、「<a class="reference external" href="http://www.intra-mart.jp/document/library/iap/public/im_master/im_master_import_export_specification/index.html">IM-共通マスタ インポート・エクスポート仕様書</a>」を参照してください。</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>アーカイブテナントにテナント管理者権限でテナント管理画面にログインします。</p></li>
+<li><p>「サイトマップ」→「テナント管理」→「ジョブネット管理」をクリックします。</p></li>
+<li><p>以下の順番でIM共通マスタをインポートします。</p>
+<ul class="simple">
+<li><p>ユーザ</p></li>
+<li><p>会社・組織</p></li>
+<li><p>会社グループ</p></li>
+<li><p>取引先</p></li>
+<li><p>法人</p></li>
+<li><p>法人グループ</p></li>
+</ul>
+</li>
+<li><p>以下の順番でテナントマスタをインポートします。</p>
+<ul class="simple">
+<li><p>ロール</p></li>
+<li><p>アカウント</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="fms-archive-add-authorization-setting">
+<span id="id42"></span><h2>認可を設定する<a class="headerlink" href="#fms-archive-add-authorization-setting" title="Link to this heading">¶</a></h2>
+<p>アーカイブテナントに認可を設定します。</p>
+<ol class="arabic simple">
+<li><p>以下のファイルをパブリックストレージに配置します。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>パブリックストレージのパスについては、Biz∫APFの逆引き(Cookbook)<a class="reference external" href="https://apf-docs.biz-integral.net/docs/LATEST/apf/document/cookbook/environment/other/005.html">ストレージパスを確認する</a>を参照してください。</p>
+</div>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/6fb2c0edca90b21e5fc5c246e406beae/role.xml"><code class="xref download docutils literal notranslate"><span class="pre">ロールインポート</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/29167f83f2e1a26f7e0fe125b35dedf5/authz-resource.xml"><code class="xref download docutils literal notranslate"><span class="pre">認可(リソース)インポート</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/ed49782d63c5667d58ff4f700c4b49b1/authz-subject-group.xml"><code class="xref download docutils literal notranslate"><span class="pre">認可(サブジェクト及びグループ)インポート</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/21dadfe10ac7dad2019acf45b6bf8199/authz-policy.xml"><code class="xref download docutils literal notranslate"><span class="pre">認可(ポリシー)インポート</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>「サイトマップ」→「テナント管理」→「ジョブネット管理」をクリックします。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>ジョブネットを利用した一括取込については、「<a class="reference external" href="http://www.intra-mart.jp/document/library/iap/public/im_import_export/im_authz_import_export_specification/index.html">IM-Authz（認可）インポート・エクスポート仕様書</a>」を参照してください。</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>テナント管理者権限でテナント管理画面にログインし、以下の登録済みのジョブネットを即時実行します。</p>
+<ul class="simple">
+<li><p>ロールインポート</p></li>
+<li><p>認可(リソース)インポート</p></li>
+<li><p>認可(サブジェクト及びグループ)インポート</p></li>
+<li><p>認可(ポリシー)インポート</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="bizui3">
+<span id="fms-archive-add-authorization-setting-bui3"></span><h2>認可を設定する（Biz∫UI3）<a class="headerlink" href="#bizui3" title="Link to this heading">¶</a></h2>
+<p>アーカイブテナントにBiz∫UI3用の認可を設定します。</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>Biz∫UI3を利用しない場合、この設定は必要ありません。</p>
+</div>
+</div></blockquote>
+<p>上記の<a class="reference internal" href="#fms-archive-add-authorization-setting"><span class="std std-ref">認可を設定する</span></a>  の手順に加え、以下のファイルをインポートしてBiz∫UI3用の認可設定を行います。</p>
+<p>インポート方法は上記と同様です。「authz-policy.xml」にリネームしてからインポートしてください。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/45b2a467e2e342b58e3acb120b93a3ea/authz-policy_bui3.xml"><code class="xref download docutils literal notranslate"><span class="pre">認可(ポリシーUI3)インポート</span></code></a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id43">
+<h2>ユーザ情報を更新する<a class="headerlink" href="#id43" title="Link to this heading">¶</a></h2>
+<p>アーカイブテナントで過年度アーカイブを利用するユーザのライセンスを有効化し、ロールを設定します。</p>
+<ol class="arabic simple">
+<li><p>テナント管理者権限でテナント管理画面にログインします。</p></li>
+<li><p>「共通マスタ」→「ユーザ」をクリックします。</p></li>
+<li><p>過年度アーカイブを利用するユーザを選択し、以下を実施します。</p>
+<ol class="arabic simple">
+<li><p>「ロール」タブで、ロール名「Biz∫会計_過年度アーカイブユーザ」のみ割り当てます。</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="fms-archive-set-parameter">
+<span id="id44"></span><h2>パラメータを設定する<a class="headerlink" href="#fms-archive-set-parameter" title="Link to this heading">¶</a></h2>
+<p>アーカイブ元のテナントにBiz∫会計管理者でログインし、下記メニューより、対象モジュール：過年度アーカイブで検索します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">会計コア</span>
+  <span class="n">マスタメンテナンス</span>
+    <span class="n">基本設定管理</span>
+      <span class="n">パラメータ管理</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<section id="id45">
+<h3>過年度保持年数を設定する<a class="headerlink" href="#id45" title="Link to this heading">¶</a></h3>
+<p>アーカイブ元テナントに過年度保持年数を設定します。</p>
+<ol class="arabic">
+<li><p>「過年度保持年数」を設定します。</p>
+<p>過年度データを保持する年数を設定してください。</p>
+</li>
+</ol>
+</section>
+<section id="id46">
+<h3>添付ファイルの削除期限日更新を設定する<a class="headerlink" href="#id46" title="Link to this heading">¶</a></h3>
+<p>アーカイブ元テナントに添付ファイルの削除期限日更新を設定します。</p>
+<ol class="arabic">
+<li><p>「添付ファイルの削除期限日更新」を設定します。</p>
+<p>アーカイブされた仕訳・取引のデータ削除時に添付ファイルの削除期限日を更新するかどうかを指定してください。</p>
+</li>
+</ol>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="index.html" >過年度アーカイブ</a></li>
+        <li class="nav-item breadcrumbs-item"><a href="">導入手順</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
