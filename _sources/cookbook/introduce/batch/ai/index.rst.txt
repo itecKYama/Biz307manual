@@ -1,0 +1,24 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_ai:
+
+===================================================
+会計連携
+===================================================
+会計連携モジュールの業務に必要なジョブをコマンドラインから起動します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   file_import_batch
+   finance_data_split_batch
+   finance_data_import_batch
+   imported_data_delete_batch
+
+.. only:: internal
+
+  file_import_batch           : 連携ファイル取込処理のジョブ実行
+  finance_data_split_batch    : 会計データ分割処理のジョブ実行
+  finance_data_import_batch   : 会計データ取込処理のジョブ実行
+  imported_data_delete_batch  : 取込済データ削除処理のジョブ実行
+

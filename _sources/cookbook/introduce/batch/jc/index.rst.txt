@@ -1,0 +1,28 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_jc:
+
+===================================================
+プロジェクト原価管理
+===================================================
+プロジェクト原価管理モジュールの業務に必要なジョブをコマンドラインから起動します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   project_fld_rel_batch
+   actual_batch
+   labor_jrnl_batch
+   prj_import_batch
+   front_out_batch
+   monthly_fix
+
+.. only:: internal
+
+  project_fld_rel_batch    : フィールド関連再作成ジョブ実行
+  actual_batch             : 稼働実績取込ジョブ実行
+  labor_jrnl_batch         : 給与仕訳取込ジョブ実行
+  prj_import_batch         : プロジェクト一括取込ジョブ実行
+  front_out_batch          : フロント連携出力ジョブ実行
+  monthly_fix              : 原価計算ジョブ実行
+

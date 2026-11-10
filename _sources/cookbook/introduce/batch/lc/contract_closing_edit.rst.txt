@@ -1,0 +1,58 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_lc-contract_closing_edit:
+
+===================================================
+契約決算更新ジョブ実行
+===================================================
+以下は、契約決算更新ジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_lc_0020
+  -certUserCd=B12200 -certUserPassword=PASSWORD
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+  -DcontractClosingExecutionClass=1 -DjournalKind=1 -DcontractClosingHandlType=2
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - 外部ソフトウェア接続URLを指定します。
+
+       http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - contractClosingExecutionClass [#doption]_
+     - | 契約決済更新する実行種別を指定します。
+       | 　1.長短振替
+       | 　2.損益計上
+   * - journalKind [#doption]_
+     - | 生成する仕訳の種類を指定します。
+       | 　1.通常
+       | 　2.決算
+   * - closingClass [#doption]_
+     - | 決算仕訳を生成する場合の決算種別を指定します。
+       | 　01.決算01 ～ 09.決算09
+       | journalKindが「2.決算」の場合必須となります。
+   * - contractClosingHandlType [#doption]_
+     - | 契約決算更新する処理区分を指定します。
+       | 　1.仮実行
+       | 　2.確定
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。
+

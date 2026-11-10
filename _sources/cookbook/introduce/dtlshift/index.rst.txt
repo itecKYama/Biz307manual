@@ -1,0 +1,50 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_dtlshift:
+
+===================================================
+明細移行
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   process
+   master
+   import
+   reconciled
+   is_balance
+   not_reconciled_jrnl
+   not_reconciled_pr
+   not_reconciled_incm_pay
+   demand
+   bill
+   ermc
+   cip
+   project_cost
+   progress_project
+   annual
+   deferred_accounts
+   wf
+
+.. only:: internal
+
+   process                    : 実施手順概要
+   master                     : 仕訳明細移行のためのマスタ設定
+   import                     : 年度毎の仕訳明細取り込み
+   reconciled                 : 消込済仕訳の登録
+   is_balance                 : 科目マスタの残高管理対象フラグ編集
+   not_reconciled_jrnl        : 未消込振替仕訳の登録
+   not_reconciled_pr          : 未消込債権債務の登録
+   not_reconciled_incm_pay    : 未消込入金支払仕訳の登録
+   demand                     : 請求残高データの取込
+   bill                       : 未決済手形の登録
+   ermc                       : 未決済電子記録債権の登録
+   cip                        : 未振替建設仮勘定仕訳の登録
+   project_cost               : 未成プロジェクト仕訳の登録
+   progress_project           : 進行基準および原価回収基準プロジェクトの移行用の仕訳の登録
+   annual                     : 年次繰越実行
+   deferred_accounts          : 経過勘定対象取引の再登録（当年度発生分）
+   wf                         : Biz∫会計ワークフローパラメータ修正
+

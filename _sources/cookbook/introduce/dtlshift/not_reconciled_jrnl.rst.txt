@@ -1,0 +1,40 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_dtlshift-not_reconciled_jrnl:
+
+===================================================
+未消込振替仕訳の登録
+===================================================
+
+移行対象年度の未消込の振替仕訳の明細を取り込みます。
+
+.. _FMS_cookbook_introduce_dtlshift-not_reconciled_jrnl-startConditions:
+
+着手条件
+===================================================
+
+* 移行対象年度の消込済分の移行が完了していること。
+
+* :ref:`FMS_cookbook_introduce_dtlshift-master` を実施している場合、 :ref:`FMS_cookbook_introduce_dtlshift-is_balance` が完了していること。
+
+
+.. _FMS_cookbook_introduce_dtlshift-not_reconciled_jrnl-do:
+
+実行手順
+===================================================
+
+仕訳明細を取り込むため、一括取込用のファイルを作成します。
+
+.. note::
+  
+  取り込み対象の仕訳明細を元に、設定シート「一括取込シート_仕訳.csv」の所定のフォーマットに従って項目を埋めたcsvファイルを準備してください。
+
+|FMS_ADM| アカウントでポータル画面にログインし、以下のメニューより「F6:ファイル選択」を押下し、ファイルを指定後、「F5:取込」より登録します。
+
+* メニュー ::
+
+    Biz∫ 会計
+      一般会計
+        仕訳取込処理
+          仕訳一括取込
+

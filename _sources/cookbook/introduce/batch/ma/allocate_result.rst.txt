@@ -1,0 +1,57 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_ma-allocate_result:
+
+===================================================
+配賦ジョブ実行
+===================================================
+以下は、配賦ジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_ma_allocateResult
+  -certUserCd=B12200 -certUserPassword=PASSWORD
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+  -DallocationPhasePatternCd=ALCPT00001 -DallocationFlag=0
+  -DslipDescription=経費 -DslipDescriptionType=1
+  -DdepartmentCd=12200
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - | 外部ソフトウェア接続URLを指定します。
+       | http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - allocationPhasePatternCd [#doption]_
+     - 配賦段階パターンコードを指定します。
+   * - allocationFlag [#doption]_
+     - | 仮仕訳を配賦対象とするかを指定します。
+       | 0.仮仕訳を含まない
+       | 1.仮仕訳を含む
+   * - slipDescription [#doption]_
+     - 伝票摘要を指定します。
+   * - slipDescriptionType [#doption]_
+     - | 伝票摘要に対象年月日を含めるかを指定します。
+       | 1.伝票摘要のみ
+       | 2.対象年月日+伝票摘要
+       | 3.伝票摘要+対象年月日
+   * - departmentCd [#doption]_
+     - 起票組織コードを指定します。
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。

@@ -1,0 +1,18 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_gm:
+
+===================================================
+|GM| 
+===================================================
+|GM| モジュールの業務に必要なジョブをコマンドラインから起動します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   di_job
+
+.. only:: internal
+
+  di_job : Biz∫APF データ連携ジョブ実行
+

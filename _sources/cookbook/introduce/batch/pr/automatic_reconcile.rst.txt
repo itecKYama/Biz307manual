@@ -1,0 +1,99 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_pr-automatic_reconcile:
+
+===================================================
+仮受金自動消込ジョブ実行
+===================================================
+以下は、仮受金自動消込ジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_pr_automaticReconcile
+  -certUserCd=B12200 -certUserPassword=PASSWORD
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+  -DincomeDecisionTimePoint=0 -DreconcileIncomeAmtOverReconcileRecAmt=0
+  -DonlyReconcileRequested=0-DreconcileIncomeAmtOverTotalClaimAmt=0
+  -DreconcileIncomeAmtUnderTotalClaimAmt=0 -DincomeDate=20220402
+  -DslipDescription=伝票摘要 -DslipMemo=伝票摘要メモ
+  -DslipDescriptionTypeReq=1 -DslipMemoTypeReq=1
+  -DincomeDateTypeReq=1 -DincomeDateFrom=2
+  -DincomeDateTo=3 -DdepartmentCd=12200
+  -DincomeDetailProcessingUnitReq=0 -DreconcilePostDate=20220401
+
+設定パラメータ
+
+.. list-table::
+   :widths: 10, 15
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - | 外部ソフトウェア接続URLを指定します。
+       | http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - incomeDecisionTimePoint [#doption]_
+     - | 処理対象となる入金日の範囲を指定します。
+       | 0.債権計上日以降
+       | 1.入金予定日以降
+   * - reconcileIncomeAmtOverReconcileRecAmt [#doption]_
+     - | 消込依頼額を超える入金額を処理対象にするかを指定します。
+       | 0.消込依頼額を超える入金額を含まない
+       | 1.消込依頼額を超える入金額を含む
+   * - onlyReconcileRequested [#doption]_
+     - | 消込依頼中の仮受金を処理対象にするかを指定します。
+       | 0.消込依頼中を含む
+       | 1.消込依頼済のみ
+   * - reconcileIncomeAmtOverTotalClaimAmt [#doption]_
+     - | 債権合計額を超える入金額仮受金を処理対象にするかを指定します。
+       | 0.債権合計額を超える入金額を含まない
+       | 1.債権合計額を超える入金額を含む
+   * - reconcileIncomeAmtUnderTotalClaimAmt [#doption]_
+     - | 債権合計額を下回る入金額仮受金を処理対象にするかを指定します。
+       | 0.債権合計額を下回る入金額を含まない
+       | 1.債権合計額を下回る入金額を含む
+   * - incomeDate [#doption]_
+     - 入金日月次締時計上日を指定します。
+   * - slipDescription [#doption]_
+     - 伝票摘要を指定します。
+   * - slipMemo [#doption]_
+     - 伝票メモを指定します。
+   * - slipDescriptionTypeReq [#doption]_
+     - | 伝票摘要に対象年月日を含めるかを指定します。
+       | 1.伝票摘要のみ
+       | 2.対象年月日+伝票摘要
+       | 3.伝票摘要+対象年月日
+   * - slipMemoTypeReq [#doption]_
+     - | 伝票メモに対象年月日を含めるかを指定します。
+       | 1.伝票メモのみ
+       | 2.対象年月日+伝票メモ
+       | 3.伝票メモ+対象年月日
+   * - incomeDateTypeReq [#doption]_
+     - | ジョブの実行日から入金日までの日数の計算方法を指定します。
+       | 1.日数
+       | 2.営業日数
+   * - incomeDateFrom [#doption]_
+     - ジョブの実行日から入金日までの日数を指定します。
+   * - incomeDateTo [#doption]_
+     - ジョブの実行日から入金日までの日数を指定します。
+   * - departmentCd [#doption]_
+     - 起票組織コードを指定します。
+   * - incomeDetailProcessingUnitReq [#doption]_
+     - | 入金明細の処理単位を指定します。
+       | 0.1件
+       | 1.入金先
+   * - reconcilePostDate [#doption]_
+     - 消込計上日を指定します。
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。

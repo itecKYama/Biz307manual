@@ -1,0 +1,92 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_pr-invoice_request_package:
+
+===================================================
+締日一括請求申請ジョブ実行
+===================================================
+以下は、締日一括請求申請ジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_pr_invoiceRequestPackage
+  -certUserCd=B12200 -certUserPassword=PASSWORD
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+  -DprocessModeReq=1 -DdepartmentCd=12200
+  -DrequestcreateCutoffJournalFlag=0 
+  -DdemandCdFrom=20160401 -DdemandCdTo=20160401
+  -DdepartmentGroupCd=G12200 -DdepartmentCdFrom=11110
+  -DdepartmentCdTo=12200 -DrequestdemandAmtOfZeroAndLessFlag=0
+  -DslipDescription=経費 -DslipMemo=20160401
+  -DslipDescriptionTypeReq=1 -DslipMemoTypeReq=1
+  -DcutoffDateTypeReq=1 -DcutoffDate=20160401
+
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - | 外部ソフトウェア接続URLを指定します。
+       | http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - processModeReq [#doption]_
+     - | 仕訳の作成方法を指定します。
+       | 1.仮実行 
+       | 2.仮実行+本実行 
+   * - departmentCd [#doption]_
+     - 起票組織コードを指定します。
+   * - requestcreateCutoffJournalFlag [#doption]_
+     - | 請求区分が「締時」の場合に、請求対象債権に消費税計算区分が「締時」または :ref:`FMS_introduce_core-parameter` で「請求時消費税再計算_明細単位」「請求時消費税再計算_取引一括」で「対象とする」とした消費税計算区分の債権を含む場合に行う、締時一括消費税仕訳の自動作成の実行有無を指定します。
+       | 0.仕訳自動作成しない
+       | 1.仕訳自動作成する
+   * - demandCdFrom [#doption]_
+     - 請求先コードの範囲を指定します。
+   * - demandCdTo [#doption]_
+     - 請求先コードの範囲を指定します。
+   * - departmentGroupCd [#doption]_
+     - 管理組織グループコードを指定します。
+   * - departmentCdFrom [#doption]_
+     - 管理組織コードの範囲を指定します。
+   * - departmentCdTo [#doption]_
+     - 管理組織コードの範囲を指定します。
+   * - requestdemandAmtOfZeroAndLessFlag [#doption]_
+     - | 請求書に出力する今回請求額により、請求対象とするかを指定します。
+       | 0.請求額0円以下を対象としない
+       | 1.請求額0円以下を対象とする
+   * - slipDescription [#doption]_
+     - 伝票摘要を指定します。
+   * - slipMemo [#doption]_
+     - 伝票メモを指定します。
+   * - slipDescriptionTypeReq [#doption]_
+     - | 伝票摘要に対象年月日を含めるかを指定します。
+       | 1.伝票摘要のみ
+       | 2.対象年月日+伝票摘要
+       | 3.伝票摘要+対象年月日
+   * - slipMemoTypeReq [#doption]_
+     - | 伝票メモに対象年月日を含めるかを指定します。
+       | 1.伝票メモのみ
+       | 2.対象年月日+伝票メモ
+       | 3.伝票メモ+対象年月日
+   * - cutoffDateTypeReq [#doption]_
+     - | 締日までの日数の計算方法を指定します。
+       | 1.日数
+       | 2.営業日数
+   * - cutoffDate [#doption]_
+     - ジョブの実行日から請求の締め日までの日数を指定します。
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。

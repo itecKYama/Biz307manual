@@ -1,0 +1,22 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_ac:
+
+===================================================
+過年度アーカイブ
+===================================================
+|FMS| 過年度アーカイブ の業務に必要なジョブをコマンドラインから起動します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   data_copy_batch
+   data_load_batch
+   data_deletion_batch
+
+.. only:: internal
+
+  data_copy_batch         : データ抽出ジョブ実行
+  data_load_batch         : データロードジョブ実行
+  data_deletion_batch     : データ削除ジョブ実行
+

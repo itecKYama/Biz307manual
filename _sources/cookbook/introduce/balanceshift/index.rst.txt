@@ -1,0 +1,19 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_balanceshift:
+
+===================================================
+残高移行
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   gl/index
+   pr/index
+
+.. only:: internal
+
+   gl  : 残高移行（一般会計）
+   pr  : 残高移行（債権債務）
+

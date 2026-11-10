@@ -1,0 +1,19 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_gl:
+
+===================================================
+一般会計
+===================================================
+一般会計モジュールの業務に必要なジョブをコマンドラインから起動します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   regular_journal_create
+   deferred_accounts_transfer_entry
+
+.. only:: internal
+
+  regular_journal_create              : 定期仕訳作成ジョブ実行
+  deferred_accounts_transfer_entry    : 経過勘定振替ジョブ実行

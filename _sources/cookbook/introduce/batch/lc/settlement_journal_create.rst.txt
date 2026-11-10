@@ -1,0 +1,65 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_lc-settlement_journal_create:
+
+===================================================
+決済仕訳作成ジョブ実行
+===================================================
+以下は、決済仕訳作成ジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_lc_0030
+  -certUserCd=B12200 -certUserPassword=PASSWORD
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+  -DpostPlanYearMonthJudgementType=2 -DcustomerCd=1401000011 -DdepartmentSelect=1
+  -DdepartmentGroupCd=G10000 -DcontractClassCd=00001 -DsettlementWayCd=00001
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - 外部ソフトウェア接続URLを指定します。
+
+       http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - postPlanYearMonthJudgementType [#doption]_
+     - | 決済情報を計上予定年月で取得する際の判定条件を指定します。
+       | 　1.最古オープン月を指定する
+       | 　2.ジョブ実行日の所属する月を指定する
+   * - headBranchDepartmentGroupCd [#doption]_
+     - | 計上日のオープンチェックや、計上予定年月を最古オープン月で取得する際の本支店組織グループを指定します。
+       | 指定しない場合、本店組織グループの月次状況を取得します。
+   * - customerCd [#doption]_
+     - | 決済情報を取得する際の取引先コードを指定します。
+   * - departmentSelect [#doption]_
+     - | 決済情報を組織グループまたは組織で取得する際の検索対象組織を指定します。
+       | 　1.契約組織
+       | 　2.決済組織
+       | 　3.損益組織
+   * - departmentGroupCd [#doption]_
+     - | 決済情報を取得する際の組織グループコードを指定します。
+   * - departmentCd [#doption]_
+     - | 決済情報を取得する際の組織コードを指定します。
+   * - contractClassCd [#doption]_
+     - | 決済情報を取得する際の契約種別コードを指定します。
+   * - settlementWayCd [#doption]_
+     - | 決済情報を取得する際の決済方法コードを指定します。
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。
+

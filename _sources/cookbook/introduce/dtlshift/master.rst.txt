@@ -1,0 +1,35 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_dtlshift-master:
+
+===================================================
+仕訳明細移行のためのマスタ設定
+===================================================
+
+仕訳明細を取り込む前に、マスタの設定を実施する。
+
+.. note::
+
+  仕訳明細の「残高明細管理状態」にて、残高明細管理対象外かどうかを指定する場合、本作業の実施は不要となります。
+
+.. _FMS_cookbook_introduce_dtlshift-master-startConditions:
+
+着手条件
+===================================================
+
+:ref:`FMS_cookbook_introduce_balanceshift` までの作業が終えていること。
+
+.. _FMS_cookbook_introduce_dtlshift-master-do:
+
+実行手順
+===================================================
+
+1. 残高明細管理対象の科目（科目マスタ登録時に残高明細管理フラグは「対象外」として登録してある）を、年度毎に期間分割する。
+
+  .. figure:: ./images/master_001.png
+     :width: 500px
+
+2. :ref:`FMS_introduce_core-parameter` を参照し、パラメータ「オープン期間」に12を指定してください。（仕訳明細を年度ごとに取り込むため）。
+
+
+

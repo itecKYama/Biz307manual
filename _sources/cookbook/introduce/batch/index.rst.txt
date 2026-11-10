@@ -1,0 +1,24 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch:
+
+===================================================
+ジョブ
+===================================================
+
+.. toctree::
+   :maxdepth: 2
+   
+   batch_user
+   job_setting
+   job_run
+   job_command
+
+
+.. only:: internal
+
+   batch_user   :各バッチ実行設定に設定する実行ユーザの権限を確認する
+   job_setting  :intra-martジョブへの登録
+   job_run      :intra-martジョブネットの実行方法
+   job_command  :コマンドラインから起動する方法
+

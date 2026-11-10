@@ -1,0 +1,27 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_dtlshift-import:
+
+===================================================
+年度毎の仕訳明細取り込み
+===================================================
+
+以下の4～11の手順を、明細を取り込む年度分繰り返します。
+古い年度から実施してください。
+
+運用開始年度の期中を取り込む場合、 :ref:`FMS_cookbook_introduce_dtlshift-annual` の年次確定は実施しないでください。
+
+4. :ref:`FMS_cookbook_introduce_dtlshift-reconciled`
+5. :ref:`FMS_cookbook_introduce_dtlshift-is_balance`
+6. :ref:`FMS_cookbook_introduce_dtlshift-not_reconciled_jrnl`
+7. :ref:`FMS_cookbook_introduce_dtlshift-not_reconciled_pr`
+8. :ref:`FMS_cookbook_introduce_dtlshift-not_reconciled_incm_pay`
+9. :ref:`FMS_cookbook_introduce_dtlshift-demand`
+10. :ref:`FMS_cookbook_introduce_dtlshift-bill`
+11. :ref:`FMS_cookbook_introduce_dtlshift-annual`
+
+
+.. note::
+
+  現在、取り込もうとしている年度を「移行対象年度」と呼ぶ。
+

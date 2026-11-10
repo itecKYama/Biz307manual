@@ -1,0 +1,61 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_pr-overseas_remittance_execute:
+
+===================================================
+海外送金依頼実行ジョブ実行
+===================================================
+以下は、海外送金依頼実行ジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_pr_paymentRequestPackage
+  -certUserCd=B12200 -certUserPassword=PASSWORD
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+  -DcompanyBankAccountCd=001 -DremittanceSpecifiedDateCalculateType=1
+  -DremittanceSpecifiedDateAdjustDateQtty=3 -DdepartmentCd=12200
+  -DaddEOFFlg=0 -DautomaticInterfaceFolderPath=\EB
+  -DdisplayFileName=EBデータ
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - | 外部ソフトウェア接続URLを指定します。
+       | http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - companyBankAccountCd [#doption]_
+     - 社内口座コードを設定します。
+   * - remittanceSpecifiedDateCalculateType [#doption]_
+     - | 送金指定日までの日数の計算方法を設定します。
+       | 1.日数
+       | 2.営業日数
+   * - remittanceSpecifiedDateAdjustDateQtty [#doption]_
+     - ジョブの実行日から送金指定日までの日数を設定します。
+   * - departmentCd [#doption]_
+     - 起票組織コードを設定します。
+   * - addEOFFlg [#doption]_
+     - | 出力ファイルの末尾にEOFを付与するかを設定します。
+       | 0.EOF付与しない
+       | 1.EOF付与
+   * - automaticInterfaceFolderPath [#doption]_
+     - 出力ファイルの出力先フォルダを、パブリックストレージパスからの相対パスで設定します。
+   * - displayFileName [#doption]_
+     - 自動連携フォルダパスに出力するEBファイルの表示名を設定します。設定しない場合、「EBファイル」がファイル名に含まれます。
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。

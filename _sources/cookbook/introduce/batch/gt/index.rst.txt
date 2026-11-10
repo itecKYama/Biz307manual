@@ -1,0 +1,20 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_gt:
+
+===================================================
+グループ会社間取引
+===================================================
+グループ会社間取引モジュールの業務に必要なジョブをコマンドラインから起動します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   cprt_intr_grp_trnsctns_batch
+   delete_apbase_info_batch
+
+.. only:: internal
+
+  cprt_intr_grp_trnsctns_batch : グループ会社間取引連携ジョブ実行
+  delete_apbase_info_batch     : 債務基礎情報削除ジョブ実行
+

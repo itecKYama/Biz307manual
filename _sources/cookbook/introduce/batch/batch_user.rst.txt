@@ -1,0 +1,1023 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch-user:
+
+===============================================================
+各ジョブ設定に設定する実行ユーザの権限を確認する
+===============================================================
+
+|FMS| で利用する各ジョブの実行ユーザに設定するユーザに設定する権限を確認します。
+ジョブ設定上で実行ユーザとして設定するユーザに以下の権限を付与するようにしてください。
+
+
+.. _FMS_cookbook_introduce_batch-user-common:
+
+全ジョブ共通の権限設定
+===================================================
+
+全ジョブの共通の権限設定は、以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - |IM| ライセンス
+    - 不要
+  * - ロール
+    - 不要
+    
+      ただし、 |IM_WF| の申請を行う場合には、ルート設定次第では必要となる場合があります。
+  * - 所属組織
+    - 主所属組織が必要
+
+.. _FMS_cookbook_introduce_batch-user-fc:
+
+会計コア
+===================================================
+
+会計コアモジュールのジョブ固有の設定は、以下となります。
+
+.. _FMS_cookbook_introduce_batch-user-fc-restrict:
+
+入力制限
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の入力制限ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 会計コア
+  * - アクセス制限（プロセス）
+    - バッチ処理用入力制限実行（restrictExecutionBatch#execute）
+
+.. _FMS_cookbook_introduce_batch-user-fc-ledger:
+
+元帳残高集計
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の元帳残高集計ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 会計コア
+  * - アクセス制限（プロセス）
+    - 元帳残高集計(ledgerBalanceSumUpBatch#execute)
+
+.. _FMS_cookbook_introduce_batch-user-fc-jpd:
+
+按分先仕訳を本仕訳に更新する
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の按分先仕訳を本仕訳に更新するジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 会計コア
+  * - アクセス制限（プロセス）
+    - 仕訳按分（journalPrprtnlDvsnBatch#execute）
+  * - 権限
+    - * 会計計上組織伝票更新権限
+    
+      * 残高明細管理状態変更権限
+
+.. _FMS_cookbook_introduce_batch-user-fc-monthly:
+
+月次更新
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の月次更新ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 会計コア
+  * - アクセス制限（プロセス）
+    - バッチ処理用月次確定実行（monthlyFixExecutionBatch#execute）
+  * - 権限
+    - * 月次更新実行権限
+
+.. _FMS_cookbook_introduce_batch-user-fc-report_job:
+
+帳票出力
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の帳票出力ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 会計コア
+  * - アクセス制限（プロセス）
+    - 帳票出力ジョブ実行（reportOutputJobBatch#execute）
+  * - 権限
+    -  * 起票組織の参照権限のうち、以下の権限のいずれかが必要となります。
+      
+         * 自起票伝票参照権限
+         * 自起票組織伝票参照権限
+         * 全起票組織伝票参照権限
+         * 指定組織グループ起票伝票参照権限
+      
+       * 会計計上組織伝票参照権限
+       
+       .. note::
+
+         各種帳票を出力するために必要となる権限の詳細は、 |FMS| ヘルプ『Appendix＞基本仕様＞権限』を参照してください。
+
+
+.. _FMS_cookbook_introduce_batch-user-gl:
+
+一般会計
+===================================================
+
+一般会計モジュールのジョブ固有の設定は、以下となります。
+
+.. _FMS_cookbook_introduce_batch-user-gl-regular_journal:
+
+定期仕訳作成
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の定期仕訳作成ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 一般会計
+  * - アクセス制限（プロセス）
+    - 定期仕訳作成（regularJournalCreateBatch#execute）
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+      
+      * 決算仕訳作成権限
+
+.. _FMS_cookbook_introduce_batch-user-gl-deferred:
+
+経過勘定振替
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の経過勘定振替ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 一般会計
+  * - アクセス制限（プロセス）
+    - 経過勘定振替実行(バッチ)（deferredAccountsTransferEntryBatch#execute）
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+      
+      * 決算仕訳作成権限
+
+.. _FMS_cookbook_introduce_batch-user-pr:
+
+債権債務
+===================================================
+
+債権債務モジュールのジョブ固有の設定は、以下となります。
+
+.. _FMS_cookbook_introduce_batch-user-pr-regular_deal:
+
+定期取引作成
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の定期取引作成ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 債権債務
+  * - アクセス制限（プロセス）
+    - 定期取引作成（regularDealCreateBatch#execute）
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+      
+      * 決算仕訳作成権限
+
+.. _FMS_cookbook_introduce_batch-user-pr-invoice:
+
+締日一括請求申請
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の締日一括請求申請ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 債権債務
+  * - アクセス制限（プロセス）
+    - 締日一括請求申請実行(バッチ)（invoiceRequestPackageBatch#execute）
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+      * 会計計上組織伝票更新権限
+
+.. _FMS_cookbook_introduce_batch-user-pr-automatic:
+
+仮受金自動消込
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の仮受金自動消込ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 債権債務
+  * - アクセス制限（プロセス）
+    - 仮受金自動消込(バッチ)（automaticReconcileBatch#execute）
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+      * 会計計上組織伝票更新権限
+
+.. _FMS_cookbook_introduce_batch-user-pr-payment:
+
+一括支払申請
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の一括支払申請ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 債権債務
+  * - アクセス制限（プロセス）
+    - 一括支払申請実行(バッチ)（paymentRequestPackageBatch#execute）
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+      * 会計計上組織伝票更新権限
+
+.. _FMS_cookbook_introduce_batch-user-pr-transfer_income_import:
+
+振込入金一括取込
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の振込入金一括取込ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 債権債務
+  * - アクセス制限（プロセス）
+    - 振込入金一括取込(バッチ)（transferIncomeImportBatch#execute）
+
+.. _FMS_cookbook_introduce_batch-user-pr-bank_account_transfer_result_import:
+
+口座振替結果ファイル取込
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の口座振替結果ファイル取込ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 債権債務
+  * - アクセス制限（プロセス）
+    - 口座振替結果ファイル取込(バッチ)（bankAccountTransferResultImportBatch#execute）
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+      * 会計計上組織伝票更新権限
+
+.. _FMS_cookbook_introduce_batch-user-pr-automatic_debit_import:
+
+自動引落取込
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の自動引落取込ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 債権債務
+  * - アクセス制限（プロセス）
+    - 自動引落取込(バッチ)（automaticDebitImportBatch#execute）
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+      * 会計計上組織伝票更新権限
+
+.. _FMS_cookbook_introduce_batch-user-pr-report_job:
+
+帳票出力
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の帳票出力ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 債権債務
+  * - アクセス制限（プロセス）
+    - 帳票出力ジョブ実行（reportOutputJobBatch#execute）
+  * - 権限
+    -  * 会計計上組織伝票参照権限
+       
+       .. note::
+
+         各種帳票を出力するために必要となる権限の詳細は、 |FMS| ヘルプ『Appendix＞基本仕様＞権限』を参照してください。
+
+.. _FMS_cookbook_introduce_batch-user-ma:
+
+管理会計
+===================================================
+
+管理会計モジュールのジョブ固有の設定は、以下となります。
+
+.. _FMS_cookbook_introduce_batch-user-ma-allocate:
+
+配賦
+--------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の配賦ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 20
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 管理会計
+  * - アクセス制限（プロセス）
+    - 配賦実行(バッチ)(allocateResultBatch#execute)
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+      * 会計計上組織伝票更新権限
+
+.. _FMS_cookbook_introduce_batch-user-fa:
+
+資産管理
+===================================================
+
+資産管理モジュールのジョブ固有の設定は、以下となります。
+
+.. _FMS_cookbook_introduce_batch-user-fa-imp:
+
+資産一括取込
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の資産一括取込ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 資産管理
+  * - アクセス制限（プロセス）
+    - 資産一括取込取込処理(非同期)（importAsyncTask#execute）
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+      
+      * 会計計上組織伝票更新権限
+      * 一括変更取込の場合
+      
+        会計計上項目更新権限（変更対象項目による）
+      
+      * 一括移動取込の場合
+      
+        移動償却費調整方法変更権限
+        
+        （償却費調整方法がパラメータ「移動時の償却費負担」と異なる場合）
+      
+      * 一括除却取込、一括売却取込の場合
+      
+        除売却償却費調整方法変更権限
+        
+        （償却費調整方法がパラメータ「除売却時の償却費負担」と異なる場合）
+
+.. _FMS_cookbook_introduce_batch-user-fa-depreciation:
+
+償却計算
+--------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の償却計算ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 20
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 資産管理
+  * - アクセス制限（プロセス）
+    - 償却計算(バッチ)(depreciationCalculateBatch#execute)
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+    
+      * 会計計上組織伝票更新権限
+
+.. _FMS_cookbook_introduce_batch-user-lc:
+
+契約管理・リース管理
+===================================================
+
+契約管理・リース管理モジュールのジョブ固有の設定は、以下となります。
+
+.. _FMS_cookbook_introduce_batch-user-lc-settlement_journal_create:
+
+決済仕訳作成
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の決済仕訳作成ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 契約管理・リース管理
+  * - アクセス制限（プロセス）
+    - 決済仕訳作成(バッチ)（settlementJournalCreateBatch#execute）
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+      
+      * 会計計上組織伝票更新権限
+      
+      * 元帳区分利用権限
+      
+      * 社内口座選択権限
+
+.. _FMS_cookbook_introduce_batch-user-lc-contract_closing_edit:
+
+契約決算更新
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の契約決算更新ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 契約管理・リース管理
+  * - アクセス制限（プロセス）
+    - 契約決算更新(バッチ)（contractClosingEditBatch#execute）
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+      
+      * 会計計上組織伝票更新権限
+      
+      * 元帳区分利用権限
+      
+      * 決算仕訳作成権限
+
+.. _FMS_cookbook_introduce_batch-user-ai:
+
+会計連携
+===================================================
+
+会計連携モジュールのジョブ固有の設定は、以下となります。
+
+.. _FMS_cookbook_introduce_batch-user-ai-file:
+
+連携ファイル取込処理
+--------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の連携ファイル取込処理ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 20
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 会計連携
+  * - アクセス制限（プロセス）
+    - 連携ファイル取込処理(fileImportBatch#execute)
+
+.. _FMS_cookbook_introduce_batch-user-ai-data:
+
+会計データ取込処理
+--------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の会計データ取込処理ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 20
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 会計連携
+  * - アクセス制限（プロセス）
+    - 会計データ取込処理(financeDataImportBatch#execute)
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+    
+      * 会計計上組織伝票更新権限
+      
+      * 仕訳（取引）の内容に応じて以下の権限が追加で必要となります。
+      
+        * 赤伝票作成権限
+        * 決算仕訳作成権限
+        * 諸口取引先更新権限
+        * 社内口座選択権限
+        * ワンタイム口座情報登録権限
+        * 非代表口座選択権限
+        * 元帳区分利用権限
+        * 残高明細管理状態変更権限
+
+.. _FMS_cookbook_introduce_batch-user-ai-delete:
+
+取込済データ削除処理
+--------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の取込済データ削除処理ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 20
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 会計連携
+  * - アクセス制限（プロセス）
+    - 取込済データ削除処理(importedDataDeleteBatch#execute)
+
+.. _FMS_cookbook_introduce_batch-user-jc:
+
+プロジェクト原価管理
+===================================================
+
+プロジェクト原価管理モジュールのジョブ固有の設定は、以下となります。
+
+.. _FMS_cookbook_introduce_batch-user-jc-prj_fldrel:
+
+フィールド関連再作成処理
+--------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外のフィールド関連再作成処理ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 20
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| プロジェクト原価管理
+  * - アクセス制限（プロセス）
+    - SP実行(バッチ)#実行(spExeEntryBatch#execute)
+
+.. _FMS_cookbook_introduce_batch-user-jc-job_time:
+
+稼働実績取込処理
+--------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の稼働実績取込処理ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 20
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| プロジェクト原価管理
+  * - アクセス制限（プロセス）
+    - SP実行(バッチ)#実行(spExeEntryBatch#execute)
+
+.. _FMS_cookbook_introduce_batch-user-jc-labor_jrnl:
+
+給与仕訳取込処理
+--------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の給与仕訳取込処理ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 20
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| プロジェクト原価管理
+  * - アクセス制限（プロセス）
+    - SP実行(バッチ)#実行(spExeEntryBatch#execute)
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+    
+      * 会計計上組織伝票更新権限
+
+.. _FMS_cookbook_introduce_batch-user-jc-project_import:
+
+プロジェクト一括取込処理
+--------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外のプロジェクト一括取込処理ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 20
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| プロジェクト原価管理
+  * - アクセス制限（プロセス）
+    - プロジェクト一括取込＃バッチ実行(projectPackageImportBatch#execute)
+  * - 権限
+    - * 会計計上組織伝票更新権限
+
+.. _FMS_cookbook_introduce_batch-user-jc-front_output:
+
+フロント連携出力処理
+--------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外のフロント連携出力処理ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 20
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| プロジェクト原価管理
+  * - アクセス制限（プロセス）
+    - フロント連携ファイル出力＃バッチ実行(bapfFrontFileOutputBatch#execute)
+  * - 権限
+    - * 会計計上組織伝票更新権限
+
+.. _FMS_cookbook_introduce_batch-user-jc-monthly:
+
+月次処理（原価計算）
+--------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の月次処理（原価計算）ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 20
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| プロジェクト原価管理
+  * - アクセス制限（プロセス）
+    - 原価計算(monthlyFixBatch#execute)
+  * - 権限
+    - * 起票組織の更新権限のうち、以下の権限のいずれかが必要となります。
+      
+        * 自起票伝票更新権限
+        * 自起票組織伝票更新権限
+        * 全起票組織伝票更新権限
+        * 指定組織グループ起票伝票更新権限
+    
+      * 会計計上組織伝票更新権限
+
+.. _FMS_cookbook_introduce_batch-user-gt:
+
+グループ会社間取引
+===================================================
+
+グループ会社間取引モジュールのジョブ固有の設定は、以下となります。
+
+.. _FMS_cookbook_introduce_batch-user-gt-trnsctns:
+
+グループ会社間取引連携
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外のグループ会社間取引連携ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| グループ会社間取引
+  * - アクセス制限（プロセス）
+    - グループ会社間取引連携＃バッチ実行(cprtIntrGrpTrnsctnsBatch#execute)
+
+.. _FMS_cookbook_introduce_batch-user-gt-delete:
+
+債務基礎情報削除
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の債務基礎情報削除ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| グループ会社間取引
+  * - アクセス制限（プロセス）
+    - 債務基礎情報削除＃バッチ実行(deleteApBaseInfoBatch#execute)
+
+.. _FMS_cookbook_introduce_batch-user-ef:
+
+着地見込管理
+===================================================
+
+着地見込管理モジュールのジョブ固有の設定は、以下となります。
+
+.. _FMS_cookbook_introduce_batch-user-ef-mview_upd:
+
+マテリアライズドビュー更新
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の入力制限ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 着地見込管理
+  * - アクセス制限（プロセス）
+    - マテリアライズドビュー更新＃バッチ実行（materializedViewUpdateBatch#execute）
+
+.. _FMS_cookbook_introduce_batch-user-ef-es_crd_add:
+
+管理会計連携用見込明細登録
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の入力制限ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 会計コア
+  * - アクセス制限（プロセス）
+    - SQLタスク管理＃バッチ実行（sqlTaskManagementBatch#execute）
+
+.. _FMS_cookbook_introduce_batch-user-ef-es_ins:
+
+見込明細取込
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の入力制限ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 着地見込管理
+  * - アクセス制限（プロセス）
+    - 見込明細取込＃バッチ実行（expectedDetailImportBatch#execute）
+
+.. _FMS_cookbook_introduce_batch-user-ef-es_crd_del:
+
+管理会計連携用見込明細削除
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の入力制限ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アプリケーションロール
+    - |FMS| 着地見込管理
+  * - アクセス制限（プロセス）
+    - 管理会計連携用見込明細削除＃バッチ実行（efExpectedDetailDeleteBatch#execute）
+
+.. _FMS_cookbook_introduce_batch-user-ac:
+
+過年度アーカイブ
+===================================================
+
+過年度アーカイブのジョブ固有の設定は、以下となります。
+
+.. _FMS_cookbook_introduce_batch-user-ac-copy:
+
+過年度データ抽出
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外ので過年度データ抽出ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アクセス制限（プロセス）
+    - データコピー＃過年度データ抽出(予算)実行（budgetDataCopyBatch#execute）
+  * - アクセス制限（プロセス）
+    - データコピー＃過年度データ抽出(実施番号)実行（execNoDataCopyBatch#execute）
+  * - アクセス制限（プロセス）
+    - データコピー＃過年度データ抽出(仕訳)実行（jrnlDataCopyBatch#execute）
+  * - アクセス制限（プロセス）
+    - データコピー＃過年度データ抽出(元帳)実行（ledgerDataCopyBatch#execute）
+
+.. _FMS_cookbook_introduce_batch-user-ac-load:
+
+過年度データロード
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外ので過年度データロードジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アクセス制限（プロセス）
+    - データロード＃過年度データロード(予算)実行（loadingBudgetBatch#execute）
+  * - アクセス制限（プロセス）
+    - データロード＃過年度データロード(実施番号)実行（loadingExecNoDataBatch#execute）
+  * - アクセス制限（プロセス）
+    - データロード＃過年度データロード(仕訳)実行（loadingJrnlDataBatch#execute）
+  * - アクセス制限（プロセス）
+    - データロード＃過年度データロード(元帳)実行（loadingLedgerDataBatch#execute）
+
+.. _FMS_cookbook_introduce_batch-user-ac-deletion:
+
+過年度データ削除
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外の過年度データ削除ジョブ固有の設定は以下となります。
+
+.. list-table::
+  :widths: 5, 18
+  :header-rows: 1
+  
+  * - 権限の種類
+    - 設定値
+  * - アクセス制限（プロセス）
+    - データ削除＃過年度データ削除(予算)実行（budgetDataDeletionBatch#execute）
+  * - アクセス制限（プロセス）
+    - データ削除＃過年度データ削除(実施番号)実行（execNoDataDeletionBatch#execute）
+  * - アクセス制限（プロセス）
+    - データ削除＃過年度データ削除(仕訳)実行（jrnlDataDeletionBatch#execute）
+  * - アクセス制限（プロセス）
+    - データ削除＃過年度データ削除(元帳)実行（ledgerDataDeletionBatch#execute）
+
+.. _FMS_cookbook_introduce_batch-user-gm:
+
+|GM| 
+===================================================
+
+|GM| モジュールのジョブ固有の設定は、以下となります。
+
+.. _FMS_cookbook_introduce_batch-user-gm-di:
+
+|DI| 
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-user-common` 以外に |DI| ジョブ固有の設定はありません。
+

@@ -1,0 +1,52 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_ai-finance_data_split_batch:
+
+===================================================
+会計データ分割処理のジョブ実行
+===================================================
+以下は、会計データ分割処理のジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_ai_financeDataSplit
+  -certUserCd=B12200 -certUserPassword=PASSWORD 
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+  -DcreateApplicationType=sms -DcreateApplicationCategory=slar
+  -DsplitOriginParallelHandlingKey=0 -DsplitCount=2
+
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - 外部ソフトウェア接続URLを指定します。
+
+       http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - createApplicationType [#doption]_
+     - :ref:`FMS_introduce_module_ai-preparation_ai` で定めた作成アプリケーションを指定します。
+   * - createApplicationCategory [#doption]_
+     - :ref:`FMS_introduce_module_ai-preparation_ai` で定めた作成アプリケーション分類を指定します。
+   * - splitOriginParallelHandlingKey [#doption]_
+     - 分割元とする並列処理用キーを指定します。
+   * - splitCount [#doption]_
+     - 分割数を 2～100 で指定します。
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。
+

@@ -1,0 +1,47 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_gt-delete_apbase_info_batch:
+
+===================================================
+債務基礎情報削除ジョブ実行
+===================================================
+以下は、債務基礎情報削除ジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_gt_deleteApBaseInfo
+  -certUserCd=B12200 -certUserPassword=PASSWORD 
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+  -DapBaseInfoAllCompanyDeleteFlg=0 -DretentionTerm=999
+
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - 外部ソフトウェア接続URLを指定します。
+
+       http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - apBaseInfoAllCompanyDeleteFlg [#doption]_
+     - 債務基礎情報全社削除フラグ(0:全社以外、1:全社)を指定します。
+   * - retentionTerm [#doption]_
+     - 債務基礎情報を保持する期間(月)を指定します。
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。
+

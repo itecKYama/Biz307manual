@@ -1,0 +1,36 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_balanceshift_pr-gl:
+
+===================================================
+一般会計残高データ取込
+===================================================
+
+一般会計の残高を取り込みます。
+:ref:`FMS_cookbook_introduce_balanceshift_pr-ar` 、 :ref:`FMS_cookbook_introduce_balanceshift_pr-ap` で取り込んだ債権債務の残高は、一般会計から控除してください。
+
+.. note::
+
+  一般会計を導入しない場合は、本作業は不要です。
+
+.. _FMS_cookbook_introduce_balanceshift_pr-gl-startConditions:
+
+着手条件
+===================================================
+
+債権債務残高の取込を終えていること。
+
+.. _FMS_cookbook_introduce_balanceshift_pr-gl-do:
+
+実行手順
+===================================================
+
+:ref:`FMS_cookbook_introduce_balanceshift_gl-journal_import` を参照してください。
+
+.. _FMS_cookbook_introduce_balanceshift_pr-gl-endConditions:
+
+完了条件
+===================================================
+
+:ref:`FMS_cookbook_introduce_balanceshift_gl-journal_import` を参照してください。
+

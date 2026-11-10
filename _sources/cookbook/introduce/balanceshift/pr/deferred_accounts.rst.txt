@@ -1,0 +1,9 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_balanceshift_pr-deferred_accounts:
+
+===================================================
+経過勘定対象取引の再登録（前年度以前発生分）
+===================================================
+
+:ref:`FMS_cookbook_introduce_balanceshift_gl-deferred_accounts` を参照してください。

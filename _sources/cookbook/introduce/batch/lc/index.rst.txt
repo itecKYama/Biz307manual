@@ -1,0 +1,20 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_lc:
+
+===================================================
+契約管理・リース管理
+===================================================
+契約管理・リース管理モジュールの業務に必要なジョブをコマンドラインから起動します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   settlement_journal_create
+   contract_closing_edit
+
+.. only:: internal
+
+  settlement_journal_create : 決済仕訳作成ジョブ
+  contract_closing_edit     : 契約決算更新ジョブ
+

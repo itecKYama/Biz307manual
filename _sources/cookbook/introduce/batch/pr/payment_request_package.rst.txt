@@ -1,0 +1,134 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_pr-payment_request_package:
+
+===================================================
+一括支払申請ジョブ実行
+===================================================
+以下は、一括支払申請ジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_pr_paymentRequestPackage
+  -certUserCd=B12200 -certUserPassword=PASSWORD
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+   -DrequestincludeReservationFlg=0 -DkindTypeReq=5
+   -DpaymentCdFrom=1111 -DpaymentCdTo=9999
+   -DemployeeCdFrom=U12200 -DemployeeCdTo=U13300
+   -DrequestincludeSundryCustomerFlg=1 -DcontrolDepartmentGroupCd=G12200
+   -DcontrolDepartmentCdFrom=12200   -DcontrolDepartmentCdTo=12200
+   -DcurrencyCd=JPY -DpaymentInstrument=1
+   -DcompanyBankAccountCdFrom=0000 -DcompanyBankAccountCdTo=0000
+   -DpostDepartmentGroupCd=G12200 -DpostDepartmentCdFrom=1200
+   -DpostDepartmentCdTo=12200 -DrequestcreateCutoffDateUnitFlg=1
+   -DpymntDnmntnsDetailDscrptn=支払経費 -DslipDescription=経費
+   -DslipMemo=201604 -DslipMemoTypeReq=1 
+   -DslipDescriptionTypeReq=1 -DpaymentExpectedDateTypeReq=1
+   -DpaymentExpectedDateFromNum=20160401 -DpaymentExpectedDateToNum=20160401
+   -DcutoffDateTypeReq=1 -DcutoffDateNum=3
+   -DprocessModeTypeReq=1 -DdepartmentCd=12200
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - | 外部ソフトウェア接続URLを指定します。
+       | http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - requestincludeReservationFlg [#doption]_
+     - | 保留中の債務を処理対象にするかを指定します。
+       | 0.保留を含まない
+       | 1.保留を含む
+   * - kindTypeReq [#doption]_
+     - | 取引先種別を指定します。
+       | 5.支払先
+       | 7.社員
+   * - paymentCdFrom [#doption]_
+     - 取引先種別が支払先の場合、取引先コードの範囲を指定します。
+   * - paymentCdTo [#doption]_
+     - 取引先種別が支払先の場合、取引先コードの範囲を指定します。
+   * - employeeCdFrom [#doption]_
+     - 取引先種別が社員の場合、社員コードの範囲を指定します。
+   * - employeeCdTo [#doption]_
+     - 取引先種別が社員の場合、社員コードの範囲を指定します。
+   * - requestincludeSundryCustomerFlg [#doption]_
+     - | 諸口取引先を処理対象にするかを指定します。
+       | 0.諸口取引先を含まない
+       | 1.諸口取引先を含む
+   * - controlDepartmentGroupCd [#doption]_
+     - 管理組織グループコードのを指定します。
+   * - controlDepartmentCdFrom [#doption]_
+     - 管理組織コードの範囲を指定します。
+   * - controlDepartmentCdTo [#doption]_
+     - 伝票メモを指定します。
+   * - currencyCd [#doption]_
+     - 通貨コードを指定します。
+   * - paymentInstrument [#doption]_
+     - 支払手段コードを指定します。
+   * - companyBankAccountCdFrom [#doption]_
+     - 社内口座コードの範囲を指定します。
+   * - companyBankAccountCdTo [#doption]_
+     - 社内口座コードの範囲を指定します。
+   * - postDepartmentGroupCd [#doption]_
+     - 計上組織グループコードを指定します。
+   * - postDepartmentCdFrom [#doption]_
+     - 計上組織コードの範囲を指定します。
+   * - postDepartmentCdTo [#doption]_
+     - 計上組織コードの範囲を指定します。
+   * - requestcreateCutoffDateUnitFlg [#doption]_
+     - | 締日単位で仕訳を作成するかを指定します。
+       | 0.作成しない
+       | 1.作成する
+   * - pymntDnmntnsDetailDscrptn [#doption]_
+     - 支払金種明細摘要を指定します。
+   * - slipDescription [#doption]_
+     - 伝票摘要を指定します。
+   * - slipMemo [#doption]_
+     - 伝票メモを指定します。
+   * - slipMemoTypeReq [#doption]_
+     - | 伝票メモに対象年月日を含めるかを指定します。
+       | 1.伝票メモのみ
+       | 2.対象年月日+伝票メモ
+       | 3.伝票メモ+対象年月日
+   * - slipDescriptionTypeReq [#doption]_
+     - | 伝票摘要に対象年月日を含めるかを指定します。
+       | 1.伝票摘要のみ
+       | 2.対象年月日+伝票摘要
+       | 3.伝票摘要+対象年月日
+   * - paymentExpectedDateTypeReq [#doption]_
+     - | 支払の締日までの日数の計算方法を指定します。
+       | 1.日数
+       | 2.営業日数
+   * - paymentExpectedDateFromNum [#doption]_
+     - ジョブの実行日から支払い予定日までの日数を指定します。
+   * - paymentExpectedDateToNum [#doption]_
+     - ジョブの実行日から支払い予定日までの日数を指定します。
+   * - cutoffDateTypeReq [#doption]_
+     - | ジョブの実行日から支払の締日までの日数の計算方法を指定します。
+       | 1.日数
+       | 2.営業日数
+   * - cutoffDateNum [#doption]_
+     - ジョブの実行日から支払の締め日までの日数を指定します。
+   * - processModeTypeReq [#doption]_
+     - | 仕訳の作成方法を設定してください。
+       | 1.仮実行
+       | 2.仮実行+本実行
+   * - departmentCd [#doption]_
+     - 起票組織コードを指定します。
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。

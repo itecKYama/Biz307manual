@@ -1,0 +1,26 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_fc:
+
+===================================================
+会計コア
+===================================================
+会計コアモジュールの業務に必要なジョブをコマンドラインから起動します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   restrict_batch
+   ledger_balance_sum_up_batch
+   jrnl_prprtnl_dvsn_batch
+   monthly_update_batch
+   report_batch
+
+.. only:: internal
+
+  restrict_batch               : 入力制限ジョブ実行
+  ledger_balance_sum_up_batch  : 元帳残高集計ジョブ実行
+  jrnl_prprtnl_dvsn_batch      : 按分先仕訳を本仕訳へ更新するジョブ実行
+  monthly_update_batch         : 月次更新ジョブ実行
+  report_batch                 : 帳票出力ジョブ実行
+

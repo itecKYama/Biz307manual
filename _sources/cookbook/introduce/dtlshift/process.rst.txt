@@ -1,0 +1,76 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_dtlshift-process:
+
+===================================================
+実施手順概要
+===================================================
+
+**実施作業一覧**
+
+.. list-table::
+   :widths: 15, 20
+   :header-rows: 1
+
+   * - 章
+     - 概要
+   * - 2. :ref:`FMS_cookbook_introduce_dtlshift-master`  [#f1]_
+     - 科目マスタ、パラメータの修正を行う。
+   * - 3. :ref:`FMS_cookbook_introduce_dtlshift-import` 
+     - 年度毎に仕訳明細を取り込む。明細を取り込む年度分、以下4～11（＝年度ごと）の手順を繰り返す。
+   * - 4. :ref:`FMS_cookbook_introduce_dtlshift-reconciled`
+     - 移行対象年度１年度分の仕訳を取り込む。未消込分を除く。
+   * - 5. :ref:`FMS_cookbook_introduce_dtlshift-is_balance` [#f1]_
+     - 残高管理対象の科目マスタについて、移行対象年度の有効期間の残高管理対象フラグを「対象」に更新する。
+   * - 6. :ref:`FMS_cookbook_introduce_dtlshift-not_reconciled_jrnl`
+     - 移行対象年度の未消込振替仕訳を取り込む。
+   * - 7. :ref:`FMS_cookbook_introduce_dtlshift-not_reconciled_pr`
+     - 移行対象年度の未消込債権、債務を取り込む。
+   * - 8. :ref:`FMS_cookbook_introduce_dtlshift-not_reconciled_incm_pay`
+     - 移行対象年度の未消込の入金仕訳（仮受計上など）、支払仕訳を登録する。（画面からの登録）
+   * - 9. :ref:`FMS_cookbook_introduce_dtlshift-demand`
+     - 運用開始の前年度のみ、請求残高データの取り込みを行う。
+   * - 10. :ref:`FMS_cookbook_introduce_dtlshift-bill`
+     - 移行対象年度の現物ありで未決済の手形を登録する。
+   * - 11. :ref:`FMS_cookbook_introduce_dtlshift-ermc`
+     - 移行対象年度の未決済の電子記録債権と電子記録債務を登録する。
+   * - 12. :ref:`FMS_cookbook_introduce_dtlshift-cip`
+     - 移行対象年度の未振替建設仮勘定を仕訳として取り込む。
+   * - 13. :ref:`FMS_cookbook_introduce_dtlshift-project_cost`
+     - 移行対象年度の未成プロジェクト残高を取り込む。
+   * - 14. :ref:`FMS_cookbook_introduce_dtlshift-progress_project`
+     - 移行対象年度の進行基準プロジェクトの進捗率を算出する。
+   * - 15. :ref:`FMS_cookbook_introduce_dtlshift-annual`
+     - 移行対象年度の年次更新を実行する。
+   * - 16. :ref:`FMS_cookbook_introduce_dtlshift-deferred_accounts`
+     - 前払費用、前受収益の移行を行う。
+   * - 17. :ref:`FMS_cookbook_introduce_dtlshift-wf`
+     - 移行完了後、ワークフローパラメータを修正する。
+
+.. note::
+
+  * 7、8、9の手順
+  
+    債権債務管理を導入する場合のみ実施してください。
+    
+  * 10の手順
+  
+    手形管理を導入する場合のみ実施してください。
+    
+  * 11の手順
+  
+    電子記録債権管理を導入する場合のみ実施してください。
+    
+  * 12の手順
+  
+    建設仮勘定を導入する場合のみ実施してください。
+    
+  * 13、14の手順
+  
+    プロジェクト原価管理を導入する場合のみ実施してください。
+
+.. rubric:: 脚注
+
+.. [#f1] 仕訳登録や取引登録にて項目「残高明細管理状態」に「0:残高明細管理対象外」を設定することにより、科目の残高明細管理対象フラグが「対象」であっても「対象外」の仕訳明細として登録します。
+
+         上記のように仕訳明細単位で残高明細管理対象かどうかを指定する場合、本作業の実施は不要となります。

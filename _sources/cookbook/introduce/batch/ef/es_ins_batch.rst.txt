@@ -1,0 +1,51 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_ef-es_ins_batch:
+
+===================================================
+見込明細取込のジョブ実行
+===================================================
+以下は、見込明細取込のジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_ef_ExpectedDetailImportBatch
+  -certUserCd=B12200 -certUserPassword=PASSWORD 
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+  -DcreateApplicationType=sms -DexpectedDtlImpType=1
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - 外部ソフトウェア接続URLを指定します。
+
+       http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - createApplicationType [#doption]_
+     - :ref:`FMS_introduce_core-accounting_type` で登録したアプリケーション区分のうち、見込として取り込む作成アプリケーションを設定します。
+   * - expectedDtlImpType [#doption]_
+     - 見込明細テーブルの内容を管理会計連携用見込明細テーブルの内容に置き換える、または追加するか設定します。
+
+       見込明細取込区分は以下となります。
+
+       　1.削除後に追加
+
+       　2.削除せず追加
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。

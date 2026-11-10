@@ -1,0 +1,43 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_ef-es_crd_add_batch:
+
+===================================================
+管理会計連携用見込明細登録のジョブ実行
+===================================================
+以下は、管理会計連携用見込明細登録のジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_ef_RstEntry
+  -certUserCd=B12200 -certUserPassword=PASSWORD 
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+  -DsqlTaskCd=fmsEfRstEntry
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - 外部ソフトウェア接続URLを指定します。
+
+       http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - sqlTaskCd [#doption]_
+     - |SMS| からデータを連携する場合は「fmsEfRstEntry」、|BES| からデータを連携する場合は「fmsEfRstBesEntry」を設定します。
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。

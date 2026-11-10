@@ -1,0 +1,35 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_pr:
+
+===================================================
+債権債務
+===================================================
+債権債務モジュールの業務に必要なジョブをコマンドラインから起動します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   regular_deal_create
+   invoice_request_package
+   automatic_reconcile
+   payment_request_package
+   transfer_execute
+   overseas_remittance_execute
+   transfer_income_import
+   bank_account_transfer_result_import
+   automatic_debit_import
+   report_batch
+
+.. only:: internal
+
+  regular_deal_create        : 定期取引作成ジョブ実行
+  invoice_request_package    : 締日一括請求申請ジョブ実行
+  automatic_reconcile        : 仮受金自動消込ジョブ実行
+  payment_request_package    : 一括支払申請ジョブ実行
+  transfer_execute           : 振込依頼実行ジョブ実行
+  overseas_remittance_execute :海外送金依頼実行ジョブ実行
+  transfer_income_import     : 振込入金一括取込ジョブ実行
+  bank_account_transfer_result_import : 口座振替結果ファイル取込ジョブ実行
+  automatic_debit_import     : 自動引落取込ジョブ実行
+  report_batch               : 帳票出力ジョブ実行

@@ -1,0 +1,92 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch-job-command:
+
+===============================================================
+コマンドラインからの起動方法
+===============================================================
+
+コマンドプロンプトを起動し、以下の例に従ったコマンドを実行してください。
+
+.. note::
+
+  コマンドラインからの実行については |BAPF| のフレームワーク `バッチブートストラップ`_ を参照して下さい。
+
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチブートストラップ%
+  -conf=app/tenantId/jobnetid/jobnet_client.properties
+  -certUserCd=B12200 -certUserPassword=PASSWORD
+  -jobnetId=BZ1_Ledger
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+
+.. note::
+
+  コマンド例1行目の%バッチブートストラップ%については、バッチサービスにあるjarファイル ./bin/biz_jobnet_bootstrap-<ver>.jar のファイル名を指定してください。
+
+  コマンドラインの-D<プロパティ名>でパラメータを引き渡します。
+
+  パラメータはプロパティファイル（jobnet_client.properties）で指定することもできます。
+
+  プロパティファイルとコマンドラインのパラメータキーが重複した場合、-Dオプションで指定したプロパティ値が優先されます。
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントID
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットID
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコード
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワード
+   * - url
+     - 外部ソフトウェア接続URLを指定します。
+
+       http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+
+
+.. _FMS_cookbook_introduce_batch-job-command_sample:
+
+ジョブ別の起動例
+---------------------------------------------------------------
+各モジュールのジョブについて、コマンドラインからの起動例を示します。
+
+.. toctree::
+   :maxdepth: 2
+
+   fc/index
+   gl/index
+   pr/index
+   ma/index
+   fa/index
+   lc/index
+   jc/index
+   ai/index
+   gt/index
+   ef/index
+   ac/index
+   gm/index
+
+.. only:: internal
+
+   fc/index : 会計コア
+   gl/index : 一般会計
+   pr/index : 債権債務
+   ma/index : 管理会計
+   fa/index : 資産管理
+   lc/index : 契約管理・リース管理
+   jc/index : プロジェクト原価管理
+   ai/index : 会計連携
+   gt/index : グループ会社間取引
+   ef/index : 着地見込管理
+   ac/index : 過年度アーカイブ
+   gm/index : グループマネジメント
+

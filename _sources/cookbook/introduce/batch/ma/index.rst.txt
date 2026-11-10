@@ -1,0 +1,17 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_ma:
+
+===================================================
+管理会計
+===================================================
+管理会計モジュールの業務に必要なジョブをコマンドラインから起動します。
+
+.. toctree::
+   :maxdepth: 1
+   
+   allocate_result
+
+.. only:: internal
+
+  allocate_result    : 配賦ジョブ実行

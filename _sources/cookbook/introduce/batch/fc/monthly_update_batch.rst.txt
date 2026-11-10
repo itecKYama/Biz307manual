@@ -1,0 +1,64 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_fc-monthly_update_batch:
+
+===================================================
+月次更新ジョブ実行
+===================================================
+以下は、月次更新ジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_fc_monthly_update
+  -certUserCd=B12200 -certUserPassword=PASSWORD
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+  -DcompanyCd=BZ1 -DtemporaryExecutionFlag=1
+  -DtargetYearMonth=202104 -DheadBranchDepartmentGroupCd=G10000
+  -DexecutionModuleCategory=gl
+
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - 外部ソフトウェア接続URLを指定します。
+
+       http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - companyCd [#doption]_
+     - 月次更新実行及び仮実行を行う会社コードを指定します。
+   * - temporaryExecutionFlag [#doption]_
+     - 仮実行処理を実施するかを表すフラグを指定します。
+
+       0：確定実行処理を実施、1：仮実行処理を実施
+   * - targetYearMonth [#doption]_
+     - 月次更新実行及び仮実行を行う年月を指定します。
+
+       未設定の場合、会社単位の最古オープン月が指定されます。
+   * - headBranchDepartmentGroupCd [#doption]_
+     - 月次更新実行及び仮実行を行う本支店組織グループコードを指定します。
+
+       未設定の場合、全ての本支店の組織グループが更新対象となります。
+   * - executionModuleCategory [#doption]_
+     - 月次更新実行及び仮実行を行うモジュール分類を指定します。
+
+       gl（一般会計）、ap（債務管理）、ar（債権管理）、ma（管理会計）、fe（外貨管理）、bn（手形管理）、ec（電子記録債権管理）、fa（資産管理）、lc（契約管理・リース管理）のいずれかを設定します。
+
+       未設定の場合、全てのモジュールが更新対象となります。  
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。

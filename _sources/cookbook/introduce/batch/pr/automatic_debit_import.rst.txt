@@ -1,0 +1,66 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_batch_pr-automatic_debit_import:
+
+===================================================
+自動引落取込ジョブ実行
+===================================================
+以下は、自動引落取込ジョブをコマンドラインから実行するコマンド例です。
+
+コマンド例（1行で記述します） ::
+
+  java -jar %バッチ処理ブートストラップ%
+  -tenantId=default -jobnetId=fms_pr_0100
+  -certUserCd=B12200 -certUserPassword=PASSWORD
+  -url=http://localhost:8080/imart/HTTPActionEventListener
+  -DjournalStatus=1 -DimportOption=1
+  -DdiscordMstImportNontarget=1 -DgetFileErrorFlag=1
+  -DexpiredDays=100 
+
+設定パラメータ
+
+.. list-table::
+   :widths: 5, 20
+   :header-rows: 1
+
+   * - パラメータ
+     - 説明
+   * - tenantId
+     - 外部ソフトウェア接続を利用する際の認証に利用するテナントIDを指定します。
+   * - jobnetId
+     - | 実行するジョブネットIDを指定します。
+       | セットアップで初期登録されたジョブネットIDや :ref:`FMS_cookbook_introduce_batch-job` で登録したジョブネットIDを指定します。
+   * - certUserCd
+     - 外部ソフトウェア接続認証に利用するユーザコードを指定します。
+   * - certUserPassword
+     - 外部ソフトウェア接続を利用する際の認証に利用するパスワードを指定します。
+   * - url
+     - | 外部ソフトウェア接続URLを指定します。
+       | http://<ホスト名>:<ポート>/ imart/HTTPActionEventListenerを指定します。
+   * - journalStatus [#doption]_
+     - | 取り込む際の仕訳状態を指定します。
+       | 　0.仮仕訳
+       | 　1.本仕訳
+   * - importOption [#doption]_
+     - | 振込入金データも取り込むかを指定します。
+       | 　0.チェックOFF
+       | 　1.チェックON
+       | 指定しない場合は「0.チェックOFF」の挙動となり、振込入金データは取り込まれません。
+   * - discordMstImportNontarget [#doption]_
+     - | 契約者番号マスタに一致しないデータを取込対象外とするか指定します。
+       | 　0.チェックOFF
+       | 　1.チェックON
+       | 指定しない場合は「0.チェックOFF」の挙動となり、契約者番号マスタに一致しないデータも取込対象となります。
+   * - getFileErrorFlag [#doption]_
+     - | ファイル取得エラー出力フラグを指定します。
+       | 　0.正常終了
+       | 　1.エラー終了
+       | 指定しない場合は「0.正常終了」の挙動となります。
+   * - expiredDays [#doption]_
+     - | 保存期間日数を指定します。
+       | 指定した日数が経過すると、ファイル管理クリーンアップ処理の削除対象となります。
+       | 指定しない場合、 :ref:`FMS_cookbook_setting_004_storageFileConfig` が利用されます。
+
+.. rubric:: 注釈
+
+.. [#doption] -Dオプションでパラメータを引き渡します。

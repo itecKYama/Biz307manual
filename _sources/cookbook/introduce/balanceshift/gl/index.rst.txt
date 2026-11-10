@@ -1,0 +1,25 @@
+.. include:: ../../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_balanceshift-gl:
+
+===================================================
+残高移行（一般会計）
+===================================================
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   journal_import
+   annual
+   deferred_accounts
+   wf_parameter
+
+
+.. only:: internal
+
+   journal_import     : 期首残高生成仕訳取込
+   annual             : 年次繰越実行
+   deferred_accounts  : 経過勘定対象取引の再登録（前年度以前発生分）
+   wf_parameter       : Biz∫会計 ワークフローパラメータ修正
+

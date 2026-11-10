@@ -1,0 +1,32 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_cookbook_introduce_dtlshift-annual:
+
+===================================================
+年次繰越実行
+===================================================
+
+移行対象年度の年次確定を実施します。
+
+.. note::
+
+  移行対象年度が、運用開始年度の場合、本手順は実施しない。
+
+
+.. _FMS_cookbook_introduce_dtlshift-annual-startConditions:
+
+着手条件
+===================================================
+
+* 移行対象年度の全明細を移行していること。
+
+* 運用開始の前年度の場合、請求残高の移行を完了していること。
+
+.. _FMS_cookbook_introduce_dtlshift-annual-do:
+
+実行手順
+===================================================
+
+:ref:`FMS_cookbook_introduce_balanceshift_gl-annual` を実行してください。
+
+
