@@ -1,0 +1,7 @@
+データ種別	行	データ区分	SQL文
+journal.tab 	1	1	計上日,仕訳番号,伝票摘要
+journal.tab 	2	2	select to_char(post_date,'yyyymmdd'),journal_no,slip_description
+journal.tab 	3	2	 from fms_fc_jrnl
+journal.tab 	4	2	 where company_cd = $1
+journal.tab 	5	2	 and post_date >= to_date($2,'yyyy-mm-dd hh24:mi:ss')
+journal.tab 	6	2	 and post_date <= to_date($3,'yyyy-mm-dd hh24:mi:ss')

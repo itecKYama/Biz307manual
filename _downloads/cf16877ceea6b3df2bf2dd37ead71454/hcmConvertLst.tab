@@ -1,0 +1,13 @@
+データ種別	行	データ区分	SQL文
+hcmConvertLst	1	1	gmcmp,gmcls,gmcode,gmname,gmstdte,gmeddte,gmkbn,gmfcode,gmfsbcd,gmtcode,gmtsbcd,gmancd01,gmancd02,
+hcmConvertLst	2	1	gmancd03,gmancd04,gmancd05,gmcusr,gmcdte,gmuusr,gmudte
+hcmConvertLst	3	2	select a.company_cd, 'CNV', a.convert_lst_cd, a.convert_lst_name,
+hcmConvertLst	4	2	to_char(a.start_date,'yyyy-mm-dd hh24:mi:ss'), to_char(a.end_date,'yyyy-mm-dd hh24:mi:ss'),
+hcmConvertLst	5	2	'0', b.before_cnvert_cd, b.before_cnvert_sbcd, b.after_cnvert_cd, b.after_cnvert_sbcd,
+hcmConvertLst	6	2	null, null, null, null, null,
+hcmConvertLst	7	2	a.create_user_cd, to_char(a.create_date,'yyyy-mm-dd hh24:mi:ss'),
+hcmConvertLst	8	2	a.record_user_cd, to_char(a.record_date,'yyyy-mm-dd hh24:mi:ss')
+hcmConvertLst	9	2	 from fms_jc_convert_lst a, fms_jc_convert_lst_dtl b
+hcmConvertLst	10	2	 where a.company_cd = $1 and a.convert_lst_cd = 'BUMON001'
+hcmConvertLst	11	2	 and b.company_cd = a.company_cd and b.convert_lst_cd = a.convert_lst_cd and b.start_date = a.start_date
+hcmConvertLst	12	3	 and a.record_date >= to_date($2,'yyyy-mm-dd hh24:mi:ss')
