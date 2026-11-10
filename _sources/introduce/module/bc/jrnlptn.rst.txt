@@ -1,0 +1,11 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_bc-jrnlptn:
+
+===================================================
+仕訳パターンの登録
+===================================================
+以下のページを参考に仕訳パターンを登録して下さい。
+
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_dept_bal_xfer_dtl`
+* :ref:`FMS_cookbook_introduce_pattern_pr-jrnlptn_unErasing_bal_xfer_dtl`

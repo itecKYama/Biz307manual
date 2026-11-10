@@ -1,0 +1,34 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_ai:
+
+===================================================
+会計連携の導入
+===================================================
+会計連携の導入手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   preparation_ai
+   batch
+   text_cnv_pattern
+   import_config
+   slip_type
+   cnv_pattern
+   slip_itm
+   parameter
+   validation
+
+.. only:: internal
+
+  preparation_ai  :連携準備
+  batch           :ジョブ登録
+  text_cnv_pattern :会計連携変換パターン管理
+  import_config   :会計連携取込設定管理
+  slip_type       :会計連携伝票区分管理
+  cnv_pattern     :会計連携変換パターン管理
+  slip_itm        :会計連携伝票項目管理
+  parameter       :パラメータ設定
+  validation      :会計連携事前チェック

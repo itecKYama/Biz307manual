@@ -1,0 +1,33 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_ef-template:
+
+===================================================
+着地見込テンプレート登録
+===================================================
+
+標準機能として用意する、以下の着地見込テンプレートを登録します。登録する手順は、 :ref:`FMS_cookbook_introduce_ef-ef_tmp` を参照してください。
+
+  .. list-table::
+     :widths: 20, 20
+     :header-rows: 1
+
+     * - データマート
+       - テンプレートファイル
+     * - 科目別着地見込データマート
+       - :download:`科目別着地見込.xlsx<./download/fms_ef_v_acc_ef.xlsx>`
+     * - 科目別組織別着地見込データマート
+       - :download:`科目別組織別着地見込.xlsx<./download/fms_ef_v_acc_dpt_ef.xlsx>`
+     * - 分析フィールド別科目別着地見込データマート
+       - :download:`分析フィールド別科目別着地見込.xlsx<./download/fms_ef_v_anl_acc_ef.xlsx>`
+     * - 組織別分析フィールド別科目別着地見込データマート
+       - :download:`組織別分析フィールド別科目別着地見込.xlsx<./download/fms_ef_v_dpt_anl_acc_ef.xlsx>`
+     * - 取引先別科目別着地見込データマート
+       - :download:`取引先別科目別着地見込.xlsx<./download/fms_ef_v_ctm_acc_ef.xlsx>`
+     * - 組織別取引先別科目別着地見込データマート
+       - :download:`組織別取引先別科目別着地見込.xlsx<./download/fms_ef_v_dpt_ctm_acc_ef.xlsx>`
+
+.. note::
+
+  データマートを追加する場合には、 :ref:`FMS_cookbook_introduce_ef-date_mart` を参照してください。
+

@@ -1,0 +1,28 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_ec:
+
+===================================================
+電子記録債権管理の導入・移行
+===================================================
+電子記録債権管理の導入・移行手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   accounting_type
+   set_erms_no
+   jrnlptn
+   account
+   dtlshift
+   for_client
+
+.. only:: internal
+
+  accounting_type :会計種別の登録
+  set_erms_no     :電子記録債権利用者番号の登録
+  jrnlptn         :仕訳パターンの登録
+  account         :科目の変更
+  dtlshift        :未決済電子記録債権の明細移行
+  for_client      :「電子記録債権管理 for Client」のインストール

@@ -1,0 +1,18 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_cm:
+
+===================================================
+資金管理の導入
+===================================================
+資金管理の導入手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   jrnlptn
+
+.. only:: internal
+
+  jrnlptn :仕訳パターンの登録

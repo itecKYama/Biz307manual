@@ -1,0 +1,28 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_ef:
+
+===================================================
+着地見込管理の導入
+===================================================
+着地見込管理の導入手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+
+   ef
+   limitations
+   parameter
+   accounting_type
+   template
+   job
+
+.. only:: internal
+
+   ef          : 着地見込管理の構成
+   limitations : 制限事項
+   parameter   : パラメータ設定
+   accounting_type :会計種別の登録
+   template    : 着地見込テンプレート登録
+   job         : ジョブ登録

@@ -1,0 +1,24 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_cp:
+
+===================================================
+建設仮勘定の導入・移行
+===================================================
+建設仮勘定の導入・移行手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   accounting_type
+   account
+   journal_set
+   dtlshift
+
+.. only:: internal
+
+  accounting_type :会計種別
+  account         :建設仮勘定科目
+  journal_set     :建設仮勘定仕訳設定
+  dtlshift        :建設仮勘定の明細移行
