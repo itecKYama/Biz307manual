@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>3. 科目登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="4. 科目構成登録" href="account_structure.html" />
+    <link rel="prev" title="2. 会計期間登録" href="accounting_period.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U">会計コアマスタの設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">3. </span>科目登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="accounting_period.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="account_structure.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">会計コアマスタの設定</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="parameter.html">1. パラメータ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounting_period.html">2. 会計期間登録</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. 科目登録</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-core-account-startconditions">3.1. 着手条件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-core-account-do">3.2. 実行手順</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-core-account-do-attention">3.2.1. 注意事項</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-core-account-endconditions">3.3. 完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="account_structure.html">4. 科目構成登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="branch_accounting.html">5. 本支店仕訳情報登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cash_flow.html">6. キャッシュフロー項目登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account_revaluate_target_control.html">7. 科目評価替対象登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="finance_module.html">8. 入力制限／月次更新対象外設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monthly_open.html">9. 会計月度オープン処理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis_field.html">10. 分析フィールド登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="field_relation.html">11. フィールド関連マスタ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounting_type.html">12. 会計種別設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restrict_batch.html">13. 入力制限ジョブ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deferred_accounts_transfer.html">14. 経過勘定振替マスタ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="balance_carryover_set.html">15. 残高繰越設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="allocate.html">16. 配賦元・先マスタ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="external_allocation_base_import.html">17. 外部配賦基準登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jrnlptn.html">18. 仕訳パターンの登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monthly_update.html">19. 月次更新ジョブ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tatsuzin.html">20. 達人連携設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="report_batch.html">21. 帳票出力ジョブ登録</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module/index.html">モジュール別の導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-core-account">
+<span id="id39"></span><h1><span class="section-number">3. </span>科目登録<a class="headerlink" href="#fms-introduce-core-account" title="Link to this heading">¶</a></h1>
+<p>Biz∫会計の用いる勘定科目・補助科目情報を登録します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>こののちに実施する<a class="reference internal" href="../../cookbook/introduce/dtlshift/index.html#fms-cookbook-introduce-dtlshift"><span class="std std-ref">明細移行</span></a>作業の<a class="reference internal" href="../../cookbook/introduce/dtlshift/reconciled.html#fms-cookbook-introduce-dtlshift-reconciled"><span class="std std-ref">消込済仕訳の登録</span></a>では、残高明細管理対象の科目を計上した仕訳明細であっても残高明細管理対象外として取り込む必要があります。</p>
+<p>残高明細管理対象の科目を計上した仕訳明細を残高明細管理対象外として取り込むには、以下のふたつの方法があります。</p>
+<p>いずれを選択するかにより、本項で登録するマスタの設定値が異なりますので、あらかじめ移行データの作成方針により適宜選択し、適切な設定値で登録してください。</p>
+<ul class="simple">
+<li><p>残高明細管理対象の科目マスタを一時的に「残高明細管理対象外」に設定して登録する。</p>
+<ul>
+<li><p>本項で登録するマスタの残高明細管理対象フラグは、すべて「対象外」に設定してください。</p></li>
+<li><p><a class="reference internal" href="../../cookbook/introduce/dtlshift/index.html#fms-cookbook-introduce-dtlshift"><span class="std std-ref">明細移行</span></a>作業の<a class="reference internal" href="../../cookbook/introduce/dtlshift/reconciled.html#fms-cookbook-introduce-dtlshift-reconciled"><span class="std std-ref">消込済仕訳の登録</span></a>にて取り込む仕訳明細の一括取込シートに、残高明細管理状態を設定する必要はありません。</p></li>
+<li><p><a class="reference internal" href="../../cookbook/introduce/dtlshift/index.html#fms-cookbook-introduce-dtlshift"><span class="std std-ref">明細移行</span></a>作業のなかで、残高明細管理対象の科目マスタの残高明細管理対象フラグを「対象」に設定しなおします。（作業の詳細は<a class="reference internal" href="../../cookbook/introduce/dtlshift/is_balance.html#fms-cookbook-introduce-dtlshift-is-balance"><span class="std std-ref">科目マスタの残高管理対象フラグ編集</span></a>参照）</p></li>
+</ul>
+</li>
+<li><p>消込済仕訳の仕訳明細の残高明細管理状態を「対象外」に設定して登録する。</p>
+<ul>
+<li><p>本項で登録するマスタの残高明細管理対象フラグは、各科目の本来の属性にしたがって、「対象」あるいは「対象外」に設定してください。</p></li>
+<li><p><a class="reference internal" href="../../cookbook/introduce/dtlshift/index.html#fms-cookbook-introduce-dtlshift"><span class="std std-ref">明細移行</span></a>作業の<a class="reference internal" href="../../cookbook/introduce/dtlshift/reconciled.html#fms-cookbook-introduce-dtlshift-reconciled"><span class="std std-ref">消込済仕訳の登録</span></a>にて取り込む仕訳明細の一括取込シートのうち、残高明細管理対象の科目を計上した明細データの残高明細管理状態を「対象外」に設定します。（作業の詳細は<a class="reference internal" href="../../cookbook/introduce/dtlshift/reconciled.html#fms-cookbook-introduce-dtlshift-reconciled-do"><span class="std std-ref">実行手順</span></a>参照）</p></li>
+<li><p><a class="reference internal" href="../../cookbook/introduce/dtlshift/index.html#fms-cookbook-introduce-dtlshift"><span class="std std-ref">明細移行</span></a>作業のなかで、残高明細管理対象の科目マスタの残高明細管理対象フラグを設定しなおす必要はありません。</p></li>
+</ul>
+</li>
+</ul>
+<p>※いったん残高明細管理対象の仕訳明細を取り込んで確定させると、その計上日を含む期間の科目マスタの残高明細管理対象フラグを「対象外」に設定しなおすことはできません。十分ご注意ください。</p>
+</div>
+<section id="fms-introduce-core-account-startconditions">
+<span id="id40"></span><h2><span class="section-number">3.1. </span>着手条件<a class="headerlink" href="#fms-introduce-core-account-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="parameter.html#fms-introduce-core-parameter"><span class="std std-ref">パラメータ登録</span></a>を終えていること。</p>
+</section>
+<section id="fms-introduce-core-account-do">
+<span id="id41"></span><h2><span class="section-number">3.2. </span>実行手順<a class="headerlink" href="#fms-introduce-core-account-do" title="Link to this heading">¶</a></h2>
+<p>Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューより「F5:新規勘定科目」から勘定科目と有効期間、「F6:新規補助科目」から補助科目と有効期間を入力します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  会計コア
+    マスタメンテナンス
+      業務マスタ
+        科目マスタ管理
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>一括登録を行う場合、一括取込マニュアルの<a class="reference internal" href="../../import/mst/account.html#fms-import-mst-account-account"><span class="std std-ref">科目</span></a>を参考に取込ファイルを準備し、同メニューの「SF5:一括登録」より登録します。</p>
+</div>
+<section id="fms-introduce-core-account-do-attention">
+<span id="id42"></span><h3><span class="section-number">3.2.1. </span>注意事項<a class="headerlink" href="#fms-introduce-core-account-do-attention" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>取込ファイル中の「会社コード」は<a class="reference internal" href="../baseset/im/company.html#fms-introduce-baseset-im-master-company"><span class="std std-ref">計上組織セットコード登録</span></a>で定めた会社コードと同一としてください。</p></li>
+<li><p>特別科目区分を指定できる科目は、各区分について1科目に限ります。</p></li>
+</ul>
+</section>
+</section>
+<section id="fms-introduce-core-account-endconditions">
+<span id="id43"></span><h2><span class="section-number">3.3. </span>完了条件<a class="headerlink" href="#fms-introduce-core-account-endconditions" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>同メニューの検索結果からプルーフリストを取得し、登録内容を確認します。</p></li>
+<li><p>一括登録は非同期タスクとして実行されます。一括登録を行った場合、以下のメニューより「勘定科目マスタ一括登録」がエラーなく終了していることを併せて確認します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF アドミニストレーション
+  システム管理（会社共通）
+    非同期タスク
+      非同期タスクモニタ
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" >会計コアマスタの設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">3. </span>科目登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>1. パラメータ登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2. 会計期間登録" href="accounting_period.html" />
+    <link rel="prev" title="会計コアマスタの設定" href="index.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U">会計コアマスタの設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">1. </span>パラメータ登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="index.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="accounting_period.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">会計コアマスタの設定</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. パラメータ登録</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-core-parameter-startconditions">1.1. 着手条件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-core-parameter-do">1.2. 実行手順</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-core-parameter-dummy">1.3. 会計ダミーコードについて</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-core-parameter-cache">1.4. 最大キャッシュ数について</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-core-parameter-endconditions">1.5. 完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="accounting_period.html">2. 会計期間登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html">3. 科目登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account_structure.html">4. 科目構成登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="branch_accounting.html">5. 本支店仕訳情報登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cash_flow.html">6. キャッシュフロー項目登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account_revaluate_target_control.html">7. 科目評価替対象登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="finance_module.html">8. 入力制限／月次更新対象外設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monthly_open.html">9. 会計月度オープン処理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis_field.html">10. 分析フィールド登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="field_relation.html">11. フィールド関連マスタ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounting_type.html">12. 会計種別設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restrict_batch.html">13. 入力制限ジョブ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deferred_accounts_transfer.html">14. 経過勘定振替マスタ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="balance_carryover_set.html">15. 残高繰越設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="allocate.html">16. 配賦元・先マスタ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="external_allocation_base_import.html">17. 外部配賦基準登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jrnlptn.html">18. 仕訳パターンの登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monthly_update.html">19. 月次更新ジョブ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tatsuzin.html">20. 達人連携設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="report_batch.html">21. 帳票出力ジョブ登録</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module/index.html">モジュール別の導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-core-parameter">
+<span id="id39"></span><h1><span class="section-number">1. </span>パラメータ登録<a class="headerlink" href="#fms-introduce-core-parameter" title="Link to this heading">¶</a></h1>
+<p>Biz∫会計の動作パラメータを業務要件・環境要件に整合させます。</p>
+<section id="fms-introduce-core-parameter-startconditions">
+<span id="id40"></span><h2><span class="section-number">1.1. </span>着手条件<a class="headerlink" href="#fms-introduce-core-parameter-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../baseset/index.html#fms-introduce-baseset"><span class="std std-ref">Biz∫ 基盤の設定</span></a>までの作業を終えていること。</p>
+</section>
+<section id="fms-introduce-core-parameter-do">
+<span id="id41"></span><h2><span class="section-number">1.2. </span>実行手順<a class="headerlink" href="#fms-introduce-core-parameter-do" title="Link to this heading">¶</a></h2>
+<p>パラメータの初期値はインストール手順において初期データとして設定されています。</p>
+<p>Biz∫会計管理者アカウントでポータル画面にログインし、パラメータの編集を行います。他のパラメータは業務要件に応じて編集します。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  会計コア
+    マスタメンテナンス
+      基本設定管理
+        パラメータ管理
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>会計コアのパラメータ</strong></p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+<col style="width: 12.5%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>区分</p></th>
+<th class="head"><p>パラメータ名</p></th>
+<th class="head"><p>初期値</p></th>
+<th class="head"><p>値とフォーマット</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>初期設定</p></td>
+<td><p>営業日カレンダ<a class="footnote-reference brackets" href="#f1" id="id42" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+<td><p>0000000001</p></td>
+<td><p>会社の営業日カレンダのコードを設定してください。</p>
+<p>半角英数20桁</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>初期設定</p></td>
+<td><p>現在年度</p></td>
+<td><p>2021</p></td>
+<td><p>現在の会計年度を判定するために使用します。</p>
+<p>残高を取り込む年度を西暦（YYYY）の形式で設定してください。（このあとの導入手順で、運用開始前年度の設定で実施する処理があります）</p>
+<p>残高のみの移行の場合：運用開始の前年度仕訳明細単位の移行の場合：仕訳明細を取り込む期間の前年度</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>初期設定</p></td>
+<td><p>オープン期間</p></td>
+<td><p>2</p></td>
+<td><p>オープン状態とする月次の月数を設定します。</p>
+<p>（例：当月から３か月間をオープンする場合の設定値は「3」となります。）</p>
+<p>半角数字2桁（1～12）</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>初期設定</p></td>
+<td><p>基準通貨換算コード<a class="footnote-reference brackets" href="#f2" id="id43" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+<td><p>COM</p></td>
+<td><p>レート計算のための基準通貨換算コード(TTS、社内レート等)を設定してください。</p>
+<p>半角英数20桁</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>初期設定</p></td>
+<td><p>月次更新単位</p></td>
+<td><p>2</p></td>
+<td><p>月次更新を行う単位を設定します。</p>
+<p>1：会社2：本支店</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>初期設定</p></td>
+<td><p>法人グループセットコード<a class="footnote-reference brackets" href="#f3" id="id44" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></td>
+<td><p>03</p></td>
+<td><p>会計として基準で使用する法人グループセットコード（取引先マスタのグループを識別するコード）を設定してください。</p>
+<p>半角英数100桁</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>債権債務のパラメータ</strong></p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+<col style="width: 12.5%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>区分</p></th>
+<th class="head"><p>パラメータ名</p></th>
+<th class="head"><p>初期値</p></th>
+<th class="head"><p>値とフォーマット</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>初期設定</p></td>
+<td><p>自社法人番号（支払調書）</p></td>
+<td><p>0</p></td>
+<td><p>支払調書の「支払者」の「個人番号又は法人番号」欄に印字される法人番号を設定してください。初期値「0」の場合、法人番号は印字されず空欄となります。</p>
+<p>半角数字13桁</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>資産管理のパラメータ</strong></p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+<col style="width: 12.5%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>区分</p></th>
+<th class="head"><p>パラメータ名</p></th>
+<th class="head"><p>初期値</p></th>
+<th class="head"><p>値とフォーマット</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>初期設定</p></td>
+<td><p>自社法人番号（償却資産申告書）</p></td>
+<td><p>0</p></td>
+<td><p>償却資産申告書の「3個人番号又は法人番号」欄に印字される法人番号を設定してください。初期値「0」の場合、法人番号は印字されず空欄となります。</p>
+<p>半角数字13桁</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id42">1</a><span class="fn-bracket">]</span></span>
+<p>カレンダコードは、カレンダーマスタに登録されている必要があります。（<a class="reference internal" href="../baseset/biz/calendar.html#fms-introduce-baseset-biz-calendar"><span class="std std-ref">カレンダ登録</span></a>参照）</p>
+</aside>
+<aside class="footnote brackets" id="f2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id43">2</a><span class="fn-bracket">]</span></span>
+<p>通貨換算コードは通貨マスタに登録されている必要があります。（<a class="reference internal" href="../baseset/biz/currency.html#fms-introduce-baseset-biz-currency-do-conversion"><span class="std std-ref">通貨換算コードの登録</span></a>参照）</p>
+</aside>
+<aside class="footnote brackets" id="f3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id44">3</a><span class="fn-bracket">]</span></span>
+<p>IM-共通マスタの「法人・取引先」の設定により、取引先をグループ化して、本パラメータで設定した法人グループセットに包含させることができます。これにより、一般会計の法人取引先別帳票にて、法人別の発生高や残高を管理することができます。また、債権債務モジュールを導入する際には、法人グループセットコードの設定は必須となります。</p>
+<p>「法人・取引先」の設定については、<a class="reference internal" href="../module/pr/corporation.html#fms-introduce-module-pr-corporation"><span class="std std-ref">法人情報登録</span></a>およびintra-mart社ドキュメント『IM-共通マスタ操作ガイド』を参照下さい。</p>
+</aside>
+</aside>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>その他パラメータの詳細については、『<a class="reference download internal" download="" href="../../_downloads/b8763cb3305ffdd9cf1aaccbc336e32f/parameter_reference.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">参考資料_パラメータ一覧</span></code></a>』を参照下さい。</p>
+</div>
+</div></blockquote>
+</section>
+<section id="fms-introduce-core-parameter-dummy">
+<span id="id45"></span><h2><span class="section-number">1.3. </span>会計ダミーコードについて<a class="headerlink" href="#fms-introduce-core-parameter-dummy" title="Link to this heading">¶</a></h2>
+<p>パラメータで制御する項目のうち、「会計ダミーコード」というパラメータがあります。会計ダミーコードは自動仕訳に設定する補助科目コード、キャッシュフローコードに値を設定しない場合や仕訳の自動生成を行わない場合に使用するコードを設定します。</p>
+<p>初期設定では、会計ダミーコードは「99999」となっており、このままでも使用可能ですが、必要に応じて値を変更してください。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>各パラメータで設定した勘定科目が補助なし科目の場合</p>
+<p>パラメータ「会計ダミーコード」に「99999」、対応するパラメータの「補助科目コード」に「99999」（会計ダミーコードと同値）を設定することで、補助科目コードに空白が設定されます。（99999がBiz∫会計内で使用する予定のないコード値である前提）</p>
+</div>
+<ul>
+<li><p>会計ダミーコードを設定可能なパラメータ</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>モジュール名</p></th>
+<th class="head"><p>パラメータ名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>会計コア</p></td>
+<td><p>0円明細行補助科目コード</p>
+<p>仮受消費税用キャッシュフローコード</p>
+<p>仮払消費税用キャッシュフローコード</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>一般会計</p></td>
+<td><p>キャッシュフロー調整仕訳相手補助科目コード</p></td>
+</tr>
+<tr class="row-even"><td><p>債権債務</p></td>
+<td><p>消費税伝票用キャッシュフローコード</p></td>
+</tr>
+<tr class="row-odd"><td><p>手形管理</p></td>
+<td><p>受取手形登録仕訳パターン</p>
+<p>取立仕訳パターン</p>
+<p>割引仕訳パターン</p>
+<p>取立決済仕訳パターン</p>
+<p>割引決済仕訳パターン</p>
+<p>裏書決済仕訳パターン</p>
+<p>不渡仕訳パターン</p>
+<p>振出決済仕訳パターン</p>
+<p>売却仕訳パターン</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>電子記録債権管理</p></td>
+<td><p>電子債権登録仕訳パターン</p>
+<p>受入決済仕訳パターン</p>
+<p>割引仕訳パターン</p>
+<p>不渡仕訳パターン</p>
+<p>発生決済仕訳パターン</p>
+<p>売却仕訳パターン</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>契約管理・リース管理</p></td>
+<td><p>付随費用仕訳作成時の補助科目</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</section>
+<section id="fms-introduce-core-parameter-cache">
+<span id="id46"></span><h2><span class="section-number">1.4. </span>最大キャッシュ数について<a class="headerlink" href="#fms-introduce-core-parameter-cache" title="Link to this heading">¶</a></h2>
+<p>「最大キャッシュ数」とはメモリ上にキャッシュするオブジェクト数の上限値です。キャッシュのアルゴリズムはLRU（Least Recently Used）方式です。</p>
+<p>最大キャッシュ数の初期値は1000であり、通常、調整する必要はありません。</p>
+<p>調整をすることにより効果を期待できるケースは、１回のリクエストあたりのキャッシュ対象のオブジェクトが1000種類以上になり、かつその回数の多いことが見込まれる場合です。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>FMSFC0074（パラメータ取得最大キャッシュ数）の場合</p>
+<p>1回のリクエストで10000件の読み込みを行うとします。</p>
+<p>この読み込みが2000種類のパラメータにつき5回ずつであることが見込まれる場合、設定値が2000であれば、2000種類をすべてキャッシュできるので、DBアクセス回数は、1パラメータにつき初回のみで済みます。</p>
+<p>これに対して、設定値が1000であると、それ以上のDBアクセスが発生することになります。</p>
+</div>
+<p>変更するかどうかは、以下のような観点を考慮してご判断ください。</p>
+<ul>
+<li><p>1リクエストあたり何種類のオブジェクトを扱うことになるか</p>
+<p>1000種類以上のオブジェクトを複数回以上扱い、かつその回数が多い場合は、設定値を増やすことで、DBアクセス回数の減少分だけパフォーマンスがよくなるはずです。ただし、種類が多くても、それぞれ1回しか扱わない場合は、キャッシュする価値がありませんので増やさないでください。</p>
+</li>
+<li><p>多重度を増やした場合でも、メモリを圧迫しないか</p>
+<p>設定値を増やせば増やすだけ、多重度が上がった時の増え方も大きくなります。充分なメモリ量を確保できるかご検討ください。</p>
+</li>
+</ul>
+<p>最大キャッシュ数のチューニングは、キャッシュ数が初期値の1000では足りずDBアクセスがかなり増加してしまうことが確実であると判明してから実施することをお勧めします。</p>
+<p>また、変更した場合は、想定される利用シナリオにおいての性能試験を十分に実施されることをお勧めします。</p>
+</section>
+<section id="fms-introduce-core-parameter-endconditions">
+<span id="id47"></span><h2><span class="section-number">1.5. </span>完了条件<a class="headerlink" href="#fms-introduce-core-parameter-endconditions" title="Link to this heading">¶</a></h2>
+<p>同画面から設定結果を確認します。</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" >会計コアマスタの設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">1. </span>パラメータ登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

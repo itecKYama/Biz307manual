@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>1. マスタ設定準備 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2. 仕訳移行準備" href="jrnl.html" />
+    <link rel="prev" title="導入前準備" href="index.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U">導入前準備</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">1. </span>マスタ設定準備</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="index.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="jrnl.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../preface/index.html">はじめに</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">導入前準備</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. マスタ設定準備</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#im-mst-biz">1.1. IM-共通マスタ ・ Biz∫ 共通マスタ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-master-fc">1.2. 会計コアのマスタ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-master-wf">1.3. ワークフローのマスタ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-master-pr">1.4. 債権債務のマスタ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-master-cm">1.5. 管理会計のマスタ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-master-fa">1.6. 資産管理のマスタ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-master-cp">1.7. 建設仮勘定のマスタ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-master-lc">1.8. 契約管理・リース管理のマスタ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-master-jc">1.9. プロジェクト原価管理のマスタ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-master-ga">1.10. グループ会計のマスタ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-master-ai">1.11. 会計連携のマスタ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-master-gt">1.12. グループ会社間取引のマスタ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gm">1.13. グループ連結オペレーション のマスタ</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="jrnl.html">2. 仕訳移行準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fa.html">3. 資産移行準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cp.html">4. 建設仮勘定移行準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lc.html">5. 契約移行準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jc.html">6. プロジェクト原価管理移行準備</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module/index.html">モジュール別の導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-preparation-master">
+<span id="id39"></span><h1><span class="section-number">1. </span>マスタ設定準備<a class="headerlink" href="#fms-introduce-preparation-master" title="Link to this heading">¶</a></h1>
+<p>マスタの設定準備を行い、以降の導入作業でスムーズにマスタの設定を行えるようにします。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>一括取込機能を利用する場合、一括取込用のファイルを準備します。</p>
+<p>各マスタの設定項目については、<a class="reference internal" href="../../import/index.html#fms-import"><span class="std std-ref">一括取込マニュアル</span></a>、もしくは各登録画面およびヘルプを参照してください。</p>
+</div>
+<section id="im-mst-biz">
+<span id="fms-introduce-preparation-master-im"></span><h2><span class="section-number">1.1. </span>IM-共通マスタ・Biz∫共通マスタ<a class="headerlink" href="#im-mst-biz" title="Link to this heading">¶</a></h2>
+<p>IM-共通マスタ・Biz∫共通マスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>会社コード（計上組織セットコード）</p></td>
+<td><p><a class="reference internal" href="../baseset/im/company.html#fms-introduce-baseset-im-master-company"><span class="std std-ref">計上組織セットコード登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>組織（計上組織）</p></td>
+<td><p><a class="reference internal" href="../baseset/im/department.html#fms-introduce-baseset-im-master-department"><span class="std std-ref">組織登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>ロール</p></td>
+<td><p><a class="reference internal" href="../baseset/im/role.html#fms-introduce-baseset-im-master-role"><span class="std std-ref">ロール登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>ユーザ</p></td>
+<td><p><a class="reference internal" href="../baseset/im/user.html#fms-introduce-baseset-im-master-user"><span class="std std-ref">ユーザ・従業員登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>認可</p></td>
+<td><p><a class="reference internal" href="../baseset/im/authorization.html#fms-introduce-baseset-im-master-authorization"><span class="std std-ref">認可設定</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>組織グループ</p></td>
+<td><p><a class="reference internal" href="../baseset/auth/dept_group.html#fms-introduce-baseset-auth-dept-group"><span class="std std-ref">組織グループ登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>アクセス権限制御に関する設定</p></td>
+<td><p><a class="reference internal" href="../baseset/auth/index.html#fms-introduce-baseset-auth"><span class="std std-ref">アクセス権設定</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>コンフィグレーションの設定</p></td>
+<td><p><a class="reference internal" href="../baseset/biz/configuration.html#fms-introduce-baseset-biz-configuration"><span class="std std-ref">コンフィグレーション設定</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>通貨に関する設定</p></td>
+<td><p><a class="reference internal" href="../baseset/biz/currency.html#fms-introduce-baseset-biz-currency"><span class="std std-ref">通貨登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>カレンダ</p></td>
+<td><p><a class="reference internal" href="../baseset/biz/calendar.html#fms-introduce-baseset-biz-calendar"><span class="std std-ref">カレンダ登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>間接税</p></td>
+<td><p><a class="reference internal" href="../baseset/biz/indirect_tax.html#fms-introduce-baseset-biz-indirect-tax"><span class="std std-ref">間接税登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>分析コード</p></td>
+<td><p><a class="reference internal" href="../baseset/biz/analysis_class.html#fms-introduce-baseset-biz-analysis-class"><span class="std std-ref">分析コード登録</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fms-introduce-preparation-master-fc">
+<span id="id40"></span><h2><span class="section-number">1.2. </span>会計コアのマスタ<a class="headerlink" href="#fms-introduce-preparation-master-fc" title="Link to this heading">¶</a></h2>
+<p>会計コアのマスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>パラメータ</p></td>
+<td><p><a class="reference internal" href="../core/parameter.html#fms-introduce-core-parameter"><span class="std std-ref">パラメータ登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>会計期間</p></td>
+<td><p><a class="reference internal" href="../core/accounting_period.html#fms-introduce-core-accounting-period"><span class="std std-ref">会計期間登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>科目</p></td>
+<td><p><a class="reference internal" href="../core/account.html#fms-introduce-core-account"><span class="std std-ref">科目登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>科目構成</p></td>
+<td><p><a class="reference internal" href="../core/account_structure.html#fms-introduce-core-account-structure"><span class="std std-ref">科目構成登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>本支店仕訳情報</p></td>
+<td><p><a class="reference internal" href="../core/branch_accounting.html#fms-introduce-core-branch-accounting"><span class="std std-ref">本支店仕訳情報登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>キャシュフロー</p></td>
+<td><p><a class="reference internal" href="../core/cash_flow.html#fms-introduce-core-cash-flow"><span class="std std-ref">キャッシュフロー項目登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>会計モジュール</p></td>
+<td><p><a class="reference internal" href="../core/finance_module.html#fms-introduce-core-finance-module"><span class="std std-ref">入力制限／月次更新対象外設定</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>分析フィールド</p></td>
+<td><p><a class="reference internal" href="../core/analysis_field.html#fms-introduce-core-analysis-field"><span class="std std-ref">分析フィールド登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>フィールド関連</p></td>
+<td><p><a class="reference internal" href="../core/field_relation.html#fms-introduce-core-field-relation"><span class="std std-ref">フィールド関連マスタ登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>会計種別</p></td>
+<td><p><a class="reference internal" href="../core/accounting_type.html#fms-introduce-core-accounting-type"><span class="std std-ref">会計種別設定</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>経過勘定振替マスタ</p></td>
+<td><p><a class="reference internal" href="../core/deferred_accounts_transfer.html#fms-introduce-core-deferred-accounts-transfer"><span class="std std-ref">経過勘定振替マスタ登録</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fms-introduce-preparation-master-wf">
+<span id="id41"></span><h2><span class="section-number">1.3. </span>ワークフローのマスタ<a class="headerlink" href="#fms-introduce-preparation-master-wf" title="Link to this heading">¶</a></h2>
+<p>ワークフローのマスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ルート</p></td>
+<td><p><a class="reference internal" href="../workflow/route.html#fms-introduce-workflow-route"><span class="std std-ref">ルート修正</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Biz∫会計ワークフローパラメータ</p></td>
+<td><p><a class="reference internal" href="../workflow/fms_wf_parameter.html#fms-introduce-workflow-fms-wf-parameter"><span class="std std-ref">Biz∫会計 ワークフローパラメータ修正</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>フローグループ</p></td>
+<td><p><a class="reference internal" href="../workflow/flow_group.html#fms-introduce-workflow-flow-group"><span class="std std-ref">フローグループ修正</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>ワークフローを導入する場合のみ</p>
+</div>
+</section>
+<section id="fms-introduce-preparation-master-pr">
+<span id="id42"></span><h2><span class="section-number">1.4. </span>債権債務のマスタ<a class="headerlink" href="#fms-introduce-preparation-master-pr" title="Link to this heading">¶</a></h2>
+<p>債権債務のマスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>銀行</p></td>
+<td><p><a class="reference internal" href="../module/pr/bank.html#fms-introduce-module-pr-bank"><span class="std std-ref">銀行登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>振込手数料</p></td>
+<td><p><a class="reference internal" href="../module/pr/transferfee.html#fms-introduce-module-pr-transferfee"><span class="std std-ref">振込手数料登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>社内口座情報</p></td>
+<td><p><a class="reference internal" href="../module/pr/company_bank_account.html#fms-introduce-module-pr-company-bank-account"><span class="std std-ref">社内口座情報登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>従業員口座情報</p></td>
+<td><p><a class="reference internal" href="../module/pr/employee_bank_account.html#fms-introduce-module-pr-employee-bank-account"><span class="std std-ref">従業員口座情報登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>サイト社員</p></td>
+<td><p><a class="reference internal" href="../module/pr/site_employee.html#fms-introduce-module-pr-site-employee"><span class="std std-ref">サイト社員登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>入金支払関連項目</p></td>
+<td><p><a class="reference internal" href="../module/pr/income_payment_relation.html#fms-introduce-module-pr-income-payment-relation"><span class="std std-ref">入金支払関連項目登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>法人情報</p></td>
+<td><p><a class="reference internal" href="../module/pr/corporation.html#fms-introduce-module-pr-corporation"><span class="std std-ref">法人情報登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>取引先（債権・債務用）</p></td>
+<td><p><a class="reference internal" href="../module/pr/customer.html#fms-introduce-module-pr-customer"><span class="std std-ref">取引先登録（債権・債務用）</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>取引先入金支払手段制御</p></td>
+<td><p><a class="reference internal" href="../module/pr/income_payment_instrument_control.html#fms-introduce-module-pr-income-payment-instrument-control"><span class="std std-ref">取引先入金支払手段制御登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>振込依頼人</p></td>
+<td><p><a class="reference internal" href="../module/pr/transfer_client_person.html#fms-introduce-module-pr-transfer-client-person"><span class="std std-ref">振込依頼人マスタの登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>契約者番号</p></td>
+<td><p><a class="reference internal" href="../module/pr/contractor_no.html#fms-introduce-module-pr-contractor-no"><span class="std std-ref">契約者番号マスタの登録</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>債権債務管理を導入する場合のみ</p>
+</div>
+</section>
+<section id="fms-introduce-preparation-master-cm">
+<span id="id43"></span><h2><span class="section-number">1.5. </span>管理会計のマスタ<a class="headerlink" href="#fms-introduce-preparation-master-cm" title="Link to this heading">¶</a></h2>
+<p>管理会計のマスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>予算</p></td>
+<td><p><a class="reference internal" href="../module/ma/budget_import.html#fms-introduce-module-ma-budget-import"><span class="std std-ref">予算取込</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>配賦元・先マスタ</p></td>
+<td><p><a class="reference internal" href="../core/allocate.html#fms-introduce-core-allocate"><span class="std std-ref">配賦元・先マスタ登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>外部配賦基準</p></td>
+<td><p><a class="reference internal" href="../core/external_allocation_base_import.html#fms-introduce-core-external-allocation-base-import"><span class="std std-ref">外部配賦基準登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>配賦段階マスタ</p></td>
+<td><p><a class="reference internal" href="../module/ma/allocate_phase.html#fms-introduce-module-ma-allocate-phase"><span class="std std-ref">配賦段階マスタ登録</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>管理会計を導入する場合のみ</p>
+</div>
+</section>
+<section id="fms-introduce-preparation-master-fa">
+<span id="id44"></span><h2><span class="section-number">1.6. </span>資産管理のマスタ<a class="headerlink" href="#fms-introduce-preparation-master-fa" title="Link to this heading">¶</a></h2>
+<p>資産管理のマスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>種類/構造/細目</p></td>
+<td><p><a class="reference internal" href="../module/fa/kind_structure_detail.html#fms-introduce-module-fa-kind-structure-detail"><span class="std std-ref">種類/構造/細目登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>償却資産申告先</p></td>
+<td><p><a class="reference internal" href="../module/fa/declare_tax_office.html#fms-introduce-module-fa-declare-tax-office"><span class="std std-ref">償却資産申告先登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>資産管理仕訳設定</p></td>
+<td><p><a class="reference internal" href="../module/fa/fixed_asset_journal_set.html#fms-introduce-module-fa-fixed-asset-journal-set"><span class="std std-ref">資産管理仕訳設定登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>償却計算方法設定</p></td>
+<td><p><a class="reference internal" href="../module/fa/depreciation_calculate_define.html#fms-introduce-module-fa-depreciation-calculate-define"><span class="std std-ref">償却計算方法設定登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>特別償却</p></td>
+<td><p><a class="reference internal" href="../module/fa/special_depreciation.html#fms-introduce-module-fa-special-depreciation"><span class="std std-ref">特別償却登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>資産管理仕訳パターン定義</p></td>
+<td><p><a class="reference internal" href="../module/fa/jrnl_ptn_def.html#fms-introduce-module-fa-jrnl-ptn-def"><span class="std std-ref">資産管理仕訳パターン定義の変更</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>資産管理を導入する場合のみ</p>
+</div>
+</section>
+<section id="fms-introduce-preparation-master-cp">
+<span id="id45"></span><h2><span class="section-number">1.7. </span>建設仮勘定のマスタ<a class="headerlink" href="#fms-introduce-preparation-master-cp" title="Link to this heading">¶</a></h2>
+<p>建設仮勘定のマスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>建設仮勘定科目</p></td>
+<td><p><a class="reference internal" href="../module/cp/account.html#fms-introduce-module-cp-account"><span class="std std-ref">建設仮勘定科目の登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>建設仮勘定仕訳設定</p></td>
+<td><p><a class="reference internal" href="../module/cp/journal_set.html#fms-introduce-module-cp-journal-set"><span class="std std-ref">建設仮勘定仕訳設定</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>建設仮勘定を導入する場合のみ</p>
+</div>
+</section>
+<section id="fms-introduce-preparation-master-lc">
+<span id="id46"></span><h2><span class="section-number">1.8. </span>契約管理・リース管理のマスタ<a class="headerlink" href="#fms-introduce-preparation-master-lc" title="Link to this heading">¶</a></h2>
+<p>契約管理・リース管理のマスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>契約種別マスタ</p></td>
+<td><p><a class="reference internal" href="../module/lc/accounting_type.html#fms-introduce-module-lc-accounting-type"><span class="std std-ref">会計種別設定</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>契約決済方法マスタ</p></td>
+<td><p><a class="reference internal" href="../module/lc/contract_settlement_way.html#fms-introduce-module-lc-contract-settlement-way"><span class="std std-ref">契約決済方法マスタ登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>契約種別仕訳マスタ</p></td>
+<td><p><a class="reference internal" href="../module/lc/contract_class_jrnl.html#fms-introduce-module-lc-contract-class-jrnl"><span class="std std-ref">契約種別仕訳マスタ登録</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>契約管理・リース管理を導入する場合のみ</p>
+</div>
+</section>
+<section id="fms-introduce-preparation-master-jc">
+<span id="id47"></span><h2><span class="section-number">1.9. </span>プロジェクト原価管理のマスタ<a class="headerlink" href="#fms-introduce-preparation-master-jc" title="Link to this heading">¶</a></h2>
+<p>プロジェクト原価管理のマスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>主科目</p></td>
+<td><p><a class="reference internal" href="../module/jc/analyze_cd.html#fms-introduce-module-jc-analyze-cd"><span class="std std-ref">分析コード登録(プロジェクト原価管理)</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>労務費ランク</p></td>
+<td><p><a class="reference internal" href="../module/jc/analyze_cd.html#fms-introduce-module-jc-analyze-cd"><span class="std std-ref">分析コード登録(プロジェクト原価管理)</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>主科目と勘定科目の関連</p></td>
+<td><p><a class="reference internal" href="../module/jc/convert_table.html#fms-introduce-module-jc-convert-table"><span class="std std-ref">変換表登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>労務費科目</p></td>
+<td><p><a class="reference internal" href="../module/jc/convert_table.html#fms-introduce-module-jc-convert-table"><span class="std std-ref">変換表登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>原価計算種別</p></td>
+<td><p><a class="reference internal" href="../module/jc/cost_account_cls.html#fms-introduce-module-jc-cost-account-cls"><span class="std std-ref">原価計算種別登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>契約形態</p></td>
+<td><p><a class="reference internal" href="../module/jc/contract_class.html#fms-introduce-module-jc-contract-class"><span class="std std-ref">契約形態登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>プロジェクト</p></td>
+<td><p><a class="reference internal" href="../module/jc/project.html#fms-introduce-module-jc-project"><span class="std std-ref">プロジェクト登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>要約原価要素</p></td>
+<td><p><a class="reference internal" href="../module/jc/cost_element_sum.html#fms-introduce-module-jc-cost-element-sum"><span class="std std-ref">要約原価要素登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>原価集計コード</p></td>
+<td><p><a class="reference internal" href="../module/jc/cost_element.html#fms-introduce-module-jc-cost-element"><span class="std std-ref">原価集計コード登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>間接費組織グループ</p></td>
+<td><p><a class="reference internal" href="../module/jc/overhead_deptgrp.html#fms-introduce-module-jc-overhead-deptgrp"><span class="std std-ref">間接費組織グループ登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>労務費ランクを決定する項目</p></td>
+<td><p><a class="reference internal" href="../module/jc/rank_segment.html#fms-introduce-module-jc-rank-segment"><span class="std std-ref">ランク区分登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>労務費ランクの決定方法</p></td>
+<td><p><a class="reference internal" href="../module/jc/rank_information.html#fms-introduce-module-jc-rank-information"><span class="std std-ref">ランク情報登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>単金</p></td>
+<td><p><a class="reference internal" href="../module/jc/plan_amount.html#fms-introduce-module-jc-plan-amount"><span class="std std-ref">単金登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>給与仕訳設定</p></td>
+<td><p><a class="reference internal" href="../module/jc/labor_jrnl_set.html#fms-introduce-module-jc-labor-jrnl-set"><span class="std std-ref">給与仕訳連携登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>月次処理手順</p></td>
+<td><p><a class="reference internal" href="../module/jc/batch_process.html#fms-introduce-module-jc-batch-process"><span class="std std-ref">月次処理手順の変更</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>プロジェクト原価管理管理を導入する場合のみ</p>
+</div>
+</section>
+<section id="fms-introduce-preparation-master-ga">
+<span id="id48"></span><h2><span class="section-number">1.10. </span>グループ会計のマスタ<a class="headerlink" href="#fms-introduce-preparation-master-ga" title="Link to this heading">¶</a></h2>
+<p>グループ会計のマスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>連結子会社識別用の取引先情報</p></td>
+<td><p><a class="reference internal" href="../module/ga/corporation.html#fms-introduce-module-ga-corporation"><span class="std std-ref">連結子会社識別用の法人情報の登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>連結子会社識別用の法人情報</p></td>
+<td><p><a class="reference internal" href="../module/ga/customer.html#fms-introduce-module-ga-customer"><span class="std std-ref">連結子会社識別用の取引先情報の登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Biz∫連結連携ファイル名</p></td>
+<td><p><a class="reference internal" href="../module/ga/setfilename.html#fms-introduce-module-ga-setfilename"><span class="std std-ref">Biz∫連結連携ファイル名の設定</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>グループ会計を導入する場合のみ</p>
+</div>
+</section>
+<section id="fms-introduce-preparation-master-ai">
+<span id="id49"></span><h2><span class="section-number">1.11. </span>会計連携のマスタ<a class="headerlink" href="#fms-introduce-preparation-master-ai" title="Link to this heading">¶</a></h2>
+<p>会計連携のマスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>連携準備</p></td>
+<td><p><a class="reference internal" href="../module/ai/preparation_ai.html#fms-introduce-module-ai-preparation-ai"><span class="std std-ref">連携準備</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>文字列変換パターン設定</p></td>
+<td><p><a class="reference internal" href="../module/ai/text_cnv_pattern.html#fms-introduce-module-ai-text-cnv-pattern"><span class="std std-ref">会計連携文字列変換パターン管理</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>取込設定</p></td>
+<td><p><a class="reference internal" href="../module/ai/import_config.html#fms-introduce-module-ai-import-config"><span class="std std-ref">会計連携取込設定管理</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>伝票区分設定</p></td>
+<td><p><a class="reference internal" href="../module/ai/slip_type.html#fms-introduce-module-ai-slip-type"><span class="std std-ref">会計連携伝票区分管理</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>変換パターン設定</p></td>
+<td><p><a class="reference internal" href="../module/ai/cnv_pattern.html#fms-introduce-module-ai-cnv-pattern"><span class="std std-ref">会計連携変換パターン管理</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>伝票項目設定</p></td>
+<td><p><a class="reference internal" href="../module/ai/slip_itm.html#fms-introduce-module-ai-slip-itm"><span class="std std-ref">会計連携伝票項目管理</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>会計連携連携を導入する場合のみ</p>
+</div>
+</section>
+<section id="fms-introduce-preparation-master-gt">
+<span id="id50"></span><h2><span class="section-number">1.12. </span>グループ会社間取引のマスタ<a class="headerlink" href="#fms-introduce-preparation-master-gt" title="Link to this heading">¶</a></h2>
+<p>グループ会社間取引のマスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>グループ会社間取引仕訳設定マスタ</p></td>
+<td><p><a class="reference internal" href="../../import/mst/gt_gtJrnl.html#fms-import-mst-gt-gtjrnl-gt-gtjrnl"><span class="std std-ref">グループ会社間取引仕訳設定マスタ</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>グループ会社間取引を導入する場合のみ</p>
+</div>
+</section>
+<section id="gm">
+<span id="fms-introduce-preparation-master-gm"></span><h2><span class="section-number">1.13. </span>グループ連結オペレーションのマスタ<a class="headerlink" href="#gm" title="Link to this heading">¶</a></h2>
+<p>グループ連結オペレーションのマスタ上で事前に決定する必要のある内容は以下となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>事前に決定する内容</p></th>
+<th class="head"><p>設定手順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>連結科目マスタ</p></td>
+<td><p><a class="reference internal" href="../module/gm/consolidated_account.html#fms-introduce-module-gm-consolidated-account"><span class="std std-ref">連結科目の登録</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>照合用連結科目グループマスタ</p></td>
+<td><p><a class="reference internal" href="../module/gm/match_consolidated_account_grp.html#fms-introduce-module-gm-match-consolidated-account-grp"><span class="std std-ref">照合用連結科目グループの登録</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>法人データアクセス制御</p></td>
+<td><p><a class="reference internal" href="../module/gm/corp_grp_access.html#fms-introduce-module-gm-corp-grp-access"><span class="std std-ref">権限グループ・権限・法人グループの関連づけ（法人データアクセス制御）</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>グループ連結オペレーションを導入する場合のみ</p>
+</div>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" >導入前準備</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">1. </span>マスタ設定準備</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

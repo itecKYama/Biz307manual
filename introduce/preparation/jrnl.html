@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>2. 仕訳移行準備 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="3. 資産移行準備" href="fa.html" />
+    <link rel="prev" title="1. マスタ設定準備" href="master.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U">導入前準備</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">2. </span>仕訳移行準備</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="master.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="fa.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../preface/index.html">はじめに</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">導入前準備</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="master.html">1. マスタ設定準備</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2. 仕訳移行準備</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-jrnl-ledger">2.1. 残高のみの移行の場合</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-preparation-jrnl-jrnl-dtl">2.2. 仕訳明細単位の移行の場合</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fa.html">3. 資産移行準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cp.html">4. 建設仮勘定移行準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lc.html">5. 契約移行準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jc.html">6. プロジェクト原価管理移行準備</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module/index.html">モジュール別の導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-preparation-jrnl">
+<span id="id39"></span><h1><span class="section-number">2. </span>仕訳移行準備<a class="headerlink" href="#fms-introduce-preparation-jrnl" title="Link to this heading">¶</a></h1>
+<p>仕訳の移行準備を行い、以降の導入作業でスムーズに仕訳の移行を行います。仕訳の移行には、以下の二種類の方法があります。</p>
+<ul>
+<li><p>残高のみの移行</p>
+<p>残高のみの移行では、運用開始年度の期首残高を、前年度の期末に取り込みます。</p>
+</li>
+<li><p>仕訳明細単位の移行</p>
+<p>仕訳明細単位の移行では、一括取込機能を使用して仕訳明細を取り込みます。仕訳明細の移行対象年度以前の残高は、残高のみの移行と同じく、仕訳明細の移行対象前年度の期末に取り込みます。</p>
+</li>
+</ul>
+<section id="fms-introduce-preparation-jrnl-ledger">
+<span id="id40"></span><h2><span class="section-number">2.1. </span>残高のみの移行の場合<a class="headerlink" href="#fms-introduce-preparation-jrnl-ledger" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>残高のみの移行の場合（一般会計）</p>
+<ul>
+<li><p>前期末の残高を、会計単位<a class="footnote-reference brackets" href="#f1" id="id41" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>、計上組織、勘定科目/補助科目、取引先、分析コード単位に集計しておく。</p>
+<p>取込フォーマット：シート「一括取込シート_仕訳.csv」</p>
+<p><strong>設定例</strong></p>
+<blockquote>
+<div><figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/jrnl_001.png"><img alt="../../_images/jrnl_001.png" src="../../_images/jrnl_001.png" style="width: 300px;" /></a>
+</figure>
+</div></blockquote>
+</li>
+</ul>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id41">1</a><span class="fn-bracket">]</span></span>
+<p>会計単位に集計するとは、本支店会計を導入する場合、「本店」「支店」ごとに、しない場合は会社ごとに集計することを言います。</p>
+</aside>
+</aside>
+</li>
+<li><p>残高のみの移行の場合（債権債務）</p>
+<ul>
+<li><p>前期末の債権残高を、会計単位、計上組織、勘定科目/補助科目、取引先、分析コード、請求残の有無単位に集計しておく。</p>
+<p>取込フォーマット：シート「一括取込シート_債権.csv」</p>
+</li>
+<li><p>前期末の請求残高を、請求先、通貨単位に集計しておく。</p></li>
+<li><p>前期末の債務残高を、会計単位、計上組織、勘定科目/補助科目、取引先、分析コード単位に集計しておく。</p>
+<p>取込フォーマット：シート「一括取込シート_債務.csv」</p>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="fms-introduce-preparation-jrnl-jrnl-dtl">
+<span id="id42"></span><h2><span class="section-number">2.2. </span>仕訳明細単位の移行の場合<a class="headerlink" href="#fms-introduce-preparation-jrnl-jrnl-dtl" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>仕訳明細を移行する年度以前の残高を、残高のみの移行の場合と同様に集計しておく。（請求残だけは、明細移行前年度ではなく、運用開始の前年度の時点の残高を集計する）</p></li>
+<li><p>移行年度内の仕訳を用意する。</p>
+<ol class="arabic simple">
+<li><p>消込済の振替仕訳、債権計上仕訳、債務計上仕訳、入金仕訳、支払仕訳を、年度ごとに所定のフォーマットに設定しておく。（消込済の仕訳＝既に完了した消込対象の仕訳と、消込を実施した仕訳）</p></li>
+</ol>
+<blockquote>
+<div><p>取込フォーマット：シート「一括取込シート_仕訳.csv」</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>部分消込した仕訳は、消込済の仕訳と未消込の仕訳に分割して登録する。分割された未消込の仕訳は2.～5.の仕訳に含める。</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>未消込の振替仕訳を、年度ごとに所定のフォーマットに設定しておく。</p></li>
+</ol>
+<blockquote>
+<div><p>取込フォーマット：シート「一括取込シート_仕訳.csv」</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>未消込の債権計上仕訳を、年度ごとに所定のフォーマットに設定しておく。</p></li>
+</ol>
+<blockquote>
+<div><p>取込フォーマット：シート「一括取込シート_債権.csv」</p>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>未消込の債務計上仕訳を、年度ごとに所定のフォーマットに設定しておく。</p></li>
+</ol>
+<blockquote>
+<div><p>取込フォーマット：シート「一括取込シート_債務.csv」</p>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>未消込の入金仕訳（仮受計上など）を所定のフォーマットに設定しておく。</p></li>
+</ol>
+<blockquote>
+<div><p>取込フォーマット：シート「一括取込シート_入金.csv」</p>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>未消込の支払仕訳を所定のフォーマットに設定しておく。</p></li>
+</ol>
+<blockquote>
+<div><p>取込フォーマット：シート「一括取込シート_支払.csv」</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p><strong>仕訳明細単位の移行の制限事項</strong></p>
+<ul class="simple">
+<li><p>消込の情報は移行できません。消込済の債権、債務、入金、支払については、振替仕訳として取り込みます。そのため、一般会計を導入しない場合、明細単位での移行はできません。<a class="footnote-reference brackets" href="#f2" id="id43" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
+<li><p>振替仕訳は、債権債務管理の帳票では確認できません。消込済の債権、債務、入金、支払については、一般会計の帳票を利用してください。</p></li>
+</ul>
+</div>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id43">2</a><span class="fn-bracket">]</span></span>
+<p>残高明細管理状態が「残高明細管理対象外」の場合には一般会計を導入しない場合でも移行可能となります。</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" >導入前準備</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">2. </span>仕訳移行準備</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

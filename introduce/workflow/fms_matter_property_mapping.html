@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>4. 案件プロパティマッピングマスタ設定 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="5. フローグループ修正" href="flow_group.html" />
+    <link rel="prev" title="3. Biz∫会計 ワークフローパラメータ修正" href="fms_wf_parameter.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U">IM-Workflow 設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">4. </span>案件プロパティマッピングマスタ設定</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="fms_wf_parameter.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="flow_group.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/index.html">会計コアマスタの設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">IM-Workflow 設定</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="import.html">1. IM-Workflow マスタ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="route.html">2. ルート修正</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fms_wf_parameter.html">3. Biz∫会計 ワークフローパラメータ修正</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4. 案件プロパティマッピングマスタ設定</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-workflow-fms-matter-property-mapping-startconditions">4.1. 着手条件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-workflow-fms-matter-property-mapping-do">4.2. 実行手順</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms">4.2.1. Biz∫会計 の設定</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id42">4.2.2. intra-mart の設定</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-workflow-fms-matter-property-mapping-endconditions">4.3. 完了条件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flow_group.html">5. フローグループ修正</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter_name.html">6. IM-Workflow 案件名表示桁数編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../module/index.html">モジュール別の導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-workflow-fms-matter-property-mapping">
+<span id="id39"></span><h1><span class="section-number">4. </span>案件プロパティマッピングマスタ設定<a class="headerlink" href="#fms-introduce-workflow-fms-matter-property-mapping" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p><a class="reference internal" href="../../workflow/user_data/list.html#fms-imw-user-data-list"><span class="std std-ref">Biz∫会計 の案件プロパティ一覧</span></a>以外に案件プロパティを追加したい場合、本作業を実施します。</p>
+</div></blockquote>
+<p>仕訳ヘッダ・取引ヘッダ・取引明細の一部項目を案件プロパティとして追加できます。追加できる項目・設定値の詳細は、<a class="reference internal" href="../../import/mst/matter_property_mapping.html#fms-import-mst-matter-property-mapping"><span class="std std-ref">案件プロパティマッピングマスタ</span></a>の項目説明およびサンプルを参照してください。</p>
+<p>追加した案件プロパティを利用できるワークフローは以下です。</p>
+<ul class="simple">
+<li><p>仕訳登録（通常）</p></li>
+<li><p>仕訳登録（決算）</p></li>
+<li><p>取引登録（債権計上）</p></li>
+<li><p>取引登録（入金）</p></li>
+<li><p>取引登録（債務計上）</p></li>
+<li><p>取引登録（支払）</p></li>
+</ul>
+<section id="fms-introduce-workflow-fms-matter-property-mapping-startconditions">
+<span id="id40"></span><h2><span class="section-number">4.1. </span>着手条件<a class="headerlink" href="#fms-introduce-workflow-fms-matter-property-mapping-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="import.html#fms-introduce-workflow-import"><span class="std std-ref">IM-Workflow マスタ登録</span></a>が完了していること。</p>
+</section>
+<section id="fms-introduce-workflow-fms-matter-property-mapping-do">
+<span id="id41"></span><h2><span class="section-number">4.2. </span>実行手順<a class="headerlink" href="#fms-introduce-workflow-fms-matter-property-mapping-do" title="Link to this heading">¶</a></h2>
+<section id="fms">
+<h3><span class="section-number">4.2.1. </span>Biz∫会計の設定<a class="headerlink" href="#fms" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p><a class="reference internal" href="../../import/mst/matter_property_mapping.html#fms-import-mst-matter-property-mapping"><span class="std std-ref">案件プロパティマッピングマスタ</span></a>の項目説明の中から追加したい案件プロパティを選択し、下記画面で案件プロパティマッピングマスタに一括登録してください。</p>
+</div></blockquote>
+<p>案件プロパティマッピングマスタへの一括登録は全件洗い替えとなりますので、再度一括登録する場合はプルーフリスト出力した後、取込データの削除フラグを１（非活動）に設定、または不要な行を取込ファイルから削除して再取込してください。</p>
+<ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  会計コア
+    マスタメンテナンス
+      基本設定管理
+        案件プロパティマッピングマスタ設定
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="id42">
+<h3><span class="section-number">4.2.2. </span>intra-martの設定<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p>intra-mart社ドキュメント『IM-Workflow管理者操作ガイド』の<a class="reference external" href="https://document.intra-mart.jp/library/iap/public/im_workflow/im_workflow_administrator_guide/texts/basic_guide/basic_guide_4.html">3.4. 案件プロパティ定義を登録・設定する</a>を参照し、IM-Workflowの案件プロパティ設定を実施します。案件プロパティマッピングマスタの「拡張案件プロパティキー」が、IM-Workflowの案件プロパティ設定の「キー」に対応します。</p>
+<p>案件プロパティを設定した後、<a class="reference external" href="https://document.intra-mart.jp/library/iap/public/im_workflow/im_workflow_administrator_guide/texts/basic_guide/basic_guide_8_2.html">4.1. 一覧表示パターン定義を登録・設定する</a>を参照し、表示したい一覧表示パターンに案件プロパティを追加してください。</p>
+</div></blockquote>
+</section>
+</section>
+<section id="fms-introduce-workflow-fms-matter-property-mapping-endconditions">
+<span id="id43"></span><h2><span class="section-number">4.3. </span>完了条件<a class="headerlink" href="#fms-introduce-workflow-fms-matter-property-mapping-endconditions" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p><a class="reference internal" href="index.html#fms-introduce-workflow"><span class="std std-ref">IM-Workflow 設定</span></a>全体の作業完了後、仕訳・取引を起票して確認します。</p>
+</div></blockquote>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" >IM-Workflow 設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">4. </span>案件プロパティマッピングマスタ設定</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>21. 帳票出力ジョブ登録 &mdash; Biz∫会計 &nbsp; 3.0.7 2026年7月1日 更新版 &nbsp; Biz∫会計</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css?v=ea4c6d7a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_custom.css?v=04fc1f03" />
+    <link rel="stylesheet" type="text/css" href="../../_static/biz_highlight.css" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=430b56af"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="IM-Workflow 設定" href="../workflow/index.html" />
+    <link rel="prev" title="20.3. 制限事項" href="tatsuzin/limitations.html" />
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/amy.js"></script>
+    <script type="text/javascript" src="../../_static/stickyfill.min.js"></script>
+  </head><body>
+    <div class="container">
+      <div class="sticky">
+        <div class="header">
+          <div class="heading">
+            <div class="left">
+              <a href="https://www.biz-integral.com" title="NTT DATA BIZINTEGRAL">
+                <img src="../../_static/biz_logo.gif" class="biz-logo">
+              </a>
+            </div>
+            <div class="right">
+              <div>
+                <a href="../../index.html" class="document-name">Biz∫会計</a>
+                <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+              </div>
+            </div>
+          </div>
+          <div class="heading-link">
+            <div style="display:flex;">
+              <a class="reference external partner-site" href="https://partner.biz-integral.net">
+                <i class="material-icons">help_outline</i>
+                <span>Partner site</span>
+              </a>
+              <a class="reference external partner-site" href="https://biz-integral.zendesk.com/hc/ja">
+                <img src="../../_static/bizkuma.png" style="padding-bottom:5px; padding-right:2px; height:24px !important;">
+                <span>お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-header">
+          <div class="left"><span class="header-logo"></span></div>
+          <div class="right">
+            <span class="product-name">Biz∫会計</span>
+            <span class="shorttitle">Biz∫会計</span>
+            <span class="heading-supplementation">3.0.7 2026年7月1日 更新版</span>
+          </div>
+        </div>
+
+        <div class="nav topnav">
+          <div class="topnav-left">
+            
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" accesskey="U">会計コアマスタの設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">21. </span>帳票出力ジョブ登録</a></li> 
+      </ul>
+    </div>
+    
+          </div>
+          <div class="topnav-right">
+            <a id="copy-breadcrumbs" class="internal menu" title="パンクズリストをクリックボードにコピーします。"><i class="material-icons">content_copy</i><span>Naviをコピー</span></a>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div id="toggle-menu" class="toggle-menu" title="目次">
+            <i class="material-icons default">menu</i>
+          </div>
+          <div class="toolbar-right">
+            <a href="tatsuzin/limitations.html" class="internal menu" title="previous"><i class="material-icons">arrow_back</i><span>前へ</span></a>
+            <a href="../workflow/index.html" class="internal menu" title="next"><span>次へ</span><i class="material-icons">arrow_forward</i></a>
+            <a href="#" class="internal menu" title="Go to page top"><i class="material-icons">arrow_upward</i><span>Topに移動</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="wrapper columns">
+          <div id="sidebar-left" class="sidebar active">
+            
+    <div class="sphinxsidebar">
+      <div class="sphinxsidebarwrapper hide-toctree-l1">
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">変更履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/setup/index.html">運用環境セットアップガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/developer/index.html">開発環境セットアップガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">導入マニュアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../preface/index.html">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/index.html">導入前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baseset/index.html">Biz∫ 基盤の設定</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">会計コアマスタの設定</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="parameter.html">1. パラメータ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounting_period.html">2. 会計期間登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html">3. 科目登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account_structure.html">4. 科目構成登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="branch_accounting.html">5. 本支店仕訳情報登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cash_flow.html">6. キャッシュフロー項目登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account_revaluate_target_control.html">7. 科目評価替対象登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="finance_module.html">8. 入力制限／月次更新対象外設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monthly_open.html">9. 会計月度オープン処理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis_field.html">10. 分析フィールド登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="field_relation.html">11. フィールド関連マスタ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounting_type.html">12. 会計種別設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restrict_batch.html">13. 入力制限ジョブ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deferred_accounts_transfer.html">14. 経過勘定振替マスタ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="balance_carryover_set.html">15. 残高繰越設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="allocate.html">16. 配賦元・先マスタ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="external_allocation_base_import.html">17. 外部配賦基準登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jrnlptn.html">18. 仕訳パターンの登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monthly_update.html">19. 月次更新ジョブ登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tatsuzin.html">20. 達人連携設定</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">21. 帳票出力ジョブ登録</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-core-report-batch-startconditions">21.1. 着手条件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-core-report-batch-do">21.2. 実行手順</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-core-report-batch-do-template">21.2.1. ジョブ実行対象の出力条件テンプレート登録</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#bapf">21.2.2. Biz∫APF へのジョブ登録</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fms-introduce-core-report-batch-do-im">21.2.3. intra-mart へのジョブ登録</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#fms-introduce-core-report-batch-endconditions">21.3. 完了条件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">IM-Workflow 設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module/index.html">モジュール別の導入</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">ワークフロー設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bui3/index.html">Biz∫UI3切替設定ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考資料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/index.html">一括取込マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deptchg/index.html">組織変更ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cookbook/index.html">逆引き(Cookbook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../archive/index.html">過年度アーカイブ</a></li>
+</ul>
+
+      </div>
+    </div>
+          </div>
+          <div class="content">
+            
+<section id="fms-introduce-core-report-batch">
+<span id="id39"></span><h1><span class="section-number">21. </span>帳票出力ジョブ登録<a class="headerlink" href="#fms-introduce-core-report-batch" title="Link to this heading">¶</a></h1>
+<div class="line-block">
+<div class="line">各種帳票・ファイル出力をジョブで実行する場合に設定します。</div>
+<div class="line">ジョブによる帳票・ファイル出力が不要な場合、本手順は不要です。</div>
+</div>
+<p>本項のジョブはセットアップで初期登録されます。運用要件に応じて、ジョブおよびジョブネットの追加・修正を行います。</p>
+<p>帳票出力ジョブの仕様は以下の通りです。</p>
+<blockquote>
+<div><ul>
+<li><p>出力条件はテンプレートを利用します。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>同一帳票・ファイルに対して、複数の条件を指定することも可能です。条件毎のテンプレートを用意し、ジョブあるいはジョブネットをテンプレート数分作成し、テンプレートIDを指定してください。</p>
+</div>
+</li>
+<li><p>出力対象となる帳票や出力方法（印刷／ファイル出力）はジョブパラメータで指定します。</p></li>
+<li><p>実行結果は非同期タスクモニタを確認します。</p>
+<p>ジョブから各種帳票・ファイル出力の非同期タスクを実行するため、結果の確認や出力した帳票の取得は非同期タスクモニタを確認します。</p>
+</li>
+<li><p>ファイル出力する場合のファイル形式はパラメータ「ファイル出力時のファイル種類」（対象モジュール：会計コア）の値に従います。</p>
+<p>パラメータ「ファイル出力時のファイル種類」は以下メニューにあります。</p>
+<blockquote>
+<div><ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ 会計
+  会計コア
+    マスタメンテナンス
+      基本設定管理
+        パラメータ管理
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>ジョブの実行については、以下の方法があり、それぞれの設定方法についてまとめています。</p>
+<ul class="simple">
+<li><p>コマンドラインから実行する</p></li>
+<li><p>intra-martジョブネット管理から実行する</p></li>
+</ul>
+<p>各システムの運用を考慮して、どの方式で処理を行うか検討します。</p>
+<section id="fms-introduce-core-report-batch-startconditions">
+<span id="id40"></span><h2><span class="section-number">21.1. </span>着手条件<a class="headerlink" href="#fms-introduce-core-report-batch-startconditions" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="account.html#fms-introduce-core-account"><span class="std std-ref">科目登録</span></a>を終えていること。</p>
+</section>
+<section id="fms-introduce-core-report-batch-do">
+<span id="id41"></span><h2><span class="section-number">21.2. </span>実行手順<a class="headerlink" href="#fms-introduce-core-report-batch-do" title="Link to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>会社単位での設定が必要となります。</p>
+</div>
+<section id="fms-introduce-core-report-batch-do-template">
+<span id="id42"></span><h3><span class="section-number">21.2.1. </span>ジョブ実行対象の出力条件テンプレート登録<a class="headerlink" href="#fms-introduce-core-report-batch-do-template" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Biz∫会計管理者アカウントでポータル画面にログインし、各種帳票・ファイル出力の出力指示画面を起動します。</p></li>
+<li><p>ジョブ実行時の出力条件とするテンプレートを登録します。</p></li>
+<li><p>登録したテンプレートで帳票・ファイル出力ができることを確認します。</p></li>
+</ol>
+</section>
+<section id="bapf">
+<span id="fms-introduce-core-report-batch-do-bapf"></span><h3><span class="section-number">21.2.2. </span>Biz∫APFへのジョブ登録<a class="headerlink" href="#bapf" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Biz∫会計管理者アカウントでポータル画面にログインし、「ジョブ管理」画面を起動します。</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>メニュー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Biz∫ APF アドミニストレーション
+  システム管理（会社共通）
+    ジョブ
+      ジョブ管理
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>ジョブの登録</p></li>
+</ol>
+<blockquote>
+<div><p>新規ボタンを押下し、ジョブ設定登録の基本情報タブにおいて下表の項目を設定し、新規のジョブを登録してください。</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>帳票出力処理</dt><dd><p>「出力対象となる帳票」毎に登録が必要です。</p>
+</dd>
+</dl>
+</li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ジョブコード</p></td>
+<td><p>任意</p></td>
+</tr>
+<tr class="row-odd"><td><p>ロケールID</p></td>
+<td><p>ジョブ名表示用のロケールID</p></td>
+</tr>
+<tr class="row-even"><td><p>名称</p></td>
+<td><p>任意</p></td>
+</tr>
+<tr class="row-odd"><td><p>実行ユーザコード</p></td>
+<td><p>ジョブ実行時に利用するユーザのID</p>
+<p>帳票出力処理のジョブでは、バッチ実行ユーザの参照権限により帳票を出力しております。このため、帳票を出力するために適切な参照権限を持つユーザをバッチ実行ユーザに登録してください。<a class="footnote-reference brackets" href="#user" id="id43" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p>コンポーネントクラス名</p></td>
+<td><p>ジョブ実行のコンポーネントクラス名。</p>
+<p>「帳票出力処理」の場合</p>
+<blockquote>
+<div><p>com.biz_integral.fms.fc.application.web.reportOutputJob.ReportOutputJobBatch</p>
+</div></blockquote>
+<p>（いずれも1行で記述します）</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">脚注</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="user" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id43">1</a><span class="fn-bracket">]</span></span>
+<p>実行ユーザコードに指定するユーザに必要な権限については、<a class="reference internal" href="../../cookbook/introduce/batch/batch_user.html#fms-cookbook-introduce-batch-user-fc-report-job"><span class="std std-ref">ジョブ実行ユーザの権限</span></a>を参照してください。実行ユーザにアクセス制限（プロセス）の権限が付与されていない場合、アプリケーションログに詳細なエラーメッセージが出力されません。その場合は「biz-batch.log」に出力されています。そちらも合わせてご確認ください。</p>
+</aside>
+</aside>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>ジョブパラメータの登録</p></li>
+</ol>
+<blockquote>
+<div><p>ジョブ設定登録のジョブパラメータタブにて、ジョブパラメータを登録します。</p>
+<p>■帳票出力処理のジョブパラメータは以下となります。</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 28.6%" />
+<col style="width: 28.6%" />
+<col style="width: 42.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータキー</p></th>
+<th class="head"><p>パラメータキー名</p></th>
+<th class="head"><p>パラメータ値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>comment</p></td>
+<td><p>コメント</p></td>
+<td><p>非同期タスクの登録時コメントを設定します。非同期タスクモニタ上での検索条件に利用する想定です。</p></td>
+</tr>
+<tr class="row-odd"><td><p>fileItmTmpltId</p></td>
+<td><p>ファイル出力項目テンプレートID</p></td>
+<td><p>ファイル出力時に選択されるファイル出力項目テンプレートIDを設定します。</p></td>
+</tr>
+<tr class="row-even"><td><p>outputProcessingType</p></td>
+<td><p>出力処理区分</p></td>
+<td><p>帳票出力の場合は1、ファイル出力の場合は2を設定します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>reportId</p></td>
+<td><p>帳票ID</p></td>
+<td><p>出力対象となる帳票を識別するための帳票IDを設定します。</p></td>
+</tr>
+<tr class="row-even"><td><p>templateId</p></td>
+<td><p>テンプレートID</p></td>
+<td><p>出力条件となるテンプレートIDを設定します。テンプレートIDは各種帳票のテンプレート登録ダイアログ画面で確認します。</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>帳票IDは、出力したい帳票に合わせて以下の値を設定してください。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>帳票名</p></th>
+<th class="head"><p>帳票ID</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>仕訳帳</p></td>
+<td><p>journal</p></td>
+</tr>
+<tr class="row-odd"><td><p>会計仕訳</p></td>
+<td><p>journalVoucher</p></td>
+</tr>
+<tr class="row-even"><td><p>実施番号別仕訳帳</p></td>
+<td><p>performanceNumberJournal</p></td>
+</tr>
+<tr class="row-odd"><td><p>総勘定元帳</p></td>
+<td><p>generalLedger</p></td>
+</tr>
+<tr class="row-even"><td><p>試算表</p></td>
+<td><p>trialBalance</p></td>
+</tr>
+<tr class="row-odd"><td><p>損益計算書</p></td>
+<td><p>incomeStatement</p></td>
+</tr>
+<tr class="row-even"><td><p>貸借対照表</p></td>
+<td><p>balanceSheet</p></td>
+</tr>
+<tr class="row-odd"><td><p>製造原価報告書</p></td>
+<td><p>manufacturingCostReport</p></td>
+</tr>
+<tr class="row-even"><td><p>比較貸借対照表</p></td>
+<td><p>comparativeBalanceSheet</p></td>
+</tr>
+<tr class="row-odd"><td><p>比較損益計算書</p></td>
+<td><p>comparativeIncomeStatement</p></td>
+</tr>
+<tr class="row-even"><td><p>比較製造原価報告書</p></td>
+<td><p>comparativeManufacturingCostReport</p></td>
+</tr>
+<tr class="row-odd"><td><p>推移貸借対照表</p></td>
+<td><p>transitionBalanceSheet</p></td>
+</tr>
+<tr class="row-even"><td><p>推移損益計算書</p></td>
+<td><p>transitionIncomeStatement</p></td>
+</tr>
+<tr class="row-odd"><td><p>推移製造原価報告書</p></td>
+<td><p>transitionManufacturingCostReport</p></td>
+</tr>
+<tr class="row-even"><td><p>通貨別元帳</p></td>
+<td><p>currencyGeneralLedger</p></td>
+</tr>
+<tr class="row-odd"><td><p>分析フィールド別元帳</p></td>
+<td><p>analysisFieldGeneralLedger</p></td>
+</tr>
+<tr class="row-even"><td><p>分析フィールド別試算表</p></td>
+<td><p>analysisFieldTrialBalance</p></td>
+</tr>
+<tr class="row-odd"><td><p>組織別分析フィールド別一覧表</p></td>
+<td><p>analysisFieldGeneralizationTrialBalance</p></td>
+</tr>
+<tr class="row-even"><td><p>予実比較試算表</p></td>
+<td><p>budgetResultTrialBalance</p></td>
+</tr>
+<tr class="row-odd"><td><p>推移試算表</p></td>
+<td><p>shiftTrialBalance</p></td>
+</tr>
+<tr class="row-even"><td><p>勘定残高内訳表</p></td>
+<td><p>accntBalanceDtllst</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>出力条件を変更する場合、テンプレートを更新してください。</p>
+</div>
+</div></blockquote>
+</section>
+<section id="fms-introduce-core-report-batch-do-im">
+<span id="id44"></span><h3><span class="section-number">21.2.3. </span>intra-martへのジョブ登録<a class="headerlink" href="#fms-introduce-core-report-batch-do-im" title="Link to this heading">¶</a></h3>
+<p><a class="reference internal" href="../../cookbook/introduce/batch/job_setting.html#fms-cookbook-introduce-batch-job"><span class="std std-ref">intra-mart へのジョブ登録</span></a>を参照してください。</p>
+<div class="admonition note">
+<p class="admonition-title">コラム</p>
+<p>intra-martジョブを利用して、並列実行できるようにするためにはジョブネットを分けて登録する必要があります。</p>
+</div>
+</section>
+</section>
+<section id="fms-introduce-core-report-batch-endconditions">
+<span id="id45"></span><h2><span class="section-number">21.3. </span>完了条件<a class="headerlink" href="#fms-introduce-core-report-batch-endconditions" title="Link to this heading">¶</a></h2>
+<p>以下の確認は、<a class="reference internal" href="#fms-introduce-core-report-batch-do"><span class="std std-ref">実行手順</span></a>で作成した全ジョブに対して実施してください。</p>
+<ul>
+<li><p><a class="reference internal" href="#fms-introduce-core-report-batch-do-bapf"><span class="std std-ref">Biz∫APF へのジョブ登録</span></a>で起動した「ジョブ設定登録/照会」画面から登録したジョブが検索結果に表示されることを確認します。</p></li>
+<li><p><a class="reference internal" href="#fms-introduce-core-report-batch-do-im"><span class="std std-ref">intra-mart へのジョブ登録</span></a>で起動したジョブ管理画面で登録したジョブが表示されることを確認します。</p></li>
+<li><p>登録したジョブが実行できることを確認します。</p>
+<p><strong>intra-martジョブネット管理から起動する場合</strong></p>
+<blockquote>
+<div><p><a class="reference internal" href="../../cookbook/introduce/batch/job_run.html#fms-cookbook-introduce-batch-job-run"><span class="std std-ref">intra-mart ジョブネットの実行方法</span></a>を参照してください。</p>
+<p>ジョブモニタで実行したジョブのジョブ状態が出力されていること、実行結果がabortでないことを確認します。</p>
+<p>非同期タスクモニタで該当の帳票の非同期タスクが正常終了していることを確認します。</p>
+</div></blockquote>
+<p><strong>コマンドラインから起動する場合</strong></p>
+<blockquote>
+<div><p><a class="reference internal" href="../../cookbook/introduce/batch/fc/report_batch.html#fms-cookbook-introduce-batch-fc-report-batch"><span class="std std-ref">帳票出力ジョブ実行</span></a>を参照してください。</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav bottomnav">
+        
+    <div class="related nav-related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul class="breadcrumbs">
+        
+        <li class="nav-item nav-item-0"><a href="../../index.html">Biz∫会計</a></li>
+        <li class="nav-item nav-item-1 breadcrumbs-item"><a href="../index.html" >導入マニュアル</a></li>
+        <li class="nav-item nav-item-2 breadcrumbs-item"><a href="index.html" >会計コアマスタの設定</a></li>
+        <li class="nav-item breadcrumbs-item"><a href=""><span class="section-number">21. </span>帳票出力ジョブ登録</a></li> 
+      </ul>
+    </div>
+    
+      </div>
+
+      <div class="footer">
+        <hr class="bar" />
+        <div class="inner">
+          <p class="copyright">
+             Copyright &copy; 2026 NTT DATA CORPORATION 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
