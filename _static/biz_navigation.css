@@ -1,0 +1,67 @@
+.new-badge {
+  width: 25px;
+  margin-left: 10px;
+  padding: 2px 3px;
+  border-radius: 2px;
+  background: #fe6363;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 20px 0 20px 0;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+div.content {
+  font-size: 14px;
+  width:100% !important;
+  margin-left:0 !important;
+}
+
+div.topnav {
+  min-height: 1px;
+  height: 1px;
+  padding: 0;
+}
+
+div.bottomnav {
+  border-color:#fff !important;
+}
+
+div.container {
+  height: unset !important;
+}
+
+div.mainContainer {
+  top: 60px;
+}
+
+div.mainContainer ul {
+  list-style-type: none !important;
+}
+
+div.mainContainer ul li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+div.mainContainer ul li a {
+  font-size: 1.1em;
+  padding-left: 10px;
+  border-left: 6px solid #e3e3e3;
+  line-height: 2;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+div.mainContainer ul li a:hover {
+  border-color: #00518f;
+}

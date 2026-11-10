@@ -1,0 +1,28 @@
+/*
+ * Amy theme for all device
+ * ~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+ * Sphinx stylesheet -- Amy theme.
+ * 
+ * ie8.css
+ *
+ */
+
+@charset "utf-8";
+div.container {
+}
+/******************************
+ max size
+ ******************************/
+ img{
+    max-width:890px !important;
+}
+pre{
+    max-width:800px;
+}
+
+/* for IE8 , unsupported background-size */
+.header-logo{
+  background:url(imart_logo_s.png) no-repeat left top;
+}
+

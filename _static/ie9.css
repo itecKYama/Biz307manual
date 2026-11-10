@@ -1,0 +1,15 @@
+/*
+ * Amy theme for all device
+ * ~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+ * Sphinx stylesheet -- Amy theme.
+ *
+ * ie9.css
+ *
+ */
+
+@charset "utf-8";
+
+div.wrapper {
+  height: 100%;
+}
