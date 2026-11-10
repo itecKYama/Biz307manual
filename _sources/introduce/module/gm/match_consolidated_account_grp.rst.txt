@@ -1,0 +1,40 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_gm-match_consolidated_account_grp:
+
+===================================================
+照合用連結科目グループの登録
+===================================================
+グループ会社間取引照合で利用する照合用連結科目グループマスタを登録します。
+
+.. _FMS_introduce_module_gm-match_consolidated_account_grp-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_module_gm-consolidated_account` までの作業を終えていること。
+
+.. _FMS_introduce_module_gm-match_consolidated_account_grp-do:
+
+実行手順
+===================================================
+
+.. note::
+  
+  照合用連結科目グループマスタはグループ全体で一元管理するマスタのため、グループ内のいずれかの1社で登録します。
+  
+
+
+Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューより、一括取込マニュアルの :ref:`FMS_import_mst-gm_match_consolidated_account_grp-gm_match_consolidated_account_grp` を参考に取込ファイルを準備し、同メニューの「SF5:一括登録」より登録します。
+
+* メニュー ::
+
+    Biz∫ 会計
+      グループ連結オペレーション
+        マスタメンテナンス
+          照合用連結科目グループマスタ管理
+            
+.. _FMS_introduce_module_gm-match_consolidated_account_grp-endConditions:
+
+完了条件
+===================================================
+* プルーフリスト出力を行い、登録した情報が登録されていることを確認します。

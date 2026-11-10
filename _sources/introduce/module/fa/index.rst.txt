@@ -1,0 +1,50 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_fa:
+
+===================================================
+資産管理の導入・移行
+===================================================
+資産管理の導入・移行手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   analysis_cd
+   analysis_field_fa
+   accounting_type
+   jrnlptn
+   kind_structure_detail
+   declare_tax_office
+   fixed_asset_journal_set
+   depreciation_calculate_define
+   special_depreciation
+   previous_period_asset_shift
+   redeploy_assets_rec_shift
+   rof_assets_rec_shift
+   asset_sales_rec_shift
+   aro_rec_shift
+   appendix16_8_rec_shift
+   jrnl_ptn_def
+   depreciation_calculate_job
+
+.. only:: internal
+
+  analysis_cd                   :分析コード登録
+  analysis_field_fa             :資産管理用分析フィールド管理
+  accounting_type               :会計種別設定
+  jrnlptn                       :仕訳パターンマスタ登録
+  kind_structure_detail         :種類/構造/細目登録
+  declare_tax_office            :償却資産申告先登録
+  fixed_asset_journal_set       :資産管理仕訳設定登録
+  depreciation_calculate_define :償却計算方法設定登録
+  special_depreciation          :特別償却登録
+  previous_period_asset_shift   :過年度取得資産の移行
+  redeploy_assets_rec_shift     :移動履歴の移行
+  rof_assets_rec_shift          :除却履歴の移行
+  asset_sales_rec_shift         :売却履歴の移行
+  aro_rec_shift                 :除去債務履歴の移行
+  appendix16_8_rec_shift        :別表十六（八）履歴の移行
+  jrnl_ptn_def                  :資産管理仕訳パターン定義の変更
+  depreciation_calculate_job    :償却計算ジョブ登録

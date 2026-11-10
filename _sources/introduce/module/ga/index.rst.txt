@@ -1,0 +1,22 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_ga:
+
+===================================================
+グループ会計の導入
+===================================================
+グループ会計の導入手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   corporation
+   customer
+   setfilename
+
+.. only:: internal
+
+  corporation       :連結子会社識別用の法人情報の登録
+  customer          :連結子会社識別用の取引先情報の登録
+  setfilename       :Biz∫連結連携ファイル名の設定

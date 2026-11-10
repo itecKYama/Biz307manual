@@ -1,0 +1,67 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_fa-depreciation_calculate_define:
+
+===================================================
+償却計算方法設定登録
+===================================================
+償却計算に用いる償却計算方法設定を登録します。
+
+.. _FMS_introduce_module_fa-depreciation_calculate_define-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_core-parameter` までの作業を終えていること。
+
+.. _FMS_introduce_module_fa-depreciation_calculate_define-do:
+
+実行手順
+===================================================
+Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューより「SF5:一括登録」を押下し登録します。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        マスタメンテナンス
+          償却計算方法設定
+
+一括取込マニュアルの :ref:`FMS_import_mst-dcd-depreciation_calculate_define` を参考に取込ファイルを準備し、同メニューの「SF5:一括登録」より登録します。
+
+.. _FMS_introduce_module_fa-depreciation_calculate_define-do-attention:
+
+注意事項
+------------
+  一括取込マニュアルの :ref:`FMS_import_mst-dcd-depreciation_calculate_define` に、初期データを以下のサンプルとして用意していますので、取込ファイルに変更し、登録を行って下さい。「償却計算方法_サンプル4」のみ、必要に応じて修正のうえ、登録を行って下さい。
+
+  .. list-table::
+     :widths: 5, 15
+     :header-rows: 1
+
+     * - シート名
+       - 説明
+     * - 償却計算方法_サンプル1
+       - 旧定率法、旧定額法、月数均等法、年数均等法、リース定額法、10/9定率法、一括償却
+     * - 償却計算方法_サンプル2
+       - 250%定率法、定額法
+     * - 償却計算方法_サンプル3
+       - 200%定率法
+     * - 償却計算方法_サンプル4
+       - IFRS用償却方法 [#f1]_
+
+  .. rubric:: 脚注
+
+  .. [#f1] パラメータのIFRS用償却情報を「使用する」にしている場合、IFRS用償却方法が必要
+
+  ファイルでの登録は、有効期間毎（サンプルシート毎）に繰り返し上書き登録を行う必要があります。
+
+.. _FMS_introduce_module_fa-depreciation_calculate_define-endConditions:
+
+完了条件
+===================================================
+一括登録は非同期タスクとして実行されます。以下のメニューより「償却計算方法設定マスタ取込」がエラーなく終了していることを確認します。 ::
+
+    Biz∫ APF アドミニストレーション 
+      システム管理（会社共通）
+        非同期タスク
+          非同期タスクモニタ

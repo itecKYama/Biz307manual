@@ -1,0 +1,40 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_fa-kind_structure_detail:
+
+===================================================
+種類/構造/細目登録
+===================================================
+種類、構造、細目情報を登録します。
+
+.. _FMS_introduce_module_fa-kind_structure_detail-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_core-parameter` までの作業を終えていること。
+
+.. _FMS_introduce_module_fa-kind_structure_detail-do:
+
+実行手順
+===================================================
+Biz∫会計管理者アカウントでポータル画面にログインし、以下のメニューより「SF5:一括登録」を押下し登録します。
+
+* メニュー ::
+
+    Biz∫ 会計
+      資産管理
+        マスタメンテナンス
+          種類／構造／細目管理
+
+一括取込マニュアルの :ref:`FMS_import_mst-ksd-kind_structure_detail` を参考に取込ファイルを準備し、同メニューの「SF5:一括登録」より登録します。
+
+.. _FMS_introduce_module_fa-kind_structure_detail-endConditions:
+
+完了条件
+===================================================
+一括登録は非同期タスクとして実行されます。以下のメニューより「種類/構造/細目マスタ取込」がエラーなく終了していることを確認します。 ::
+
+    Biz∫ APF アドミニストレーション 
+      システム管理（会社共通）
+        非同期タスク
+          非同期タスクモニタ

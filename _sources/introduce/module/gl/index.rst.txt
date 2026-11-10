@@ -1,0 +1,35 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_gl:
+
+===================================================
+一般会計の導入・移行
+===================================================
+一般会計の導入・移行手順について説明します。
+
+.. note::
+
+  債権債務を導入する場合は :ref:`FMS_introduce_module_pr` にて以下の手順1～3と同等の作業を行いますので、本手順1～3は不要です。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   customer_gl
+   balanceshift
+   dtlshift
+   jrnlptn
+   regular_journals_master
+   create_regular_journals_job
+   deferred_accounts_transfer_job
+
+.. only:: internal
+
+  customer_gl                    :取引先登録（一般会計用）
+  balanceshift                   :残高移行（一般会計）
+  dtlshift                       :明細移行（一般会計）
+  jrnlptn                        :仕訳パターンの登録
+  regular_journals_master        :定期仕訳マスタの登録
+  create_regular_journals_job    :定期仕訳作成ジョブ登録
+  deferred_accounts_transfer_job :経過勘定振替ジョブ登録
+  

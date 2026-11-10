@@ -1,0 +1,18 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_fe:
+
+===================================================
+外貨管理の導入
+===================================================
+外貨管理の導入手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   jrnlptn
+
+.. only:: internal
+
+  jrnlptn :仕訳パターンの登録

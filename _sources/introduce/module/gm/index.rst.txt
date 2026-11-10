@@ -1,0 +1,32 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_gm:
+
+===================================================
+|GM| の導入
+===================================================
+|GM| の導入手順について説明します。
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   
+   parameter
+   consolidated_account
+   match_consolidated_account_grp
+   corporation_group
+   corp_grp_access
+   di_wl_master
+   di_job
+   di_execution
+
+.. only:: internal
+
+   parameter                       :パラメータ設定
+   consolidated_account            :連結科目の登録
+   match_consolidated_account_grp  :照合用連結科目グループの登録
+   corporation_group               : |GM| 法人グループの登録
+   corp_grp_access                 :権限グループと権限、法人グループの関連づけ（法人データアクセス権限グループ）
+   di_wl_master                    :データ連携のワークロードマスタ登録
+   di_job                          :データ連携のジョブ登録
+   di_execution                    :データ連携の実行

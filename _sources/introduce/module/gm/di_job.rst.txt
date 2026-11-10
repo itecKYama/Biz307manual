@@ -1,0 +1,129 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_gm-di_job:
+
+===================================================
+|DI| のジョブ登録
+===================================================
+
+.. _FMS_introduce_module_gm-di_job-supplement:
+
+|gm| で参照するグループ各社のデータをテナントシェアードスキーマに集約するジョブを登録します。
+
+ジョブの実行については、以下の方法があり、それぞれの設定方法についてまとめています。
+
+* コマンドラインから実行する
+
+* |IM| ジョブネット管理から実行する
+
+各システムの運用を考慮して、どの方式で処理を行うか検討します。
+
+.. note::
+
+  本項で登録するジョブの実行については、日次・夜間でスケジューリングすることを推奨します。
+
+.. _FMS_introduce_module_gm-di_job-startConditions:
+
+着手条件
+===================================================
+:ref:`FMS_introduce_module_gm-di_wl_master` までの作業を終えていること。
+
+.. _FMS_introduce_module_gm-di_job-do:
+
+
+実行手順
+===================================================
+.. note::
+
+  以下の :ref:`FMS_introduce_module_gm-di_job-do-bapf` 、 :ref:`FMS_introduce_module_gm-di_job-do-im` の設定及び、 :ref:`FMS_introduce_module_gm-di_job-endConditions` の確認は本ジョブを設定した会社ごとに実施してください。
+
+.. _FMS_introduce_module_gm-di_job-do-bapf:
+
+|BAPF| へのジョブ登録
+---------------------------------------------------
+1. Biz∫会計管理者アカウントでポータル画面にログインし、「ジョブ管理」画面を起動します。
+
+  * メニュー ::
+
+      Biz∫ APF アドミニストレーション 
+        システム管理（会社共通）
+          ジョブ
+            ジョブ管理
+
+2. ジョブの登録
+
+   新規ボタンを押下し、ジョブ設定登録の基本情報タブにおいて下表の項目を設定し、新規のジョブを登録してください。
+
+  .. list-table::
+     :widths: 10, 20
+     :header-rows: 1
+
+     * - 項目名
+       - 設定値
+     * - ジョブコード
+       - 任意
+     * - ロケールID
+       - ジョブ名表示用のロケールID
+     * - 名称
+       - 任意
+     * - 実行ユーザコード
+       - ジョブ実行時に利用するユーザのID [#user]_
+     * - コンポーネントクラス名
+       - ジョブ実行のコンポーネントクラス名。
+
+         com.biz_integral.biz.di.application.web.batch.WorkloadExecutionBatch
+
+         （1行で記述します）
+
+  .. rubric:: 脚注
+
+  .. [#user] 実行ユーザコードに指定するユーザに必要な権限については、 :ref:`ジョブ実行ユーザの権限<FMS_cookbook_introduce_batch-user-gm-di>` を参照してください。
+
+3. ジョブパラメータの登録
+
+  ジョブ設定登録のジョブパラメータタブにて、ジョブパラメータを登録します。
+
+  .. list-table::
+     :widths: 1, 7
+     :header-rows: 1
+
+     * - パラメータキー
+       - パラメータ値
+     * - workloadCd
+       - :ref:`FMS_introduce_module_gm-di_wl_master` で登録したワークロードコード [#workloadCd]_
+
+  .. rubric:: 脚注
+
+  .. [#workloadCd] 月次確定/確定取消/仮実行を実施した際に「月次状況」を連携するワークロード は月次処理（月次確定/確定取消/仮実行）実施時に実行されますので、ジョブの登録は不要です。
+
+.. _FMS_introduce_module_gm-di_job-do-im:
+
+|IM| へのジョブ登録
+---------------------------------------------------
+
+:ref:`FMS_cookbook_introduce_batch-job` を参照してください。
+
+.. note:: 分析フィールド別元帳残高の連携は集計済のレコードのみが対象になるため、事前に元帳残高集計のジョブを実行してください。
+
+         上記のジョブは同一ジョブネットで実行することを推奨します。
+
+.. _FMS_introduce_module_gm-di_job-endConditions:
+
+完了条件
+===================================================
+以下の確認は、 :ref:`FMS_introduce_module_gm-di_job-do` で作成した全バッチに対して実施してください。
+
+* :ref:`FMS_introduce_module_gm-di_job-do-bapf` で起動した「ジョブ設定登録/照会」画面から登録したジョブが検索結果に表示されることを確認します。
+
+* :ref:`FMS_introduce_module_gm-di_job-do-im` で起動したジョブ管理画面で登録したジョブが表示されることを確認します。
+
+* 登録したジョブが実行できることを確認します。
+
+  **intra-martジョブネット管理から起動する場合**
+
+    :ref:`FMS_cookbook_introduce_batch-job-run` を参照してください。
+
+  **コマンドラインから起動する場合**
+
+    :ref:`FMS_cookbook_introduce_batch_gt-di_job` を参照してください。
+

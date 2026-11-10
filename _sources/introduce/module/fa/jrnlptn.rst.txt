@@ -1,0 +1,10 @@
+.. include:: ../../../include/definition.txt
+
+.. _FMS_introduce_module_fa-jrnlptn:
+
+===================================================
+仕訳パターンの登録
+===================================================
+以下のページを参考に仕訳パターンを登録して下さい。
+
+* :ref:`FMS_cookbook_introduce_pattern_fa-jrnlptn_fa`
