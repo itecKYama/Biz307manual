@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns="http://www.intra-mart.jp/authz/imex/subject-group">
+    <authz-subject-group>
+        <display-name>
+            <name locale="ja">Biz∫会計_過年度アーカイブユーザ</name>
+        </display-name>
+        <expression>S(b_m_role:fms-ac)</expression>
+    </authz-subject-group>
+</root>
